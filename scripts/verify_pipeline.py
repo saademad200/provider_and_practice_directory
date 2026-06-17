@@ -31,6 +31,8 @@ REQUIRED_PACKAGE_FILES = [
     "README.md",
     "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
     "PRESENTATION_NARRATIVE.md",
+    "WINNING_PROPOSAL_BRIEF.md",
+    "IMPLEMENTATION_ROADMAP_90_DAYS.md",
     "candidate_updates.csv",
     "auto_apply_updates.csv",
     "review_queue.csv",

@@ -25,14 +25,14 @@ submissions/latest_final_package.zip
 Start here:
 
 1. `notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-2. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
-3. `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-4. `submissions/exp0172/WORKING_PROTOTYPE.md`
-5. `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`
-6. `submissions/exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md`
-7. `submissions/exp0172/EXECUTIVE_SUMMARY.md`
-8. `submissions/exp0172/KAGGLE_SUBMISSION_HANDOFF.md`
-9. `submissions/exp0172/ARTIFACT_INDEX.md`
+2. `WINNING_PROPOSAL_BRIEF.md`
+3. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
+4. `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+5. `submissions/exp0172/WORKING_PROTOTYPE.md`
+6. `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`
+7. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
+8. `submissions/exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md`
+9. `submissions/exp0172/KAGGLE_SUBMISSION_HANDOFF.md`
 
 Current verified package:
 

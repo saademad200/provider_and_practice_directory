@@ -24,12 +24,13 @@ Key proof points:
 Recommended first files for judges:
 
 1. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-2. `ONE_PAGE_JUDGE_GUIDE.md`
-3. `TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-4. `WORKING_PROTOTYPE.md`
-5. `ARCHITECTURE_DIAGRAM.md`
-6. `COMBINED_ABC_PIPELINE_COVERAGE.md`
-7. `verification.json`
+2. `WINNING_PROPOSAL_BRIEF.md`
+3. `ONE_PAGE_JUDGE_GUIDE.md`
+4. `TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+5. `WORKING_PROTOTYPE.md`
+6. `ARCHITECTURE_DIAGRAM.md`
+7. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
+8. `verification.json`
 
 ## Verify Before Upload
 
