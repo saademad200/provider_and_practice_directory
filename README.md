@@ -24,11 +24,15 @@ submissions/latest_final_package.zip
 
 Start here:
 
-1. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
-2. `submissions/exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md`
-3. `submissions/exp0172/EXECUTIVE_SUMMARY.md`
-4. `submissions/exp0172/KAGGLE_SUBMISSION_HANDOFF.md`
-5. `submissions/exp0172/ARTIFACT_INDEX.md`
+1. `notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+2. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
+3. `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+4. `submissions/exp0172/WORKING_PROTOTYPE.md`
+5. `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`
+6. `submissions/exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md`
+7. `submissions/exp0172/EXECUTIVE_SUMMARY.md`
+8. `submissions/exp0172/KAGGLE_SUBMISSION_HANDOFF.md`
+9. `submissions/exp0172/ARTIFACT_INDEX.md`
 
 Current verified package:
 
@@ -46,6 +50,9 @@ Current verified package:
 - `src/` - reusable pipeline modules for candidate generation, scoring, source reliability, review routing, audit, privacy, red-team checks, and production readiness.
 - `scripts/` - reproducible CLI entrypoints for the best pipeline, public dataset triage, Kaggle metadata collection, and package verification.
 - `docs/` - working research and architecture documents.
+- `architecture/` - judge-facing architecture proposal, implementation map, and diagram source.
+- `prototype/` - judge-facing MVP runbook and prototype artifact map.
+- `notebooks/` - polished end-to-end notebook with narrative, MVP execution, metrics, diagrams, and bonus coverage.
 - `autoresearch/` - self-improvement loop state, playbook, hypotheses, journal, and leaderboard.
 - `experiments/` - append-only experiment scripts used to evolve the solution.
 - `data/sample/` - synthetic provider/evidence/gold-update benchmark used when official train/test labels are unavailable.

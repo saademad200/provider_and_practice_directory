@@ -23,12 +23,12 @@ Key proof points:
 
 Recommended first files for judges:
 
-1. `COMBINED_ABC_PIPELINE_COVERAGE.md`
-2. `COMPETITION_ALIGNMENT_REFRESH.md`
-3. `PUBLIC_DATASET_PROFILE.md`
-4. `PUBLIC_DATASET_TRIAGE_CLI.md`
-5. `MVP_FIELD_COVERAGE.md`
-6. `ONE_PAGE_JUDGE_GUIDE.md`
+1. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+2. `ONE_PAGE_JUDGE_GUIDE.md`
+3. `TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+4. `WORKING_PROTOTYPE.md`
+5. `ARCHITECTURE_DIAGRAM.md`
+6. `COMBINED_ABC_PIPELINE_COVERAGE.md`
 7. `verification.json`
 
 ## Verify Before Upload

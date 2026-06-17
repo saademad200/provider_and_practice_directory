@@ -29,6 +29,8 @@ REQUIRED_DOCS = [
 
 REQUIRED_PACKAGE_FILES = [
     "README.md",
+    "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+    "PRESENTATION_NARRATIVE.md",
     "candidate_updates.csv",
     "auto_apply_updates.csv",
     "review_queue.csv",
@@ -86,6 +88,10 @@ REQUIRED_PACKAGE_FILES = [
     "MVP_FIELD_COVERAGE.md",
     "CORE_DOC_CONSISTENCY.md",
     "COMBINED_ABC_PIPELINE_COVERAGE.md",
+    "TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+    "WORKING_PROTOTYPE.md",
+    "ARCHITECTURE_DIAGRAM.md",
+    "ARCHITECTURE_DIAGRAM.mmd",
     "COMPETITION_ALIGNMENT_REFRESH.md",
     "PUBLIC_DATASET_PROFILE.md",
     "PUBLIC_DATASET_TRIAGE_CLI.md",
@@ -291,6 +297,34 @@ def validate_docs(checks: list[dict[str, Any]]) -> None:
         record(checks, f"doc_{Path(doc).name}", path.exists() and path.stat().st_size > 0, doc)
 
 
+def validate_notebook(checks: list[dict[str, Any]]) -> None:
+    notebook_path = ROOT / "notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb"
+    if not notebook_path.exists():
+        record(checks, "notebook_exists", False, str(notebook_path))
+        return
+    try:
+        notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        record(checks, "notebook_json_valid", False, str(exc))
+        return
+    cells = notebook.get("cells", [])
+    markdown_count = sum(1 for cell in cells if cell.get("cell_type") == "markdown")
+    code_count = sum(1 for cell in cells if cell.get("cell_type") == "code")
+    text = "\n".join("".join(cell.get("source", [])) for cell in cells)
+    required_terms = [
+        "Evaluation Criteria",
+        "Bonus Point Coverage",
+        "AWS Production Plan",
+        "Whitepaper-Informed Design",
+        "Technical Architecture Diagram",
+        "Working Prototype",
+    ]
+    missing_terms = [term for term in required_terms if term not in text]
+    record(checks, "notebook_json_valid", True, str(notebook_path))
+    record(checks, "notebook_cell_count", markdown_count >= 10 and code_count >= 10, f"markdown={markdown_count}, code={code_count}")
+    record(checks, "notebook_required_story_terms", not missing_terms, ", ".join(missing_terms))
+
+
 def validate_package(checks: list[dict[str, Any]], package_path: Path) -> None:
     if not package_path.exists():
         record(checks, "package_exists", False, str(package_path))
@@ -322,6 +356,7 @@ def main() -> int:
     cli_metrics = run_cli(checks, out_dir / "cli")
     run_public_dataset_cli_smoke(checks, out_dir)
     validate_docs(checks)
+    validate_notebook(checks)
     validate_package(checks, Path(args.package))
 
     report = {
