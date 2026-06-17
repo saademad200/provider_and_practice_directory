@@ -1,0 +1,23 @@
+[
+  {
+    "npi": "1999000001",
+    "source": "nppes",
+    "field": "address",
+    "value": "123 MAIN ST SUITE 4 MIAMI FL 33101",
+    "url": "https://npiregistry.cms.hhs.gov/provider-view/1999000001"
+  },
+  {
+    "npi": "1999000001",
+    "source": "nppes",
+    "field": "phone",
+    "value": "5551234567",
+    "url": "https://npiregistry.cms.hhs.gov/provider-view/1999000001"
+  },
+  {
+    "npi": "1999000001",
+    "source": "nppes",
+    "field": "credential",
+    "value": "MD",
+    "url": "https://npiregistry.cms.hhs.gov/provider-view/1999000001"
+  }
+]

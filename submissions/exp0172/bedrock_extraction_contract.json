@@ -1,0 +1,93 @@
+{
+  "runtime": "bedrock-runtime",
+  "api": "Converse",
+  "response_format": "json_schema",
+  "schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "provider_name",
+      "fields",
+      "confidence",
+      "evidence_spans",
+      "warnings"
+    ],
+    "properties": {
+      "provider_name": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "fields": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "phone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "address": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "specialty": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "accepting_new_patients": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "provider_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "confidence": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "evidence_spans": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "field",
+            "text"
+          ],
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "warnings": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "temperature": 0,
+  "max_output_tokens": 450,
+  "system": "Extract only provider-directory facts directly supported by the page text. Return null for missing fields. Include short evidence spans copied from the page."
+}

@@ -1,0 +1,7 @@
+skill_candidate,skill_dir,authority_tier,eval_cases,owner
+checking-source-health,results/exp0104/provider_directory_skills/checking_source_health,read-only,6,source_ops
+normalizing-provider-evidence,results/exp0104/provider_directory_skills/normalizing_provider_evidence,draft-only,6,data_quality
+resolving-provider-identity,results/exp0104/provider_directory_skills/resolving_provider_identity,draft-only,6,identity_ops
+routing-human-review,results/exp0104/provider_directory_skills/routing_human_review,draft-only,6,directory_ops
+auditing-and-rollback,results/exp0104/provider_directory_skills/auditing_and_rollback,action-allowed-after-approval,6,compliance
+evaluating-provider-directory-pipeline,results/exp0104/provider_directory_skills/evaluating_provider_directory_pipeline,read-only,6,ml_ops

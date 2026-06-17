@@ -1,0 +1,15 @@
+config_name,f1,precision,recall,auto_apply_precision,auto_apply_count,review_count,cost_per_correct_update_usd,f1_delta_vs_baseline
+baseline_fresh_business,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+business_listing_max_age_60,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+business_listing_max_age_75,0.948276,0.948276,0.948276,1.0,20,38,0.005945,0.0
+business_listing_weight_0.05,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+business_listing_weight_0.1,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+business_listing_weight_0.2,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+business_listing_weight_0.3,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+phone_threshold_0.76,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+phone_threshold_0.78,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+phone_threshold_0.82,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+address_threshold_0.78,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+address_threshold_0.8,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+address_threshold_0.84,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+business_listing_max_age_45,0.93913,0.947368,0.931034,1.0,20,37,0.005887,-0.009146

@@ -1,0 +1,42 @@
+[
+  {
+    "area": "source_terms",
+    "requirement": "Confirm API terms, robots.txt, usage policies, and redistribution limits before crawling or storing data."
+  },
+  {
+    "area": "rate_limits",
+    "requirement": "Set connector-specific rate limits, retries, and backoff to avoid abusive access patterns."
+  },
+  {
+    "area": "raw_snapshot_retention",
+    "requirement": "Define how long raw source HTML/API payloads stay in S3 and who can access them."
+  },
+  {
+    "area": "pii_scope",
+    "requirement": "Classify provider directory data and avoid collecting patient data or unrelated PII."
+  },
+  {
+    "area": "auditability",
+    "requirement": "Store source URL, retrieved timestamp, parser version, confidence formula version, and reviewer disposition."
+  },
+  {
+    "area": "license_authority",
+    "requirement": "Use state/license sources for license status; do not infer license validity from NPPES alone."
+  },
+  {
+    "area": "llm_controls",
+    "requirement": "Send only necessary public text snippets to Bedrock or any model endpoint; log prompt/version/output."
+  },
+  {
+    "area": "human_review",
+    "requirement": "Require review for stale, conflicting, high-risk, peer-mismatched, or identity-level changes."
+  },
+  {
+    "area": "appeals_rollbacks",
+    "requirement": "Support rollback and correction workflow for contested updates."
+  },
+  {
+    "area": "monitoring",
+    "requirement": "Monitor source freshness, connector failures, false positives, review backlog, and cost drift."
+  }
+]

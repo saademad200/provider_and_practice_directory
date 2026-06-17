@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "skills": 6,
+  "checks": 55,
+  "failed_checks": 0,
+  "positive_trigger_cases": 18,
+  "negative_trigger_cases": 18
+}

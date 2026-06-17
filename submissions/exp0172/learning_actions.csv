@@ -1,0 +1,14 @@
+source,field,observations,accept_rate,auto_apply_share,recommended_action,rationale
+practice_website,specialty,9,0.7778,0.5556,downweight_or_review_gate,review outcomes show elevated rejection rate
+nppes,specialty,7,0.8571,0.7143,hold,enough precision for current role
+health_system,specialty,9,0.8889,0.5556,hold,enough precision for current role
+practice_website,address,10,0.9,0.0,hold,enough precision for current role
+health_system,address,12,0.9167,0.0,hold,enough precision for current role
+nppes,phone,15,1.0,0.0,consider_safe_auto_apply_expansion,high accept rate but many items still route to review
+practice_website,phone,14,1.0,0.0,consider_safe_auto_apply_expansion,high accept rate but many items still route to review
+health_system,phone,13,1.0,0.0,consider_safe_auto_apply_expansion,high accept rate but many items still route to review
+health_system,accepting_new_patients,12,1.0,0.8333,hold,enough precision for current role
+nppes,accepting_new_patients,11,1.0,0.9091,hold,enough precision for current role
+nppes,address,11,1.0,0.0,consider_safe_auto_apply_expansion,high accept rate but many items still route to review
+practice_website,accepting_new_patients,11,1.0,0.9091,hold,enough precision for current role
+state_license,license_status,5,1.0,1.0,hold,enough precision for current role

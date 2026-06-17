@@ -1,0 +1,4 @@
+scenario,providers,batch_size,max_parallel_batches,batches,waves,estimated_sequential_minutes,estimated_parallel_minutes,aws_orchestration,control
+daily_delta_refresh,10000,500,20,20,1,0.25,0.01,EventBridge Scheduler -> Step Functions Map -> AWS Batch/Glue workers -> S3/RDS outputs,"SQS dead-letter queue, CloudWatch alarms, idempotent S3 partition writes, audit event required before mutation"
+regional_refresh,100000,1000,40,100,3,2.47,0.07,EventBridge Scheduler -> Step Functions Map -> AWS Batch/Glue workers -> S3/RDS outputs,"SQS dead-letter queue, CloudWatch alarms, idempotent S3 partition writes, audit event required before mutation"
+national_backfill,1000000,2000,80,500,7,24.67,0.35,EventBridge Scheduler -> Step Functions Map -> AWS Batch/Glue workers -> S3/RDS outputs,"SQS dead-letter queue, CloudWatch alarms, idempotent S3 partition writes, audit event required before mutation"

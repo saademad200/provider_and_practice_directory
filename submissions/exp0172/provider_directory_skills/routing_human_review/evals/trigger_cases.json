@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "routing-human-review_positive_1",
+    "input": "Check review queue, SLA, disposition, reviewer feedback for this provider directory batch.",
+    "expected_skill": "routing-human-review",
+    "should_trigger": true
+  },
+  {
+    "case_id": "routing-human-review_positive_2",
+    "input": "I need help with review queue, SLA, disposition, reviewer feedback before review routing.",
+    "expected_skill": "routing-human-review",
+    "should_trigger": true
+  },
+  {
+    "case_id": "routing-human-review_positive_3",
+    "input": "Run the routing-human-review workflow for the latest package artifacts.",
+    "expected_skill": "routing-human-review",
+    "should_trigger": true
+  },
+  {
+    "case_id": "routing-human-review_negative_1",
+    "input": "Do source crawling or model tuning instead.",
+    "expected_skill": "routing-human-review",
+    "should_trigger": false
+  },
+  {
+    "case_id": "routing-human-review_negative_2",
+    "input": "Summarize the executive summary in plain English.",
+    "expected_skill": "routing-human-review",
+    "should_trigger": false
+  },
+  {
+    "case_id": "routing-human-review_negative_3",
+    "input": "Package the current submission zip without changing workflow logic.",
+    "expected_skill": "routing-human-review",
+    "should_trigger": false
+  }
+]

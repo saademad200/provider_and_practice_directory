@@ -1,0 +1,6 @@
+field,tp,fp,fn,precision,recall,f1,auto_apply_count,auto_apply_precision,review_count,review_recall,estimated_cost_usd,cost_per_correct_update_usd,source_cost_breakdown_usd,predicted_updates,gold_updates
+accepting_new_patients,12,0,0,1.0,1.0,1.0,10,1.0,2,0.166667,0.0751,0.006258,"{'health_system': 0.03, 'nppes': 0.0011, 'practice_website': 0.044}",12,12
+address,12,1,2,0.923077,0.857143,0.888889,0,0.0,13,0.857143,0.0741,0.006175,"{'business_listing': 0.003, 'health_system': 0.03, 'nppes': 0.0011, 'practice_website': 0.04}",13,14
+license_status,5,0,1,1.0,0.833333,0.909091,5,1.0,0,0.0,0.0075,0.0015,{'state_license': 0.0075},5,6
+phone,18,0,0,1.0,1.0,1.0,0,0.0,18,1.0,0.1051,0.005839,"{'business_listing': 0.015, 'health_system': 0.0325, 'nppes': 0.0016, 'practice_website': 0.056}",18,18
+specialty,8,2,0,0.8,1.0,0.888889,5,1.0,5,0.375,0.0592,0.0074,"{'health_system': 0.0225, 'nppes': 0.0007, 'practice_website': 0.036}",10,8

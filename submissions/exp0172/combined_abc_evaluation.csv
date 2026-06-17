@@ -1,0 +1,10 @@
+evaluation_criterion,answer,evidence
+Accuracy,"F1 0.948276, precision 0.948276, recall 0.948276, auto-apply precision 1.0",metrics.json; cv_metrics.json; residual_false_positives.csv; residual_false_negatives.csv
+Scalability,AWS batch/Step Functions plan and 100x synthetic throughput benchmark,SYNTHETIC_VOLUME_BENCHMARK.md; aws_step_functions_throughput_plan.csv
+Cost Efficiency,Low-cost deterministic sources first; optional LLM fallback only when gated,COST_MODEL.md; LLM_FALLBACK_CONTRACT.md; source_ablation.csv
+Practicality,"Lean-team implementation with runnable CLI, docs, dashboard, review contracts, and package verifier",REPRODUCIBILITY.md; KAGGLE_SUBMISSION_HANDOFF.md; verification.json
+Explainability,"Every update includes old/new values, confidence, sources, URLs, freshness, review reason",candidate_updates.csv; REVIEW_QUEUE_PRIORITIZATION.md
+Data Quality,"Normalization and identity matching across names, addresses, phones, specialties, practices, status",SPECIALTY_NORMALIZATION.md; MVP_FIELD_COVERAGE.md
+Source Reliability,"Authority-tiered source registry, conflict adjudication, perturbation tests",SOURCE_CONNECTOR_REGISTRY.md; SOURCE_CONFLICT_ADJUDICATION.md
+Human Review Design,Only ambiguous/high-risk/conflicting/identity-sensitive updates route to review,review_queue.csv; REVIEW_DISPOSITION_AND_SLA.md
+Audit Trail,"Append-only events, change timeline, rollback plan, manifest, no-secrets scan",audit_events.jsonl; provider_change_timeline.csv; rollback_plan.csv

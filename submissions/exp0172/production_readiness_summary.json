@@ -1,0 +1,12 @@
+{
+  "criteria": 10,
+  "strong_criteria": 10,
+  "readiness_score": 50,
+  "max_score": 50,
+  "readiness_percent": 1.0,
+  "lowest_scoring": [
+    "accuracy",
+    "agentic_harness",
+    "auditability"
+  ]
+}

@@ -1,0 +1,9 @@
+control_id,domain,control,implementation,evidence_artifact
+pc_public_provider_data_only,data_minimization,Ingest only public provider/practice facts needed for directory accuracy.,Source connector registry excludes patient/member data and all parser schemas reject PHI-like fields.,SOURCE_CONNECTOR_REGISTRY.md
+pc_no_patient_identifiers,schema,"Candidate, evidence, review, and audit schemas contain provider/practice identifiers only.","Review disposition contract requires provider_id and reviewer_id, not patient/member identifiers.",review_disposition_contract.json
+pc_least_privilege_roles,access_control,Agents use least-privilege AWS roles and cannot mutate directory data directly.,Source tools are read/append-only; scoring and review lanes are separated from write permissions.,AGENT_SECURITY_MATRIX.md
+pc_secrets_manager,secrets,"Source credentials and partner-feed secrets are not stored in prompts, docs, or code.",AWS Secrets Manager is the target production secrets boundary.,AWS_PRODUCTION_ARCHITECTURE.md
+pc_immutable_audit,audit,Every update/review/rollback writes append-only audit evidence.,S3 audit bundles plus RDS audit event IDs; rollback never mutates prior audit events.,AUDIT_ROLLBACK_WORKFLOW.md
+pc_retention_policy,retention,Raw source snapshots and audit bundles have explicit retention classes.,Hot normalized evidence retained for operational window; immutable audit retained for compliance window.,PRIVACY_COMPLIANCE_MODEL.md
+pc_terms_and_rate_limits,source_compliance,Web sources require terms/robots approval and rate limits before crawling.,Terms allowlist required in evidence tool manifest for public web and third-party listings.,evidence_tool_manifest.json
+pc_red_team_terms,safety_eval,Terms violations and audit gaps are red-team failure cases.,Failed critical red-team cases block production auto-apply or connector execution.,RED_TEAM_EVALS.md

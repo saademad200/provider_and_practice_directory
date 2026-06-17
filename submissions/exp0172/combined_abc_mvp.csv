@@ -1,0 +1,9 @@
+mvp_field,coverage,evidence
+Provider name,Identity/display anchor; review-first for mutation,MVP_FIELD_COVERAGE.md; DUPLICATE_MOVEMENT_DETECTION.md
+NPI,Stable identity anchor and validation signal,NPPES_API_SMOKE.md; public_dataset_issue_counts.csv
+Specialty,Prototype update field with normalization,SPECIALTY_NORMALIZATION.md; candidate_updates.csv
+Practice name,Production design plus practice-change diagnostics,PRACTICE_AFFILIATION_REBRAND.md; practice_change_candidates.csv
+Address,Prototype update field with normalization and guarded source policy,candidate_updates.csv; FIELD_RISK_POLICY.md
+Phone number,Prototype update field with normalization and peer checks,candidate_updates.csv; FRESH_BUSINESS_LISTING_FALLBACK.md
+Website,Evidence/source surface plus production update design,SOURCE_CONNECTOR_REGISTRY.md; PUBLIC_DATASET_PROFILE.md
+Active/inactive status,License/status update field plus inactive detection,INACTIVE_PROVIDER_DETECTION.md; inactive_provider_candidates.csv

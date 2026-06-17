@@ -1,0 +1,4 @@
+provider_id,field,old_value,new_value,normalized_value,error_type
+P0010,address,"681 Lake Dr, Suite 12, FL","170 Market St, Suite 11, FL",170 market street suite 11 florida,false_negative
+P0038,license_status,inactive,active,active,false_negative
+P0049,address,"954 Cedar Rd, Suite 3, FL","443 Oak Ave, Suite 2, FL",443 oak avenue suite 2 florida,false_negative

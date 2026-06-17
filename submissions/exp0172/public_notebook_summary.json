@@ -1,0 +1,15 @@
+{
+  "available": true,
+  "id": "chaitanyajamble/provider-and-practice-directory",
+  "title": "Provider and Practice directory",
+  "votes": "0",
+  "summary": "Baseline notebook scores internal directory health using structural, semantic, temporal, duplicate-risk, and change-velocity signals, then writes a priority-sorted submission CSV.",
+  "gaps": "No AWS architecture, source governance, confidence formula for external evidence, audit/rollback trail, website-source extraction, source-reliability model, or production human-review workflow.",
+  "npi_mentions": 5,
+  "aws_mentions": 0,
+  "confidence_mentions": 0,
+  "audit_mentions": 0,
+  "review_mentions": 2,
+  "website_mentions": 0,
+  "duplicate_mentions": 11
+}

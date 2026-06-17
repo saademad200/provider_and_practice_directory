@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "normalizing-provider-evidence_positive_1",
+    "input": "Check normalize phone/address/specialty/license evidence for this provider directory batch.",
+    "expected_skill": "normalizing-provider-evidence",
+    "should_trigger": true
+  },
+  {
+    "case_id": "normalizing-provider-evidence_positive_2",
+    "input": "I need help with normalize phone/address/specialty/license evidence before review routing.",
+    "expected_skill": "normalizing-provider-evidence",
+    "should_trigger": true
+  },
+  {
+    "case_id": "normalizing-provider-evidence_positive_3",
+    "input": "Run the normalizing-provider-evidence workflow for the latest package artifacts.",
+    "expected_skill": "normalizing-provider-evidence",
+    "should_trigger": true
+  },
+  {
+    "case_id": "normalizing-provider-evidence_negative_1",
+    "input": "Do apply directory update instead.",
+    "expected_skill": "normalizing-provider-evidence",
+    "should_trigger": false
+  },
+  {
+    "case_id": "normalizing-provider-evidence_negative_2",
+    "input": "Summarize the executive summary in plain English.",
+    "expected_skill": "normalizing-provider-evidence",
+    "should_trigger": false
+  },
+  {
+    "case_id": "normalizing-provider-evidence_negative_3",
+    "input": "Package the current submission zip without changing workflow logic.",
+    "expected_skill": "normalizing-provider-evidence",
+    "should_trigger": false
+  }
+]

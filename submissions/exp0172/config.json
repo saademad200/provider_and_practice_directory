@@ -1,0 +1,56 @@
+{
+  "auto_apply_threshold": 0.94,
+  "confidence_threshold": 0.74,
+  "disabled_sources": [],
+  "field_auto_apply_thresholds": {
+    "accepting_new_patients": 0.98,
+    "address": 0.97,
+    "license_status": 0.9,
+    "phone": 0.96,
+    "specialty": 0.97
+  },
+  "field_confidence_thresholds": {
+    "accepting_new_patients": 0.82,
+    "address": 0.8,
+    "license_status": 0.72,
+    "phone": 0.78,
+    "specialty": 0.82
+  },
+  "min_auto_sources": 1,
+  "min_auto_sources_by_field": {
+    "accepting_new_patients": 3,
+    "address": 3,
+    "license_status": 1,
+    "phone": 3,
+    "specialty": 3
+  },
+  "min_distinct_sources": 1,
+  "min_distinct_sources_by_field": {
+    "accepting_new_patients": 2,
+    "address": 2,
+    "license_status": 1,
+    "phone": 2,
+    "specialty": 2
+  },
+  "practice_consensus_review_fields": [
+    "phone",
+    "address"
+  ],
+  "recency_half_life_days": 120.0,
+  "source_field_allowlist": {
+    "business_listing": [
+      "phone",
+      "address"
+    ]
+  },
+  "source_max_age_days_by_source_field": {
+    "business_listing": {
+      "address": 60,
+      "phone": 60
+    }
+  },
+  "source_weights": {
+    "business_listing": 0.1,
+    "practice_website": 0.65
+  }
+}

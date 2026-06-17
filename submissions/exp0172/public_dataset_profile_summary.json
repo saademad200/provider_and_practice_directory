@@ -1,0 +1,136 @@
+{
+  "dataset": "data/raw/kaggle_public_provider_directory/provider_directory_dataset.csv",
+  "rows": 42000,
+  "columns": 37,
+  "as_of_date": "2026-06-17",
+  "license": "CC0-1.0 via Kaggle dataset metadata",
+  "change_flag_counts": {
+    "Accepting Status Changed": 5429,
+    "Retired": 5302,
+    "No Change": 5292,
+    "Specialty Changed": 5202,
+    "Phone Changed": 5202,
+    "Left Practice": 5201,
+    "Address Changed": 5194,
+    "blank": 5178
+  },
+  "verification_status_counts": {
+    "Verified": 8490,
+    "Unverified": 8413,
+    "Needs Review": 8402,
+    "Pending": 8360,
+    "Stale": 8335
+  },
+  "data_source_counts": {
+    "Manual Audit": 7073,
+    "State License Board": 7050,
+    "CMS": 7033,
+    "CAQH": 7000,
+    "Claims Data": 6937,
+    "Provider Self-Reported": 6907
+  },
+  "top_missing_fields": [
+    {
+      "field": "address_line2",
+      "blank_rows": 29522,
+      "blank_rate": 0.702905
+    },
+    {
+      "field": "specialty_secondary",
+      "blank_rows": 25195,
+      "blank_rate": 0.599881
+    },
+    {
+      "field": "hospital_affiliations",
+      "blank_rows": 20890,
+      "blank_rate": 0.497381
+    },
+    {
+      "field": "group_npi",
+      "blank_rows": 5962,
+      "blank_rate": 0.141952
+    },
+    {
+      "field": "change_flag",
+      "blank_rows": 5178,
+      "blank_rate": 0.123286
+    },
+    {
+      "field": "fax",
+      "blank_rows": 2555,
+      "blank_rate": 0.060833
+    },
+    {
+      "field": "website",
+      "blank_rows": 1840,
+      "blank_rate": 0.04381
+    },
+    {
+      "field": "address_line1",
+      "blank_rows": 1276,
+      "blank_rate": 0.030381
+    },
+    {
+      "field": "phone",
+      "blank_rows": 1270,
+      "blank_rate": 0.030238
+    },
+    {
+      "field": "zip_code",
+      "blank_rows": 1042,
+      "blank_rate": 0.02481
+    }
+  ],
+  "top_issues": [
+    {
+      "issue": "stale_verification_over_365d",
+      "affected_rows": 42000,
+      "affected_rate": 1.0
+    },
+    {
+      "issue": "invalid_npi_luhn_or_format",
+      "affected_rows": 38144,
+      "affected_rate": 0.90819
+    },
+    {
+      "issue": "expired_license",
+      "affected_rows": 25791,
+      "affected_rate": 0.614071
+    },
+    {
+      "issue": "verification_needs_review",
+      "affected_rows": 25150,
+      "affected_rate": 0.59881
+    },
+    {
+      "issue": "change_flag_high_risk",
+      "affected_rows": 10503,
+      "affected_rate": 0.250071
+    },
+    {
+      "issue": "invalid_phone_format",
+      "affected_rows": 4170,
+      "affected_rate": 0.099286
+    },
+    {
+      "issue": "invalid_website_format",
+      "affected_rows": 2560,
+      "affected_rate": 0.060952
+    },
+    {
+      "issue": "invalid_zip_format",
+      "affected_rows": 2066,
+      "affected_rate": 0.04919
+    },
+    {
+      "issue": "missing_address_line1",
+      "affected_rows": 1276,
+      "affected_rate": 0.030381
+    },
+    {
+      "issue": "invalid_email_format",
+      "affected_rows": 996,
+      "affected_rate": 0.023714
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+left_practice_id,right_practice_id,left_practice_name,right_practice_name,provider_id,change_score,name_similarity,signals,recommended_action
+PR000,PR_REBRAND,HealthLynked Practice PR000,HealthLynked Medical Group,P0001,1.0,0.6415,same_address|same_phone|possible_rebrand|same_provider_npi|practice_affiliation_change,practice_change_review
+PR000,PR_NEW_AFFIL,HealthLynked Practice PR000,Coastal Ortho Partners,P0001,0.85,0.4082,same_address|same_provider_npi|practice_affiliation_change,practice_change_review
+PR_REBRAND,PR_NEW_AFFIL,HealthLynked Medical Group,Coastal Ortho Partners,P0001,0.85,0.3333,same_address|same_provider_npi|practice_affiliation_change,practice_change_review

@@ -1,0 +1,7 @@
+scenario,f1,precision,recall,auto_apply_precision,auto_apply_count,review_count,cost_per_correct_update_usd,f1_delta_vs_baseline
+baseline_fresh_business,0.948276,0.948276,0.948276,1.0,20,38,0.005836,0.0
+no_practice_website,0.884615,1.0,0.793103,1.0,5,41,0.002709,-0.063661
+no_health_system,0.843137,0.977273,0.741379,1.0,5,39,0.004033,-0.105139
+no_business_listing,0.93913,0.947368,0.931034,1.0,20,37,0.005609,-0.009146
+public_registry_only,0.15873,1.0,0.086207,1.0,5,0,0.0015,-0.789546
+stale_source_penalty,0.93913,0.947368,0.931034,1.0,20,37,0.005896,-0.009146

@@ -1,0 +1,44 @@
+[
+  {
+    "metric": "auto_apply_acceptance_rate",
+    "threshold": "< 0.995 over rolling 7 days",
+    "severity": "critical",
+    "owner": "data_quality",
+    "action": "Pause auto-apply for affected field/source, route to review, inspect recent accepted updates."
+  },
+  {
+    "metric": "all_stale_candidate_share",
+    "threshold": "> 0.25 of candidates",
+    "severity": "high",
+    "owner": "data_platform",
+    "action": "Trigger AWS EventBridge recrawl/reingest jobs and lower auto-apply eligibility until freshness recovers."
+  },
+  {
+    "metric": "source_coverage_rate",
+    "threshold": "< 0.80 for any primary source",
+    "severity": "high",
+    "owner": "connectors",
+    "action": "Check connector failures, API changes, robots/legal constraints, and retry queues."
+  },
+  {
+    "metric": "review_backlog_age_p95_hours",
+    "threshold": "> 72 hours",
+    "severity": "medium",
+    "owner": "operations",
+    "action": "Increase reviewer allocation or tighten auto-apply expansion candidates with strong active-learning evidence."
+  },
+  {
+    "metric": "cost_per_1000_records",
+    "threshold": "> planned budget by 20%",
+    "severity": "medium",
+    "owner": "platform_finops",
+    "action": "Inspect LLM call rate, manual review rate, failed recrawls, and low-value source usage."
+  },
+  {
+    "metric": "false_positive_review_rate",
+    "threshold": "> 0.10 by source/field",
+    "severity": "high",
+    "owner": "data_science",
+    "action": "Downweight source-field pair or require additional corroboration in shadow mode."
+  }
+]

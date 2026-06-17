@@ -1,0 +1,3 @@
+priority_band,items,sla_hours,estimated_reviewer_hours,risk_policy
+medium,13,24,0.542,standard_queue_review
+low,24,72,0.6,standard_queue_review

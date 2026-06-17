@@ -1,0 +1,12 @@
+{
+  "total_weight": 100,
+  "weighted_score": 100.0,
+  "score_percent": 100.0,
+  "criteria": 12,
+  "criteria_at_full_score": 12,
+  "lowest_criteria": [
+    "operational_verifiability",
+    "privacy_security",
+    "agentic_innovation"
+  ]
+}

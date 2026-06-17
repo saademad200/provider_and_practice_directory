@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "evaluating-provider-directory-pipeline_positive_1",
+    "input": "Check CV metrics, red-team eval, readiness score, verifier check for this provider directory batch.",
+    "expected_skill": "evaluating-provider-directory-pipeline",
+    "should_trigger": true
+  },
+  {
+    "case_id": "evaluating-provider-directory-pipeline_positive_2",
+    "input": "I need help with CV metrics, red-team eval, readiness score, verifier check before review routing.",
+    "expected_skill": "evaluating-provider-directory-pipeline",
+    "should_trigger": true
+  },
+  {
+    "case_id": "evaluating-provider-directory-pipeline_positive_3",
+    "input": "Run the evaluating-provider-directory-pipeline workflow for the latest package artifacts.",
+    "expected_skill": "evaluating-provider-directory-pipeline",
+    "should_trigger": true
+  },
+  {
+    "case_id": "evaluating-provider-directory-pipeline_negative_1",
+    "input": "Do manual review disposition instead.",
+    "expected_skill": "evaluating-provider-directory-pipeline",
+    "should_trigger": false
+  },
+  {
+    "case_id": "evaluating-provider-directory-pipeline_negative_2",
+    "input": "Summarize the executive summary in plain English.",
+    "expected_skill": "evaluating-provider-directory-pipeline",
+    "should_trigger": false
+  },
+  {
+    "case_id": "evaluating-provider-directory-pipeline_negative_3",
+    "input": "Package the current submission zip without changing workflow logic.",
+    "expected_skill": "evaluating-provider-directory-pipeline",
+    "should_trigger": false
+  }
+]

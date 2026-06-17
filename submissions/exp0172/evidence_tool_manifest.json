@@ -1,0 +1,469 @@
+{
+  "cloud_target": "aws",
+  "contract": "provider-directory-evidence-tools",
+  "manifest_version": "2026-06-16",
+  "tools": [
+    {
+      "authority_rank": 1,
+      "cache_ttl_days": 7,
+      "description": "Fetch and normalize npi, provider_name, practice_address, mailing_address, taxonomy_specialty, enumeration_status from official_api.",
+      "freshness_sla_days": 7,
+      "input_schema": {
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "provider_name"
+        ],
+        "type": "object"
+      },
+      "name": "nppes_npi_registry",
+      "output_schema": {
+        "properties": {
+          "cache_key": {
+            "type": "string"
+          },
+          "connector_id": {
+            "const": "nppes_npi_registry"
+          },
+          "evidence": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "health_status": {
+            "enum": [
+              "ok",
+              "degraded",
+              "failed",
+              "stale"
+            ]
+          },
+          "retrieved_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connector_id",
+          "retrieved_at",
+          "evidence",
+          "health_status"
+        ],
+        "type": "object"
+      },
+      "permissions": {
+        "default_mode": "read_or_append_only",
+        "may_mutate_directory": false,
+        "requires_terms_allowlist": false
+      }
+    },
+    {
+      "authority_rank": 1,
+      "cache_ttl_days": 14,
+      "description": "Fetch and normalize license_status, disciplinary_status, license_expiration, practice_state from official_state_source.",
+      "freshness_sla_days": 14,
+      "input_schema": {
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "provider_name"
+        ],
+        "type": "object"
+      },
+      "name": "state_license_board",
+      "output_schema": {
+        "properties": {
+          "cache_key": {
+            "type": "string"
+          },
+          "connector_id": {
+            "const": "state_license_board"
+          },
+          "evidence": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "health_status": {
+            "enum": [
+              "ok",
+              "degraded",
+              "failed",
+              "stale"
+            ]
+          },
+          "retrieved_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connector_id",
+          "retrieved_at",
+          "evidence",
+          "health_status"
+        ],
+        "type": "object"
+      },
+      "permissions": {
+        "default_mode": "read_or_append_only",
+        "may_mutate_directory": false,
+        "requires_terms_allowlist": false
+      }
+    },
+    {
+      "authority_rank": 2,
+      "cache_ttl_days": 30,
+      "description": "Fetch and normalize clinician_enrollment, organization, address, specialty, provider participation signals from official_dataset_api.",
+      "freshness_sla_days": 30,
+      "input_schema": {
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "provider_name"
+        ],
+        "type": "object"
+      },
+      "name": "cms_provider_data_catalog",
+      "output_schema": {
+        "properties": {
+          "cache_key": {
+            "type": "string"
+          },
+          "connector_id": {
+            "const": "cms_provider_data_catalog"
+          },
+          "evidence": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "health_status": {
+            "enum": [
+              "ok",
+              "degraded",
+              "failed",
+              "stale"
+            ]
+          },
+          "retrieved_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connector_id",
+          "retrieved_at",
+          "evidence",
+          "health_status"
+        ],
+        "type": "object"
+      },
+      "permissions": {
+        "default_mode": "read_or_append_only",
+        "may_mutate_directory": false,
+        "requires_terms_allowlist": false
+      }
+    },
+    {
+      "authority_rank": 2,
+      "cache_ttl_days": 14,
+      "description": "Fetch and normalize practice_affiliation, location_address, phone, specialty, accepting_new_patients from public_web_or_partner_feed.",
+      "freshness_sla_days": 14,
+      "input_schema": {
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "provider_name"
+        ],
+        "type": "object"
+      },
+      "name": "health_system_directory",
+      "output_schema": {
+        "properties": {
+          "cache_key": {
+            "type": "string"
+          },
+          "connector_id": {
+            "const": "health_system_directory"
+          },
+          "evidence": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "health_status": {
+            "enum": [
+              "ok",
+              "degraded",
+              "failed",
+              "stale"
+            ]
+          },
+          "retrieved_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connector_id",
+          "retrieved_at",
+          "evidence",
+          "health_status"
+        ],
+        "type": "object"
+      },
+      "permissions": {
+        "default_mode": "read_or_append_only",
+        "may_mutate_directory": false,
+        "requires_terms_allowlist": false
+      }
+    },
+    {
+      "authority_rank": 3,
+      "cache_ttl_days": 14,
+      "description": "Fetch and normalize phone, location_address, accepting_new_patients, specialty, provider_roster from public_web.",
+      "freshness_sla_days": 21,
+      "input_schema": {
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "provider_name"
+        ],
+        "type": "object"
+      },
+      "name": "practice_website",
+      "output_schema": {
+        "properties": {
+          "cache_key": {
+            "type": "string"
+          },
+          "connector_id": {
+            "const": "practice_website"
+          },
+          "evidence": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "health_status": {
+            "enum": [
+              "ok",
+              "degraded",
+              "failed",
+              "stale"
+            ]
+          },
+          "retrieved_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connector_id",
+          "retrieved_at",
+          "evidence",
+          "health_status"
+        ],
+        "type": "object"
+      },
+      "permissions": {
+        "default_mode": "read_or_append_only",
+        "may_mutate_directory": false,
+        "requires_terms_allowlist": true
+      }
+    },
+    {
+      "authority_rank": 5,
+      "cache_ttl_days": 30,
+      "description": "Fetch and normalize phone, address, open/closed hints from third_party_listing.",
+      "freshness_sla_days": 45,
+      "input_schema": {
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "source_run_id": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "provider_id",
+          "provider_name"
+        ],
+        "type": "object"
+      },
+      "name": "business_listing",
+      "output_schema": {
+        "properties": {
+          "cache_key": {
+            "type": "string"
+          },
+          "connector_id": {
+            "const": "business_listing"
+          },
+          "evidence": {
+            "items": {
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "health_status": {
+            "enum": [
+              "ok",
+              "degraded",
+              "failed",
+              "stale"
+            ]
+          },
+          "retrieved_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "source_url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "connector_id",
+          "retrieved_at",
+          "evidence",
+          "health_status"
+        ],
+        "type": "object"
+      },
+      "permissions": {
+        "default_mode": "read_or_append_only",
+        "may_mutate_directory": false,
+        "requires_terms_allowlist": true
+      }
+    }
+  ]
+}

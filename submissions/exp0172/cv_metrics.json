@@ -1,0 +1,388 @@
+{
+  "config": {
+    "auto_apply_threshold": 0.94,
+    "confidence_threshold": 0.74,
+    "disabled_sources": [],
+    "field_auto_apply_thresholds": {
+      "accepting_new_patients": 0.98,
+      "address": 0.97,
+      "license_status": 0.9,
+      "phone": 0.96,
+      "specialty": 0.97
+    },
+    "field_confidence_thresholds": {
+      "accepting_new_patients": 0.82,
+      "address": 0.8,
+      "license_status": 0.72,
+      "phone": 0.78,
+      "specialty": 0.82
+    },
+    "full_directory_peer_context": true,
+    "min_auto_sources": 1,
+    "min_auto_sources_by_field": {
+      "accepting_new_patients": 3,
+      "address": 3,
+      "license_status": 1,
+      "phone": 3,
+      "specialty": 3
+    },
+    "min_distinct_sources": 1,
+    "min_distinct_sources_by_field": {
+      "accepting_new_patients": 2,
+      "address": 2,
+      "license_status": 1,
+      "phone": 2,
+      "specialty": 2
+    },
+    "n_splits": 5,
+    "practice_consensus_review_fields": [
+      "phone",
+      "address"
+    ],
+    "recency_half_life_days": 120.0,
+    "seed": 42,
+    "source_field_allowlist": {
+      "business_listing": [
+        "phone",
+        "address"
+      ]
+    },
+    "source_max_age_days_by_source_field": {
+      "business_listing": {
+        "address": 60,
+        "phone": 60
+      }
+    },
+    "source_weights": {
+      "business_listing": 0.1,
+      "practice_website": 0.65
+    }
+  },
+  "folds": [
+    {
+      "auto_apply_count": 5,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.00515,
+      "estimated_cost_usd": 0.0721,
+      "f1": 0.965517,
+      "fn": 0,
+      "fold": 1,
+      "fp": 1,
+      "gold_updates": 14,
+      "precision": 0.933333,
+      "predicted_updates": 15,
+      "recall": 1.0,
+      "review_count": 10,
+      "review_recall": 0.642857,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.003,
+        "health_system": 0.0275,
+        "nppes": 0.0011,
+        "practice_website": 0.036,
+        "state_license": 0.0045
+      },
+      "tp": 14
+    },
+    {
+      "auto_apply_count": 8,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.006208,
+      "estimated_cost_usd": 0.0745,
+      "f1": 0.923077,
+      "fn": 1,
+      "fold": 2,
+      "fp": 1,
+      "gold_updates": 13,
+      "precision": 0.923077,
+      "predicted_updates": 13,
+      "recall": 0.923077,
+      "review_count": 5,
+      "review_recall": 0.307692,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.003,
+        "health_system": 0.0275,
+        "nppes": 0.001,
+        "practice_website": 0.04,
+        "state_license": 0.003
+      },
+      "tp": 12
+    },
+    {
+      "auto_apply_count": 2,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.006078,
+      "estimated_cost_usd": 0.0547,
+      "f1": 0.947368,
+      "fn": 1,
+      "fold": 3,
+      "fp": 0,
+      "gold_updates": 10,
+      "precision": 1.0,
+      "predicted_updates": 9,
+      "recall": 0.9,
+      "review_count": 7,
+      "review_recall": 0.7,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.006,
+        "health_system": 0.02,
+        "nppes": 0.0007,
+        "practice_website": 0.028
+      },
+      "tp": 9
+    },
+    {
+      "auto_apply_count": 3,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.006182,
+      "estimated_cost_usd": 0.068,
+      "f1": 0.916667,
+      "fn": 1,
+      "fold": 4,
+      "fp": 1,
+      "gold_updates": 12,
+      "precision": 0.916667,
+      "predicted_updates": 12,
+      "recall": 0.916667,
+      "review_count": 9,
+      "review_recall": 0.666667,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.003,
+        "health_system": 0.02,
+        "nppes": 0.001,
+        "practice_website": 0.044
+      },
+      "tp": 11
+    },
+    {
+      "auto_apply_count": 2,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.005744,
+      "estimated_cost_usd": 0.0517,
+      "f1": 1.0,
+      "fn": 0,
+      "fold": 5,
+      "fp": 0,
+      "gold_updates": 9,
+      "precision": 1.0,
+      "predicted_updates": 9,
+      "recall": 1.0,
+      "review_count": 7,
+      "review_recall": 0.777778,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.003,
+        "health_system": 0.02,
+        "nppes": 0.0007,
+        "practice_website": 0.028
+      },
+      "tp": 9
+    }
+  ],
+  "overall": {
+    "auto_apply_count": 20,
+    "auto_apply_precision": 1.0,
+    "cost_per_correct_update_usd": 0.005836,
+    "estimated_cost_usd": 0.321,
+    "f1": 0.948276,
+    "fn": 3,
+    "fp": 3,
+    "gold_updates": 58,
+    "precision": 0.948276,
+    "predicted_updates": 58,
+    "recall": 0.948276,
+    "review_count": 38,
+    "review_recall": 0.603448,
+    "source_cost_breakdown_usd": {
+      "business_listing": 0.018,
+      "health_system": 0.115,
+      "nppes": 0.0045,
+      "practice_website": 0.176,
+      "state_license": 0.0075
+    },
+    "tp": 55
+  },
+  "per_field": [
+    {
+      "auto_apply_count": 10,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.006258,
+      "estimated_cost_usd": 0.0751,
+      "f1": 1.0,
+      "field": "accepting_new_patients",
+      "fn": 0,
+      "fp": 0,
+      "gold_updates": 12,
+      "precision": 1.0,
+      "predicted_updates": 12,
+      "recall": 1.0,
+      "review_count": 2,
+      "review_recall": 0.166667,
+      "source_cost_breakdown_usd": {
+        "health_system": 0.03,
+        "nppes": 0.0011,
+        "practice_website": 0.044
+      },
+      "tp": 12
+    },
+    {
+      "auto_apply_count": 0,
+      "auto_apply_precision": 0.0,
+      "cost_per_correct_update_usd": 0.006175,
+      "estimated_cost_usd": 0.0741,
+      "f1": 0.888889,
+      "field": "address",
+      "fn": 2,
+      "fp": 1,
+      "gold_updates": 14,
+      "precision": 0.923077,
+      "predicted_updates": 13,
+      "recall": 0.857143,
+      "review_count": 13,
+      "review_recall": 0.857143,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.003,
+        "health_system": 0.03,
+        "nppes": 0.0011,
+        "practice_website": 0.04
+      },
+      "tp": 12
+    },
+    {
+      "auto_apply_count": 5,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.0015,
+      "estimated_cost_usd": 0.0075,
+      "f1": 0.909091,
+      "field": "license_status",
+      "fn": 1,
+      "fp": 0,
+      "gold_updates": 6,
+      "precision": 1.0,
+      "predicted_updates": 5,
+      "recall": 0.833333,
+      "review_count": 0,
+      "review_recall": 0.0,
+      "source_cost_breakdown_usd": {
+        "state_license": 0.0075
+      },
+      "tp": 5
+    },
+    {
+      "auto_apply_count": 0,
+      "auto_apply_precision": 0.0,
+      "cost_per_correct_update_usd": 0.005839,
+      "estimated_cost_usd": 0.1051,
+      "f1": 1.0,
+      "field": "phone",
+      "fn": 0,
+      "fp": 0,
+      "gold_updates": 18,
+      "precision": 1.0,
+      "predicted_updates": 18,
+      "recall": 1.0,
+      "review_count": 18,
+      "review_recall": 1.0,
+      "source_cost_breakdown_usd": {
+        "business_listing": 0.015,
+        "health_system": 0.0325,
+        "nppes": 0.0016,
+        "practice_website": 0.056
+      },
+      "tp": 18
+    },
+    {
+      "auto_apply_count": 5,
+      "auto_apply_precision": 1.0,
+      "cost_per_correct_update_usd": 0.0074,
+      "estimated_cost_usd": 0.0592,
+      "f1": 0.888889,
+      "field": "specialty",
+      "fn": 0,
+      "fp": 2,
+      "gold_updates": 8,
+      "precision": 0.8,
+      "predicted_updates": 10,
+      "recall": 1.0,
+      "review_count": 5,
+      "review_recall": 0.375,
+      "source_cost_breakdown_usd": {
+        "health_system": 0.0225,
+        "nppes": 0.0007,
+        "practice_website": 0.036
+      },
+      "tp": 8
+    }
+  ],
+  "runtime_seconds": 0.188,
+  "worst_providers": [
+    {
+      "error": 2,
+      "fn": 1,
+      "fp": 1,
+      "provider_id": "P0010",
+      "tp": 1
+    },
+    {
+      "error": 1,
+      "fn": 1,
+      "fp": 0,
+      "provider_id": "P0038",
+      "tp": 0
+    },
+    {
+      "error": 1,
+      "fn": 1,
+      "fp": 0,
+      "provider_id": "P0049",
+      "tp": 1
+    },
+    {
+      "error": 1,
+      "fn": 0,
+      "fp": 1,
+      "provider_id": "P0001",
+      "tp": 0
+    },
+    {
+      "error": 1,
+      "fn": 0,
+      "fp": 1,
+      "provider_id": "P0013",
+      "tp": 0
+    },
+    {
+      "error": 0,
+      "fn": 0,
+      "fp": 0,
+      "provider_id": "P0003",
+      "tp": 1
+    },
+    {
+      "error": 0,
+      "fn": 0,
+      "fp": 0,
+      "provider_id": "P0004",
+      "tp": 2
+    },
+    {
+      "error": 0,
+      "fn": 0,
+      "fp": 0,
+      "provider_id": "P0005",
+      "tp": 2
+    },
+    {
+      "error": 0,
+      "fn": 0,
+      "fp": 0,
+      "provider_id": "P0006",
+      "tp": 1
+    },
+    {
+      "error": 0,
+      "fn": 0,
+      "fp": 0,
+      "provider_id": "P0009",
+      "tp": 1
+    }
+  ]
+}

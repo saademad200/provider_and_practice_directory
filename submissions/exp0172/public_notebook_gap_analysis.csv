@@ -1,0 +1,4 @@
+public_asset,observed_strength,observed_gap,our_response
+chaitanyajamble/provider-and-practice-directory,"Has a runnable tabular scoring baseline with structural, temporal, duplicate-risk, and action-priority features.",No external evidence collection or citation-backed update candidate workflow.,"Candidate updates preserve sources, URLs, freshness, old/new values, confidence, review reasons, and decisions."
+chaitanyajamble/provider-and-practice-directory,Uses duplicate-risk signals via TF-IDF blocking.,"Duplicate handling is a score, not a governed merge/review workflow.",Duplicate and movement candidates are review-routed with rollback and audit artifacts.
+chaitanyajamble/provider-and-practice-directory,Creates a submission CSV from an attached dataset.,"No production architecture, AWS path, source governance, cost model, or human-review SLA.","Option C package includes AWS architecture, cost model, source connector registry, review SLA, and verifier."

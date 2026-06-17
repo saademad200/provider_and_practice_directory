@@ -1,0 +1,38 @@
+[
+  {
+    "case_id": "auditing-and-rollback_positive_1",
+    "input": "Check audit event, rollback plan, false positive auto-apply for this provider directory batch.",
+    "expected_skill": "auditing-and-rollback",
+    "should_trigger": true
+  },
+  {
+    "case_id": "auditing-and-rollback_positive_2",
+    "input": "I need help with audit event, rollback plan, false positive auto-apply before review routing.",
+    "expected_skill": "auditing-and-rollback",
+    "should_trigger": true
+  },
+  {
+    "case_id": "auditing-and-rollback_positive_3",
+    "input": "Run the auditing-and-rollback workflow for the latest package artifacts.",
+    "expected_skill": "auditing-and-rollback",
+    "should_trigger": true
+  },
+  {
+    "case_id": "auditing-and-rollback_negative_1",
+    "input": "Do new candidate generation instead.",
+    "expected_skill": "auditing-and-rollback",
+    "should_trigger": false
+  },
+  {
+    "case_id": "auditing-and-rollback_negative_2",
+    "input": "Summarize the executive summary in plain English.",
+    "expected_skill": "auditing-and-rollback",
+    "should_trigger": false
+  },
+  {
+    "case_id": "auditing-and-rollback_negative_3",
+    "input": "Package the current submission zip without changing workflow logic.",
+    "expected_skill": "auditing-and-rollback",
+    "should_trigger": false
+  }
+]

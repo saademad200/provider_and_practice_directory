@@ -1,0 +1,6 @@
+disabled_source,f1,precision,recall,auto_apply_precision,delta_f1_vs_base
+nppes,0.859649,0.875,0.844828,1.0,-0.064721
+state_license,0.877193,0.892857,0.862069,1.0,-0.047177
+health_system,0.882883,0.924528,0.844828,1.0,-0.041487
+practice_website,0.900901,0.943396,0.862069,1.0,-0.023469
+business_listing,0.93913,0.947368,0.931034,1.0,0.01476

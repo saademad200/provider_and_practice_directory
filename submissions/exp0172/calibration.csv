@@ -1,0 +1,12 @@
+field,decision,confidence_bin,count,accuracy,avg_confidence
+accepting_new_patients,auto_apply,0.98-1.00,9,1.0,0.99
+accepting_new_patients,review,0.98-1.00,5,0.6,0.99
+address,auto_apply,0.98-1.00,5,1.0,0.99
+address,review,0.98-1.00,8,0.875,0.99
+license_status,auto_apply,0.98-1.00,5,1.0,0.99
+phone,auto_apply,0.98-1.00,7,1.0,0.99
+phone,review,0.90-0.95,1,1.0,0.9297
+phone,review,0.98-1.00,11,0.909091,0.989391
+specialty,auto_apply,0.98-1.00,3,1.0,0.99
+specialty,review,0.95-0.98,1,1.0,0.9771
+specialty,review,0.98-1.00,6,0.666667,0.99

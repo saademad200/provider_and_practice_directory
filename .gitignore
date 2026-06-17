@@ -1,0 +1,35 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Generated research outputs
+outputs/
+results/
+
+# Keep the final submission package, not every historical package.
+submissions/*.zip
+!submissions/latest_final_package.zip
+!submissions/exp0172_final_combined_abc_handoff_package.zip
+submissions/exp0*/
+!submissions/exp0172/
+!submissions/exp0172/**
+
+# Raw external downloads and reference PDFs are not required in the repo.
+data/raw/kaggle_competition/provider-practice-directory-update-pipeline.zip
+AgenticWhitepapers/*.pdf
