@@ -38,6 +38,7 @@ git push -u origin main
 - `submissions/healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md`
 - `submissions/healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 - `submissions/healthlynked_option_c_clean/proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+- `submissions/healthlynked_option_c_clean/proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
 - `submissions/healthlynked_option_c_clean/prototype/WORKING_PROTOTYPE.md`
 - `submissions/healthlynked_option_c_clean/dashboard/index.html`
 

@@ -9,11 +9,12 @@ This is the curated judge package for the HealthLynked Provider / Practice Direc
 3. Read `proposal/JUDGE_DECISION_MEMO.md` for the consulting-ready business case.
 4. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
 5. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
-6. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
-7. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-8. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` for the trusted-source ingestion plan.
-9. Inspect `dashboard/index.html` for the sample human review experience.
-10. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+6. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
+7. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
+8. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+9. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` and `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md` for trusted-source operations.
+10. Inspect `dashboard/index.html` for the sample human review experience.
+11. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Why The Package Is Structured This Way
 

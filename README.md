@@ -30,17 +30,19 @@ Start here:
 4. `proposal/WINNING_PROPOSAL_BRIEF.md`
 5. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 6. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-7. `prototype/WORKING_PROTOTYPE.md`
-8. `prototype/RECOMMENDATION_API_CONTRACT.md`
-9. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-10. `dashboard/index.html`
-11. `evidence/verification.json`
+7. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+8. `prototype/WORKING_PROTOTYPE.md`
+9. `prototype/RECOMMENDATION_API_CONTRACT.md`
+10. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+11. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+12. `dashboard/index.html`
+13. `evidence/verification.json`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 79 curated-package checks
+- Verification checks passed: 81 curated-package checks
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
@@ -57,11 +59,13 @@ Show only the curated package path above. The intended first impression is small
 4. `proposal/WINNING_PROPOSAL_BRIEF.md`
 5. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 6. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-7. `prototype/WORKING_PROTOTYPE.md`
-8. `prototype/RECOMMENDATION_API_CONTRACT.md`
-9. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-10. `dashboard/index.html`
-11. `evidence/verification.json`
+7. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+8. `prototype/WORKING_PROTOTYPE.md`
+9. `prototype/RECOMMENDATION_API_CONTRACT.md`
+10. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+11. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+12. `dashboard/index.html`
+13. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 
