@@ -4,7 +4,7 @@ This document defines the production control loop for the provider-directory pip
 
 ## Current Baseline Snapshot
 
-- Candidate updates: 57
+- Candidate updates: 58
 - Auto-apply count: 20
 - Review count: 38
 - Auto-apply precision proxy: 1.0

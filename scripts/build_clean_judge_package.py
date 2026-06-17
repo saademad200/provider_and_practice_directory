@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import zipfile
 from pathlib import Path
@@ -16,8 +17,10 @@ TARGET = ROOT / "submissions/healthlynked_option_c_clean"
 TOP_LEVEL_FILES = [
     ("README.md", "README.md"),
     ("Provider_Directory_Update_Pipeline_End_to_End.ipynb", "Provider_Directory_Update_Pipeline_End_to_End.ipynb"),
+    ("JUDGE_DECISION_MEMO.md", "proposal/JUDGE_DECISION_MEMO.md"),
     ("WINNING_PROPOSAL_BRIEF.md", "proposal/WINNING_PROPOSAL_BRIEF.md"),
     ("TECHNICAL_ARCHITECTURE_PROPOSAL.md", "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md"),
+    ("CONFIDENCE_AND_DECISION_POLICY.md", "proposal/CONFIDENCE_AND_DECISION_POLICY.md"),
     ("ARCHITECTURE_DIAGRAM.md", "proposal/ARCHITECTURE_DIAGRAM.md"),
     ("ARCHITECTURE_DIAGRAM.mmd", "proposal/ARCHITECTURE_DIAGRAM.mmd"),
     ("IMPLEMENTATION_ROADMAP_90_DAYS.md", "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md"),
@@ -41,6 +44,7 @@ TOP_LEVEL_FILES = [
     ("judge_rubric_self_eval.csv", "evidence/judge_rubric_self_eval.csv"),
     ("verification.json", "evidence/verification.json"),
     ("COST_MODEL.md", "appendix/COST_MODEL.md"),
+    ("AWS_PRODUCTION_ARCHITECTURE.md", "appendix/AWS_PRODUCTION_ARCHITECTURE.md"),
     ("DASHBOARD_SPEC.md", "appendix/DASHBOARD_SPEC.md"),
     ("DUPLICATE_MOVEMENT_DETECTION.md", "appendix/DUPLICATE_MOVEMENT_DETECTION.md"),
     ("INACTIVE_PROVIDER_DETECTION.md", "appendix/INACTIVE_PROVIDER_DETECTION.md"),
@@ -55,7 +59,6 @@ TOP_LEVEL_FILES = [
 
 CODE_FILES = [
     "scripts/run_best_pipeline.py",
-    "scripts/verify_pipeline.py",
     "requirements.txt",
     "pyproject.toml",
 ]
@@ -76,12 +79,14 @@ This is the curated judge package for the HealthLynked Provider / Practice Direc
 
 1. Open `Provider_Directory_Update_Pipeline_End_to_End.ipynb` for the narrated end-to-end walkthrough.
 2. Read `proposal/WINNING_PROPOSAL_BRIEF.md` for the executive case.
-3. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
-4. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
-5. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-6. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` for the trusted-source ingestion plan.
-7. Inspect `dashboard/index.html` for the sample human review experience.
-8. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+3. Read `proposal/JUDGE_DECISION_MEMO.md` for the consulting-ready business case.
+4. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
+5. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
+6. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
+7. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+8. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` for the trusted-source ingestion plan.
+9. Inspect `dashboard/index.html` for the sample human review experience.
+10. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Why The Package Is Structured This Way
 
@@ -97,8 +102,10 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 
 - `START_HERE.md`
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+- `proposal/JUDGE_DECISION_MEMO.md`
 - `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+- `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 - `prototype/WORKING_PROTOTYPE.md`
 - `dashboard/index.html`
 
@@ -117,7 +124,7 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `dashboard/` - sample human review dashboard.
 - `evidence/` - machine-readable verification, rubric, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
 - `appendix/` - supporting production controls and deeper implementation notes.
-- `src/` and `scripts/` - lightweight reproducible code snapshot.
+- `src/`, `scripts/`, and `data/sample/` - lightweight reproducible MVP code snapshot.
 """
 
 
@@ -149,13 +156,16 @@ def build(target: Path) -> dict:
         if source_name == "README.md":
             continue
         copy_file(SOURCE / source_name, target / target_name)
+    patch_notebook_for_curated_package(target)
 
     for directory in ["dashboard", "dashboard_v2"]:
         source_dir = SOURCE / directory
         if source_dir.exists():
             shutil.copytree(source_dir, target / directory)
+    sync_dashboard_metrics(target)
 
     shutil.copytree(ROOT / "src", target / "src", ignore=shutil.ignore_patterns("__pycache__"))
+    shutil.copytree(ROOT / "data/sample", target / "data/sample")
     for code_file in CODE_FILES:
         copy_file(ROOT / code_file, target / code_file)
 
@@ -172,6 +182,44 @@ def build(target: Path) -> dict:
         encoding="utf-8",
     )
     return summary
+
+
+def sync_dashboard_metrics(target: Path) -> None:
+    metrics_path = target / "prototype/metrics.json"
+    if not metrics_path.exists():
+        return
+    metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+    for dashboard_path in [target / "dashboard/index.html", target / "dashboard_v2/index.html"]:
+        if not dashboard_path.exists():
+            continue
+        html = dashboard_path.read_text(encoding="utf-8")
+        match = re.search(r"const data = (\{.*?\});\n\s+const views", html, flags=re.S)
+        if not match:
+            continue
+        data = json.loads(match.group(1))
+        data["metrics"] = metrics
+        data.setdefault("counts", {})
+        data["counts"]["review"] = metrics.get("review_count", data["counts"].get("review"))
+        data["counts"]["auto"] = metrics.get("auto_apply_count", data["counts"].get("auto"))
+        replacement = "const data = " + json.dumps(data, sort_keys=True) + ";\n    const views"
+        html = html[: match.start()] + replacement + html[match.end() :]
+        dashboard_path.write_text(html, encoding="utf-8")
+
+
+def patch_notebook_for_curated_package(target: Path) -> None:
+    notebook_path = target / "Provider_Directory_Update_Pipeline_End_to_End.ipynb"
+    if not notebook_path.exists():
+        return
+    notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
+    old = "audit_path = ROOT / 'submissions/exp0172/audit_events.jsonl'\n"
+    new = "audit_path = ROOT / 'evidence/audit_events.jsonl'\n"
+    for cell in notebook.get("cells", []):
+        source = cell.get("source", [])
+        if isinstance(source, list):
+            cell["source"] = [new if line == old else line for line in source]
+    notebook_text = json.dumps(notebook, indent=1, ensure_ascii=False)
+    notebook_text = notebook_text.replace(str(ROOT), ".")
+    notebook_path.write_text(notebook_text + "\n", encoding="utf-8")
 
 
 def zip_dir(target: Path, zip_path: Path) -> None:

@@ -26,19 +26,21 @@ Start here:
 
 1. `START_HERE.md`
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-3. `proposal/WINNING_PROPOSAL_BRIEF.md`
-4. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-5. `prototype/WORKING_PROTOTYPE.md`
-6. `prototype/RECOMMENDATION_API_CONTRACT.md`
-7. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-8. `dashboard/index.html`
-9. `evidence/verification.json`
+3. `proposal/JUDGE_DECISION_MEMO.md`
+4. `proposal/WINNING_PROPOSAL_BRIEF.md`
+5. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+6. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+7. `prototype/WORKING_PROTOTYPE.md`
+8. `prototype/RECOMMENDATION_API_CONTRACT.md`
+9. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+10. `dashboard/index.html`
+11. `evidence/verification.json`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 61 curated-package checks
+- Verification checks passed: 79 curated-package checks
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
@@ -51,13 +53,15 @@ Show only the curated package path above. The intended first impression is small
 
 1. `START_HERE.md`
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-3. `proposal/WINNING_PROPOSAL_BRIEF.md`
-4. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-5. `prototype/WORKING_PROTOTYPE.md`
-6. `prototype/RECOMMENDATION_API_CONTRACT.md`
-7. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-8. `dashboard/index.html`
-9. `evidence/verification.json`
+3. `proposal/JUDGE_DECISION_MEMO.md`
+4. `proposal/WINNING_PROPOSAL_BRIEF.md`
+5. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+6. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+7. `prototype/WORKING_PROTOTYPE.md`
+8. `prototype/RECOMMENDATION_API_CONTRACT.md`
+9. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+10. `dashboard/index.html`
+11. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 

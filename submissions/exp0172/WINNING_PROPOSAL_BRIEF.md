@@ -6,7 +6,9 @@ This submission provides:
 
 - a working MVP;
 - an AWS production architecture;
+- a judge decision memo for why this team can implement after the award;
 - confidence scoring;
+- explicit auto-update and human-review decision policy;
 - source governance;
 - human review routing;
 - audit and rollback;
@@ -30,10 +32,11 @@ This submission provides:
 ## Best Judge Path
 
 1. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-2. `TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-3. `ARCHITECTURE_DIAGRAM.md`
-4. `WORKING_PROTOTYPE.md`
-5. `candidate_updates.csv`
-6. `auto_apply_updates.csv`
-7. `review_queue.csv`
-8. `audit_events.jsonl`
+2. `proposal/JUDGE_DECISION_MEMO.md`
+3. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+4. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+5. `prototype/WORKING_PROTOTYPE.md`
+6. `prototype/candidate_updates.csv`
+7. `prototype/auto_apply_updates.csv`
+8. `prototype/review_queue.csv`
+9. `evidence/audit_events.jsonl`

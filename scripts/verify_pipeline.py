@@ -4,6 +4,8 @@ from __future__ import annotations
 import argparse
 import compileall
 import json
+import re
+import shutil
 import subprocess
 import sys
 import zipfile
@@ -221,8 +223,10 @@ CURATED_PACKAGE_FILES = [
     "README.md",
     "START_HERE.md",
     "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+    "proposal/JUDGE_DECISION_MEMO.md",
     "proposal/WINNING_PROPOSAL_BRIEF.md",
     "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+    "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
     "proposal/ARCHITECTURE_DIAGRAM.md",
     "proposal/ARCHITECTURE_DIAGRAM.mmd",
     "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
@@ -243,6 +247,7 @@ CURATED_PACKAGE_FILES = [
     "evidence/audit_events.jsonl",
     "evidence/rollback_plan.csv",
     "appendix/COST_MODEL.md",
+    "appendix/AWS_PRODUCTION_ARCHITECTURE.md",
     "appendix/DASHBOARD_SPEC.md",
     "appendix/DUPLICATE_MOVEMENT_DETECTION.md",
     "appendix/INACTIVE_PROVIDER_DETECTION.md",
@@ -250,7 +255,9 @@ CURATED_PACKAGE_FILES = [
     "src/metrics.py",
     "src/cv.py",
     "scripts/run_best_pipeline.py",
-    "scripts/verify_pipeline.py",
+    "data/sample/providers.csv",
+    "data/sample/evidence.csv",
+    "data/sample/gold_updates.csv",
     "requirements.txt",
 ]
 
@@ -419,6 +426,90 @@ def validate_package(checks: list[dict[str, Any]], package_path: Path) -> None:
         record(checks, f"package_{filename}", expected in names, expected)
     private_hits = sorted(name for name in names if any(pattern in name for pattern in PRIVATE_PACKAGE_PATTERNS))
     record(checks, "package_no_private_research_artifacts", not private_hits, "; ".join(private_hits[:10]))
+    if curated_mode:
+        validate_curated_package_text(checks, package_path, prefix)
+
+
+def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Path, prefix: str) -> None:
+    selected_docs = [
+        "START_HERE.md",
+        "proposal/JUDGE_DECISION_MEMO.md",
+        "proposal/WINNING_PROPOSAL_BRIEF.md",
+        "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+        "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
+        "prototype/WORKING_PROTOTYPE.md",
+        "prototype/RECOMMENDATION_API_CONTRACT.md",
+    ]
+    forbidden = ["submissions/exp0172/", "COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
+    required_terms = {
+        "proposal/JUDGE_DECISION_MEMO.md": ["Monday-Morning Implementation Plan", "What Would Make This Unsafe"],
+        "proposal/CONFIDENCE_AND_DECISION_POLICY.md": ["Confidence Formula", "Auto-Update Rules", "Human Review Rules"],
+        "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md": ["Confidence And Decision Law", "AWS Production Plan"],
+        "prototype/RECOMMENDATION_API_CONTRACT.md": ["recommended_action", "audit_required"],
+    }
+    with zipfile.ZipFile(package_path) as archive:
+        legacy_hits: list[str] = []
+        for doc in selected_docs:
+            name = f"{prefix}/{doc}"
+            try:
+                text = archive.read(name).decode("utf-8")
+            except KeyError:
+                continue
+            for pattern in forbidden:
+                if pattern in text:
+                    legacy_hits.append(f"{doc}:{pattern}")
+            for term in required_terms.get(doc, []):
+                record(checks, f"package_text_{doc}_{term}", term in text, term)
+        try:
+            metrics = json.loads(archive.read(f"{prefix}/prototype/metrics.json").decode("utf-8"))
+            dashboard = archive.read(f"{prefix}/dashboard/index.html").decode("utf-8")
+            match = re.search(r"const data = (\{.*?\});\n\s+const views", dashboard, flags=re.S)
+            dashboard_metrics = json.loads(match.group(1))["metrics"] if match else {}
+            metric_keys = ["f1", "precision", "recall", "auto_apply_precision", "cost_per_correct_update_usd"]
+            consistent = all(dashboard_metrics.get(key) == metrics.get(key) for key in metric_keys)
+            detail = ", ".join(f"{key}={dashboard_metrics.get(key)}" for key in metric_keys)
+            record(checks, "package_dashboard_metrics_match_prototype", consistent, detail)
+        except (KeyError, json.JSONDecodeError, TypeError, AttributeError) as exc:
+            record(checks, "package_dashboard_metrics_match_prototype", False, str(exc))
+        try:
+            notebook_text = archive.read(f"{prefix}/Provider_Directory_Update_Pipeline_End_to_End.ipynb").decode("utf-8")
+            notebook_portable = "submissions/exp0172/audit_events.jsonl" not in notebook_text and "evidence/audit_events.jsonl" in notebook_text
+            record(checks, "package_notebook_uses_curated_paths", notebook_portable, "evidence/audit_events.jsonl")
+        except KeyError as exc:
+            record(checks, "package_notebook_uses_curated_paths", False, str(exc))
+    record(checks, "package_no_legacy_doc_references", not legacy_hits, "; ".join(legacy_hits[:10]))
+
+
+def run_package_self_contained_smoke(checks: list[dict[str, Any]], package_path: Path, out_dir: Path) -> None:
+    if not package_path.exists():
+        record(checks, "package_self_contained_smoke", False, str(package_path))
+        return
+    extract_dir = out_dir / "package_self_contained"
+    if extract_dir.exists():
+        shutil.rmtree(extract_dir)
+    extract_dir.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(package_path) as archive:
+        archive.extractall(extract_dir)
+    package_roots = [path for path in extract_dir.iterdir() if path.is_dir()]
+    if len(package_roots) != 1:
+        record(checks, "package_self_contained_smoke", False, f"roots={len(package_roots)}")
+        return
+    package_root = package_roots[0]
+    proc = subprocess.run(
+        [sys.executable, "scripts/run_best_pipeline.py", "--out-dir", "outputs/package_smoke"],
+        cwd=package_root,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    metrics_path = package_root / "outputs/package_smoke/metrics.json"
+    if proc.returncode != 0 or not metrics_path.exists():
+        record(checks, "package_self_contained_smoke", False, (proc.stderr or proc.stdout)[-500:])
+        return
+    metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+    passed = metrics.get("f1", 0) >= 0.90 and metrics.get("auto_apply_precision", 0) >= 0.95
+    detail = f"f1={metrics.get('f1')}, auto_precision={metrics.get('auto_apply_precision')}"
+    record(checks, "package_self_contained_smoke", passed, detail)
 
 
 def main() -> int:
@@ -441,6 +532,7 @@ def main() -> int:
     validate_notebook(checks)
     validate_recommendation_contract(checks)
     validate_package(checks, Path(args.package))
+    run_package_self_contained_smoke(checks, Path(args.package), out_dir)
 
     report = {
         "passed": all(item["passed"] for item in checks),

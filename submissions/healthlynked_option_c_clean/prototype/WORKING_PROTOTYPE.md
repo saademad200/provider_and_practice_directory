@@ -35,12 +35,12 @@ python3 scripts/verify_pipeline.py \
 
 ## Primary Outputs
 
-- `candidate_updates.csv`
-- `auto_apply_updates.csv`
-- `review_queue.csv`
-- `metrics.json`
-- `cv_metrics.json`
-- `audit_events.jsonl`
+- `prototype/candidate_updates.csv`
+- `prototype/auto_apply_updates.csv`
+- `prototype/review_queue.csv`
+- `prototype/metrics.json`
+- `evidence/audit_events.jsonl`
+- `evidence/rollback_plan.csv`
 
 ## Current Metrics
 

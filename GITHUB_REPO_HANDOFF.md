@@ -34,8 +34,10 @@ git push -u origin main
 - `SUBMISSION.md`
 - `submissions/healthlynked_option_c_clean/START_HERE.md`
 - `submissions/healthlynked_option_c_clean/Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+- `submissions/healthlynked_option_c_clean/proposal/JUDGE_DECISION_MEMO.md`
 - `submissions/healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md`
 - `submissions/healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+- `submissions/healthlynked_option_c_clean/proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 - `submissions/healthlynked_option_c_clean/prototype/WORKING_PROTOTYPE.md`
 - `submissions/healthlynked_option_c_clean/dashboard/index.html`
 

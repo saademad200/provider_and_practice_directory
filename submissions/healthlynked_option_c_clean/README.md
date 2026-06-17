@@ -6,8 +6,10 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 
 - `START_HERE.md`
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+- `proposal/JUDGE_DECISION_MEMO.md`
 - `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+- `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 - `prototype/WORKING_PROTOTYPE.md`
 - `dashboard/index.html`
 
@@ -26,4 +28,4 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `dashboard/` - sample human review dashboard.
 - `evidence/` - machine-readable verification, rubric, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
 - `appendix/` - supporting production controls and deeper implementation notes.
-- `src/` and `scripts/` - lightweight reproducible code snapshot.
+- `src/`, `scripts/`, and `data/sample/` - lightweight reproducible MVP code snapshot.

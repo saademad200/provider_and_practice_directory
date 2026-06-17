@@ -12,9 +12,9 @@ This dashboard is the operational surface for uncertain provider-directory updat
 
 ## Current Queue Snapshot
 
-- Candidate updates: 57
+- Candidate updates: 58
 - Auto-apply queue: 20
-- Manual review queue: 37
+- Manual review queue: 38
 - F1: 0.948276
 - Precision: 0.948276
 - Recall: 0.948276
@@ -26,7 +26,7 @@ This dashboard is the operational surface for uncertain provider-directory updat
 |---|---:|
 | accepting_new_patients | 2 |
 | address | 13 |
-| phone | 17 |
+| phone | 18 |
 | specialty | 5 |
 
 ## Top Review Items
@@ -36,6 +36,7 @@ This dashboard is the operational surface for uncertain provider-directory updat
 | P0031 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
 | P0066 | address | 0.556 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
 | P0050 | address | 0.556 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
+| P0051 | address | 0.556 | all_stale | practice_peer_mismatch | business_listing, health_system, nppes |
 | P0039 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
 | P0003 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
 | P0023 | address | 0.556 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |

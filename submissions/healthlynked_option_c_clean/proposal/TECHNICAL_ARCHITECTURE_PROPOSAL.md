@@ -4,15 +4,15 @@ This package includes a detailed implementation plan for a repeatable, cost-effi
 
 Open these files together:
 
-- `ARCHITECTURE_DIAGRAM.md`
-- `COMBINED_ABC_PIPELINE_COVERAGE.md`
-- `ARCHITECTURE.md`
-- `AWS_PRODUCTION_ARCHITECTURE.md`
-- `SOURCE_CONNECTOR_REGISTRY.md`
-- `FIELD_RISK_POLICY.md`
-- `COST_MODEL.md`
-- `AUDIT_ROLLBACK_WORKFLOW.md`
-- `REVIEW_DISPOSITION_AND_SLA.md`
+- `proposal/ARCHITECTURE_DIAGRAM.md`
+- `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+- `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+- `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`
+- `prototype/RECOMMENDATION_API_CONTRACT.md`
+- `appendix/COST_MODEL.md`
+- `appendix/AWS_PRODUCTION_ARCHITECTURE.md`
+- `appendix/AUDIT_ROLLBACK_WORKFLOW.md`
+- `appendix/SOURCE_CONFLICT_ADJUDICATION.md`
 
 ## Pipeline Summary
 
@@ -61,6 +61,15 @@ Each agent has scoped permissions, source authority rules, and output contracts 
 - Source conflict adjudication.
 - Field-risk policy for safe auto-update.
 
+## Confidence And Decision Law
+
+The production decision law is documented in `proposal/CONFIDENCE_AND_DECISION_POLICY.md`. In short:
+
+- low-risk fields such as phone and website can be auto-updated only with high confidence, fresh evidence, and independent source agreement;
+- medium-risk fields such as address and specialty require stricter source authority and conflict checks;
+- high-risk or identity-sensitive changes such as provider name, NPI, affiliation moves, inactive status, merges, and suppressions are review-first;
+- every change must be audit-ready before any mutation is allowed.
+
 ## Cost Controls
 
 - Cache public data snapshots.
@@ -80,4 +89,4 @@ Each agent has scoped permissions, source authority rules, and output contracts 
 
 ## AWS Production Plan
 
-The production plan uses EventBridge, Step Functions, Lambda/ECS, S3, RDS/DynamoDB, CloudWatch, and gated Bedrock fallback. See `AWS_PRODUCTION_ARCHITECTURE.md`.
+The production plan uses EventBridge, Step Functions, Lambda/ECS, S3, RDS/DynamoDB, CloudWatch, and gated Bedrock fallback. See `appendix/AWS_PRODUCTION_ARCHITECTURE.md`.

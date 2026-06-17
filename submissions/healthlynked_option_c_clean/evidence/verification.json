@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_003/cli/candidate_updates.csv",
+      "detail": "outputs/verify_clean_019/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_003/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_clean_019/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_003/cli/review_queue.csv",
+      "detail": "outputs/verify_clean_019/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_003/cli/config.json",
+      "detail": "outputs/verify_clean_019/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -76,7 +76,7 @@
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "detail": "notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "notebook_json_valid",
       "passed": true
     },
@@ -91,12 +91,12 @@
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "detail": "prototype/recommendation_api_examples.json",
       "name": "recommendation_examples_exist",
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "detail": "prototype/recommendation_api_examples.json",
       "name": "recommendation_json_valid",
       "passed": true
     },
@@ -146,6 +146,11 @@
       "passed": true
     },
     {
+      "detail": "healthlynked_option_c_clean/proposal/JUDGE_DECISION_MEMO.md",
+      "name": "package_proposal/JUDGE_DECISION_MEMO.md",
+      "passed": true
+    },
+    {
       "detail": "healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md",
       "name": "package_proposal/WINNING_PROPOSAL_BRIEF.md",
       "passed": true
@@ -153,6 +158,11 @@
     {
       "detail": "healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
       "name": "package_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/CONFIDENCE_AND_DECISION_POLICY.md",
+      "name": "package_proposal/CONFIDENCE_AND_DECISION_POLICY.md",
       "passed": true
     },
     {
@@ -256,6 +266,11 @@
       "passed": true
     },
     {
+      "detail": "healthlynked_option_c_clean/appendix/AWS_PRODUCTION_ARCHITECTURE.md",
+      "name": "package_appendix/AWS_PRODUCTION_ARCHITECTURE.md",
+      "passed": true
+    },
+    {
       "detail": "healthlynked_option_c_clean/appendix/DASHBOARD_SPEC.md",
       "name": "package_appendix/DASHBOARD_SPEC.md",
       "passed": true
@@ -291,8 +306,18 @@
       "passed": true
     },
     {
-      "detail": "healthlynked_option_c_clean/scripts/verify_pipeline.py",
-      "name": "package_scripts/verify_pipeline.py",
+      "detail": "healthlynked_option_c_clean/data/sample/providers.csv",
+      "name": "package_data/sample/providers.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/data/sample/evidence.csv",
+      "name": "package_data/sample/evidence.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/data/sample/gold_updates.csv",
+      "name": "package_data/sample/gold_updates.csv",
       "passed": true
     },
     {
@@ -303,6 +328,71 @@
     {
       "detail": "",
       "name": "package_no_private_research_artifacts",
+      "passed": true
+    },
+    {
+      "detail": "Monday-Morning Implementation Plan",
+      "name": "package_text_proposal/JUDGE_DECISION_MEMO.md_Monday-Morning Implementation Plan",
+      "passed": true
+    },
+    {
+      "detail": "What Would Make This Unsafe",
+      "name": "package_text_proposal/JUDGE_DECISION_MEMO.md_What Would Make This Unsafe",
+      "passed": true
+    },
+    {
+      "detail": "Confidence And Decision Law",
+      "name": "package_text_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md_Confidence And Decision Law",
+      "passed": true
+    },
+    {
+      "detail": "AWS Production Plan",
+      "name": "package_text_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md_AWS Production Plan",
+      "passed": true
+    },
+    {
+      "detail": "Confidence Formula",
+      "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Confidence Formula",
+      "passed": true
+    },
+    {
+      "detail": "Auto-Update Rules",
+      "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Auto-Update Rules",
+      "passed": true
+    },
+    {
+      "detail": "Human Review Rules",
+      "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Human Review Rules",
+      "passed": true
+    },
+    {
+      "detail": "recommended_action",
+      "name": "package_text_prototype/RECOMMENDATION_API_CONTRACT.md_recommended_action",
+      "passed": true
+    },
+    {
+      "detail": "audit_required",
+      "name": "package_text_prototype/RECOMMENDATION_API_CONTRACT.md_audit_required",
+      "passed": true
+    },
+    {
+      "detail": "f1=0.948276, precision=0.948276, recall=0.948276, auto_apply_precision=1.0, cost_per_correct_update_usd=0.005836",
+      "name": "package_dashboard_metrics_match_prototype",
+      "passed": true
+    },
+    {
+      "detail": "evidence/audit_events.jsonl",
+      "name": "package_notebook_uses_curated_paths",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "package_no_legacy_doc_references",
+      "passed": true
+    },
+    {
+      "detail": "f1=0.948276, auto_precision=1.0",
+      "name": "package_self_contained_smoke",
       "passed": true
     }
   ],

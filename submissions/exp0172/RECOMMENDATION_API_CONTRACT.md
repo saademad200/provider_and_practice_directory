@@ -6,9 +6,9 @@ The competition prompt asks for a structured recommendation that product and ope
 
 This submission therefore includes:
 
-- `scripts/export_recommendation_api_examples.py`
-- `submissions/exp0172/recommendation_api_examples.json`
-- `submissions/exp0172/recommendation_api_schema.json`
+- `prototype/recommendation_api_examples.json`
+- `prototype/recommendation_api_schema.json`
+- `scripts/export_recommendation_api_examples.py` in the full repository workspace
 
 ## Response Shape
 
