@@ -72,6 +72,17 @@ CODE_FILES = [
     "pyproject.toml",
 ]
 
+CURATED_SRC_FILES = [
+    "src/__init__.py",
+    "src/cost.py",
+    "src/data.py",
+    "src/freshness.py",
+    "src/metrics.py",
+    "src/cv.py",
+    "src/review_priority.py",
+    "src/specialty.py",
+]
+
 
 PRIVATE_PATTERNS = [
     "JUDGE_AUDIT",
@@ -200,20 +211,22 @@ def build(target: Path) -> dict:
             shutil.copytree(source_dir, target / directory)
     sync_dashboard_metrics(target)
 
-    shutil.copytree(ROOT / "src", target / "src", ignore=shutil.ignore_patterns("__pycache__"))
+    for src_file in CURATED_SRC_FILES:
+        copy_file(ROOT / src_file, target / src_file)
     shutil.copytree(ROOT / "data/sample", target / "data/sample")
     for code_file in CODE_FILES:
         copy_file(ROOT / code_file, target / code_file)
 
     offenders = assert_no_private_files(target)
-    file_count = sum(1 for path in target.rglob("*") if path.is_file())
+    summary_path = target / "evidence/clean_package_summary.json"
+    file_count = sum(1 for path in target.rglob("*") if path.is_file()) + (0 if summary_path.exists() else 1)
     summary = {
         "target": str(target),
         "file_count": file_count,
         "private_file_offenders": offenders,
         "passed": not offenders,
     }
-    (target / "evidence/clean_package_summary.json").write_text(
+    summary_path.write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
