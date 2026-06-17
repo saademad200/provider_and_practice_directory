@@ -224,6 +224,7 @@ CURATED_PACKAGE_FILES = [
     "START_HERE.md",
     "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
     "proposal/JUDGE_DECISION_MEMO.md",
+    "proposal/JUDGE_COMPARISON_MATRIX.md",
     "proposal/WINNING_PROPOSAL_BRIEF.md",
     "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
     "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
@@ -440,6 +441,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
     selected_docs = [
         "START_HERE.md",
         "proposal/JUDGE_DECISION_MEMO.md",
+        "proposal/JUDGE_COMPARISON_MATRIX.md",
         "proposal/WINNING_PROPOSAL_BRIEF.md",
         "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
         "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
@@ -451,6 +453,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
     required_terms = {
         "START_HERE.md": ["90-Second Read", "self-contained unzip-and-run MVP smoke test passes"],
         "proposal/JUDGE_DECISION_MEMO.md": ["Monday-Morning Implementation Plan", "What Would Make This Unsafe"],
+        "proposal/JUDGE_COMPARISON_MATRIX.md": ["Competitive Comparison", "Winning Edge By Criterion"],
         "proposal/CONFIDENCE_AND_DECISION_POLICY.md": ["Confidence Formula", "Auto-Update Rules", "Human Review Rules"],
         "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md": ["Confidence And Decision Law", "AWS Production Plan"],
         "prototype/RECOMMENDATION_API_CONTRACT.md": ["recommended_action", "audit_required"],
