@@ -14,7 +14,7 @@ This submission intentionally combines all three allowed paths: Option A technic
 
 Key proof points:
 
-- Verified package checks: 95 curated-package checks
+- Verified package checks: 98 curated-package checks
 - Local proxy F1: 0.948276
 - Precision/recall: 0.948276 / 0.948276
 - Auto-apply precision: 1.0
