@@ -32,10 +32,12 @@ git push -u origin main
 
 - `README.md`
 - `SUBMISSION.md`
-- `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
-- `submissions/exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md`
-- `submissions/exp0172/EXECUTIVE_SUMMARY.md`
-- `submissions/exp0172/ARTIFACT_INDEX.md`
+- `submissions/healthlynked_option_c_clean/START_HERE.md`
+- `submissions/healthlynked_option_c_clean/Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+- `submissions/healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md`
+- `submissions/healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+- `submissions/healthlynked_option_c_clean/prototype/WORKING_PROTOTYPE.md`
+- `submissions/healthlynked_option_c_clean/dashboard/index.html`
 
 ## CI
 

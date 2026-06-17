@@ -1,0 +1,356 @@
+{
+  "checks": [
+    {
+      "detail": "src, scripts, experiments",
+      "name": "python_compile",
+      "passed": true
+    },
+    {
+      "detail": "f1=0.866667, predicted=16",
+      "name": "smoke_cv",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cli_exit",
+      "passed": true
+    },
+    {
+      "detail": "f1=0.948276, auto_precision=1.0",
+      "name": "cli_metrics_thresholds",
+      "passed": true
+    },
+    {
+      "detail": "outputs/verify_clean_003/cli/candidate_updates.csv",
+      "name": "cli_output_candidate_updates.csv",
+      "passed": true
+    },
+    {
+      "detail": "outputs/verify_clean_003/cli/auto_apply_updates.csv",
+      "name": "cli_output_auto_apply_updates.csv",
+      "passed": true
+    },
+    {
+      "detail": "outputs/verify_clean_003/cli/review_queue.csv",
+      "name": "cli_output_review_queue.csv",
+      "passed": true
+    },
+    {
+      "detail": "outputs/verify_clean_003/cli/config.json",
+      "name": "cli_output_config.json",
+      "passed": true
+    },
+    {
+      "detail": "skipped_missing_public_dataset",
+      "name": "public_dataset_cli_smoke",
+      "passed": true
+    },
+    {
+      "detail": "docs/ARCHITECTURE.md",
+      "name": "doc_ARCHITECTURE.md",
+      "passed": true
+    },
+    {
+      "detail": "docs/JUDGING_NARRATIVE.md",
+      "name": "doc_JUDGING_NARRATIVE.md",
+      "passed": true
+    },
+    {
+      "detail": "docs/FIELD_RISK_POLICY.md",
+      "name": "doc_FIELD_RISK_POLICY.md",
+      "passed": true
+    },
+    {
+      "detail": "docs/SUBMISSION_CHECKLIST.md",
+      "name": "doc_SUBMISSION_CHECKLIST.md",
+      "passed": true
+    },
+    {
+      "detail": "docs/RISK_REGISTER.md",
+      "name": "doc_RISK_REGISTER.md",
+      "passed": true
+    },
+    {
+      "detail": "docs/BENCHMARK_DATASHEET.md",
+      "name": "doc_BENCHMARK_DATASHEET.md",
+      "passed": true
+    },
+    {
+      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "name": "notebook_json_valid",
+      "passed": true
+    },
+    {
+      "detail": "markdown=20, code=20",
+      "name": "notebook_cell_count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "notebook_required_story_terms",
+      "passed": true
+    },
+    {
+      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "name": "recommendation_examples_exist",
+      "passed": true
+    },
+    {
+      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "name": "recommendation_json_valid",
+      "passed": true
+    },
+    {
+      "detail": "recommendations=8",
+      "name": "recommendation_contract_shape",
+      "passed": true
+    },
+    {
+      "detail": "supporting_sources required per change",
+      "name": "recommendation_contract_sources",
+      "passed": true
+    },
+    {
+      "detail": "at least one human_review example",
+      "name": "recommendation_contract_human_review",
+      "passed": true
+    },
+    {
+      "detail": "ProviderDirectoryRecommendationBatch",
+      "name": "recommendation_schema_title",
+      "passed": true
+    },
+    {
+      "detail": "submissions/latest_final_package.zip",
+      "name": "package_exists",
+      "passed": true
+    },
+    {
+      "detail": "START_HERE.md present",
+      "name": "package_curated_layout",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/README.md",
+      "name": "package_README.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/START_HERE.md",
+      "name": "package_START_HERE.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "name": "package_Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md",
+      "name": "package_proposal/WINNING_PROPOSAL_BRIEF.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "name": "package_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/ARCHITECTURE_DIAGRAM.md",
+      "name": "package_proposal/ARCHITECTURE_DIAGRAM.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/ARCHITECTURE_DIAGRAM.mmd",
+      "name": "package_proposal/ARCHITECTURE_DIAGRAM.mmd",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "name": "package_proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
+      "name": "package_proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/WORKING_PROTOTYPE.md",
+      "name": "package_prototype/WORKING_PROTOTYPE.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/RECOMMENDATION_API_CONTRACT.md",
+      "name": "package_prototype/RECOMMENDATION_API_CONTRACT.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/metrics.json",
+      "name": "package_prototype/metrics.json",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/candidate_updates.csv",
+      "name": "package_prototype/candidate_updates.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/auto_apply_updates.csv",
+      "name": "package_prototype/auto_apply_updates.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/review_queue.csv",
+      "name": "package_prototype/review_queue.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/recommendation_api_examples.json",
+      "name": "package_prototype/recommendation_api_examples.json",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/prototype/recommendation_api_schema.json",
+      "name": "package_prototype/recommendation_api_schema.json",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/dashboard/index.html",
+      "name": "package_dashboard/index.html",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/evidence/verification.json",
+      "name": "package_evidence/verification.json",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/evidence/judge_rubric_self_eval.csv",
+      "name": "package_evidence/judge_rubric_self_eval.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/evidence/cost_model_per_1000.csv",
+      "name": "package_evidence/cost_model_per_1000.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/evidence/source_connector_registry.csv",
+      "name": "package_evidence/source_connector_registry.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/evidence/audit_events.jsonl",
+      "name": "package_evidence/audit_events.jsonl",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/evidence/rollback_plan.csv",
+      "name": "package_evidence/rollback_plan.csv",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/appendix/COST_MODEL.md",
+      "name": "package_appendix/COST_MODEL.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/appendix/DASHBOARD_SPEC.md",
+      "name": "package_appendix/DASHBOARD_SPEC.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/appendix/DUPLICATE_MOVEMENT_DETECTION.md",
+      "name": "package_appendix/DUPLICATE_MOVEMENT_DETECTION.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/appendix/INACTIVE_PROVIDER_DETECTION.md",
+      "name": "package_appendix/INACTIVE_PROVIDER_DETECTION.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/src/data.py",
+      "name": "package_src/data.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/src/metrics.py",
+      "name": "package_src/metrics.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/src/cv.py",
+      "name": "package_src/cv.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/scripts/run_best_pipeline.py",
+      "name": "package_scripts/run_best_pipeline.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/scripts/verify_pipeline.py",
+      "name": "package_scripts/verify_pipeline.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/requirements.txt",
+      "name": "package_requirements.txt",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "package_no_private_research_artifacts",
+      "passed": true
+    }
+  ],
+  "cli_metrics": {
+    "auto_apply_count": 20,
+    "auto_apply_precision": 1.0,
+    "cost_per_correct_update_usd": 0.005836,
+    "estimated_cost_usd": 0.321,
+    "f1": 0.948276,
+    "fn": 3,
+    "fp": 3,
+    "gold_updates": 58,
+    "precision": 0.948276,
+    "predicted_updates": 58,
+    "recall": 0.948276,
+    "review_count": 38,
+    "review_recall": 0.603448,
+    "source_cost_breakdown_usd": {
+      "business_listing": 0.018,
+      "health_system": 0.115,
+      "nppes": 0.0045,
+      "practice_website": 0.176,
+      "state_license": 0.0075
+    },
+    "tp": 55
+  },
+  "passed": true,
+  "smoke_metrics": {
+    "auto_apply_count": 9,
+    "auto_apply_precision": 1.0,
+    "cost_per_correct_update_usd": 0.006462,
+    "estimated_cost_usd": 0.084,
+    "f1": 0.866667,
+    "fn": 1,
+    "fp": 3,
+    "gold_updates": 14,
+    "precision": 0.8125,
+    "predicted_updates": 16,
+    "recall": 0.928571,
+    "review_count": 7,
+    "review_recall": 0.285714,
+    "source_cost_breakdown_usd": {
+      "business_listing": 0.006,
+      "health_system": 0.03,
+      "nppes": 0.001,
+      "practice_website": 0.044,
+      "state_license": 0.003
+    },
+    "tp": 13
+  }
+}

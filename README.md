@@ -16,7 +16,7 @@ Provider/practice directory
 
 ## Judge Path
 
-Upload this file to Kaggle:
+Upload this curated judge package to Kaggle:
 
 ```text
 submissions/latest_final_package.zip
@@ -24,41 +24,56 @@ submissions/latest_final_package.zip
 
 Start here:
 
-1. `notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-2. `WINNING_PROPOSAL_BRIEF.md`
-3. `ADVERSARIAL_JUDGE_AUDIT.md`
-4. `RECOMMENDATION_API_CONTRACT.md`
-5. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
-6. `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-7. `submissions/exp0172/WORKING_PROTOTYPE.md`
-8. `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`
-9. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
+1. `START_HERE.md`
+2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+3. `proposal/WINNING_PROPOSAL_BRIEF.md`
+4. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+5. `prototype/WORKING_PROTOTYPE.md`
+6. `prototype/RECOMMENDATION_API_CONTRACT.md`
+7. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+8. `dashboard/index.html`
+9. `evidence/verification.json`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 213
+- Verification checks passed: 61 curated-package checks
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
 - Cost per correct update: `$0.005836`
 - Cloud target: AWS
 
+## Files To Show Judges
+
+Show only the curated package path above. The intended first impression is small and deliberate:
+
+1. `START_HERE.md`
+2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+3. `proposal/WINNING_PROPOSAL_BRIEF.md`
+4. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+5. `prototype/WORKING_PROTOTYPE.md`
+6. `prototype/RECOMMENDATION_API_CONTRACT.md`
+7. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+8. `dashboard/index.html`
+9. `evidence/verification.json`
+
+Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
+
 ## What Is Included
 
 - `src/` - reusable pipeline modules for candidate generation, scoring, source reliability, review routing, audit, privacy, red-team checks, and production readiness.
 - `scripts/` - reproducible CLI entrypoints for the best pipeline, public dataset triage, Kaggle metadata collection, and package verification.
-- `docs/` - working research and architecture documents.
+- `docs/` - supporting research and architecture documents.
 - `architecture/` - judge-facing architecture proposal, implementation map, and diagram source.
 - `prototype/` - judge-facing MVP runbook and prototype artifact map.
 - `notebooks/` - polished end-to-end notebook with narrative, MVP execution, metrics, diagrams, and bonus coverage.
 - `RECOMMENDATION_API_CONTRACT.md` - product-facing JSON recommendation shape matching the competition examples.
-- `ADVERSARIAL_JUDGE_AUDIT.md` and `GRANDMASTER_COUNTERMOVE_LOG.md` - skeptical review and countermeasure trail.
-- `autoresearch/` - self-improvement loop state, playbook, hypotheses, journal, and leaderboard.
+- `OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` - real-source ingestion plan for NPPES, CMS files, FSMB/state boards, practice websites, and fallback sources.
 - `experiments/` - append-only experiment scripts used to evolve the solution.
 - `data/sample/` - synthetic provider/evidence/gold-update benchmark used when official train/test labels are unavailable.
-- `submissions/exp0172/` - final judge-facing handoff package.
+- `submissions/healthlynked_option_c_clean/` - curated judge-facing handoff package.
 - `submissions/latest_final_package.zip` - upload-ready Kaggle package.
 
 ## Run The Prototype

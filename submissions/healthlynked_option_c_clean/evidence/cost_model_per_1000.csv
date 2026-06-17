@@ -1,0 +1,5 @@
+scenario,evidence_usd,aws_compute_storage_monitoring_usd,llm_extraction_usd,manual_review_usd,total_usd,manual_review_items
+base_case,5.31,0.2,0.8,277.5,283.81,370.0
+llm_heavy,5.31,0.2,2.5,277.5,285.51,370.0
+review_heavy,5.31,0.2,0.8,450.0,456.31,600.0
+mature_auto_apply,5.31,0.2,0.5,135.0,141.01,180.0

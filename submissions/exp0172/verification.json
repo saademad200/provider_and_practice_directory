@@ -21,27 +21,27 @@
       "passed": true
     },
     {
-      "detail": "results/exp0172/verification/cli/candidate_updates.csv",
+      "detail": "outputs/verify_gan_loop_003/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "results/exp0172/verification/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_gan_loop_003/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "results/exp0172/verification/cli/review_queue.csv",
+      "detail": "outputs/verify_gan_loop_003/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "results/exp0172/verification/cli/config.json",
+      "detail": "outputs/verify_gan_loop_003/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
     {
-      "detail": "rows=42000, top25=True",
+      "detail": "skipped_missing_public_dataset",
       "name": "public_dataset_cli_smoke",
       "passed": true
     },
@@ -76,13 +76,108 @@
       "passed": true
     },
     {
-      "detail": "submissions/exp0172_final_combined_abc_handoff_package.zip",
+      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "name": "notebook_json_valid",
+      "passed": true
+    },
+    {
+      "detail": "markdown=20, code=20",
+      "name": "notebook_cell_count",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "notebook_required_story_terms",
+      "passed": true
+    },
+    {
+      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "name": "recommendation_examples_exist",
+      "passed": true
+    },
+    {
+      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "name": "recommendation_json_valid",
+      "passed": true
+    },
+    {
+      "detail": "recommendations=8",
+      "name": "recommendation_contract_shape",
+      "passed": true
+    },
+    {
+      "detail": "supporting_sources required per change",
+      "name": "recommendation_contract_sources",
+      "passed": true
+    },
+    {
+      "detail": "at least one human_review example",
+      "name": "recommendation_contract_human_review",
+      "passed": true
+    },
+    {
+      "detail": "ProviderDirectoryRecommendationBatch",
+      "name": "recommendation_schema_title",
+      "passed": true
+    },
+    {
+      "detail": "submissions/latest_final_package.zip",
       "name": "package_exists",
       "passed": true
     },
     {
       "detail": "exp0172/README.md",
       "name": "package_README.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "name": "package_Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/PRESENTATION_NARRATIVE.md",
+      "name": "package_PRESENTATION_NARRATIVE.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/WINNING_PROPOSAL_BRIEF.md",
+      "name": "package_WINNING_PROPOSAL_BRIEF.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "name": "package_IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/ADVERSARIAL_JUDGE_AUDIT.md",
+      "name": "package_ADVERSARIAL_JUDGE_AUDIT.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/GRANDMASTER_COUNTERMOVE_LOG.md",
+      "name": "package_GRANDMASTER_COUNTERMOVE_LOG.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/RECOMMENDATION_API_CONTRACT.md",
+      "name": "package_RECOMMENDATION_API_CONTRACT.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
+      "name": "package_OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/recommendation_api_examples.json",
+      "name": "package_recommendation_api_examples.json",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/recommendation_api_schema.json",
+      "name": "package_recommendation_api_schema.json",
       "passed": true
     },
     {
@@ -368,6 +463,26 @@
     {
       "detail": "exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md",
       "name": "package_COMBINED_ABC_PIPELINE_COVERAGE.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "name": "package_TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/WORKING_PROTOTYPE.md",
+      "name": "package_WORKING_PROTOTYPE.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/ARCHITECTURE_DIAGRAM.md",
+      "name": "package_ARCHITECTURE_DIAGRAM.md",
+      "passed": true
+    },
+    {
+      "detail": "exp0172/ARCHITECTURE_DIAGRAM.mmd",
+      "name": "package_ARCHITECTURE_DIAGRAM.mmd",
       "passed": true
     },
     {

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProviderDirectoryRecommendationBatch",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pipeline_version",
+    "metrics_snapshot",
+    "recommendations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "provider-directory-recommendation-v1"
+    },
+    "pipeline_version": {
+      "type": "string"
+    },
+    "metrics_snapshot": {
+      "type": "object"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "provider_id",
+          "npi",
+          "change_detected",
+          "changes",
+          "overall_confidence",
+          "recommended_action",
+          "reason",
+          "audit_required"
+        ],
+        "properties": {
+          "provider_id": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "npi": {
+            "type": "string"
+          },
+          "practice_id": {
+            "type": "string"
+          },
+          "change_detected": {
+            "type": "boolean"
+          },
+          "changes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "field",
+                "old_value",
+                "new_value",
+                "confidence_score",
+                "supporting_sources"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "old_value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "new_value": {
+                  "type": [
+                    "string",
+                    "number",
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "confidence_score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "supporting_sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "source_urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "freshness_status": {
+                  "type": "string"
+                },
+                "review_reason_code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "overall_confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "recommended_action": {
+            "enum": [
+              "auto_update",
+              "human_review",
+              "no_change"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "supporting_source_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "audit_required": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
