@@ -9,7 +9,7 @@ This is an Option C Hybrid submission: a runnable provider-directory update prot
 - Package: `submissions/latest_final_package.zip`
 - Source package: `submissions/exp0172_final_combined_abc_handoff_package.zip`
 - Verification: `verification.json` inside the package.
-- Verification checks passed: 81 curated-package checks
+- Verification checks passed: 84 curated-package checks
 - Production readiness score: 50 / 50.
 - Red-team evals passed: 7 / 7.
 - Rubric self-eval: 100 / 100.

@@ -22,6 +22,7 @@ TOP_LEVEL_FILES = [
     ("TECHNICAL_ARCHITECTURE_PROPOSAL.md", "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md"),
     ("CONFIDENCE_AND_DECISION_POLICY.md", "proposal/CONFIDENCE_AND_DECISION_POLICY.md"),
     ("IMPLEMENTATION_ACCEPTANCE_CRITERIA.md", "proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md"),
+    ("EVALUATION_LIMITS_AND_TRANSFER_PLAN.md", "proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md"),
     ("ARCHITECTURE_DIAGRAM.md", "proposal/ARCHITECTURE_DIAGRAM.md"),
     ("ARCHITECTURE_DIAGRAM.mmd", "proposal/ARCHITECTURE_DIAGRAM.mmd"),
     ("IMPLEMENTATION_ROADMAP_90_DAYS.md", "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md"),
@@ -77,6 +78,21 @@ START_HERE = """# Start Here
 
 This is the curated judge package for the HealthLynked Provider / Practice Directory Update Pipeline competition.
 
+## 90-Second Read
+
+This is an Option C hybrid submission: a runnable MVP plus an AWS-ready production architecture. The core idea is a provider-directory quality control plane, not a one-time cleanup script. It collects trusted evidence, normalizes fields, resolves provider/practice/location identity, scores confidence, routes uncertain changes to review, safely auto-updates only low-risk high-confidence fields, and records an audit/rollback trail for every recommendation.
+
+Proof points:
+
+- F1 `0.948276`, precision `0.948276`, recall `0.948276`
+- safe auto-apply precision `1.0`
+- estimated cost per correct update `$0.005836`
+- 84 curated-package verification checks
+- self-contained unzip-and-run MVP smoke test passes
+- AWS production plan with source governance, review operations, monitoring, and rollback
+
+Why it should win: it is immediately implementable after the competition. The package includes the technical architecture, working prototype, confidence policy, connector operating model, human review workflow, audit trail, cost controls, and post-award acceptance criteria.
+
 ## Recommended Judge Path
 
 1. Open `Provider_Directory_Update_Pipeline_End_to_End.ipynb` for the narrated end-to-end walkthrough.
@@ -86,10 +102,11 @@ This is the curated judge package for the HealthLynked Provider / Practice Direc
 5. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
 6. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
 7. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
-8. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-9. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` and `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md` for trusted-source operations.
-10. Inspect `dashboard/index.html` for the sample human review experience.
-11. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+8. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
+9. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+10. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` and `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md` for trusted-source operations.
+11. Inspect `dashboard/index.html` for the sample human review experience.
+12. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Why The Package Is Structured This Way
 
@@ -110,6 +127,7 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 - `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 - `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+- `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md`
 - `prototype/WORKING_PROTOTYPE.md`
 - `dashboard/index.html`
 

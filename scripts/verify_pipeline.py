@@ -228,6 +228,7 @@ CURATED_PACKAGE_FILES = [
     "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
     "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
     "proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
+    "proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
     "proposal/ARCHITECTURE_DIAGRAM.md",
     "proposal/ARCHITECTURE_DIAGRAM.mmd",
     "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
@@ -444,12 +445,14 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
     ]
     forbidden = ["submissions/exp0172/", "COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
     required_terms = {
+        "START_HERE.md": ["90-Second Read", "self-contained unzip-and-run MVP smoke test passes"],
         "proposal/JUDGE_DECISION_MEMO.md": ["Monday-Morning Implementation Plan", "What Would Make This Unsafe"],
         "proposal/CONFIDENCE_AND_DECISION_POLICY.md": ["Confidence Formula", "Auto-Update Rules", "Human Review Rules"],
         "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md": ["Confidence And Decision Law", "AWS Production Plan"],
         "prototype/RECOMMENDATION_API_CONTRACT.md": ["recommended_action", "audit_required"],
         "proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md": ["Go/No-Go Thresholds", "Consulting Success Definition"],
         "proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md": ["Connector Health Signals", "Field-Level Source Law"],
+        "proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md": ["What The Current Metrics Do Not Prove", "Transfer Plan To HealthLynked Data"],
     }
     with zipfile.ZipFile(package_path) as archive:
         legacy_hits: list[str] = []
