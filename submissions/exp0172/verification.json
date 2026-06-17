@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_gan_loop_003/cli/candidate_updates.csv",
+      "detail": "outputs/verify_clean_033/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_gan_loop_003/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_clean_033/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_gan_loop_003/cli/review_queue.csv",
+      "detail": "outputs/verify_clean_033/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_gan_loop_003/cli/config.json",
+      "detail": "outputs/verify_clean_033/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -76,7 +76,7 @@
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "detail": "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "notebook_json_valid",
       "passed": true
     },
@@ -91,12 +91,12 @@
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "detail": "prototype/recommendation_api_examples.json",
       "name": "recommendation_examples_exist",
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/exp0172/recommendation_api_examples.json",
+      "detail": "prototype/recommendation_api_examples.json",
       "name": "recommendation_json_valid",
       "passed": true
     },
@@ -121,953 +121,313 @@
       "passed": true
     },
     {
-      "detail": "submissions/latest_final_package.zip",
+      "detail": "latest_final_package.zip",
       "name": "package_exists",
       "passed": true
     },
     {
-      "detail": "exp0172/README.md",
+      "detail": "START_HERE.md present",
+      "name": "package_curated_layout",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/README.md",
       "name": "package_README.md",
       "passed": true
     },
     {
-      "detail": "exp0172/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "detail": "healthlynked_option_c_clean/START_HERE.md",
+      "name": "package_START_HERE.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "package_Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "passed": true
     },
     {
-      "detail": "exp0172/PRESENTATION_NARRATIVE.md",
-      "name": "package_PRESENTATION_NARRATIVE.md",
+      "detail": "healthlynked_option_c_clean/proposal/JUDGE_DECISION_MEMO.md",
+      "name": "package_proposal/JUDGE_DECISION_MEMO.md",
       "passed": true
     },
     {
-      "detail": "exp0172/WINNING_PROPOSAL_BRIEF.md",
-      "name": "package_WINNING_PROPOSAL_BRIEF.md",
+      "detail": "healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md",
+      "name": "package_proposal/WINNING_PROPOSAL_BRIEF.md",
       "passed": true
     },
     {
-      "detail": "exp0172/IMPLEMENTATION_ROADMAP_90_DAYS.md",
-      "name": "package_IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "detail": "healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "name": "package_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
       "passed": true
     },
     {
-      "detail": "exp0172/ADVERSARIAL_JUDGE_AUDIT.md",
-      "name": "package_ADVERSARIAL_JUDGE_AUDIT.md",
+      "detail": "healthlynked_option_c_clean/proposal/CONFIDENCE_AND_DECISION_POLICY.md",
+      "name": "package_proposal/CONFIDENCE_AND_DECISION_POLICY.md",
       "passed": true
     },
     {
-      "detail": "exp0172/GRANDMASTER_COUNTERMOVE_LOG.md",
-      "name": "package_GRANDMASTER_COUNTERMOVE_LOG.md",
+      "detail": "healthlynked_option_c_clean/proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
+      "name": "package_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
       "passed": true
     },
     {
-      "detail": "exp0172/RECOMMENDATION_API_CONTRACT.md",
-      "name": "package_RECOMMENDATION_API_CONTRACT.md",
+      "detail": "healthlynked_option_c_clean/proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
+      "name": "package_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
       "passed": true
     },
     {
-      "detail": "exp0172/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
-      "name": "package_OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
+      "detail": "healthlynked_option_c_clean/proposal/LEAN_TEAM_OPERATING_MODEL.md",
+      "name": "package_proposal/LEAN_TEAM_OPERATING_MODEL.md",
       "passed": true
     },
     {
-      "detail": "exp0172/recommendation_api_examples.json",
-      "name": "package_recommendation_api_examples.json",
+      "detail": "healthlynked_option_c_clean/proposal/FAILURE_MODE_PLAYBOOK.md",
+      "name": "package_proposal/FAILURE_MODE_PLAYBOOK.md",
       "passed": true
     },
     {
-      "detail": "exp0172/recommendation_api_schema.json",
-      "name": "package_recommendation_api_schema.json",
+      "detail": "healthlynked_option_c_clean/proposal/ARCHITECTURE_DIAGRAM.md",
+      "name": "package_proposal/ARCHITECTURE_DIAGRAM.md",
       "passed": true
     },
     {
-      "detail": "exp0172/candidate_updates.csv",
-      "name": "package_candidate_updates.csv",
+      "detail": "healthlynked_option_c_clean/proposal/ARCHITECTURE_DIAGRAM.mmd",
+      "name": "package_proposal/ARCHITECTURE_DIAGRAM.mmd",
       "passed": true
     },
     {
-      "detail": "exp0172/auto_apply_updates.csv",
-      "name": "package_auto_apply_updates.csv",
+      "detail": "healthlynked_option_c_clean/proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "name": "package_proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
       "passed": true
     },
     {
-      "detail": "exp0172/review_queue.csv",
-      "name": "package_review_queue.csv",
+      "detail": "healthlynked_option_c_clean/proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
+      "name": "package_proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
       "passed": true
     },
     {
-      "detail": "exp0172/config.json",
-      "name": "package_config.json",
+      "detail": "healthlynked_option_c_clean/proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
+      "name": "package_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
       "passed": true
     },
     {
-      "detail": "exp0172/metrics.json",
-      "name": "package_metrics.json",
+      "detail": "healthlynked_option_c_clean/prototype/WORKING_PROTOTYPE.md",
+      "name": "package_prototype/WORKING_PROTOTYPE.md",
       "passed": true
     },
     {
-      "detail": "exp0172/cv_metrics.json",
-      "name": "package_cv_metrics.json",
+      "detail": "healthlynked_option_c_clean/prototype/RECOMMENDATION_API_CONTRACT.md",
+      "name": "package_prototype/RECOMMENDATION_API_CONTRACT.md",
       "passed": true
     },
     {
-      "detail": "exp0172/source_ablation.csv",
-      "name": "package_source_ablation.csv",
+      "detail": "healthlynked_option_c_clean/prototype/metrics.json",
+      "name": "package_prototype/metrics.json",
       "passed": true
     },
     {
-      "detail": "exp0172/web_extraction_benchmark.json",
-      "name": "package_web_extraction_benchmark.json",
+      "detail": "healthlynked_option_c_clean/prototype/candidate_updates.csv",
+      "name": "package_prototype/candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/nppes_parsed_evidence.json",
-      "name": "package_nppes_parsed_evidence.json",
+      "detail": "healthlynked_option_c_clean/prototype/auto_apply_updates.csv",
+      "name": "package_prototype/auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/per_field.csv",
-      "name": "package_per_field.csv",
+      "detail": "healthlynked_option_c_clean/prototype/review_queue.csv",
+      "name": "package_prototype/review_queue.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/worst_providers.csv",
-      "name": "package_worst_providers.csv",
+      "detail": "healthlynked_option_c_clean/prototype/recommendation_api_examples.json",
+      "name": "package_prototype/recommendation_api_examples.json",
       "passed": true
     },
     {
-      "detail": "exp0172/BENCHMARK_DATASHEET.md",
-      "name": "package_BENCHMARK_DATASHEET.md",
+      "detail": "healthlynked_option_c_clean/prototype/recommendation_api_schema.json",
+      "name": "package_prototype/recommendation_api_schema.json",
       "passed": true
     },
     {
-      "detail": "exp0172/REVIEW_QUEUE_PRIORITIZATION.md",
-      "name": "package_REVIEW_QUEUE_PRIORITIZATION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/CASE_STUDIES.md",
-      "name": "package_CASE_STUDIES.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/EXECUTIVE_SUMMARY.md",
-      "name": "package_EXECUTIVE_SUMMARY.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/EXTERNAL_SOURCE_STRATEGY.md",
-      "name": "package_EXTERNAL_SOURCE_STRATEGY.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/MISSING_SOURCE_ROBUSTNESS.md",
-      "name": "package_MISSING_SOURCE_ROBUSTNESS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SOURCE_FRESHNESS_ALERTS.md",
-      "name": "package_SOURCE_FRESHNESS_ALERTS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AWS_PRODUCTION_ARCHITECTURE.md",
-      "name": "package_AWS_PRODUCTION_ARCHITECTURE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/ACTIVE_LEARNING_FEEDBACK.md",
-      "name": "package_ACTIVE_LEARNING_FEEDBACK.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/DASHBOARD_SPEC.md",
-      "name": "package_DASHBOARD_SPEC.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/DUPLICATE_MOVEMENT_DETECTION.md",
-      "name": "package_DUPLICATE_MOVEMENT_DETECTION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/COST_MODEL.md",
-      "name": "package_COST_MODEL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/MONITORING_ALERTS.md",
-      "name": "package_MONITORING_ALERTS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/NPPES_API_SMOKE.md",
-      "name": "package_NPPES_API_SMOKE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SPECIALTY_NORMALIZATION.md",
-      "name": "package_SPECIALTY_NORMALIZATION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PRACTICE_AFFILIATION_REBRAND.md",
-      "name": "package_PRACTICE_AFFILIATION_REBRAND.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SOURCE_GOVERNANCE_CHECKLIST.md",
-      "name": "package_SOURCE_GOVERNANCE_CHECKLIST.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/INACTIVE_PROVIDER_DETECTION.md",
-      "name": "package_INACTIVE_PROVIDER_DETECTION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/LLM_FALLBACK_CONTRACT.md",
-      "name": "package_LLM_FALLBACK_CONTRACT.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AUDIT_ROLLBACK_WORKFLOW.md",
-      "name": "package_AUDIT_ROLLBACK_WORKFLOW.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SOURCE_CONFLICT_ADJUDICATION.md",
-      "name": "package_SOURCE_CONFLICT_ADJUDICATION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AGENTIC_WHITEPAPER_INSIGHTS.md",
-      "name": "package_AGENTIC_WHITEPAPER_INSIGHTS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AGENT_CARDS_AND_WORKFLOW_CONTRACTS.md",
-      "name": "package_AGENT_CARDS_AND_WORKFLOW_CONTRACTS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/TRAJECTORY_TOOL_USE_EVALS.md",
-      "name": "package_TRAJECTORY_TOOL_USE_EVALS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AGENT_SECURITY_MATRIX.md",
-      "name": "package_AGENT_SECURITY_MATRIX.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/INCIDENT_RESPONSE_RUNBOOKS.md",
-      "name": "package_INCIDENT_RESPONSE_RUNBOOKS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PRODUCTION_READINESS_SCORECARD.md",
-      "name": "package_PRODUCTION_READINESS_SCORECARD.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SYNTHETIC_VOLUME_BENCHMARK.md",
-      "name": "package_SYNTHETIC_VOLUME_BENCHMARK.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SOURCE_CONNECTOR_REGISTRY.md",
-      "name": "package_SOURCE_CONNECTOR_REGISTRY.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/REVIEW_DISPOSITION_AND_SLA.md",
-      "name": "package_REVIEW_DISPOSITION_AND_SLA.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/RED_TEAM_EVALS.md",
-      "name": "package_RED_TEAM_EVALS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AGENT_WORKFLOW_DIAGRAM.md",
-      "name": "package_AGENT_WORKFLOW_DIAGRAM.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/AGENT_SKILLS_INSIGHTS.md",
-      "name": "package_AGENT_SKILLS_INSIGHTS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PROVIDER_DIRECTORY_SKILLS_LIBRARY.md",
-      "name": "package_PROVIDER_DIRECTORY_SKILLS_LIBRARY.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SKILL_LIBRARY_EVALS.md",
-      "name": "package_SKILL_LIBRARY_EVALS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/CAPABILITY_PROFILES_AND_ORCHESTRATION.md",
-      "name": "package_CAPABILITY_PROFILES_AND_ORCHESTRATION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/JUDGE_RUBRIC_SELF_EVAL.md",
-      "name": "package_JUDGE_RUBRIC_SELF_EVAL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/SOURCE_PERTURBATION_STRESS_TESTS.md",
-      "name": "package_SOURCE_PERTURBATION_STRESS_TESTS.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/THRESHOLD_ROBUSTNESS_SWEEP.md",
-      "name": "package_THRESHOLD_ROBUSTNESS_SWEEP.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/RESIDUAL_ERROR_DATA_ACQUISITION.md",
-      "name": "package_RESIDUAL_ERROR_DATA_ACQUISITION.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/FRESH_BUSINESS_LISTING_FALLBACK.md",
-      "name": "package_FRESH_BUSINESS_LISTING_FALLBACK.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/ONE_PAGE_JUDGE_GUIDE.md",
-      "name": "package_ONE_PAGE_JUDGE_GUIDE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/REPRODUCIBILITY.md",
-      "name": "package_REPRODUCIBILITY.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/MVP_FIELD_COVERAGE.md",
-      "name": "package_MVP_FIELD_COVERAGE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/CORE_DOC_CONSISTENCY.md",
-      "name": "package_CORE_DOC_CONSISTENCY.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md",
-      "name": "package_COMBINED_ABC_PIPELINE_COVERAGE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
-      "name": "package_TECHNICAL_ARCHITECTURE_PROPOSAL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/WORKING_PROTOTYPE.md",
-      "name": "package_WORKING_PROTOTYPE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/ARCHITECTURE_DIAGRAM.md",
-      "name": "package_ARCHITECTURE_DIAGRAM.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/ARCHITECTURE_DIAGRAM.mmd",
-      "name": "package_ARCHITECTURE_DIAGRAM.mmd",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/COMPETITION_ALIGNMENT_REFRESH.md",
-      "name": "package_COMPETITION_ALIGNMENT_REFRESH.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PUBLIC_DATASET_PROFILE.md",
-      "name": "package_PUBLIC_DATASET_PROFILE.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PUBLIC_DATASET_TRIAGE_CLI.md",
-      "name": "package_PUBLIC_DATASET_TRIAGE_CLI.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/KAGGLE_SUBMISSION_HANDOFF.md",
-      "name": "package_KAGGLE_SUBMISSION_HANDOFF.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/ARTIFACT_INDEX.md",
-      "name": "package_ARTIFACT_INDEX.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PRIVACY_COMPLIANCE_MODEL.md",
-      "name": "package_PRIVACY_COMPLIANCE_MODEL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/PACKAGE_INTEGRITY_MANIFEST.md",
-      "name": "package_PACKAGE_INTEGRITY_MANIFEST.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/NO_SECRETS_SCAN.md",
-      "name": "package_NO_SECRETS_SCAN.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/FINAL_RELEASE_NOTES.md",
-      "name": "package_FINAL_RELEASE_NOTES.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/MILESTONE_100_NORTH_STAR_AUDIT.md",
-      "name": "package_MILESTONE_100_NORTH_STAR_AUDIT.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/verification.json",
-      "name": "package_verification.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/prioritized_review_queue.csv",
-      "name": "package_prioritized_review_queue.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/case_studies.json",
-      "name": "package_case_studies.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/missing_source_robustness.csv",
-      "name": "package_missing_source_robustness.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/freshness_summary.csv",
-      "name": "package_freshness_summary.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/aws_service_map.json",
-      "name": "package_aws_service_map.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/learning_actions.csv",
-      "name": "package_learning_actions.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/dashboard_data_contract.json",
-      "name": "package_dashboard_data_contract.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/dashboard_review_queue.csv",
-      "name": "package_dashboard_review_queue.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/duplicate_candidates.csv",
-      "name": "package_duplicate_candidates.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_movement_candidates.csv",
-      "name": "package_provider_movement_candidates.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/cost_model_per_1000.csv",
-      "name": "package_cost_model_per_1000.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/monitoring_alerts.json",
-      "name": "package_monitoring_alerts.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/dashboard/index.html",
+      "detail": "healthlynked_option_c_clean/dashboard/index.html",
       "name": "package_dashboard/index.html",
       "passed": true
     },
     {
-      "detail": "exp0172/dashboard_v2/index.html",
-      "name": "package_dashboard_v2/index.html",
+      "detail": "healthlynked_option_c_clean/evidence/verification.json",
+      "name": "package_evidence/verification.json",
       "passed": true
     },
     {
-      "detail": "exp0172/nppes_api_evidence.csv",
-      "name": "package_nppes_api_evidence.csv",
+      "detail": "healthlynked_option_c_clean/evidence/judge_rubric_self_eval.csv",
+      "name": "package_evidence/judge_rubric_self_eval.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/specialty_normalization_fixture.csv",
-      "name": "package_specialty_normalization_fixture.csv",
+      "detail": "healthlynked_option_c_clean/evidence/cost_model_per_1000.csv",
+      "name": "package_evidence/cost_model_per_1000.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/practice_change_candidates.csv",
-      "name": "package_practice_change_candidates.csv",
+      "detail": "healthlynked_option_c_clean/evidence/source_connector_registry.csv",
+      "name": "package_evidence/source_connector_registry.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/source_governance_checklist.json",
-      "name": "package_source_governance_checklist.json",
+      "detail": "healthlynked_option_c_clean/evidence/audit_events.jsonl",
+      "name": "package_evidence/audit_events.jsonl",
       "passed": true
     },
     {
-      "detail": "exp0172/inactive_provider_candidates.csv",
-      "name": "package_inactive_provider_candidates.csv",
+      "detail": "healthlynked_option_c_clean/evidence/rollback_plan.csv",
+      "name": "package_evidence/rollback_plan.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/bedrock_extraction_contract.json",
-      "name": "package_bedrock_extraction_contract.json",
+      "detail": "healthlynked_option_c_clean/appendix/COST_MODEL.md",
+      "name": "package_appendix/COST_MODEL.md",
       "passed": true
     },
     {
-      "detail": "exp0172/llm_fallback_fixture.csv",
-      "name": "package_llm_fallback_fixture.csv",
+      "detail": "healthlynked_option_c_clean/appendix/AWS_PRODUCTION_ARCHITECTURE.md",
+      "name": "package_appendix/AWS_PRODUCTION_ARCHITECTURE.md",
       "passed": true
     },
     {
-      "detail": "exp0172/audit_events.jsonl",
-      "name": "package_audit_events.jsonl",
+      "detail": "healthlynked_option_c_clean/appendix/DASHBOARD_SPEC.md",
+      "name": "package_appendix/DASHBOARD_SPEC.md",
       "passed": true
     },
     {
-      "detail": "exp0172/rollback_plan.csv",
-      "name": "package_rollback_plan.csv",
+      "detail": "healthlynked_option_c_clean/appendix/DUPLICATE_MOVEMENT_DETECTION.md",
+      "name": "package_appendix/DUPLICATE_MOVEMENT_DETECTION.md",
       "passed": true
     },
     {
-      "detail": "exp0172/provider_change_timeline.csv",
-      "name": "package_provider_change_timeline.csv",
+      "detail": "healthlynked_option_c_clean/appendix/INACTIVE_PROVIDER_DETECTION.md",
+      "name": "package_appendix/INACTIVE_PROVIDER_DETECTION.md",
       "passed": true
     },
     {
-      "detail": "exp0172/source_conflict_adjudication.csv",
-      "name": "package_source_conflict_adjudication.csv",
+      "detail": "healthlynked_option_c_clean/src/data.py",
+      "name": "package_src/data.py",
       "passed": true
     },
     {
-      "detail": "exp0172/agent_cards.json",
-      "name": "package_agent_cards.json",
+      "detail": "healthlynked_option_c_clean/src/metrics.py",
+      "name": "package_src/metrics.py",
       "passed": true
     },
     {
-      "detail": "exp0172/orchestrator_contract.json",
-      "name": "package_orchestrator_contract.json",
+      "detail": "healthlynked_option_c_clean/src/cv.py",
+      "name": "package_src/cv.py",
       "passed": true
     },
     {
-      "detail": "exp0172/trajectory_trace_fixture.csv",
-      "name": "package_trajectory_trace_fixture.csv",
+      "detail": "healthlynked_option_c_clean/scripts/run_best_pipeline.py",
+      "name": "package_scripts/run_best_pipeline.py",
       "passed": true
     },
     {
-      "detail": "exp0172/trajectory_eval_results.csv",
-      "name": "package_trajectory_eval_results.csv",
+      "detail": "healthlynked_option_c_clean/data/sample/providers.csv",
+      "name": "package_data/sample/providers.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/trajectory_eval_rubric.csv",
-      "name": "package_trajectory_eval_rubric.csv",
+      "detail": "healthlynked_option_c_clean/data/sample/evidence.csv",
+      "name": "package_data/sample/evidence.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/agent_security_matrix.csv",
-      "name": "package_agent_security_matrix.csv",
+      "detail": "healthlynked_option_c_clean/data/sample/gold_updates.csv",
+      "name": "package_data/sample/gold_updates.csv",
       "passed": true
     },
     {
-      "detail": "exp0172/incident_response_runbooks.csv",
-      "name": "package_incident_response_runbooks.csv",
+      "detail": "healthlynked_option_c_clean/requirements.txt",
+      "name": "package_requirements.txt",
       "passed": true
     },
     {
-      "detail": "exp0172/production_readiness_scorecard.csv",
-      "name": "package_production_readiness_scorecard.csv",
+      "detail": "",
+      "name": "package_no_private_research_artifacts",
       "passed": true
     },
     {
-      "detail": "exp0172/production_readiness_summary.json",
-      "name": "package_production_readiness_summary.json",
+      "detail": "90-Second Read",
+      "name": "package_text_START_HERE.md_90-Second Read",
       "passed": true
     },
     {
-      "detail": "exp0172/synthetic_volume_benchmark.csv",
-      "name": "package_synthetic_volume_benchmark.csv",
+      "detail": "self-contained unzip-and-run MVP smoke test passes",
+      "name": "package_text_START_HERE.md_self-contained unzip-and-run MVP smoke test passes",
       "passed": true
     },
     {
-      "detail": "exp0172/aws_step_functions_throughput_plan.csv",
-      "name": "package_aws_step_functions_throughput_plan.csv",
+      "detail": "Monday-Morning Implementation Plan",
+      "name": "package_text_proposal/JUDGE_DECISION_MEMO.md_Monday-Morning Implementation Plan",
       "passed": true
     },
     {
-      "detail": "exp0172/source_connector_registry.csv",
-      "name": "package_source_connector_registry.csv",
+      "detail": "What Would Make This Unsafe",
+      "name": "package_text_proposal/JUDGE_DECISION_MEMO.md_What Would Make This Unsafe",
       "passed": true
     },
     {
-      "detail": "exp0172/evidence_tool_manifest.json",
-      "name": "package_evidence_tool_manifest.json",
+      "detail": "Confidence And Decision Law",
+      "name": "package_text_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md_Confidence And Decision Law",
       "passed": true
     },
     {
-      "detail": "exp0172/connector_health_check_fixture.csv",
-      "name": "package_connector_health_check_fixture.csv",
+      "detail": "AWS Production Plan",
+      "name": "package_text_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md_AWS Production Plan",
       "passed": true
     },
     {
-      "detail": "exp0172/review_disposition_contract.json",
-      "name": "package_review_disposition_contract.json",
+      "detail": "Confidence Formula",
+      "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Confidence Formula",
       "passed": true
     },
     {
-      "detail": "exp0172/review_sla_metrics.csv",
-      "name": "package_review_sla_metrics.csv",
+      "detail": "Auto-Update Rules",
+      "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Auto-Update Rules",
       "passed": true
     },
     {
-      "detail": "exp0172/review_outcome_feedback_fixture.csv",
-      "name": "package_review_outcome_feedback_fixture.csv",
+      "detail": "Human Review Rules",
+      "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Human Review Rules",
       "passed": true
     },
     {
-      "detail": "exp0172/red_team_cases.csv",
-      "name": "package_red_team_cases.csv",
+      "detail": "recommended_action",
+      "name": "package_text_prototype/RECOMMENDATION_API_CONTRACT.md_recommended_action",
       "passed": true
     },
     {
-      "detail": "exp0172/red_team_eval_results.csv",
-      "name": "package_red_team_eval_results.csv",
+      "detail": "audit_required",
+      "name": "package_text_prototype/RECOMMENDATION_API_CONTRACT.md_audit_required",
       "passed": true
     },
     {
-      "detail": "exp0172/red_team_summary.json",
-      "name": "package_red_team_summary.json",
+      "detail": "f1=0.948276, precision=0.948276, recall=0.948276, auto_apply_precision=1.0, cost_per_correct_update_usd=0.005836",
+      "name": "package_dashboard_metrics_match_prototype",
       "passed": true
     },
     {
-      "detail": "exp0172/agent_workflow_diagram.mmd",
-      "name": "package_agent_workflow_diagram.mmd",
+      "detail": "evidence/audit_events.jsonl",
+      "name": "package_notebook_uses_curated_paths",
       "passed": true
     },
     {
-      "detail": "exp0172/agent_workflow_nodes.csv",
-      "name": "package_agent_workflow_nodes.csv",
+      "detail": "",
+      "name": "package_no_legacy_doc_references",
       "passed": true
     },
     {
-      "detail": "exp0172/agent_workflow_edges.csv",
-      "name": "package_agent_workflow_edges.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/artifact_index.csv",
-      "name": "package_artifact_index.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/privacy_controls.csv",
-      "name": "package_privacy_controls.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/data_minimization_schema.json",
-      "name": "package_data_minimization_schema.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/package_integrity_manifest.csv",
-      "name": "package_package_integrity_manifest.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/package_integrity_summary.json",
-      "name": "package_package_integrity_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/no_secrets_findings.csv",
-      "name": "package_no_secrets_findings.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/no_secrets_summary.json",
-      "name": "package_no_secrets_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/milestone_100_north_star_audit.csv",
-      "name": "package_milestone_100_north_star_audit.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skill_candidates.csv",
-      "name": "package_provider_directory_skill_candidates.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills_index.csv",
-      "name": "package_provider_directory_skills_index.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/skill_eval_coverage.json",
-      "name": "package_skill_eval_coverage.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/skill_library_eval_results.csv",
-      "name": "package_skill_library_eval_results.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/skill_library_eval_summary.json",
-      "name": "package_skill_library_eval_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/agent_capability_profiles.json",
-      "name": "package_agent_capability_profiles.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/skill_orchestration_dag.csv",
-      "name": "package_skill_orchestration_dag.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/judge_rubric_self_eval.csv",
-      "name": "package_judge_rubric_self_eval.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/judge_rubric_self_eval_summary.json",
-      "name": "package_judge_rubric_self_eval_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/source_perturbation_stress_tests.csv",
-      "name": "package_source_perturbation_stress_tests.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/threshold_robustness_sweep.csv",
-      "name": "package_threshold_robustness_sweep.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/residual_false_positives.csv",
-      "name": "package_residual_false_positives.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/residual_false_negatives.csv",
-      "name": "package_residual_false_negatives.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/data_acquisition_plan.csv",
-      "name": "package_data_acquisition_plan.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/fresh_business_listing_comparison.csv",
-      "name": "package_fresh_business_listing_comparison.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/mvp_field_coverage.csv",
-      "name": "package_mvp_field_coverage.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/core_doc_stale_findings.csv",
-      "name": "package_core_doc_stale_findings.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/competition_alignment_matrix.csv",
-      "name": "package_competition_alignment_matrix.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_notebook_gap_analysis.csv",
-      "name": "package_public_notebook_gap_analysis.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_notebook_summary.json",
-      "name": "package_public_notebook_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_dataset_profile_summary.json",
-      "name": "package_public_dataset_profile_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_dataset_missingness.csv",
-      "name": "package_public_dataset_missingness.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_dataset_issue_counts.csv",
-      "name": "package_public_dataset_issue_counts.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_dataset_triage_action_counts.csv",
-      "name": "package_public_dataset_triage_action_counts.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_dataset_triage_top500.csv",
-      "name": "package_public_dataset_triage_top500.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/public_dataset_triage_cli_summary.json",
-      "name": "package_public_dataset_triage_cli_summary.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/combined_abc_options.csv",
-      "name": "package_combined_abc_options.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/combined_abc_pipeline.csv",
-      "name": "package_combined_abc_pipeline.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/combined_abc_capabilities.csv",
-      "name": "package_combined_abc_capabilities.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/combined_abc_evaluation.csv",
-      "name": "package_combined_abc_evaluation.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/combined_abc_bonus.csv",
-      "name": "package_combined_abc_bonus.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/combined_abc_mvp.csv",
-      "name": "package_combined_abc_mvp.csv",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/auditing_and_rollback/SKILL.md",
-      "name": "package_provider_directory_skills/auditing_and_rollback/SKILL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/auditing_and_rollback/evals/trigger_cases.json",
-      "name": "package_provider_directory_skills/auditing_and_rollback/evals/trigger_cases.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/auditing_and_rollback/references/authority_tier.md",
-      "name": "package_provider_directory_skills/auditing_and_rollback/references/authority_tier.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/checking_source_health/SKILL.md",
-      "name": "package_provider_directory_skills/checking_source_health/SKILL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/checking_source_health/evals/trigger_cases.json",
-      "name": "package_provider_directory_skills/checking_source_health/evals/trigger_cases.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/checking_source_health/references/authority_tier.md",
-      "name": "package_provider_directory_skills/checking_source_health/references/authority_tier.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/evaluating_provider_directory_pipeline/SKILL.md",
-      "name": "package_provider_directory_skills/evaluating_provider_directory_pipeline/SKILL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/evaluating_provider_directory_pipeline/evals/trigger_cases.json",
-      "name": "package_provider_directory_skills/evaluating_provider_directory_pipeline/evals/trigger_cases.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/evaluating_provider_directory_pipeline/references/authority_tier.md",
-      "name": "package_provider_directory_skills/evaluating_provider_directory_pipeline/references/authority_tier.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/normalizing_provider_evidence/SKILL.md",
-      "name": "package_provider_directory_skills/normalizing_provider_evidence/SKILL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/normalizing_provider_evidence/evals/trigger_cases.json",
-      "name": "package_provider_directory_skills/normalizing_provider_evidence/evals/trigger_cases.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/normalizing_provider_evidence/references/authority_tier.md",
-      "name": "package_provider_directory_skills/normalizing_provider_evidence/references/authority_tier.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/resolving_provider_identity/SKILL.md",
-      "name": "package_provider_directory_skills/resolving_provider_identity/SKILL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/resolving_provider_identity/evals/trigger_cases.json",
-      "name": "package_provider_directory_skills/resolving_provider_identity/evals/trigger_cases.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/resolving_provider_identity/references/authority_tier.md",
-      "name": "package_provider_directory_skills/resolving_provider_identity/references/authority_tier.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/routing_human_review/SKILL.md",
-      "name": "package_provider_directory_skills/routing_human_review/SKILL.md",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/routing_human_review/evals/trigger_cases.json",
-      "name": "package_provider_directory_skills/routing_human_review/evals/trigger_cases.json",
-      "passed": true
-    },
-    {
-      "detail": "exp0172/provider_directory_skills/routing_human_review/references/authority_tier.md",
-      "name": "package_provider_directory_skills/routing_human_review/references/authority_tier.md",
+      "detail": "f1=0.948276, auto_precision=1.0",
+      "name": "package_self_contained_smoke",
       "passed": true
     }
   ],

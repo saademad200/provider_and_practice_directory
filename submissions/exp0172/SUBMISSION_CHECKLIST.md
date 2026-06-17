@@ -26,4 +26,4 @@
 - Review count: 38
 - Cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
-- Package checks passed: 84 curated-package checks
+- Package checks passed: 86 curated-package checks

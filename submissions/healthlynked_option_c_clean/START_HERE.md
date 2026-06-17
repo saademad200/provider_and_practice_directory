@@ -11,7 +11,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 84 curated-package verification checks
+- 86 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -27,10 +27,11 @@ Why it should win: it is immediately implementable after the competition. The pa
 6. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
 7. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
 8. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
-9. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-10. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` and `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md` for trusted-source operations.
-11. Inspect `dashboard/index.html` for the sample human review experience.
-12. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+9. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
+10. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+11. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` and `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md` for trusted-source operations.
+12. Inspect `dashboard/index.html` for the sample human review experience.
+13. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Why The Package Is Structured This Way
 

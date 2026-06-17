@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_027/cli/candidate_updates.csv",
+      "detail": "outputs/verify_clean_033/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_027/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_clean_033/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_027/cli/review_queue.csv",
+      "detail": "outputs/verify_clean_033/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_027/cli/config.json",
+      "detail": "outputs/verify_clean_033/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -76,7 +76,7 @@
       "passed": true
     },
     {
-      "detail": "notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "detail": "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "notebook_json_valid",
       "passed": true
     },
@@ -121,7 +121,7 @@
       "passed": true
     },
     {
-      "detail": "submissions/latest_final_package.zip",
+      "detail": "latest_final_package.zip",
       "name": "package_exists",
       "passed": true
     },
@@ -173,6 +173,16 @@
     {
       "detail": "healthlynked_option_c_clean/proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
       "name": "package_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/LEAN_TEAM_OPERATING_MODEL.md",
+      "name": "package_proposal/LEAN_TEAM_OPERATING_MODEL.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/FAILURE_MODE_PLAYBOOK.md",
+      "name": "package_proposal/FAILURE_MODE_PLAYBOOK.md",
       "passed": true
     },
     {
