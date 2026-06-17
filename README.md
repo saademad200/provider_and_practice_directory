@@ -26,19 +26,19 @@ Start here:
 
 1. `notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 2. `WINNING_PROPOSAL_BRIEF.md`
-3. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
-4. `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-5. `submissions/exp0172/WORKING_PROTOTYPE.md`
-6. `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`
-7. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
-8. `submissions/exp0172/COMBINED_ABC_PIPELINE_COVERAGE.md`
-9. `submissions/exp0172/KAGGLE_SUBMISSION_HANDOFF.md`
+3. `ADVERSARIAL_JUDGE_AUDIT.md`
+4. `RECOMMENDATION_API_CONTRACT.md`
+5. `submissions/exp0172/ONE_PAGE_JUDGE_GUIDE.md`
+6. `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+7. `submissions/exp0172/WORKING_PROTOTYPE.md`
+8. `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`
+9. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 191
+- Verification checks passed: 213
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
@@ -53,6 +53,8 @@ Current verified package:
 - `architecture/` - judge-facing architecture proposal, implementation map, and diagram source.
 - `prototype/` - judge-facing MVP runbook and prototype artifact map.
 - `notebooks/` - polished end-to-end notebook with narrative, MVP execution, metrics, diagrams, and bonus coverage.
+- `RECOMMENDATION_API_CONTRACT.md` - product-facing JSON recommendation shape matching the competition examples.
+- `ADVERSARIAL_JUDGE_AUDIT.md` and `GRANDMASTER_COUNTERMOVE_LOG.md` - skeptical review and countermeasure trail.
 - `autoresearch/` - self-improvement loop state, playbook, hypotheses, journal, and leaderboard.
 - `experiments/` - append-only experiment scripts used to evolve the solution.
 - `data/sample/` - synthetic provider/evidence/gold-update benchmark used when official train/test labels are unavailable.

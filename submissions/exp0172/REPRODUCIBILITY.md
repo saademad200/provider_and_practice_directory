@@ -36,7 +36,7 @@ Expected result:
 
 - `outputs/reproduce_verify/verification.json`
 - `passed: true`
-- 191 checks
+- 213 checks
 - F1 at or above 0.90
 - Auto-apply precision at or above 0.95
 

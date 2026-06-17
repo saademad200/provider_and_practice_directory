@@ -14,7 +14,7 @@ This submission intentionally combines all three allowed paths: Option A technic
 
 Key proof points:
 
-- Verified package checks: 191
+- Verified package checks: 213
 - Local proxy F1: 0.948276
 - Precision/recall: 0.948276 / 0.948276
 - Auto-apply precision: 1.0
@@ -25,12 +25,14 @@ Recommended first files for judges:
 
 1. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 2. `WINNING_PROPOSAL_BRIEF.md`
-3. `ONE_PAGE_JUDGE_GUIDE.md`
-4. `TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-5. `WORKING_PROTOTYPE.md`
-6. `ARCHITECTURE_DIAGRAM.md`
-7. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
-8. `verification.json`
+3. `ADVERSARIAL_JUDGE_AUDIT.md`
+4. `RECOMMENDATION_API_CONTRACT.md`
+5. `ONE_PAGE_JUDGE_GUIDE.md`
+6. `TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+7. `WORKING_PROTOTYPE.md`
+8. `ARCHITECTURE_DIAGRAM.md`
+9. `IMPLEMENTATION_ROADMAP_90_DAYS.md`
+10. `verification.json`
 
 ## Verify Before Upload
 

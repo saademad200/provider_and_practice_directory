@@ -33,6 +33,11 @@ REQUIRED_PACKAGE_FILES = [
     "PRESENTATION_NARRATIVE.md",
     "WINNING_PROPOSAL_BRIEF.md",
     "IMPLEMENTATION_ROADMAP_90_DAYS.md",
+    "ADVERSARIAL_JUDGE_AUDIT.md",
+    "GRANDMASTER_COUNTERMOVE_LOG.md",
+    "RECOMMENDATION_API_CONTRACT.md",
+    "recommendation_api_examples.json",
+    "recommendation_api_schema.json",
     "candidate_updates.csv",
     "auto_apply_updates.csv",
     "review_queue.csv",
@@ -327,6 +332,38 @@ def validate_notebook(checks: list[dict[str, Any]]) -> None:
     record(checks, "notebook_required_story_terms", not missing_terms, ", ".join(missing_terms))
 
 
+def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
+    examples_path = ROOT / "submissions/exp0172/recommendation_api_examples.json"
+    schema_path = ROOT / "submissions/exp0172/recommendation_api_schema.json"
+    if not examples_path.exists():
+        record(checks, "recommendation_examples_exist", False, str(examples_path))
+        return
+    if not schema_path.exists():
+        record(checks, "recommendation_schema_exist", False, str(schema_path))
+        return
+    try:
+        examples = json.loads(examples_path.read_text(encoding="utf-8"))
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        record(checks, "recommendation_json_valid", False, str(exc))
+        return
+    recommendations = examples.get("recommendations", [])
+    required_keys = {"provider_id", "npi", "change_detected", "changes", "overall_confidence", "recommended_action", "reason"}
+    valid_shape = bool(recommendations) and all(required_keys.issubset(item) for item in recommendations)
+    has_sources = all(
+        all("supporting_sources" in change and change["supporting_sources"] for change in item.get("changes", []))
+        for item in recommendations
+    )
+    has_human_review = any(item.get("recommended_action") == "human_review" for item in recommendations)
+    has_schema_title = schema.get("title") == "ProviderDirectoryRecommendationBatch"
+    record(checks, "recommendation_examples_exist", True, str(examples_path))
+    record(checks, "recommendation_json_valid", True, str(examples_path))
+    record(checks, "recommendation_contract_shape", valid_shape, f"recommendations={len(recommendations)}")
+    record(checks, "recommendation_contract_sources", has_sources, "supporting_sources required per change")
+    record(checks, "recommendation_contract_human_review", has_human_review, "at least one human_review example")
+    record(checks, "recommendation_schema_title", has_schema_title, schema.get("title", ""))
+
+
 def validate_package(checks: list[dict[str, Any]], package_path: Path) -> None:
     if not package_path.exists():
         record(checks, "package_exists", False, str(package_path))
@@ -359,6 +396,7 @@ def main() -> int:
     run_public_dataset_cli_smoke(checks, out_dir)
     validate_docs(checks)
     validate_notebook(checks)
+    validate_recommendation_contract(checks)
     validate_package(checks, Path(args.package))
 
     report = {

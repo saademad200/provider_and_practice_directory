@@ -6,7 +6,7 @@
 - Source package: `submissions/exp0168_final_combined_abc_package.zip`
 - Submission mode: Option A + Option B + Option C combined.
 - Verification: see `verification.json`.
-- Verification checks: 191.
+- Verification checks: 213.
 - Public dataset CLI smoke: passes on 42,000 Kaggle-adjacent rows when the downloaded public dataset is present.
 - Self no-secrets scan: see `NO_SECRETS_SCAN.md`.
 - Production readiness score: 50 / 50.
@@ -23,7 +23,7 @@
 - Review count: 38
 - Cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
-- Package checks passed: 191
+- Package checks passed: 213
 
 ## Major Additions
 
