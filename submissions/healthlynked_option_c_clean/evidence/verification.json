@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_038/cli/candidate_updates.csv",
+      "detail": "outputs/verify_clean_040/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_038/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_clean_040/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_038/cli/review_queue.csv",
+      "detail": "outputs/verify_clean_040/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_clean_038/cli/config.json",
+      "detail": "outputs/verify_clean_040/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -218,6 +218,11 @@
     {
       "detail": "healthlynked_option_c_clean/proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
       "name": "package_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/OFFICIAL_SOURCE_REFERENCES.md",
+      "name": "package_proposal/OFFICIAL_SOURCE_REFERENCES.md",
       "passed": true
     },
     {
@@ -428,6 +433,16 @@
     {
       "detail": "Connector Admission Checklist",
       "name": "package_text_proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md_Connector Admission Checklist",
+      "passed": true
+    },
+    {
+      "detail": "Reference Map",
+      "name": "package_text_proposal/OFFICIAL_SOURCE_REFERENCES.md_Reference Map",
+      "passed": true
+    },
+    {
+      "detail": "Design Implications",
+      "name": "package_text_proposal/OFFICIAL_SOURCE_REFERENCES.md_Design Implications",
       "passed": true
     },
     {

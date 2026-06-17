@@ -238,6 +238,7 @@ CURATED_PACKAGE_FILES = [
     "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
     "proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md",
     "proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
+    "proposal/OFFICIAL_SOURCE_REFERENCES.md",
     "prototype/WORKING_PROTOTYPE.md",
     "prototype/RECOMMENDATION_API_CONTRACT.md",
     "prototype/metrics.json",
@@ -446,6 +447,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
         "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
         "proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md",
+        "proposal/OFFICIAL_SOURCE_REFERENCES.md",
         "prototype/WORKING_PROTOTYPE.md",
         "prototype/RECOMMENDATION_API_CONTRACT.md",
     ]
@@ -463,6 +465,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "proposal/LEAN_TEAM_OPERATING_MODEL.md": ["Minimum Team", "Decision Rights"],
         "proposal/FAILURE_MODE_PLAYBOOK.md": ["Safe Defaults", "Incident Workflow"],
         "proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md": ["Source Access Law", "Connector Admission Checklist"],
+        "proposal/OFFICIAL_SOURCE_REFERENCES.md": ["Reference Map", "Design Implications"],
     }
     with zipfile.ZipFile(package_path) as archive:
         legacy_hits: list[str] = []

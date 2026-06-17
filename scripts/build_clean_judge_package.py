@@ -32,6 +32,7 @@ TOP_LEVEL_FILES = [
     ("OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md", "proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md"),
     ("SOURCE_CONNECTOR_STATUS_MATRIX.md", "proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md"),
     ("SOURCE_ACCESS_COMPLIANCE_POLICY.md", "proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md"),
+    ("OFFICIAL_SOURCE_REFERENCES.md", "proposal/OFFICIAL_SOURCE_REFERENCES.md"),
     ("WORKING_PROTOTYPE.md", "prototype/WORKING_PROTOTYPE.md"),
     ("RECOMMENDATION_API_CONTRACT.md", "prototype/RECOMMENDATION_API_CONTRACT.md"),
     ("metrics.json", "prototype/metrics.json"),
@@ -91,7 +92,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 92 curated-package verification checks
+- 95 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -110,7 +111,7 @@ Why it should win: it is immediately implementable after the competition. The pa
 9. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
 10. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
 11. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-12. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, and `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md` for trusted-source operations.
+12. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
 13. Inspect `dashboard/index.html` for the sample human review experience.
 14. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
@@ -137,6 +138,7 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md`
 - `proposal/LEAN_TEAM_OPERATING_MODEL.md`
 - `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+- `proposal/OFFICIAL_SOURCE_REFERENCES.md`
 - `prototype/WORKING_PROTOTYPE.md`
 - `dashboard/index.html`
 
