@@ -1,12 +1,12 @@
-# Judge Rubric Self Eval
+# Judge Rubric Coverage Self Eval
 
-Curated-package refresh against `submissions/latest_final_package.zip`. The score is artifact-backed and evidence pointers are aligned to the judge upload.
+Curated-package refresh against `submissions/latest_final_package.zip`. This is an internal coverage check, not an official judge score: it asks whether each published evaluation criterion has concrete evidence in the upload and whether the numeric proxy gates pass.
 
-## Result
+## Coverage Result
 
-- Weighted score: 100.0 / 100
-- Score percent: 100.0%
-- Criteria at full score: 12 / 12
+- Weighted coverage: 100.0 / 100
+- Coverage percent: 100.0%
+- Criteria with complete evidence: 12 / 12
 
 ## Current Prototype Context
 
