@@ -10,6 +10,7 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/BONUS_COVERAGE_MATRIX.md`
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+- `proposal/AGENT_WORKFLOW_DIAGRAM.md`
 - `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 - `prototype/WORKING_PROTOTYPE.md`
 - `dashboard/index.html`

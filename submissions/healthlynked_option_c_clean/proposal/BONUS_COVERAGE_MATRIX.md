@@ -9,7 +9,7 @@ This page maps the competition bonus-point list to concrete artifacts in the cur
 | Bonus Item | Coverage | Primary Evidence |
 |---|---|---|
 | Working prototype | Included | `prototype/WORKING_PROTOTYPE.md`, `scripts/run_best_pipeline.py`, `prototype/metrics.json` |
-| Agent workflow diagram | Included | `proposal/ARCHITECTURE_DIAGRAM.md`, `proposal/ARCHITECTURE_DIAGRAM.mmd`, `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` |
+| Agent workflow diagram | Included | `proposal/AGENT_WORKFLOW_DIAGRAM.md`, `proposal/AGENT_WORKFLOW_DIAGRAM.mmd`, `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` |
 | Cost estimate per 1,000 records | Included | `appendix/COST_MODEL.md`, `evidence/cost_model_per_1000.csv` |
 | Confidence scoring formula | Included | `proposal/CONFIDENCE_AND_DECISION_POLICY.md` |
 | Sample human review dashboard | Included | `dashboard/index.html`, `appendix/DASHBOARD_SPEC.md` |
