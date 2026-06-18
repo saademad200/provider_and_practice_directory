@@ -8,12 +8,6 @@ Upload:
 submissions/latest_final_package.zip
 ```
 
-Equivalent copy:
-
-```text
-submissions/healthlynked_option_c_clean.zip
-```
-
 ## Current Artifact Fingerprint
 
 - SHA-256: `7c4c85ff078e9b46c86dc3bdbc424b8491ce4e3292ae2a1eb4e02ac0ff792335`
