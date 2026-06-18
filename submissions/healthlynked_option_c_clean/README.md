@@ -28,6 +28,26 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - Cost per correct update: $0.005836
 - Cloud plan: AWS
 
+## Run The MVP
+
+From inside the unzipped package:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 scripts/run_best_pipeline.py --out-dir outputs/judge_smoke
+```
+
+Expected output files:
+
+- `outputs/judge_smoke/candidate_updates.csv`
+- `outputs/judge_smoke/auto_apply_updates.csv`
+- `outputs/judge_smoke/review_queue.csv`
+- `outputs/judge_smoke/metrics.json`
+
+The package has already been verified by `evidence/verification.json`; the repository root also includes `scripts/verify_pipeline.py` for full package verification.
+
 ## Folder Map
 
 - `proposal/` - architecture, winning brief, source connector plan, roadmap, and diagram.

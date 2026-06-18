@@ -124,7 +124,6 @@ REQUIRED_PACKAGE_FILES = [
     "cost_model_per_1000.csv",
     "monitoring_alerts.json",
     "dashboard/index.html",
-    "dashboard_v2/index.html",
     "nppes_api_evidence.csv",
     "specialty_normalization_fixture.csv",
     "practice_change_candidates.csv",

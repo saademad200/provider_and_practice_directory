@@ -55,7 +55,7 @@
 | residual_false_positives.csv | metrics | Remaining false-positive proposed updates after normalized matching. | 1522 |
 | threshold_robustness_sweep.csv | metrics | Nearby confidence, source-weight, and auto-apply threshold sweep results. | 1189 |
 | dashboard/index.html | dashboard | Static operations dashboard prototype. | 16965 |
-| dashboard_v2/index.html | dashboard | Lifecycle, LLM, and rollback dashboard lanes. | 16965 |
+| dashboard/index.html | dashboard | Lifecycle, LLM, and rollback dashboard lanes. | 16965 |
 | audit_events.jsonl | audit | Append-only audit trail sample. | 44305 |
 | rollback_plan.csv | audit | Rollback plan for applied updates. | 3285 |
 | PUBLIC_DATASET_PROFILE.md | data_profile | Profile and review-first triage transfer check for the visible 42k-row public provider-directory dataset. | 2345 |

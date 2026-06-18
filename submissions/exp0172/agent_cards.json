@@ -177,7 +177,7 @@
       "learning_signal"
     ],
     "tools": [
-      "dashboard_v2",
+      "dashboard",
       "review_priority_queue",
       "case_study_generator"
     ],

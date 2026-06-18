@@ -128,6 +128,19 @@ Why it should win: it is immediately implementable after the competition. The pa
 14. Inspect `dashboard/index.html` for the sample human review experience.
 15. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
+## Run The MVP
+
+From inside the unzipped package:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 scripts/run_best_pipeline.py --out-dir outputs/judge_smoke
+```
+
+The run writes candidate updates, safe auto-apply updates, human-review queue, config, and metrics under `outputs/judge_smoke/`. The expected proof point is the same as the packaged evidence: F1 `0.948276`, safe auto-apply precision `1.0`, and cost per correct update `$0.005836`.
+
 ## Why The Package Is Structured This Way
 
 The first layer is intentionally small: notebook, proposal, prototype, architecture, API contract, source plan, dashboard, and verification. Supporting material is organized under `appendix/` and `evidence/` so judges can go deep without being forced through a flat folder of internal research files.
@@ -163,6 +176,26 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - Safe auto-apply precision: 1.0
 - Cost per correct update: $0.005836
 - Cloud plan: AWS
+
+## Run The MVP
+
+From inside the unzipped package:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 scripts/run_best_pipeline.py --out-dir outputs/judge_smoke
+```
+
+Expected output files:
+
+- `outputs/judge_smoke/candidate_updates.csv`
+- `outputs/judge_smoke/auto_apply_updates.csv`
+- `outputs/judge_smoke/review_queue.csv`
+- `outputs/judge_smoke/metrics.json`
+
+The package has already been verified by `evidence/verification.json`; the repository root also includes `scripts/verify_pipeline.py` for full package verification.
 
 ## Folder Map
 
@@ -238,7 +271,7 @@ def sync_dashboard_metrics(target: Path) -> None:
     if not metrics_path.exists():
         return
     metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
-    for dashboard_path in [target / "dashboard/index.html", target / "dashboard_v2/index.html"]:
+    for dashboard_path in [target / "dashboard/index.html"]:
         if not dashboard_path.exists():
             continue
         html = dashboard_path.read_text(encoding="utf-8")

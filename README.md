@@ -28,15 +28,19 @@ Start here:
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 3. `proposal/JUDGE_DECISION_MEMO.md`
 4. `proposal/WINNING_PROPOSAL_BRIEF.md`
-5. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-6. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-7. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-8. `prototype/WORKING_PROTOTYPE.md`
-9. `prototype/RECOMMENDATION_API_CONTRACT.md`
-10. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-11. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-12. `dashboard/index.html`
-13. `evidence/verification.json`
+5. `proposal/PRESENTATION_NARRATIVE.md`
+6. `proposal/JUDGE_COMPARISON_MATRIX.md`
+7. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+8. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+9. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+10. `prototype/WORKING_PROTOTYPE.md`
+11. `prototype/RECOMMENDATION_API_CONTRACT.md`
+12. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+13. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+14. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+15. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+16. `dashboard/index.html`
+17. `evidence/verification.json`
 
 Current verified package:
 
@@ -57,15 +61,19 @@ Show only the curated package path above. The intended first impression is small
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 3. `proposal/JUDGE_DECISION_MEMO.md`
 4. `proposal/WINNING_PROPOSAL_BRIEF.md`
-5. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-6. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-7. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-8. `prototype/WORKING_PROTOTYPE.md`
-9. `prototype/RECOMMENDATION_API_CONTRACT.md`
-10. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-11. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-12. `dashboard/index.html`
-13. `evidence/verification.json`
+5. `proposal/PRESENTATION_NARRATIVE.md`
+6. `proposal/JUDGE_COMPARISON_MATRIX.md`
+7. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+8. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+9. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+10. `prototype/WORKING_PROTOTYPE.md`
+11. `prototype/RECOMMENDATION_API_CONTRACT.md`
+12. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+13. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+14. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+15. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+16. `dashboard/index.html`
+17. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 

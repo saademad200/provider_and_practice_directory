@@ -80,7 +80,7 @@ The package should be judged as a runnable MVP plus a production-scale architect
 | Agent workflow diagram | included | AGENT_WORKFLOW_DIAGRAM.md; agent_workflow_diagram.mmd |
 | Cost estimate per 1,000 provider records | included | COST_MODEL.md; cost_model_per_1000.csv |
 | Confidence scoring formula | included | candidate_updates.csv; THRESHOLD_ROBUSTNESS_SWEEP.md; FIELD_RISK_POLICY.md |
-| Sample human review dashboard | included | dashboard/index.html; dashboard_v2/index.html |
+| Sample human review dashboard | included | dashboard/index.html |
 | Duplicate detection logic | included | DUPLICATE_MOVEMENT_DETECTION.md; duplicate_candidates.csv |
 | Address normalization strategy | included | FIELD_RISK_POLICY.md; BENCHMARK_DATASHEET.md |
 | NPI validation | included | NPPES_API_SMOKE.md; public_dataset_issue_counts.csv |

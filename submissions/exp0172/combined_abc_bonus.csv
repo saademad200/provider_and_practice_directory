@@ -3,7 +3,7 @@ Working prototype,scripts/run_best_pipeline.py; candidate_updates.csv; verificat
 Agent workflow diagram,AGENT_WORKFLOW_DIAGRAM.md; agent_workflow_diagram.mmd,included
 "Cost estimate per 1,000 provider records",COST_MODEL.md; cost_model_per_1000.csv,included
 Confidence scoring formula,candidate_updates.csv; THRESHOLD_ROBUSTNESS_SWEEP.md; FIELD_RISK_POLICY.md,included
-Sample human review dashboard,dashboard/index.html; dashboard_v2/index.html,included
+Sample human review dashboard,dashboard/index.html,included
 Duplicate detection logic,DUPLICATE_MOVEMENT_DETECTION.md; duplicate_candidates.csv,included
 Address normalization strategy,FIELD_RISK_POLICY.md; BENCHMARK_DATASHEET.md,included
 NPI validation,NPPES_API_SMOKE.md; public_dataset_issue_counts.csv,included
