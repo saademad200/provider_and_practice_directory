@@ -278,6 +278,16 @@ CURATED_PACKAGE_FILES = [
 ]
 
 PRIVATE_PACKAGE_PATTERNS = ["JUDGE_AUDIT", "COUNTERMOVE_LOG"]
+SECRET_NAME_PATTERNS = [".env", "kaggle.json", "credentials", "secrets"]
+SECRET_TEXT_PATTERNS = [
+    re.compile(r"AKIA[0-9A-Z]{16}"),
+    re.compile(r"(?i)aws_secret_access_key"),
+    re.compile(r"(?i)kaggle_key"),
+    re.compile(r"(?i)kaggle_username"),
+    re.compile(r"ghp_[A-Za-z0-9_]{20,}"),
+    re.compile(r"sk-[A-Za-z0-9_-]{20,}"),
+    re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----"),
+]
 SAFE_AUTO_APPLY_FIELDS = {"phone", "specialty"}
 UNSAFE_AUTO_APPLY_DRIVER_PATTERN = re.compile(r"high_field_risk|practice_peer_mismatch|source_gap")
 
@@ -514,6 +524,20 @@ def validate_package(checks: list[dict[str, Any]], package_path: Path) -> None:
         record(checks, f"package_{filename}", expected in names, expected)
     private_hits = sorted(name for name in names if any(pattern in name for pattern in PRIVATE_PACKAGE_PATTERNS))
     record(checks, "package_no_private_research_artifacts", not private_hits, "; ".join(private_hits[:10]))
+    secret_name_hits = sorted(name for name in names if any(pattern in name.lower() for pattern in SECRET_NAME_PATTERNS))
+    secret_text_hits: list[str] = []
+    with zipfile.ZipFile(package_path) as archive:
+        for name in sorted(names):
+            if name.endswith("/"):
+                continue
+            try:
+                text = archive.read(name).decode("utf-8")
+            except (UnicodeDecodeError, KeyError):
+                continue
+            if any(pattern.search(text) for pattern in SECRET_TEXT_PATTERNS):
+                secret_text_hits.append(name)
+    secret_hits = secret_name_hits + secret_text_hits
+    record(checks, "package_no_secret_like_artifacts", not secret_hits, "; ".join(secret_hits[:10]))
     if curated_mode:
         validate_curated_package_text(checks, package_path, prefix)
 
