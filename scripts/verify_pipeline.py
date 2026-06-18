@@ -548,6 +548,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "proposal/AGENT_WORKFLOW_DIAGRAM.md": ["Agent Responsibilities", "Safety And Policy Gates", "Render-Free Diagram"],
         "proposal/ARCHITECTURE_DIAGRAM.md": ["Render-Free Diagram", "LLM extraction is a gated fallback"],
         "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md": ["Confidence And Decision Law", "AWS Production Plan"],
+        "prototype/WORKING_PROTOTYPE.md": ["Deterministic Reproduction Check"],
         "prototype/RECOMMENDATION_API_CONTRACT.md": ["recommended_action", "audit_required"],
         "proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md": ["Go/No-Go Thresholds", "Consulting Success Definition"],
         "proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md": ["Connector Health Signals", "Field-Level Source Law"],

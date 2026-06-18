@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_source_health_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_repro_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_source_health_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_repro_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_source_health_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_repro_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_source_health_fixed/cli/config.json",
+      "detail": "outputs/verify_repro_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -566,6 +566,11 @@
       "passed": true
     },
     {
+      "detail": "Deterministic Reproduction Check",
+      "name": "package_text_prototype/WORKING_PROTOTYPE.md_Deterministic Reproduction Check",
+      "passed": true
+    },
+    {
       "detail": "recommended_action",
       "name": "package_text_prototype/RECOMMENDATION_API_CONTRACT.md_recommended_action",
       "passed": true
@@ -611,7 +616,7 @@
       "passed": true
     },
     {
-      "detail": "125 curated-package checks passed=True",
+      "detail": "126 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },
