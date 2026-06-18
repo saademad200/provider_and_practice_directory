@@ -6,30 +6,36 @@ Upload `submissions/latest_final_package.zip`.
 
 ## Suggested Submission Title
 
-Combined Option A/B/C Provider Directory Update Pipeline
+Option C Hybrid Provider Directory Quality Control Plane
 
 ## Suggested Submission Description
 
-This submission intentionally combines all three allowed paths: Option A technical architecture, Option B working prototype, and Option C hybrid production scale plan. It includes a runnable provider/practice directory update MVP, an AWS-oriented production operating model, source-governed candidate updates, confidence scoring, safe auto-apply thresholds, human review routing, audit/rollback artifacts, source reliability controls, public-notebook gap analysis, and a 42,000-row Kaggle-adjacent provider-directory transfer check with a reusable CLI.
+This Option C hybrid submission combines a runnable provider/practice directory update MVP with an AWS-oriented production architecture. It includes source-governed candidate updates, deterministic normalization, provider/practice/location matching, confidence scoring, safe auto-apply thresholds, human review routing, audit/rollback artifacts, source access controls, bonus-capability evidence, and a 90-day implementation plan for the expected post-award consulting engagement.
 
 Key proof points:
 
-- Verified package checks: 191
+- Verified package checks: 101 curated-package checks
 - Local proxy F1: 0.948276
 - Precision/recall: 0.948276 / 0.948276
 - Auto-apply precision: 1.0
-- Public dataset CLI smoke: 42,000 Kaggle-adjacent rows processed
+- Bonus coverage matrix: included
+- Manual unzip-and-run smoke: passed
 - Cloud target: AWS
 
 Recommended first files for judges:
 
-1. `COMBINED_ABC_PIPELINE_COVERAGE.md`
-2. `COMPETITION_ALIGNMENT_REFRESH.md`
-3. `PUBLIC_DATASET_PROFILE.md`
-4. `PUBLIC_DATASET_TRIAGE_CLI.md`
-5. `MVP_FIELD_COVERAGE.md`
-6. `ONE_PAGE_JUDGE_GUIDE.md`
-7. `verification.json`
+1. `START_HERE.md`
+2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+3. `proposal/WINNING_PROPOSAL_BRIEF.md`
+4. `proposal/JUDGE_DECISION_MEMO.md`
+5. `proposal/BONUS_COVERAGE_MATRIX.md`
+6. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+7. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+8. `prototype/WORKING_PROTOTYPE.md`
+9. `prototype/RECOMMENDATION_API_CONTRACT.md`
+10. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+11. `dashboard/index.html`
+12. `evidence/verification.json`
 
 ## Verify Before Upload
 
