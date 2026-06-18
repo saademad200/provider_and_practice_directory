@@ -37,4 +37,4 @@ This scorecard maps the HealthLynked judging surface to concrete evidence, machi
 
 - Treat any criterion below 5 as the next packaging or engineering opportunity.
 - Keep this scorecard in the final zip so judges can trace each claim to a file.
-- Update `scripts/verify_pipeline.py` whenever a scorecard artifact becomes mandatory.
+- Update the repository package verifier whenever a scorecard artifact becomes mandatory.
