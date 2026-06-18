@@ -571,7 +571,11 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
     required_terms = {
         "START_HERE.md": ["90-Second Read", "self-contained unzip-and-run MVP smoke test passes"],
         "proposal/ONE_PAGE_SCORECARD.md": ["Competition Criteria", "Bonus Coverage", "The Judge Decision In One Sentence"],
-        "proposal/JUDGE_DECISION_MEMO.md": ["Monday-Morning Implementation Plan", "What Would Make This Unsafe"],
+        "proposal/JUDGE_DECISION_MEMO.md": [
+            "Monday-Morning Implementation Plan",
+            "What Would Make This Unsafe",
+            "Judge Objection Handling",
+        ],
         "proposal/JUDGE_COMPARISON_MATRIX.md": ["Competitive Comparison", "Winning Edge By Criterion"],
         "proposal/BONUS_COVERAGE_MATRIX.md": ["Bonus Evidence", "Confidence scoring formula"],
         "proposal/PRESENTATION_NARRATIVE.md": ["Three-Minute Talk Track", "Closing Ask"],

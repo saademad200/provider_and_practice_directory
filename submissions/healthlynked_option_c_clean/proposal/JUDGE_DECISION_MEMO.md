@@ -69,6 +69,16 @@ The system should not auto-apply:
 
 Those cases go to human review with sources, confidence, reason codes, and rollback context.
 
+## Judge Objection Handling
+
+| Concern | Response |
+| --- | --- |
+| "The prototype uses proxy data, so why trust it?" | The metrics are intentionally framed as engineering proof, not production truth. The transfer plan requires HealthLynked shadow-mode calibration before production writes. |
+| "This may be too complex for a lean team." | The MVP starts with deterministic connectors, cached evidence, conservative review routing, and only a small set of low-risk auto-update fields. Agents are bounded workers, not an uncontrolled autonomous system. |
+| "LLM search could become expensive or unreliable." | LLM extraction is a fallback only after approved deterministic parsing fails, and outputs are schema-validated, source-grounded, confidence-scored, and review-only when uncertain. |
+| "Bad auto-updates could damage trust." | Identity-sensitive and high-risk changes are review-first; auto-apply requires strong agreement, fresh evidence, allowed fields, audit events, and rollback records. |
+| "Source conflicts are unavoidable." | Source authority, freshness, and field-specific reliability are explicit scoring inputs; conflicts lower confidence and route records to review with reason codes. |
+
 ## Decision
 
 This is the best submission if the goal is to hire a consultant team that can actually implement the pipeline after the competition. It gives judges a working prototype, production architecture, operating policy, and evidence trail in one coherent package.
