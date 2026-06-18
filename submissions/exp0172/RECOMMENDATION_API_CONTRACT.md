@@ -8,7 +8,7 @@ This submission therefore includes:
 
 - `prototype/recommendation_api_examples.json`
 - `prototype/recommendation_api_schema.json`
-- `scripts/export_recommendation_api_examples.py` in the full repository workspace
+- a full-repository exporter used to regenerate the examples from pipeline outputs
 
 ## Response Shape
 
@@ -59,6 +59,10 @@ This submission therefore includes:
 | `auto_update` | All proposed changes satisfy source, confidence, freshness, field-risk, and auto-apply thresholds. |
 | `human_review` | At least one change is low-confidence, conflicting, high-risk, stale, identity-sensitive, or lacks enough independent source support. |
 | `no_change` | Current record is confirmed or external evidence is insufficient to recommend a change. |
+
+## Demo Source URLs
+
+The prototype uses synthetic `example.org` source URLs because the sample benchmark is synthetic and contains no real provider records. In production, these fields are populated with the exact NPPES/API/file reference, state-board page, practice website URL, health-system roster URL, retrieval timestamp, and parser version used for the recommendation.
 
 ## Production Notes
 
