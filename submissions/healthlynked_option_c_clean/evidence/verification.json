@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_production_docs_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_five_minute_path_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_production_docs_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_five_minute_path_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_production_docs_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_five_minute_path_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_production_docs_fixed/cli/config.json",
+      "detail": "outputs/verify_five_minute_path_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -436,6 +436,11 @@
       "passed": true
     },
     {
+      "detail": "Five-Minute Judge Path",
+      "name": "package_text_START_HERE.md_Five-Minute Judge Path",
+      "passed": true
+    },
+    {
       "detail": "self-contained unzip-and-run MVP smoke test passes",
       "name": "package_text_START_HERE.md_self-contained unzip-and-run MVP smoke test passes",
       "passed": true
@@ -691,7 +696,7 @@
       "passed": true
     },
     {
-      "detail": "141 curated-package checks passed=True",
+      "detail": "142 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

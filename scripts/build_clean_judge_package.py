@@ -120,11 +120,19 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 141 curated-package verification checks
+- 142 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
 Why it should win: it is immediately implementable after the competition. The package includes the technical architecture, working prototype, confidence policy, connector operating model, human review workflow, audit trail, cost controls, and post-award acceptance criteria.
+
+## Five-Minute Judge Path
+
+1. Read `proposal/ONE_PAGE_SCORECARD.md`.
+2. Read `proposal/JUDGE_DECISION_MEMO.md`.
+3. Open `Provider_Directory_Update_Pipeline_End_to_End.ipynb`.
+4. Inspect `dashboard/index.html`.
+5. Check `evidence/verification.json`.
 
 ## Recommended Judge Path
 
