@@ -77,7 +77,7 @@ Show only the curated package path above. The intended first impression is small
 15. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
 16. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
 17. `dashboard/index.html`
-17. `evidence/verification.json`
+18. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 
@@ -91,7 +91,7 @@ Everything else in the upload is supporting evidence under `appendix/`, `evidenc
 - `notebooks/` - polished end-to-end notebook with narrative, MVP execution, metrics, diagrams, and bonus coverage.
 - `RECOMMENDATION_API_CONTRACT.md` - product-facing JSON recommendation shape matching the competition examples.
 - `OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` - real-source ingestion plan for NPPES, CMS files, FSMB/state boards, practice websites, and fallback sources.
-- `experiments/` - append-only experiment scripts used to evolve the solution.
+- `experiments/` - note explaining that historical research runners are intentionally excluded from the public handoff.
 - `data/sample/` - synthetic provider/evidence/gold-update benchmark used when official train/test labels are unavailable.
 - `submissions/healthlynked_option_c_clean/` - curated judge-facing handoff package.
 - `submissions/latest_final_package.zip` - upload-ready Kaggle package.
