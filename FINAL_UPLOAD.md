@@ -12,7 +12,7 @@ submissions/latest_final_package.zip
 
 - SHA-256: `f28c96ce0f5a7ee1ecc34957a6f5041b59f171fc77dca977cdd4bd87a6e82d42`
 - Size: `173749` bytes
-- Curated package files: `70`
+- Curated package files: `72`
 - Verification: `127 / 127` checks passing
 
 ## Verify Before Upload
