@@ -22,6 +22,8 @@ Upload this curated judge package to Kaggle:
 submissions/latest_final_package.zip
 ```
 
+See `FINAL_UPLOAD.md` for the current artifact SHA-256, verification command, and judge smoke-test command.
+
 Start here:
 
 1. `START_HERE.md`
