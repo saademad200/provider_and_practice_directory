@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import compileall
+import csv
 import json
 import re
 import shutil
@@ -269,10 +270,30 @@ CURATED_PACKAGE_FILES = [
 ]
 
 PRIVATE_PACKAGE_PATTERNS = ["JUDGE_AUDIT", "COUNTERMOVE_LOG"]
+SAFE_AUTO_APPLY_FIELDS = {"phone", "specialty"}
+UNSAFE_AUTO_APPLY_DRIVER_PATTERN = re.compile(r"high_field_risk|practice_peer_mismatch|source_gap")
 
 
 def record(checks: list[dict[str, Any]], name: str, passed: bool, detail: str = "") -> None:
     checks.append({"name": name, "passed": bool(passed), "detail": detail})
+
+
+def auto_apply_policy_violations(rows: list[dict[str, str]]) -> list[str]:
+    violations: list[str] = []
+    for index, row in enumerate(rows, start=2):
+        field = row.get("field", "")
+        freshness_status = row.get("freshness_status", "")
+        drivers = row.get("review_priority_drivers", "")
+        reason = row.get("review_reason_code", "")
+        if field not in SAFE_AUTO_APPLY_FIELDS:
+            violations.append(f"row {index}: unsafe field {field}")
+        if freshness_status == "all_stale":
+            violations.append(f"row {index}: all_stale evidence")
+        if UNSAFE_AUTO_APPLY_DRIVER_PATTERN.search(drivers):
+            violations.append(f"row {index}: unsafe driver {drivers}")
+        if reason != "auto_apply_criteria_met":
+            violations.append(f"row {index}: review reason {reason}")
+    return violations
 
 
 def compile_project(checks: list[dict[str, Any]]) -> None:
@@ -312,6 +333,16 @@ def run_cli(checks: list[dict[str, Any]], out_dir: Path) -> dict:
     record(checks, "cli_metrics_thresholds", passed, detail)
     for name in ["candidate_updates.csv", "auto_apply_updates.csv", "review_queue.csv", "config.json"]:
         record(checks, f"cli_output_{name}", (out_dir / name).exists(), str(out_dir / name))
+    auto_path = out_dir / "auto_apply_updates.csv"
+    if auto_path.exists():
+        rows = list(csv.DictReader(auto_path.read_text(encoding="utf-8").splitlines()))
+        violations = auto_apply_policy_violations(rows)
+        record(
+            checks,
+            "cli_safe_auto_apply_policy",
+            not violations,
+            f"rows={len(rows)}, violations={'; '.join(violations[:5])}",
+        )
     return metrics
 
 
@@ -494,6 +525,18 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
             record(checks, "package_dashboard_metrics_match_prototype", consistent, detail)
         except (KeyError, json.JSONDecodeError, TypeError, AttributeError) as exc:
             record(checks, "package_dashboard_metrics_match_prototype", False, str(exc))
+        try:
+            auto_text = archive.read(f"{prefix}/prototype/auto_apply_updates.csv").decode("utf-8")
+            auto_rows = list(csv.DictReader(auto_text.splitlines()))
+            violations = auto_apply_policy_violations(auto_rows)
+            record(
+                checks,
+                "package_safe_auto_apply_policy",
+                not violations,
+                f"rows={len(auto_rows)}, violations={'; '.join(violations[:5])}",
+            )
+        except KeyError as exc:
+            record(checks, "package_safe_auto_apply_policy", False, str(exc))
         try:
             notebook_text = archive.read(f"{prefix}/Provider_Directory_Update_Pipeline_End_to_End.ipynb").decode("utf-8")
             notebook_portable = "submissions/" not in notebook_text and "evidence/audit_events.jsonl" in notebook_text
