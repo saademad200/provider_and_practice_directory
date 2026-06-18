@@ -10,10 +10,10 @@ submissions/latest_final_package.zip
 
 ## Current Artifact Fingerprint
 
-- SHA-256: `07b3a24b67c07aa46721449ef069c61a7e2cbab53d3e502658d9c419c68fe394`
-- Size: `168444` bytes
-- Curated package files: `69`
-- Verification: `110 / 110` checks passing
+- SHA-256: `8fe2910ce7799bc624e0472fa809fd4d65c95156689342864cc9324ec3e08d9c`
+- Size: `169126` bytes
+- Curated package files: `70`
+- Verification: `114 / 114` checks passing
 
 ## Verify Before Upload
 
@@ -26,7 +26,7 @@ python3 scripts/verify_pipeline.py \
 Expected result:
 
 ```text
-checks=110 passed=True failed=0
+checks=114 passed=True failed=0
 ```
 
 ## Judge Smoke Test

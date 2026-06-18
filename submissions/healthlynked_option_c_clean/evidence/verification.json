@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_agent_workflow_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_valid_npi_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_agent_workflow_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_valid_npi_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_agent_workflow_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_valid_npi_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_agent_workflow_fixed/cli/config.json",
+      "detail": "outputs/verify_valid_npi_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -48,6 +48,11 @@
     {
       "detail": "skipped_missing_public_dataset",
       "name": "public_dataset_cli_smoke",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "sample_npi_validity",
       "passed": true
     },
     {
@@ -123,6 +128,11 @@
     {
       "detail": "at least one human_review example",
       "name": "recommendation_contract_human_review",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "recommendation_contract_valid_npis",
       "passed": true
     },
     {
@@ -371,6 +381,11 @@
       "passed": true
     },
     {
+      "detail": "healthlynked_option_c_clean/src/npi.py",
+      "name": "package_src/npi.py",
+      "passed": true
+    },
+    {
       "detail": "healthlynked_option_c_clean/scripts/run_best_pipeline.py",
       "name": "package_scripts/run_best_pipeline.py",
       "passed": true
@@ -527,6 +542,11 @@
     },
     {
       "detail": "",
+      "name": "package_sample_npi_validity",
+      "passed": true
+    },
+    {
+      "detail": "",
       "name": "package_cost_model_markdown_matches_csv",
       "passed": true
     },
@@ -536,7 +556,7 @@
       "passed": true
     },
     {
-      "detail": "110 curated-package checks passed=True",
+      "detail": "114 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

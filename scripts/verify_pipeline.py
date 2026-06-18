@@ -13,12 +13,15 @@ import zipfile
 from pathlib import Path
 from typing import Any
 
+import pandas as pd
+
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.run_best_pipeline import BEST_CFG
 from src.cv import run_cv
+from src.npi import valid_npi
 
 
 REQUIRED_DOCS = [
@@ -264,6 +267,7 @@ CURATED_PACKAGE_FILES = [
     "src/data.py",
     "src/metrics.py",
     "src/cv.py",
+    "src/npi.py",
     "scripts/run_best_pipeline.py",
     "data/sample/providers.csv",
     "data/sample/evidence.csv",
@@ -373,6 +377,16 @@ def run_cli(checks: list[dict[str, Any]], out_dir: Path) -> dict:
     return metrics
 
 
+def validate_sample_npis(checks: list[dict[str, Any]]) -> None:
+    providers_path = ROOT / "data/sample/providers.csv"
+    if not providers_path.exists():
+        record(checks, "sample_npi_validity", False, str(providers_path))
+        return
+    providers = pd.read_csv(providers_path, dtype=str)
+    invalid = providers.loc[~providers["npi"].map(valid_npi), "npi"].head(5).tolist()
+    record(checks, "sample_npi_validity", not invalid, "; ".join(invalid))
+
+
 def run_public_dataset_cli_smoke(checks: list[dict[str, Any]], out_dir: Path) -> None:
     dataset_path = ROOT / "data/raw/kaggle_public_provider_directory/provider_directory_dataset.csv"
     if not dataset_path.exists():
@@ -469,6 +483,7 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
         for item in recommendations
     )
     has_human_review = any(item.get("recommended_action") == "human_review" for item in recommendations)
+    invalid_npis = [str(item.get("npi", "")) for item in recommendations if not valid_npi(item.get("npi", ""))]
     has_schema_title = schema.get("title") == "ProviderDirectoryRecommendationBatch"
     record(checks, "recommendation_examples_exist", True, str(examples_path))
     record(checks, "recommendation_json_valid", True, str(examples_path))
@@ -476,6 +491,7 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
     record(checks, "recommendation_contract_sources", has_sources, "supporting_sources required per change")
     record(checks, "recommendation_contract_field_decisions", has_field_decisions, "field_decision required per change")
     record(checks, "recommendation_contract_human_review", has_human_review, "at least one human_review example")
+    record(checks, "recommendation_contract_valid_npis", not invalid_npis, "; ".join(invalid_npis[:5]))
     record(checks, "recommendation_schema_title", has_schema_title, schema.get("title", ""))
 
 
@@ -572,6 +588,13 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         except KeyError as exc:
             record(checks, "package_safe_auto_apply_policy", False, str(exc))
         try:
+            providers_text = archive.read(f"{prefix}/data/sample/providers.csv").decode("utf-8")
+            providers = list(csv.DictReader(providers_text.splitlines()))
+            invalid = [row.get("npi", "") for row in providers if not valid_npi(row.get("npi", ""))]
+            record(checks, "package_sample_npi_validity", not invalid, "; ".join(invalid[:5]))
+        except KeyError as exc:
+            record(checks, "package_sample_npi_validity", False, str(exc))
+        try:
             cost_md = archive.read(f"{prefix}/appendix/COST_MODEL.md").decode("utf-8")
             cost_csv = archive.read(f"{prefix}/evidence/cost_model_per_1000.csv").decode("utf-8")
             md_rows = cost_model_markdown_rows(cost_md)
@@ -664,6 +687,7 @@ def main() -> int:
     smoke = run_smoke_cv(checks)
     cli_metrics = run_cli(checks, out_dir / "cli")
     run_public_dataset_cli_smoke(checks, out_dir)
+    validate_sample_npis(checks)
     validate_docs(checks)
     validate_notebook(checks)
     validate_recommendation_contract(checks)

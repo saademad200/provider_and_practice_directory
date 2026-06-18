@@ -8,13 +8,14 @@ from typing import Any
 
 import pandas as pd
 
+from .npi import valid_npi
+
 
 AS_OF_DATE = datetime(2026, 6, 17, tzinfo=timezone.utc)
 PHONE_RE = re.compile(r"^\(\d{3}\)\s\d{3}-\d{4}$")
 EMAIL_RE = re.compile(r"^[\w.\-]+@[\w\-]+\.\w{2,}$")
 URL_RE = re.compile(r"^https?://[\w\-\.]+\.\w{2,}")
 ZIP_RE = re.compile(r"^\d{5}(-\d{4})?$")
-NPI_RE = re.compile(r"^\d{10}$")
 
 
 def parse_date(value: str) -> datetime | None:
@@ -24,25 +25,6 @@ def parse_date(value: str) -> datetime | None:
         return datetime.strptime(str(value)[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
     except ValueError:
         return None
-
-
-def luhn_check_digit(payload: str) -> int:
-    total = 0
-    for idx, char in enumerate(payload[::-1]):
-        digit = int(char)
-        if idx % 2 == 0:
-            digit *= 2
-            total += digit - 9 if digit > 9 else digit
-        else:
-            total += digit
-    return (10 - total % 10) % 10
-
-
-def valid_npi(npi: str) -> bool:
-    npi = str(npi)
-    if not NPI_RE.match(npi):
-        return False
-    return luhn_check_digit("80840" + npi[:9]) == int(npi[-1])
 
 
 def load_public_dataset(path: Path) -> pd.DataFrame:

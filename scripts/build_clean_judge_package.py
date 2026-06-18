@@ -91,6 +91,7 @@ CURATED_SRC_FILES = [
     "src/freshness.py",
     "src/metrics.py",
     "src/cv.py",
+    "src/npi.py",
     "src/review_priority.py",
     "src/specialty.py",
 ]
@@ -115,7 +116,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 110 curated-package verification checks
+- 114 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 

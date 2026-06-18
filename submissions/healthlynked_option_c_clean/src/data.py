@@ -9,12 +9,13 @@ import pandas as pd
 from sklearn.model_selection import GroupKFold
 
 from .freshness import freshness_metadata
+from .npi import synthetic_npi
 from .review_priority import review_priority
 from .specialty import normalize_specialty
 
 
 FIELDS = ["phone", "address", "specialty", "license_status", "accepting_new_patients"]
-BENCHMARK_VERSION = "2026-06-16-v2"
+BENCHMARK_VERSION = "2026-06-18-v3-valid-npi"
 
 SOURCE_WEIGHTS = {
     "nppes": 0.92,
@@ -187,7 +188,7 @@ def ensure_sample_data(paths: DatasetPaths | None = None, n_providers: int = 72,
             {
                 "provider_id": provider_id,
                 "practice_id": practice_id,
-                "npi": f"1999{i:06d}",
+                "npi": synthetic_npi(i),
                 "provider_name": f"Provider {i:03d}",
                 **current_values,
             }

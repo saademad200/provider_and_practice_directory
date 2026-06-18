@@ -15,7 +15,7 @@ This page maps the competition bonus-point list to concrete artifacts in the cur
 | Sample human review dashboard | Included | `dashboard/index.html`, `appendix/DASHBOARD_SPEC.md` |
 | Duplicate detection logic | Included | `appendix/DUPLICATE_MOVEMENT_DETECTION.md`, `evidence/duplicate_candidates.csv` |
 | Address normalization strategy | Included | `src/data.py`, `proposal/CONFIDENCE_AND_DECISION_POLICY.md` |
-| NPI validation | Included | `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/OFFICIAL_SOURCE_REFERENCES.md` |
+| NPI validation | Included | `src/npi.py`, `evidence/verification.json`, `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md` |
 | Practice-location matching | Included | `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`, `appendix/DUPLICATE_MOVEMENT_DETECTION.md` |
 | Provider movement detection | Included | `appendix/DUPLICATE_MOVEMENT_DETECTION.md`, `evidence/provider_movement_candidates.csv` |
 | Inactive/retired provider detection | Included | `appendix/INACTIVE_PROVIDER_DETECTION.md`, `evidence/inactive_provider_candidates.csv` |
