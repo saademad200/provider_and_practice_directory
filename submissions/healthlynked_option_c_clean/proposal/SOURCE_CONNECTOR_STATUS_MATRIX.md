@@ -33,7 +33,7 @@ This matrix shows how the production system keeps source usage reliable, legal, 
 |---|---|---|---|
 | NPI | NPPES API/file | none | Never auto-change |
 | Provider name | NPPES plus practice/health-system corroboration | none | Formatting-only normalization; otherwise review |
-| Specialty | NPPES taxonomy plus health-system/practice corroboration | business listings not allowed | Review unless strong authority agreement |
+| Specialty | NPPES taxonomy plus health-system/practice corroboration | business listings not allowed | Auto only for configured low-risk specialty corrections with strong independent agreement; otherwise review |
 | Practice name | Practice website, health-system directory, HealthLynked history | business listings low-weight | Review if affiliation/rebrand ambiguity exists |
 | Address | Practice website, health-system directory, NPPES practice location | fresh business listing as support only | Auto only with strong agreement and no conflict |
 | Phone | Practice website, health-system directory, NPPES/business listing support | fresh business listing | Auto allowed when low-risk and independently supported |
