@@ -36,7 +36,7 @@ Expected result:
 
 - `outputs/reproduce_verify/verification.json`
 - `passed: true`
-- 98 curated-package checks
+- 101 curated-package checks
 - F1 at or above 0.90
 - Auto-apply precision at or above 0.95
 

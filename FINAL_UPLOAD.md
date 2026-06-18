@@ -16,10 +16,10 @@ submissions/healthlynked_option_c_clean.zip
 
 ## Current Artifact Fingerprint
 
-- SHA-256: `9176360b4b262d56cb831a1e1e20c4c847ca1a50929e5dc3d1126910e5557320`
-- Size: `169818` bytes
-- Curated package files: `66`
-- Verification: `98 / 98` checks passing
+- SHA-256: `31ea246795aacd3be0c6be8d27813f4cedec1b36a8a7702c7ef1e1108ced29e9`
+- Size: `171148` bytes
+- Curated package files: `67`
+- Verification: `101 / 101` checks passing
 
 ## Verify Before Upload
 
@@ -32,7 +32,7 @@ python3 scripts/verify_pipeline.py \
 Expected result:
 
 ```text
-checks=98 passed=True failed=0
+checks=101 passed=True failed=0
 ```
 
 ## Judge Smoke Test
