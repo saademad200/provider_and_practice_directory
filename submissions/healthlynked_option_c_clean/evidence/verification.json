@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_boundary_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_production_docs_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_boundary_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_production_docs_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_boundary_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_production_docs_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_boundary_fixed/cli/config.json",
+      "detail": "outputs/verify_production_docs_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -511,6 +511,46 @@
       "passed": true
     },
     {
+      "detail": "Go/No-Go Thresholds",
+      "name": "package_text_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md_Go/No-Go Thresholds",
+      "passed": true
+    },
+    {
+      "detail": "Consulting Success Definition",
+      "name": "package_text_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md_Consulting Success Definition",
+      "passed": true
+    },
+    {
+      "detail": "What The Current Metrics Do Not Prove",
+      "name": "package_text_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md_What The Current Metrics Do Not Prove",
+      "passed": true
+    },
+    {
+      "detail": "Transfer Plan To HealthLynked Data",
+      "name": "package_text_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md_Transfer Plan To HealthLynked Data",
+      "passed": true
+    },
+    {
+      "detail": "Minimum Team",
+      "name": "package_text_proposal/LEAN_TEAM_OPERATING_MODEL.md_Minimum Team",
+      "passed": true
+    },
+    {
+      "detail": "Decision Rights",
+      "name": "package_text_proposal/LEAN_TEAM_OPERATING_MODEL.md_Decision Rights",
+      "passed": true
+    },
+    {
+      "detail": "Safe Defaults",
+      "name": "package_text_proposal/FAILURE_MODE_PLAYBOOK.md_Safe Defaults",
+      "passed": true
+    },
+    {
+      "detail": "Incident Workflow",
+      "name": "package_text_proposal/FAILURE_MODE_PLAYBOOK.md_Incident Workflow",
+      "passed": true
+    },
+    {
       "detail": "Agent Responsibilities",
       "name": "package_text_proposal/AGENT_WORKFLOW_DIAGRAM.md_Agent Responsibilities",
       "passed": true
@@ -548,6 +588,16 @@
     {
       "detail": "Human Review Rules",
       "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Human Review Rules",
+      "passed": true
+    },
+    {
+      "detail": "Connector Health Signals",
+      "name": "package_text_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md_Connector Health Signals",
+      "passed": true
+    },
+    {
+      "detail": "Field-Level Source Law",
+      "name": "package_text_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md_Field-Level Source Law",
       "passed": true
     },
     {
@@ -641,7 +691,7 @@
       "passed": true
     },
     {
-      "detail": "131 curated-package checks passed=True",
+      "detail": "141 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },
