@@ -48,6 +48,6 @@ Expected proof points:
 
 Latest manual unzip smoke:
 
-- Command path: `outputs/manual_judge_unzip/healthlynked_option_c_clean`
+- Method: extracted the tracked upload zip into a temporary local folder and ran the package-local MVP command
 - Result: F1 `0.948276`, auto-apply precision `1.0`, cost per correct update `$0.005836`
 - Output files confirmed: candidate updates and review queue
