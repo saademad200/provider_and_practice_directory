@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_scorecard_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_render_free_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_scorecard_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_render_free_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_scorecard_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_render_free_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_scorecard_fixed/cli/config.json",
+      "detail": "outputs/verify_render_free_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -506,6 +506,21 @@
       "passed": true
     },
     {
+      "detail": "Render-Free Diagram",
+      "name": "package_text_proposal/AGENT_WORKFLOW_DIAGRAM.md_Render-Free Diagram",
+      "passed": true
+    },
+    {
+      "detail": "Render-Free Diagram",
+      "name": "package_text_proposal/ARCHITECTURE_DIAGRAM.md_Render-Free Diagram",
+      "passed": true
+    },
+    {
+      "detail": "LLM extraction is a gated fallback",
+      "name": "package_text_proposal/ARCHITECTURE_DIAGRAM.md_LLM extraction is a gated fallback",
+      "passed": true
+    },
+    {
       "detail": "Confidence Formula",
       "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Confidence Formula",
       "passed": true
@@ -586,7 +601,7 @@
       "passed": true
     },
     {
-      "detail": "120 curated-package checks passed=True",
+      "detail": "123 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

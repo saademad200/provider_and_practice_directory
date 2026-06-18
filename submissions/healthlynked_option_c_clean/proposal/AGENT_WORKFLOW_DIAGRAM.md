@@ -28,6 +28,25 @@ flowchart LR
     class safety safety
 ```
 
+## Render-Free Diagram
+
+```text
+AWS EventBridge schedule
+  -> source connector registry
+  -> source retrieval agents
+  -> evidence normalization agent
+  -> provider / practice identity agent
+  -> source conflict resolver
+  -> confidence scoring agent
+  -> safety and policy gates
+  -> decision router
+       -> safe low-risk update: audit and rollback agent
+       -> ambiguous or high-risk: human review workbench
+  -> monitoring and learning loop
+```
+
+Every agent has a narrow contract, field-level evidence, and a policy gate before any directory mutation.
+
 ## Agent Responsibilities
 
 | Agent | Responsibility | Guardrail | Package Evidence |
