@@ -9,6 +9,10 @@ This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM
 - Review count: 55
 - Auto-apply count: 3
 
+## Metric Boundary
+
+The `$0.005836` prototype figure is evidence acquisition cost per true-positive recommendation. It does not include human labor. The per-1,000-record scenarios below add AWS compute/storage/monitoring, gated LLM extraction, and manual-review labor so judges can see both the cheap evidence layer and the operational cost of review.
+
 ## Default Assumptions
 
 - `records_per_1000`: 1000

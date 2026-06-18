@@ -704,6 +704,12 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
                 not total_mismatches,
                 "; ".join(total_mismatches[:8]),
             )
+            metric_boundary = (
+                "evidence acquisition cost per true-positive recommendation" in cost_md
+                and "does not include human labor" in cost_md
+                and "manual-review labor" in cost_md
+            )
+            record(checks, "package_cost_model_metric_boundary", metric_boundary, "prototype evidence cost vs review labor")
         except (KeyError, ValueError) as exc:
             record(checks, "package_cost_model_markdown_matches_csv", False, str(exc))
         try:
