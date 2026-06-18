@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+import csv
+import html
 import json
 import re
 import shutil
@@ -118,7 +120,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 127 curated-package verification checks
+- 128 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -320,9 +322,35 @@ def sync_dashboard_metrics(target: Path) -> None:
         data.setdefault("counts", {})
         data["counts"]["review"] = metrics.get("review_count", data["counts"].get("review"))
         data["counts"]["auto"] = metrics.get("auto_apply_count", data["counts"].get("auto"))
+        review_path = target / "prototype/review_queue.csv"
+        if review_path.exists():
+            data.setdefault("tables", {})
+            data["tables"]["review"] = dashboard_review_table(review_path)
         replacement = "const data = " + json.dumps(data, sort_keys=True) + ";\n    const views"
         html = html[: match.start()] + replacement + html[match.end() :]
         dashboard_path.write_text(html, encoding="utf-8")
+
+
+def dashboard_review_table(review_path: Path) -> str:
+    rows = list(csv.DictReader(review_path.read_text(encoding="utf-8").splitlines()))
+    columns = [
+        "provider_id",
+        "field",
+        "old_value",
+        "proposed_value",
+        "confidence",
+        "review_priority_score",
+        "freshness_status",
+        "sources",
+        "evidence_urls",
+        "review_reason_code",
+    ]
+    head = "".join(f"<th>{html.escape(column)}</th>" for column in columns)
+    body_rows = []
+    for row in rows:
+        cells = "".join(f"<td>{html.escape(str(row.get(column, '')))}</td>" for column in columns)
+        body_rows.append(f"<tr>{cells}</tr>")
+    return f"<table><thead><tr>{head}</tr></thead><tbody>{''.join(body_rows)}</tbody></table>"
 
 
 def patch_notebook_for_curated_package(target: Path) -> None:

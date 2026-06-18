@@ -606,6 +606,8 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
             record(checks, "package_dashboard_metrics_match_prototype", consistent, detail)
             has_reviewer_actions = all(term in dashboard for term in ["data-review-action=\"accept\"", "data-review-action=\"reject\"", "data-review-action=\"recrawl\""])
             record(checks, "package_dashboard_reviewer_actions", has_reviewer_actions, "accept/reject/recrawl controls")
+            has_review_sources = all(term in dashboard for term in ["<th>sources</th>", "<th>evidence_urls</th>", "https://example.org/"])
+            record(checks, "package_dashboard_review_sources", has_review_sources, "review table includes source and URL columns")
         except (KeyError, json.JSONDecodeError, TypeError, AttributeError) as exc:
             record(checks, "package_dashboard_metrics_match_prototype", False, str(exc))
         try:
