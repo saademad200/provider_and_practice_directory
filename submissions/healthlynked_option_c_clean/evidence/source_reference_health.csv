@@ -1,0 +1,6 @@
+source,official_url,last_verified_utc,observed_status,design_implication
+NPPES NPI Registry API,https://npiregistry.cms.hhs.gov/api-page,2026-06-18T00:00:00Z,Official CMS API page reachable,Use for targeted NPI identity and taxonomy lookups; do not treat NPI issuance as licensure proof.
+CMS NPI downloadable files,https://download.cms.gov/nppes/NPI_Files.html,2026-06-18T00:00:00Z,"CMS lists Version 2 monthly and weekly downloadable files; June 08 2026 monthly V.2 and June 2026 weekly updates were visible.",Use bulk V.2 files for low-cost batch refresh with file-version lineage.
+CMS NPPES data dissemination,https://www.cms.gov/medicare/regulations-guidance/administrative-simplification/data-dissemination,2026-06-18T00:00:00Z,Official CMS policy/reference page reachable,Use for public-dissemination scope and connector governance.
+FSMB data integration,https://www.fsmb.org/data-integration/,2026-06-18T00:00:00Z,Official FSMB data integration page listed as governed source,Use as paid/contracted authority path for licensure and disciplinary status when terms are approved.
+FSMB Physician Data Center,https://www.fsmb.org/PDC/pdc-data-files/,2026-06-18T00:00:00Z,Official FSMB high-volume physician data page listed as governed source,Prefer feed-style licensure/status enrichment over brittle state-board scraping where commercially approved.

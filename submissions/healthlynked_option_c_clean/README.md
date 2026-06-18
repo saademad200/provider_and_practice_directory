@@ -51,6 +51,6 @@ The package has already been verified by `evidence/verification.json`.
 - `proposal/` - architecture, winning brief, source connector plan, roadmap, and diagram.
 - `prototype/` - runnable MVP outputs, metrics, recommendation API contract, and update examples.
 - `dashboard/` - sample human review dashboard.
-- `evidence/` - machine-readable verification, rubric, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
+- `evidence/` - machine-readable verification, rubric, source-health, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
 - `appendix/` - supporting production controls and deeper implementation notes.
 - `src/`, `scripts/`, and `data/sample/` - lightweight reproducible MVP code snapshot.

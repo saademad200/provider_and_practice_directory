@@ -258,6 +258,7 @@ CURATED_PACKAGE_FILES = [
     "evidence/judge_rubric_self_eval.csv",
     "evidence/cost_model_per_1000.csv",
     "evidence/source_connector_registry.csv",
+    "evidence/source_reference_health.csv",
     "evidence/audit_events.jsonl",
     "evidence/rollback_plan.csv",
     "appendix/COST_MODEL.md",
@@ -554,7 +555,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "proposal/LEAN_TEAM_OPERATING_MODEL.md": ["Minimum Team", "Decision Rights"],
         "proposal/FAILURE_MODE_PLAYBOOK.md": ["Safe Defaults", "Incident Workflow"],
         "proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md": ["Source Access Law", "Connector Admission Checklist"],
-        "proposal/OFFICIAL_SOURCE_REFERENCES.md": ["Reference Map", "Design Implications"],
+        "proposal/OFFICIAL_SOURCE_REFERENCES.md": ["Reference Map", "Design Implications", "Current Verification Snapshot"],
     }
     with zipfile.ZipFile(package_path) as archive:
         legacy_hits: list[str] = []

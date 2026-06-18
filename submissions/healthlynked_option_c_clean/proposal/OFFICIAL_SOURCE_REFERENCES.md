@@ -26,6 +26,10 @@ This note records the public authority sources that shaped the connector strateg
 - Business listings are fallback discovery evidence, not final authority for sensitive updates.
 - Every connector records source URL/file, retrieval timestamp, source version, parser version, and evidence hash.
 
+## Current Verification Snapshot
+
+The package includes `evidence/source_reference_health.csv` as the machine-readable source-health snapshot. The June 18, 2026 check records official URLs, observed status, and the design implication used by the connector plan. The most important operational finding is that the CMS NPI files page lists V.2 downloadable files and warns that NPI issuance does not validate licensure; the architecture therefore uses NPPES as an identity/taxonomy anchor and keeps active/inactive status review-first unless higher-authority licensure evidence agrees.
+
 ## Judge Takeaway
 
 The system is designed around public and legally accessible authority sources first, with paid or LLM-assisted paths treated as gated fallbacks. That keeps the proposal practical, auditable, and cost-controlled.

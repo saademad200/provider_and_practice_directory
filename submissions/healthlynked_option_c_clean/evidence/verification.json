@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_render_free_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_source_health_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_render_free_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_source_health_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_render_free_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_source_health_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_render_free_fixed/cli/config.json",
+      "detail": "outputs/verify_source_health_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -336,6 +336,11 @@
       "passed": true
     },
     {
+      "detail": "healthlynked_option_c_clean/evidence/source_reference_health.csv",
+      "name": "package_evidence/source_reference_health.csv",
+      "passed": true
+    },
+    {
       "detail": "healthlynked_option_c_clean/evidence/audit_events.jsonl",
       "name": "package_evidence/audit_events.jsonl",
       "passed": true
@@ -556,6 +561,11 @@
       "passed": true
     },
     {
+      "detail": "Current Verification Snapshot",
+      "name": "package_text_proposal/OFFICIAL_SOURCE_REFERENCES.md_Current Verification Snapshot",
+      "passed": true
+    },
+    {
       "detail": "recommended_action",
       "name": "package_text_prototype/RECOMMENDATION_API_CONTRACT.md_recommended_action",
       "passed": true
@@ -601,7 +611,7 @@
       "passed": true
     },
     {
-      "detail": "123 curated-package checks passed=True",
+      "detail": "125 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

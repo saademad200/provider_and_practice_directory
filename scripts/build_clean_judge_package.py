@@ -49,6 +49,7 @@ TOP_LEVEL_FILES = [
     ("recommendation_api_schema.json", "prototype/recommendation_api_schema.json"),
     ("cost_model_per_1000.csv", "evidence/cost_model_per_1000.csv"),
     ("source_connector_registry.csv", "evidence/source_connector_registry.csv"),
+    ("source_reference_health.csv", "evidence/source_reference_health.csv"),
     ("duplicate_candidates.csv", "evidence/duplicate_candidates.csv"),
     ("provider_movement_candidates.csv", "evidence/provider_movement_candidates.csv"),
     ("inactive_provider_candidates.csv", "evidence/inactive_provider_candidates.csv"),
@@ -117,7 +118,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 123 curated-package verification checks
+- 125 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -216,7 +217,7 @@ The package has already been verified by `evidence/verification.json`.
 - `proposal/` - architecture, winning brief, source connector plan, roadmap, and diagram.
 - `prototype/` - runnable MVP outputs, metrics, recommendation API contract, and update examples.
 - `dashboard/` - sample human review dashboard.
-- `evidence/` - machine-readable verification, rubric, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
+- `evidence/` - machine-readable verification, rubric, source-health, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
 - `appendix/` - supporting production controls and deeper implementation notes.
 - `src/`, `scripts/`, and `data/sample/` - lightweight reproducible MVP code snapshot.
 """
