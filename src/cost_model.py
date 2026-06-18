@@ -5,7 +5,7 @@ from typing import Any
 
 DEFAULT_COST_ASSUMPTIONS = {
     "records_per_1000": 1000,
-    "source_evidence_cost_per_record": 0.00531,
+    "source_evidence_cost_per_record": 0.00446,
     "aws_batch_etl_per_1000": 0.15,
     "aws_storage_monitoring_per_1000": 0.05,
     "llm_extraction_call_cost": 0.01,

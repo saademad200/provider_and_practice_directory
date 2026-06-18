@@ -4,15 +4,15 @@ This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM
 
 ## Current Prototype Inputs
 
-- Estimated source evidence cost: $0.3029 for 57 proposed updates
-- Cost per correct update: $0.005609
+- Estimated source evidence cost: $0.321 for 72 provider records and 58 proposed updates
+- Cost per correct update: $0.005836
 - Review count: 55
 - Auto-apply count: 3
 
 ## Default Assumptions
 
 - `records_per_1000`: 1000
-- `source_evidence_cost_per_record`: 0.00531
+- `source_evidence_cost_per_record`: 0.00446
 - `aws_batch_etl_per_1000`: 0.15
 - `aws_storage_monitoring_per_1000`: 0.05
 - `llm_extraction_call_cost`: 0.01
@@ -25,10 +25,12 @@ This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM
 
 | Scenario | Evidence | AWS Compute/Storage/Monitoring | LLM Extraction | Manual Review | Review Items | Total / 1,000 |
 |---|---:|---:|---:|---:|---:|---:|
-| base_case | 5.31 | 0.2 | 0.8 | 277.5 | 370.0 | 283.81 |
-| llm_heavy | 5.31 | 0.2 | 2.5 | 277.5 | 370.0 | 285.51 |
-| review_heavy | 5.31 | 0.2 | 0.8 | 450.0 | 600.0 | 456.31 |
-| mature_auto_apply | 5.31 | 0.2 | 0.5 | 135.0 | 180.0 | 141.01 |
+| base_case | 4.46 | 0.2 | 0.8 | 277.5 | 370.0 | 282.96 |
+| llm_heavy | 4.46 | 0.2 | 2.5 | 277.5 | 370.0 | 284.66 |
+| review_heavy | 4.46 | 0.2 | 0.8 | 450.0 | 600.0 | 455.46 |
+| mature_auto_apply | 4.46 | 0.2 | 0.5 | 135.0 | 180.0 | 139.96 |
+
+The proxy benchmark is intentionally enriched for risky/outdated records, so its raw review queue rate is not used as the production base-case rate. The `manual_review_rate` assumption is a planning target that HealthLynked can recalibrate from reviewer disposition data during shadow mode.
 
 ## Cost-Control Levers
 

@@ -296,6 +296,31 @@ def auto_apply_policy_violations(rows: list[dict[str, str]]) -> list[str]:
     return violations
 
 
+def cost_model_markdown_rows(text: str) -> dict[str, dict[str, float]]:
+    rows: dict[str, dict[str, float]] = {}
+    columns = [
+        "evidence_usd",
+        "aws_compute_storage_monitoring_usd",
+        "llm_extraction_usd",
+        "manual_review_usd",
+        "manual_review_items",
+        "total_usd",
+    ]
+    for line in text.splitlines():
+        if not line.startswith("| ") or "---" in line or "Scenario" in line:
+            continue
+        cells = [cell.strip() for cell in line.strip("|").split("|")]
+        if len(cells) != 7:
+            continue
+        scenario = cells[0]
+        try:
+            values = [float(cell) for cell in cells[1:]]
+        except ValueError:
+            continue
+        rows[scenario] = dict(zip(columns, values))
+    return rows
+
+
 def compile_project(checks: list[dict[str, Any]]) -> None:
     targets = ["src", "scripts", "experiments"]
     ok = True
@@ -537,6 +562,35 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
             )
         except KeyError as exc:
             record(checks, "package_safe_auto_apply_policy", False, str(exc))
+        try:
+            cost_md = archive.read(f"{prefix}/appendix/COST_MODEL.md").decode("utf-8")
+            cost_csv = archive.read(f"{prefix}/evidence/cost_model_per_1000.csv").decode("utf-8")
+            md_rows = cost_model_markdown_rows(cost_md)
+            csv_rows = {row["scenario"]: row for row in csv.DictReader(cost_csv.splitlines())}
+            mismatches = []
+            for scenario, csv_row in csv_rows.items():
+                md_row = md_rows.get(scenario)
+                if not md_row:
+                    mismatches.append(f"{scenario}: missing markdown row")
+                    continue
+                for csv_key, md_key in [
+                    ("evidence_usd", "evidence_usd"),
+                    ("aws_compute_storage_monitoring_usd", "aws_compute_storage_monitoring_usd"),
+                    ("llm_extraction_usd", "llm_extraction_usd"),
+                    ("manual_review_usd", "manual_review_usd"),
+                    ("manual_review_items", "manual_review_items"),
+                    ("total_usd", "total_usd"),
+                ]:
+                    if round(float(csv_row[csv_key]), 2) != round(float(md_row[md_key]), 2):
+                        mismatches.append(f"{scenario}:{csv_key}")
+            record(
+                checks,
+                "package_cost_model_markdown_matches_csv",
+                not mismatches,
+                "; ".join(mismatches[:8]),
+            )
+        except (KeyError, ValueError) as exc:
+            record(checks, "package_cost_model_markdown_matches_csv", False, str(exc))
         try:
             notebook_text = archive.read(f"{prefix}/Provider_Directory_Update_Pipeline_End_to_End.ipynb").decode("utf-8")
             notebook_portable = "submissions/" not in notebook_text and "evidence/audit_events.jsonl" in notebook_text

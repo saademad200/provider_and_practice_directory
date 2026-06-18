@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_auto_policy_invariant_final/cli/candidate_updates.csv",
+      "detail": "outputs/verify_cost_model_consistency/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_auto_policy_invariant_final/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_cost_model_consistency/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_auto_policy_invariant_final/cli/review_queue.csv",
+      "detail": "outputs/verify_cost_model_consistency/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_auto_policy_invariant_final/cli/config.json",
+      "detail": "outputs/verify_cost_model_consistency/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -498,6 +498,11 @@
     {
       "detail": "rows=3, violations=",
       "name": "package_safe_auto_apply_policy",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "package_cost_model_markdown_matches_csv",
       "passed": true
     },
     {
