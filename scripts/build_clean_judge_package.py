@@ -205,7 +205,7 @@ def build(target: Path) -> dict:
         copy_file(SOURCE / source_name, target / target_name)
     patch_notebook_for_curated_package(target)
 
-    for directory in ["dashboard", "dashboard_v2"]:
+    for directory in ["dashboard"]:
         source_dir = SOURCE / directory
         if source_dir.exists():
             shutil.copytree(source_dir, target / directory)
