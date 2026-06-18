@@ -85,13 +85,13 @@ Everything else in the upload is supporting evidence under `appendix/`, `evidenc
 
 - `src/` - reusable pipeline modules for candidate generation, scoring, source reliability, review routing, audit, privacy, red-team checks, and production readiness.
 - `scripts/` - reproducible CLI entrypoints for the best pipeline, public dataset triage, Kaggle metadata collection, and package verification.
-- `docs/` - supporting research and architecture documents.
-- `architecture/` - judge-facing architecture proposal, implementation map, and diagram source.
-- `prototype/` - judge-facing MVP runbook and prototype artifact map.
+- `docs/` - supporting research, architecture, source governance, operations, and validation notes.
+- `architecture/` - root copies of the architecture proposal and diagram source.
+- `prototype/` - root copy of the MVP runbook.
 - `notebooks/` - polished end-to-end notebook with narrative, MVP execution, metrics, diagrams, and bonus coverage.
-- `RECOMMENDATION_API_CONTRACT.md` - product-facing JSON recommendation shape matching the competition examples.
-- `OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` - real-source ingestion plan for NPPES, CMS files, FSMB/state boards, practice websites, and fallback sources.
-- `experiments/` - note explaining that historical research runners are intentionally excluded from the public handoff.
+- `submissions/healthlynked_option_c_clean/prototype/RECOMMENDATION_API_CONTRACT.md` - product-facing JSON recommendation shape matching the competition examples.
+- `submissions/healthlynked_option_c_clean/proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` - real-source ingestion plan for NPPES, CMS files, FSMB/state boards, practice websites, and fallback sources.
+- `experiments/` - research experiment scripts retained for reproducibility; the curated judge package excludes private/internal loop artifacts.
 - `data/sample/` - synthetic provider/evidence/gold-update benchmark used when official train/test labels are unavailable.
 - `submissions/healthlynked_option_c_clean/` - curated judge-facing handoff package.
 - `submissions/latest_final_package.zip` - upload-ready Kaggle package.
