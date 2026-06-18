@@ -15,6 +15,7 @@
         {
           "confidence_score": 0.99,
           "field": "accepting_new_patients",
+          "field_decision": "review",
           "freshness_status": "partially_stale",
           "new_value": "true",
           "old_value": false,
@@ -33,6 +34,7 @@
         {
           "confidence_score": 0.99,
           "field": "phone",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "555-125-2925",
           "old_value": "555-226-6662",
@@ -53,6 +55,7 @@
         {
           "confidence_score": 0.99,
           "field": "specialty",
+          "field_decision": "auto_apply",
           "freshness_status": "partially_stale",
           "new_value": "cardiology",
           "old_value": "pediatrics",
@@ -85,6 +88,7 @@
         {
           "confidence_score": 0.99,
           "field": "phone",
+          "field_decision": "review",
           "freshness_status": "partially_stale",
           "new_value": "555-105-2185",
           "old_value": "555-206-5922",
@@ -103,6 +107,7 @@
         {
           "confidence_score": 0.99,
           "field": "specialty",
+          "field_decision": "auto_apply",
           "freshness_status": "partially_stale",
           "new_value": "neurology",
           "old_value": "cardiology",
@@ -135,6 +140,7 @@
         {
           "confidence_score": 0.99,
           "field": "specialty",
+          "field_decision": "auto_apply",
           "freshness_status": "partially_stale",
           "new_value": "orthopedics",
           "old_value": "family medicine",
@@ -167,6 +173,7 @@
         {
           "confidence_score": 0.99,
           "field": "accepting_new_patients",
+          "field_decision": "review",
           "freshness_status": "partially_stale",
           "new_value": "true",
           "old_value": false,
@@ -185,6 +192,7 @@
         {
           "confidence_score": 0.99,
           "field": "address",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "422 market street suite 11 florida",
           "old_value": "933 Lake Dr, Suite 12, FL",
@@ -201,6 +209,7 @@
         {
           "confidence_score": 0.99,
           "field": "license_status",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "active",
           "old_value": "inactive",
@@ -229,6 +238,7 @@
         {
           "confidence_score": 0.99,
           "field": "accepting_new_patients",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "true",
           "old_value": false,
@@ -247,6 +257,7 @@
         {
           "confidence_score": 0.99,
           "field": "address",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "457 pine boulevard suite 4 florida",
           "old_value": "968 Market St, Suite 5, FL",
@@ -265,6 +276,7 @@
         {
           "confidence_score": 0.9651,
           "field": "phone",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "555-151-3887",
           "old_value": "555-252-7624",
@@ -295,6 +307,7 @@
         {
           "confidence_score": 0.99,
           "field": "accepting_new_patients",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "true",
           "old_value": false,
@@ -313,6 +326,7 @@
         {
           "confidence_score": 0.99,
           "field": "address",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "541 pine boulevard suite 4 florida",
           "old_value": "1052 Market St, Suite 5, FL",
@@ -329,6 +343,7 @@
         {
           "confidence_score": 0.99,
           "field": "specialty",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "pediatrics",
           "old_value": "neurology",
@@ -361,6 +376,7 @@
         {
           "confidence_score": 0.99,
           "field": "address",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "128 market street suite 5 florida",
           "old_value": "639 Lake Dr, Suite 6, FL",
@@ -377,6 +393,7 @@
         {
           "confidence_score": 0.99,
           "field": "phone",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "555-104-2148",
           "old_value": "555-205-5885",
@@ -407,6 +424,7 @@
         {
           "confidence_score": 0.99,
           "field": "accepting_new_patients",
+          "field_decision": "review",
           "freshness_status": "partially_stale",
           "new_value": "true",
           "old_value": false,
@@ -425,6 +443,7 @@
         {
           "confidence_score": 0.99,
           "field": "address",
+          "field_decision": "review",
           "freshness_status": "all_stale",
           "new_value": "1213 pine boulevard suite 4 florida",
           "old_value": "681 Lake Dr, Suite 12, FL",

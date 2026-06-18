@@ -57,7 +57,8 @@
                 "old_value",
                 "new_value",
                 "confidence_score",
-                "supporting_sources"
+                "supporting_sources",
+                "field_decision"
               ],
               "properties": {
                 "field": {
@@ -98,6 +99,12 @@
                 },
                 "freshness_status": {
                   "type": "string"
+                },
+                "field_decision": {
+                  "enum": [
+                    "auto_apply",
+                    "review"
+                  ]
                 },
                 "review_reason_code": {
                   "type": "string"

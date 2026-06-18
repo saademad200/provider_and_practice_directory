@@ -462,12 +462,17 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
         all("supporting_sources" in change and change["supporting_sources"] for change in item.get("changes", []))
         for item in recommendations
     )
+    has_field_decisions = all(
+        all(change.get("field_decision") in {"auto_apply", "review"} for change in item.get("changes", []))
+        for item in recommendations
+    )
     has_human_review = any(item.get("recommended_action") == "human_review" for item in recommendations)
     has_schema_title = schema.get("title") == "ProviderDirectoryRecommendationBatch"
     record(checks, "recommendation_examples_exist", True, str(examples_path))
     record(checks, "recommendation_json_valid", True, str(examples_path))
     record(checks, "recommendation_contract_shape", valid_shape, f"recommendations={len(recommendations)}")
     record(checks, "recommendation_contract_sources", has_sources, "supporting_sources required per change")
+    record(checks, "recommendation_contract_field_decisions", has_field_decisions, "field_decision required per change")
     record(checks, "recommendation_contract_human_review", has_human_review, "at least one human_review example")
     record(checks, "recommendation_schema_title", has_schema_title, schema.get("title", ""))
 

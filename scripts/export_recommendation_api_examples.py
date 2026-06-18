@@ -71,6 +71,7 @@ def recommendation_records(limit: int = 8) -> list[dict[str, Any]]:
                     "supporting_sources": sources,
                     "source_urls": urls,
                     "freshness_status": item.get("freshness_status", ""),
+                    "field_decision": item.get("decision", ""),
                     "review_reason_code": item.get("review_reason_code", ""),
                 }
             )

@@ -25,20 +25,25 @@ This submission therefore includes:
   },
   "recommendations": [
     {
-      "provider_id": "P0051",
-      "provider_name": "Provider 051",
-      "npi": "1999000051",
-      "practice_id": "PR017",
+      "provider_id": "P0022",
+      "provider_name": "Provider 022",
+      "npi": "1999000022",
+      "practice_id": "PR007",
       "change_detected": true,
       "changes": [
         {
-          "field": "phone",
-          "old_value": "555-252-5887",
-          "new_value": "555-151-3887",
+          "field": "specialty",
+          "old_value": "family medicine",
+          "new_value": "orthopedics",
           "confidence_score": 0.99,
           "supporting_sources": ["health_system", "nppes", "practice_website"],
-          "source_urls": ["https://example.org/health_system/P0051"],
-          "freshness_status": "fresh",
+          "source_urls": [
+            "https://example.org/health_system/P0022",
+            "https://example.org/nppes/P0022",
+            "https://example.org/practice_website/P0022"
+          ],
+          "freshness_status": "partially_stale",
+          "field_decision": "auto_apply",
           "review_reason_code": "auto_apply_criteria_met"
         }
       ],
@@ -59,6 +64,8 @@ This submission therefore includes:
 | `auto_update` | All proposed changes satisfy source, confidence, freshness, field-risk, and auto-apply thresholds. |
 | `human_review` | At least one change is low-confidence, conflicting, high-risk, stale, identity-sensitive, or lacks enough independent source support. |
 | `no_change` | Current record is confirmed or external evidence is insufficient to recommend a change. |
+
+`field_decision` records the field-level route from the scoring engine. A recommendation is only `auto_update` when every changed field is `auto_apply`; mixed records are sent to `human_review` with the field-level reasons preserved.
 
 ## Demo Source URLs
 

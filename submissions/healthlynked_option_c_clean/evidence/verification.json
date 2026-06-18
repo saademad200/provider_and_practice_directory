@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_model_consistency/cli/candidate_updates.csv",
+      "detail": "outputs/verify_recommendation_field_decisions/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_model_consistency/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_recommendation_field_decisions/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_model_consistency/cli/review_queue.csv",
+      "detail": "outputs/verify_recommendation_field_decisions/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_cost_model_consistency/cli/config.json",
+      "detail": "outputs/verify_recommendation_field_decisions/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -113,6 +113,11 @@
     {
       "detail": "supporting_sources required per change",
       "name": "recommendation_contract_sources",
+      "passed": true
+    },
+    {
+      "detail": "field_decision required per change",
+      "name": "recommendation_contract_field_decisions",
       "passed": true
     },
     {
