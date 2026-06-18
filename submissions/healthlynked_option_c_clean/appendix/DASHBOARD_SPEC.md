@@ -13,8 +13,8 @@ This dashboard is the operational surface for uncertain provider-directory updat
 ## Current Queue Snapshot
 
 - Candidate updates: 58
-- Auto-apply queue: 20
-- Manual review queue: 38
+- Auto-apply queue: 3
+- Manual review queue: 55
 - F1: 0.948276
 - Precision: 0.948276
 - Recall: 0.948276
@@ -24,24 +24,26 @@ This dashboard is the operational surface for uncertain provider-directory updat
 
 | Field | Review Items |
 |---|---:|
-| accepting_new_patients | 2 |
+| accepting_new_patients | 12 |
 | address | 13 |
+| license_status | 5 |
 | phone | 18 |
-| specialty | 5 |
+| specialty | 7 |
 
 ## Top Review Items
 
 | Provider | Field | Priority Score | Freshness | Reason | Sources |
 |---|---|---:|---|---|---|
-| P0031 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0066 | address | 0.556 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0050 | address | 0.556 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0051 | address | 0.556 | all_stale | practice_peer_mismatch | business_listing, health_system, nppes |
-| P0039 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0003 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0023 | address | 0.556 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0017 | address | 0.556 | all_stale | practice_peer_mismatch | health_system, nppes, practice_website |
-| P0046 | address | 0.516 | all_stale | insufficient_auto_sources | health_system, nppes |
+| P0004 | address | 0.516 | all_stale | insufficient_auto_sources, field_not_safe_for_auto_apply, stale_or_missing_supporting_evidence | health_system, practice_website |
+| P0010 | address | 0.516 | all_stale | insufficient_auto_sources, field_not_safe_for_auto_apply, stale_or_missing_supporting_evidence | health_system, practice_website |
+| P0046 | address | 0.516 | all_stale | insufficient_auto_sources, field_not_safe_for_auto_apply, stale_or_missing_supporting_evidence | health_system, nppes |
+| P0048 | address | 0.516 | all_stale | insufficient_auto_sources, field_not_safe_for_auto_apply, stale_or_missing_supporting_evidence | nppes, practice_website |
+| P0063 | address | 0.516 | all_stale | insufficient_auto_sources, field_not_safe_for_auto_apply, stale_or_missing_supporting_evidence | health_system, nppes |
+| P0016 | accepting_new_patients | 0.468 | partially_stale | insufficient_auto_sources, field_not_safe_for_auto_apply | health_system, nppes |
+| P0027 | accepting_new_patients | 0.468 | all_stale | insufficient_auto_sources, field_not_safe_for_auto_apply, stale_or_missing_supporting_evidence | health_system, practice_website |
+| P0005 | phone | 0.460 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
+| P0006 | phone | 0.460 | partially_stale | practice_peer_mismatch | health_system, nppes, practice_website |
+| P0009 | phone | 0.460 | partially_stale | practice_peer_mismatch | business_listing, health_system, nppes |
 
 ## Required Views
 

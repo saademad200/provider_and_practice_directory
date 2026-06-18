@@ -595,6 +595,23 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         except KeyError as exc:
             record(checks, "package_sample_npi_validity", False, str(exc))
         try:
+            metrics = json.loads(archive.read(f"{prefix}/prototype/metrics.json").decode("utf-8"))
+            review_rows = list(csv.DictReader(archive.read(f"{prefix}/prototype/review_queue.csv").decode("utf-8").splitlines()))
+            dashboard_spec = archive.read(f"{prefix}/appendix/DASHBOARD_SPEC.md").decode("utf-8")
+            field_counts: dict[str, int] = {}
+            for row in review_rows:
+                field_counts[row.get("field", "")] = field_counts.get(row.get("field", ""), 0) + 1
+            expected_terms = [
+                f"Candidate updates: {metrics.get('predicted_updates')}",
+                f"Auto-apply queue: {metrics.get('auto_apply_count')}",
+                f"Manual review queue: {metrics.get('review_count')}",
+            ]
+            expected_terms.extend(f"| {field} | {count} |" for field, count in sorted(field_counts.items()))
+            missing = [term for term in expected_terms if term not in dashboard_spec]
+            record(checks, "package_dashboard_spec_matches_outputs", not missing, "; ".join(missing[:8]))
+        except (KeyError, json.JSONDecodeError) as exc:
+            record(checks, "package_dashboard_spec_matches_outputs", False, str(exc))
+        try:
             cost_md = archive.read(f"{prefix}/appendix/COST_MODEL.md").decode("utf-8")
             cost_csv = archive.read(f"{prefix}/evidence/cost_model_per_1000.csv").decode("utf-8")
             md_rows = cost_model_markdown_rows(cost_md)

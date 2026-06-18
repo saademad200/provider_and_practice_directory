@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_valid_npi_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_dashboard_spec_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_valid_npi_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_dashboard_spec_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_valid_npi_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_dashboard_spec_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_valid_npi_fixed/cli/config.json",
+      "detail": "outputs/verify_dashboard_spec_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -547,6 +547,11 @@
     },
     {
       "detail": "",
+      "name": "package_dashboard_spec_matches_outputs",
+      "passed": true
+    },
+    {
+      "detail": "",
       "name": "package_cost_model_markdown_matches_csv",
       "passed": true
     },
@@ -556,7 +561,7 @@
       "passed": true
     },
     {
-      "detail": "114 curated-package checks passed=True",
+      "detail": "115 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },
