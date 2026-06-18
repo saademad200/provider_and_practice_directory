@@ -18,7 +18,7 @@ The visible public notebook is a useful baseline, but it is mostly a directory-h
 - Precision: 0.948276
 - Recall: 0.948276
 - Auto-apply precision: 1.0
-- Review count: 38
+- Review count: 55
 - Latest package: `submissions/latest_final_package.zip`
 
 ## Evaluation Criteria Coverage

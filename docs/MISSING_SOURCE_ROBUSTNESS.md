@@ -6,11 +6,11 @@ Baseline uses business listings disabled because source ablation showed they hur
 
 ## Baseline
 
-- F1: 0.93913
-- Precision: 0.947368
-- Recall: 0.931034
-- Auto-apply count: 20
-- Review count: 37
+- F1: 0.948276
+- Precision: 0.948276
+- Recall: 0.948276
+- Auto-apply count: 3
+- Review count: 55
 
 ## Source Drop Results
 

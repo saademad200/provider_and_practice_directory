@@ -4,11 +4,11 @@ This plan is based on official CMS/HHS documentation checked on 2026-06-16. It e
 
 ## Current Prototype Anchor
 
-- F1: 0.93913
-- Precision: 0.947368
-- Recall: 0.931034
+- F1: 0.948276
+- Precision: 0.948276
+- Recall: 0.948276
 - Auto-apply precision: 1.0
-- Review count: 37
+- Review count: 55
 
 ## Source Plan
 

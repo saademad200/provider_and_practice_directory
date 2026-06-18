@@ -65,24 +65,24 @@ Evidence rows by source:
 
 Grouped validation uses `GroupKFold(provider_id)` with five folds. Candidate generation does not read gold labels.
 
-- Experiment: `exp0029` using the `exp0027` no-business-listing configuration
-- F1: 0.93913
-- Precision: 0.947368
-- Recall: 0.931034
+- Experiment: current safe auto-apply configuration in `scripts/run_best_pipeline.py`
+- F1: 0.948276
+- Precision: 0.948276
+- Recall: 0.948276
 - Auto-apply precision: 1.0
-- Auto-apply count: 35
-- Review count: 22
-- Cost per correct update: $0.005609
+- Auto-apply count: 3
+- Review count: 55
+- Cost per correct update: $0.005836
 
 Per-field metrics:
 
 | Field | F1 | Precision | Recall | Auto Count | Auto Precision |
 |---|---:|---:|---:|---:|---:|
-| accepting_new_patients | 1.0 | 1.0 | 1.0 | 10 | 1.0 |
-| address | 0.888889 | 0.923077 | 0.857143 | 7 | 1.0 |
-| license_status | 0.909091 | 1.0 | 0.833333 | 5 | 1.0 |
-| phone | 0.971429 | 1.0 | 0.944444 | 8 | 1.0 |
-| specialty | 0.888889 | 0.8 | 1.0 | 5 | 1.0 |
+| accepting_new_patients | 1.0 | 1.0 | 1.0 | 0 | 0.0 |
+| address | 0.888889 | 0.923077 | 0.857143 | 0 | 0.0 |
+| license_status | 0.909091 | 1.0 | 0.833333 | 0 | 0.0 |
+| phone | 1.0 | 1.0 | 1.0 | 0 | 0.0 |
+| specialty | 0.888889 | 0.8 | 1.0 | 3 | 1.0 |
 
 ## Leakage Controls
 

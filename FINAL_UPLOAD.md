@@ -10,8 +10,8 @@ submissions/latest_final_package.zip
 
 ## Current Artifact Fingerprint
 
-- SHA-256: `f40c4ee16cccdddb4dbab2f14963be5fecce41bb72d5816f938173b313d3d7d4`
-- Size: `171171` bytes
+- SHA-256: `1fbd73d9311dd8c15faf65337c4d5e4dce3c211a3d5950847f139211c1c39381`
+- Size: `164881` bytes
 - Curated package files: `67`
 - Verification: `101 / 101` checks passing
 

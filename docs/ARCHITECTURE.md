@@ -24,8 +24,8 @@ This is an Option C Hybrid submission: the repository includes a runnable local 
 - Precision: 0.948276
 - Recall: 0.948276
 - Auto-apply precision: 1.0
-- Auto-apply count: 20
-- Review count: 38
+- Auto-apply count: 3
+- Review count: 55
 - Cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
 

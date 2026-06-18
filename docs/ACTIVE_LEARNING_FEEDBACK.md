@@ -4,12 +4,12 @@ This experiment models the self-improving loop that should run after human revie
 
 ## Current Metrics
 
-- F1: 0.93913
-- Precision: 0.947368
-- Recall: 0.931034
+- F1: 0.948276
+- Precision: 0.948276
+- Recall: 0.948276
 - Auto-apply precision: 1.0
-- Auto-apply count: 20
-- Review count: 37
+- Auto-apply count: 3
+- Review count: 55
 
 ## Simulated Reviewer Outcomes
 

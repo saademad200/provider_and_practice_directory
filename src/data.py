@@ -277,6 +277,10 @@ def build_candidate_updates(
     source_weights = {**SOURCE_WEIGHTS, **cfg.get("source_weights", {})}
     conflict_weight_scale = float(cfg.get("conflict_weight_scale", 0.15))
     practice_consensus_fields = set(cfg.get("practice_consensus_review_fields", []))
+    safe_auto_apply_fields = set(cfg.get("safe_auto_apply_fields", ["phone", "specialty"]))
+    auto_apply_freshness_statuses = set(
+        cfg.get("auto_apply_freshness_statuses", ["fresh", "partially_stale"])
+    )
     disabled_sources = set(cfg.get("disabled_sources", []))
     source_slas_days = cfg.get("source_slas_days", {})
     source_field_allowlist = {
@@ -335,11 +339,16 @@ def build_candidate_updates(
             continue
 
         min_auto_sources = int(min_auto_sources_by_field.get(field, default_min_auto_sources))
+        freshness = freshness_metadata(ages.get(proposed_value, []), source_slas_days)
         review_reasons = []
         if confidence < auto_threshold:
             review_reasons.append("confidence_below_auto_threshold")
         if distinct_sources < min_auto_sources:
             review_reasons.append("insufficient_auto_sources")
+        if field not in safe_auto_apply_fields:
+            review_reasons.append("field_not_safe_for_auto_apply")
+        if freshness["freshness_status"] not in auto_apply_freshness_statuses:
+            review_reasons.append("stale_or_missing_supporting_evidence")
         decision = "auto_apply" if not review_reasons else "review"
         practice_consensus_status = "not_checked"
         if decision == "auto_apply" and field in practice_consensus_fields:
@@ -357,7 +366,6 @@ def build_candidate_updates(
                 practice_consensus_status = "peer_match"
             else:
                 practice_consensus_status = "no_peers"
-        review_reason_code = "|".join(review_reasons) if review_reasons else "auto_apply_criteria_met"
         priority = review_priority(
             field=field,
             confidence=confidence,
@@ -367,7 +375,19 @@ def build_candidate_updates(
             distinct_sources=distinct_sources,
             min_auto_sources=min_auto_sources,
         )
-        freshness = freshness_metadata(ages.get(proposed_value, []), source_slas_days)
+        if decision == "auto_apply" and "high_field_risk" in priority["review_priority_drivers"]:
+            decision = "review"
+            review_reasons.append("high_field_risk")
+            priority = review_priority(
+                field=field,
+                confidence=confidence,
+                review_reasons=review_reasons,
+                threshold=threshold,
+                auto_threshold=auto_threshold,
+                distinct_sources=distinct_sources,
+                min_auto_sources=min_auto_sources,
+            )
+        review_reason_code = "|".join(review_reasons) if review_reasons else "auto_apply_criteria_met"
         records.append(
             {
                 "provider_id": provider_id,

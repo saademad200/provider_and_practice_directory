@@ -19,6 +19,8 @@ BEST_CFG = {
     "auto_apply_threshold": 0.94,
     "recency_half_life_days": 120.0,
     "practice_consensus_review_fields": ["phone", "address"],
+    "safe_auto_apply_fields": ["phone", "specialty"],
+    "auto_apply_freshness_statuses": ["fresh", "partially_stale"],
     "disabled_sources": [],
     "source_field_allowlist": {
         "business_listing": ["phone", "address"],

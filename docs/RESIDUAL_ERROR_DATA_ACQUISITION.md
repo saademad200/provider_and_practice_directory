@@ -4,9 +4,9 @@ This artifact explains what remains after the current best pipeline. Threshold s
 
 ## Current Metrics
 
-- F1: 0.93913
-- Precision: 0.947368
-- Recall: 0.931034
+- F1: 0.948276
+- Precision: 0.948276
+- Recall: 0.948276
 - False positives: 3
 - False negatives: 4
 

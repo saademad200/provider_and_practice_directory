@@ -5,8 +5,8 @@ This document defines the production control loop for the provider-directory pip
 ## Current Baseline Snapshot
 
 - Candidate updates: 57
-- Auto-apply count: 20
-- Review count: 37
+- Auto-apply count: 3
+- Review count: 55
 - Auto-apply precision proxy: 1.0
 - All-stale candidate share: 0.5439
 - Cost per correct update: $0.005609

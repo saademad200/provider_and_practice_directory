@@ -18,7 +18,7 @@
           "freshness_status": "partially_stale",
           "new_value": "true",
           "old_value": false,
-          "review_reason_code": "auto_apply_criteria_met",
+          "review_reason_code": "field_not_safe_for_auto_apply",
           "source_urls": [
             "https://example.org/health_system/P0025",
             "https://example.org/nppes/P0025",
@@ -36,7 +36,7 @@
           "freshness_status": "all_stale",
           "new_value": "555-125-2925",
           "old_value": "555-226-6662",
-          "review_reason_code": "practice_peer_mismatch",
+          "review_reason_code": "stale_or_missing_supporting_evidence",
           "source_urls": [
             "https://example.org/business_listing/P0025",
             "https://example.org/health_system/P0025",
@@ -74,203 +74,9 @@
       "practice_id": "PR008",
       "provider_id": "P0025",
       "provider_name": "Provider 025",
-      "reason": "Manual verification recommended because practice peer mismatch.",
+      "reason": "Manual verification recommended because field not safe for auto apply, stale or missing supporting evidence.",
       "recommended_action": "human_review",
       "supporting_source_count": 4
-    },
-    {
-      "audit_required": true,
-      "change_detected": true,
-      "changes": [
-        {
-          "confidence_score": 0.99,
-          "field": "accepting_new_patients",
-          "freshness_status": "partially_stale",
-          "new_value": "true",
-          "old_value": false,
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/health_system/P0046",
-            "https://example.org/nppes/P0046",
-            "https://example.org/practice_website/P0046"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes",
-            "practice_website"
-          ]
-        },
-        {
-          "confidence_score": 0.99,
-          "field": "address",
-          "freshness_status": "all_stale",
-          "new_value": "422 market street suite 11 florida",
-          "old_value": "933 Lake Dr, Suite 12, FL",
-          "review_reason_code": "insufficient_auto_sources",
-          "source_urls": [
-            "https://example.org/health_system/P0046",
-            "https://example.org/nppes/P0046"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes"
-          ]
-        },
-        {
-          "confidence_score": 0.99,
-          "field": "license_status",
-          "freshness_status": "all_stale",
-          "new_value": "active",
-          "old_value": "inactive",
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/license/P0046"
-          ],
-          "supporting_sources": [
-            "state_license"
-          ]
-        }
-      ],
-      "npi": "1999000046",
-      "overall_confidence": 0.99,
-      "practice_id": "PR015",
-      "provider_id": "P0046",
-      "provider_name": "Provider 046",
-      "reason": "Manual verification recommended because insufficient auto sources.",
-      "recommended_action": "human_review",
-      "supporting_source_count": 4
-    },
-    {
-      "audit_required": true,
-      "change_detected": true,
-      "changes": [
-        {
-          "confidence_score": 0.99,
-          "field": "accepting_new_patients",
-          "freshness_status": "all_stale",
-          "new_value": "true",
-          "old_value": false,
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/health_system/P0051",
-            "https://example.org/nppes/P0051",
-            "https://example.org/practice_website/P0051"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes",
-            "practice_website"
-          ]
-        },
-        {
-          "confidence_score": 0.99,
-          "field": "address",
-          "freshness_status": "all_stale",
-          "new_value": "457 pine boulevard suite 4 florida",
-          "old_value": "968 Market St, Suite 5, FL",
-          "review_reason_code": "practice_peer_mismatch",
-          "source_urls": [
-            "https://example.org/business_listing/P0051",
-            "https://example.org/health_system/P0051",
-            "https://example.org/nppes/P0051"
-          ],
-          "supporting_sources": [
-            "business_listing",
-            "health_system",
-            "nppes"
-          ]
-        },
-        {
-          "confidence_score": 0.9651,
-          "field": "phone",
-          "freshness_status": "all_stale",
-          "new_value": "555-151-3887",
-          "old_value": "555-252-7624",
-          "review_reason_code": "insufficient_auto_sources",
-          "source_urls": [
-            "https://example.org/nppes/P0051",
-            "https://example.org/practice_website/P0051"
-          ],
-          "supporting_sources": [
-            "nppes",
-            "practice_website"
-          ]
-        }
-      ],
-      "npi": "1999000051",
-      "overall_confidence": 0.9817,
-      "practice_id": "PR017",
-      "provider_id": "P0051",
-      "provider_name": "Provider 051",
-      "reason": "Manual verification recommended because insufficient auto sources, practice peer mismatch.",
-      "recommended_action": "human_review",
-      "supporting_source_count": 4
-    },
-    {
-      "audit_required": true,
-      "change_detected": true,
-      "changes": [
-        {
-          "confidence_score": 0.99,
-          "field": "accepting_new_patients",
-          "freshness_status": "all_stale",
-          "new_value": "true",
-          "old_value": false,
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/health_system/P0063",
-            "https://example.org/nppes/P0063",
-            "https://example.org/practice_website/P0063"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes",
-            "practice_website"
-          ]
-        },
-        {
-          "confidence_score": 0.99,
-          "field": "address",
-          "freshness_status": "all_stale",
-          "new_value": "541 pine boulevard suite 4 florida",
-          "old_value": "1052 Market St, Suite 5, FL",
-          "review_reason_code": "insufficient_auto_sources",
-          "source_urls": [
-            "https://example.org/health_system/P0063",
-            "https://example.org/nppes/P0063"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes"
-          ]
-        },
-        {
-          "confidence_score": 0.99,
-          "field": "specialty",
-          "freshness_status": "all_stale",
-          "new_value": "pediatrics",
-          "old_value": "neurology",
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/health_system/P0063",
-            "https://example.org/nppes/P0063",
-            "https://example.org/practice_website/P0063"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes",
-            "practice_website"
-          ]
-        }
-      ],
-      "npi": "1999000063",
-      "overall_confidence": 0.99,
-      "practice_id": "PR021",
-      "provider_id": "P0063",
-      "provider_name": "Provider 063",
-      "reason": "Manual verification recommended because insufficient auto sources.",
-      "recommended_action": "human_review",
-      "supporting_source_count": 3
     },
     {
       "audit_required": true,
@@ -328,11 +134,283 @@
       "changes": [
         {
           "confidence_score": 0.99,
+          "field": "specialty",
+          "freshness_status": "partially_stale",
+          "new_value": "orthopedics",
+          "old_value": "family medicine",
+          "review_reason_code": "auto_apply_criteria_met",
+          "source_urls": [
+            "https://example.org/health_system/P0022",
+            "https://example.org/nppes/P0022",
+            "https://example.org/practice_website/P0022"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000022",
+      "overall_confidence": 0.99,
+      "practice_id": "PR007",
+      "provider_id": "P0022",
+      "provider_name": "Provider 022",
+      "reason": "All proposed changes satisfy high-confidence, low-risk auto-update rules.",
+      "recommended_action": "auto_update",
+      "supporting_source_count": 3
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
           "field": "accepting_new_patients",
           "freshness_status": "partially_stale",
           "new_value": "true",
           "old_value": false,
-          "review_reason_code": "auto_apply_criteria_met",
+          "review_reason_code": "field_not_safe_for_auto_apply",
+          "source_urls": [
+            "https://example.org/health_system/P0046",
+            "https://example.org/nppes/P0046",
+            "https://example.org/practice_website/P0046"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "field": "address",
+          "freshness_status": "all_stale",
+          "new_value": "422 market street suite 11 florida",
+          "old_value": "933 Lake Dr, Suite 12, FL",
+          "review_reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0046",
+            "https://example.org/nppes/P0046"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "field": "license_status",
+          "freshness_status": "all_stale",
+          "new_value": "active",
+          "old_value": "inactive",
+          "review_reason_code": "field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/license/P0046"
+          ],
+          "supporting_sources": [
+            "state_license"
+          ]
+        }
+      ],
+      "npi": "1999000046",
+      "overall_confidence": 0.99,
+      "practice_id": "PR015",
+      "provider_id": "P0046",
+      "provider_name": "Provider 046",
+      "reason": "Manual verification recommended because field not safe for auto apply, field not safe for auto apply|stale or missing supporting evidence, insufficient auto sources|field not safe for auto apply|stale or missing supporting evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 4
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "field": "accepting_new_patients",
+          "freshness_status": "all_stale",
+          "new_value": "true",
+          "old_value": false,
+          "review_reason_code": "field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0051",
+            "https://example.org/nppes/P0051",
+            "https://example.org/practice_website/P0051"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "field": "address",
+          "freshness_status": "all_stale",
+          "new_value": "457 pine boulevard suite 4 florida",
+          "old_value": "968 Market St, Suite 5, FL",
+          "review_reason_code": "field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/business_listing/P0051",
+            "https://example.org/health_system/P0051",
+            "https://example.org/nppes/P0051"
+          ],
+          "supporting_sources": [
+            "business_listing",
+            "health_system",
+            "nppes"
+          ]
+        },
+        {
+          "confidence_score": 0.9651,
+          "field": "phone",
+          "freshness_status": "all_stale",
+          "new_value": "555-151-3887",
+          "old_value": "555-252-7624",
+          "review_reason_code": "insufficient_auto_sources|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/nppes/P0051",
+            "https://example.org/practice_website/P0051"
+          ],
+          "supporting_sources": [
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000051",
+      "overall_confidence": 0.9817,
+      "practice_id": "PR017",
+      "provider_id": "P0051",
+      "provider_name": "Provider 051",
+      "reason": "Manual verification recommended because field not safe for auto apply|stale or missing supporting evidence, insufficient auto sources|stale or missing supporting evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 4
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "field": "accepting_new_patients",
+          "freshness_status": "all_stale",
+          "new_value": "true",
+          "old_value": false,
+          "review_reason_code": "field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0063",
+            "https://example.org/nppes/P0063",
+            "https://example.org/practice_website/P0063"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "field": "address",
+          "freshness_status": "all_stale",
+          "new_value": "541 pine boulevard suite 4 florida",
+          "old_value": "1052 Market St, Suite 5, FL",
+          "review_reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0063",
+            "https://example.org/nppes/P0063"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "field": "specialty",
+          "freshness_status": "all_stale",
+          "new_value": "pediatrics",
+          "old_value": "neurology",
+          "review_reason_code": "stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0063",
+            "https://example.org/nppes/P0063",
+            "https://example.org/practice_website/P0063"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000063",
+      "overall_confidence": 0.99,
+      "practice_id": "PR021",
+      "provider_id": "P0063",
+      "provider_name": "Provider 063",
+      "reason": "Manual verification recommended because field not safe for auto apply|stale or missing supporting evidence, insufficient auto sources|field not safe for auto apply|stale or missing supporting evidence, stale or missing supporting evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 3
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "field": "address",
+          "freshness_status": "all_stale",
+          "new_value": "128 market street suite 5 florida",
+          "old_value": "639 Lake Dr, Suite 6, FL",
+          "review_reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0004",
+            "https://example.org/practice_website/P0004"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "practice_website"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "field": "phone",
+          "freshness_status": "all_stale",
+          "new_value": "555-104-2148",
+          "old_value": "555-205-5885",
+          "review_reason_code": "insufficient_auto_sources|stale_or_missing_supporting_evidence",
+          "source_urls": [
+            "https://example.org/health_system/P0004",
+            "https://example.org/practice_website/P0004"
+          ],
+          "supporting_sources": [
+            "health_system",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000004",
+      "overall_confidence": 0.99,
+      "practice_id": "PR001",
+      "provider_id": "P0004",
+      "provider_name": "Provider 004",
+      "reason": "Manual verification recommended because insufficient auto sources|field not safe for auto apply|stale or missing supporting evidence, insufficient auto sources|stale or missing supporting evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 2
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "field": "accepting_new_patients",
+          "freshness_status": "partially_stale",
+          "new_value": "true",
+          "old_value": false,
+          "review_reason_code": "field_not_safe_for_auto_apply",
           "source_urls": [
             "https://example.org/health_system/P0010",
             "https://example.org/nppes/P0010",
@@ -350,7 +428,7 @@
           "freshness_status": "all_stale",
           "new_value": "1213 pine boulevard suite 4 florida",
           "old_value": "681 Lake Dr, Suite 12, FL",
-          "review_reason_code": "insufficient_auto_sources",
+          "review_reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
           "source_urls": [
             "https://example.org/health_system/P0010",
             "https://example.org/practice_website/P0010"
@@ -366,83 +444,9 @@
       "practice_id": "PR003",
       "provider_id": "P0010",
       "provider_name": "Provider 010",
-      "reason": "Manual verification recommended because insufficient auto sources.",
+      "reason": "Manual verification recommended because field not safe for auto apply, insufficient auto sources|field not safe for auto apply|stale or missing supporting evidence.",
       "recommended_action": "human_review",
       "supporting_source_count": 3
-    },
-    {
-      "audit_required": true,
-      "change_detected": true,
-      "changes": [
-        {
-          "confidence_score": 0.99,
-          "field": "address",
-          "freshness_status": "all_stale",
-          "new_value": "317 oak avenue suite 8 florida",
-          "old_value": "828 Cedar Rd, Suite 9, FL",
-          "review_reason_code": "practice_peer_mismatch",
-          "source_urls": [
-            "https://example.org/health_system/P0031",
-            "https://example.org/nppes/P0031",
-            "https://example.org/practice_website/P0031"
-          ],
-          "supporting_sources": [
-            "health_system",
-            "nppes",
-            "practice_website"
-          ]
-        },
-        {
-          "confidence_score": 0.99,
-          "field": "license_status",
-          "freshness_status": "fresh",
-          "new_value": "active",
-          "old_value": "inactive",
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/license/P0031"
-          ],
-          "supporting_sources": [
-            "state_license"
-          ]
-        }
-      ],
-      "npi": "1999000031",
-      "overall_confidence": 0.99,
-      "practice_id": "PR010",
-      "provider_id": "P0031",
-      "provider_name": "Provider 031",
-      "reason": "Manual verification recommended because practice peer mismatch.",
-      "recommended_action": "human_review",
-      "supporting_source_count": 4
-    },
-    {
-      "audit_required": true,
-      "change_detected": true,
-      "changes": [
-        {
-          "confidence_score": 0.99,
-          "field": "license_status",
-          "freshness_status": "fresh",
-          "new_value": "active",
-          "old_value": "inactive",
-          "review_reason_code": "auto_apply_criteria_met",
-          "source_urls": [
-            "https://example.org/license/P0011"
-          ],
-          "supporting_sources": [
-            "state_license"
-          ]
-        }
-      ],
-      "npi": "1999000011",
-      "overall_confidence": 0.99,
-      "practice_id": "PR003",
-      "provider_id": "P0011",
-      "provider_name": "Provider 011",
-      "reason": "All proposed changes satisfy high-confidence, low-risk auto-update rules.",
-      "recommended_action": "auto_update",
-      "supporting_source_count": 1
     }
   ],
   "schema_version": "provider-directory-recommendation-v1"

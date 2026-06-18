@@ -6,8 +6,8 @@ This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM
 
 - Estimated source evidence cost: $0.3029 for 57 proposed updates
 - Cost per correct update: $0.005609
-- Review count: 37
-- Auto-apply count: 20
+- Review count: 55
+- Auto-apply count: 3
 
 ## Default Assumptions
 

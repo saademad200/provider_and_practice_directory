@@ -4,9 +4,9 @@ This checklist is operational due diligence, not legal advice. It helps a lean e
 
 ## Current Pipeline Context
 
-- F1: 0.93913
-- Precision: 0.947368
-- Recall: 0.931034
+- F1: 0.948276
+- Precision: 0.948276
+- Recall: 0.948276
 - Auto-apply precision: 1.0
 
 ## Checklist

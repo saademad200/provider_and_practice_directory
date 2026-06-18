@@ -8,8 +8,8 @@ This document maps the local provider-directory prototype to an AWS production d
 - Precision: 0.948276
 - Recall: 0.948276
 - Auto-apply precision: 1.0
-- Auto-apply count: 20
-- Review count: 38
+- Auto-apply count: 3
+- Review count: 55
 
 ## Service Map
 

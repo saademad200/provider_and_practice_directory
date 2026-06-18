@@ -1,21 +1,4 @@
 rollback_id,event_id,provider_id,practice_id,field,current_value_to_replace,restore_value,required_approval,rollback_reason_required,evidence_hash
-rollback-exp0059-00003-cc9967e17bda9e5b,exp0059-00003-cc9967e17bda9e5b,P0011,PR003,license_status,active,inactive,directory_ops_lead,True,85f875c68bb32f59
-rollback-exp0059-00006-199c0bf1997110d0,exp0059-00006-199c0bf1997110d0,P0031,PR010,license_status,active,inactive,directory_ops_lead,True,b90869f1c4a5106f
-rollback-exp0059-00008-0042d98c95985921,exp0059-00008-0042d98c95985921,P0046,PR015,accepting_new_patients,true,false,directory_ops_lead,True,a534b4c108132eb7
-rollback-exp0059-00010-5fdf71a4d9a2637b,exp0059-00010-5fdf71a4d9a2637b,P0046,PR015,license_status,active,inactive,directory_ops_lead,True,ee8afb67b95edc5c
-rollback-exp0059-00011-1017ceefd864595c,exp0059-00011-1017ceefd864595c,P0051,PR017,accepting_new_patients,true,false,directory_ops_lead,True,373b711882926bf1
-rollback-exp0059-00017-810e91af5437d035,exp0059-00017-810e91af5437d035,P0005,PR001,specialty,neurology,cardiology,directory_ops_lead,True,8214961074ac3f9e
-rollback-exp0059-00018-c14a578c705ee9f4,exp0059-00018-c14a578c705ee9f4,P0010,PR003,accepting_new_patients,true,false,directory_ops_lead,True,51c6e1d45ddeb603
-rollback-exp0059-00020-4896177a8c9d658a,exp0059-00020-4896177a8c9d658a,P0015,PR005,license_status,active,inactive,directory_ops_lead,True,3534067c75e699bc
-rollback-exp0059-00021-3f79dce98a308c2f,exp0059-00021-3f79dce98a308c2f,P0025,PR008,accepting_new_patients,true,false,directory_ops_lead,True,620eac0205dd97a8
-rollback-exp0059-00023-e6c4b0bd1330816c,exp0059-00023-e6c4b0bd1330816c,P0025,PR008,specialty,cardiology,pediatrics,directory_ops_lead,True,b06eb412e142e764
-rollback-exp0059-00024-ac60c824079b7cc8,exp0059-00024-ac60c824079b7cc8,P0045,PR015,accepting_new_patients,true,false,directory_ops_lead,True,82564517960fc7d8
-rollback-exp0059-00027-d9151e988b735728,exp0059-00027-d9151e988b735728,P0060,PR020,accepting_new_patients,false,true,directory_ops_lead,True,38c63d7f71f3e571
-rollback-exp0059-00028-a6dea622efac7a94,exp0059-00028-a6dea622efac7a94,P0065,PR021,license_status,active,inactive,directory_ops_lead,True,7ad067c8aedf99f8
-rollback-exp0059-00032-5c7f26535b7a8a1b,exp0059-00032-5c7f26535b7a8a1b,P0019,PR006,accepting_new_patients,true,false,directory_ops_lead,True,453a918fb6c96673
-rollback-exp0059-00036-9233d9619928091c,exp0059-00036-9233d9619928091c,P0054,PR018,accepting_new_patients,true,false,directory_ops_lead,True,10f6ce9549a3b78a
-rollback-exp0059-00042-36fdb4abdb44973a,exp0059-00042-36fdb4abdb44973a,P0033,PR011,specialty,pediatrics,neurology,directory_ops_lead,True,8f8a6220565ae9f9
-rollback-exp0059-00046-015e6431b3652d8c,exp0059-00046-015e6431b3652d8c,P0063,PR021,accepting_new_patients,true,false,directory_ops_lead,True,b791381e8f25badb
-rollback-exp0059-00048-8758706fcabc7773,exp0059-00048-8758706fcabc7773,P0063,PR021,specialty,pediatrics,neurology,directory_ops_lead,True,83dc8b45ea313cda
-rollback-exp0059-00051-205de9db1c9b3cf0,exp0059-00051-205de9db1c9b3cf0,P0022,PR007,specialty,orthopedics,family medicine,directory_ops_lead,True,5e033b3b2b8e2c7b
-rollback-exp0059-00055-bbe4af3fff77e960,exp0059-00055-bbe4af3fff77e960,P0047,PR015,accepting_new_patients,true,false,directory_ops_lead,True,e88d2d550c529b2f
+rollback-safe-auto-policy-00006-5366b3b87c8aa051,safe-auto-policy-00006-5366b3b87c8aa051,P0005,PR001,specialty,neurology,cardiology,directory_ops_lead,True,8214961074ac3f9e
+rollback-safe-auto-policy-00018-4f9cf5c6014ad310,safe-auto-policy-00018-4f9cf5c6014ad310,P0022,PR007,specialty,orthopedics,family medicine,directory_ops_lead,True,5e033b3b2b8e2c7b
+rollback-safe-auto-policy-00023-5e76fcf7408d9705,safe-auto-policy-00023-5e76fcf7408d9705,P0025,PR008,specialty,cardiology,pediatrics,directory_ops_lead,True,b06eb412e142e764
