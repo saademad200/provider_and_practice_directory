@@ -65,7 +65,7 @@ def provider_directory_agent_cards() -> list[dict[str, Any]]:
             "purpose": "Prepare reviewer worklists and capture accept, reject, edit, defer, recrawl, and rollback decisions.",
             "inputs": ["review_queue", "source_conflict_rows", "inactive_provider_candidates"],
             "outputs": ["review_disposition", "review_feedback_event", "learning_signal"],
-            "tools": ["dashboard_v2", "review_priority_queue", "case_study_generator"],
+            "tools": ["dashboard", "review_priority_queue", "case_study_generator"],
             "permissions": ["read_review_artifacts", "write_reviewer_disposition"],
             "forbidden_actions": ["hide_source_urls", "overwrite_audit_event"],
             "handoff_to": ["active_learning_agent", "audit_rollback_agent"],

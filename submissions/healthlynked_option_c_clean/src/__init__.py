@@ -1,2 +1,1 @@
-"""Provider directory autoresearch utilities."""
-
+"""Provider directory update pipeline utilities."""

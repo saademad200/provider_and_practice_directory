@@ -86,7 +86,7 @@ ARTIFACT_PURPOSES: dict[str, tuple[str, str]] = {
     "audit_events.jsonl": ("audit", "Append-only audit trail sample."),
     "rollback_plan.csv": ("audit", "Rollback plan for applied updates."),
     "dashboard/index.html": ("dashboard", "Static operations dashboard prototype."),
-    "dashboard_v2/index.html": ("dashboard", "Lifecycle, LLM, and rollback dashboard lanes."),
+    "dashboard/index.html": ("dashboard", "Lifecycle, LLM, and rollback dashboard lanes."),
 }
 
 

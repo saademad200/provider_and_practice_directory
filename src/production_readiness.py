@@ -57,7 +57,7 @@ def production_readiness_rows(root: Path, metrics: dict[str, Any]) -> pd.DataFra
         {
             "criterion": "human_review",
             "judge_signal": "Ambiguous or high-risk items are ranked with reason codes, evidence URLs, and reviewer context.",
-            "primary_artifacts": "prioritized_review_queue.csv, dashboard/index.html, dashboard_v2/index.html, REVIEW_QUEUE_PRIORITIZATION.md",
+            "primary_artifacts": "prioritized_review_queue.csv, dashboard/index.html, REVIEW_QUEUE_PRIORITIZATION.md",
             "automation_check": "Review queue has reasons, priority score, sources, and before/after values.",
             "status": "strong",
             "score": 5,
