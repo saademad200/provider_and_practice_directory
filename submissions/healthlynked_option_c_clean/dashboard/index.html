@@ -64,6 +64,16 @@
       cursor: pointer;
     }
     button.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+    button.mini {
+      height: 28px;
+      padding: 0 8px;
+      font-size: 12px;
+      margin: 0 4px 4px 0;
+      white-space: nowrap;
+    }
+    button.accept { border-color: #7fb685; color: #226032; }
+    button.reject { border-color: #d99696; color: #8a2d2d; }
+    button.recrawl { border-color: #9eb9cf; color: #1e5d86; }
     section {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -96,6 +106,7 @@
       letter-spacing: 0;
     }
     tbody tr:hover td { background: #f8fbfd; }
+    td.actions { min-width: 190px; }
     .empty { padding: 24px; color: var(--muted); }
     @media (max-width: 1000px) {
       header { align-items: flex-start; flex-direction: column; }
@@ -155,10 +166,36 @@
       title.textContent = view[1];
       caption.textContent = view[2];
       table.innerHTML = data.tables[active];
+      enhanceTable(active);
       tabs.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
         active = button.dataset.key;
         render();
       }));
+    }
+    function enhanceTable(viewKey) {
+      const tableElement = table.querySelector('table');
+      if (!tableElement || !['review', 'inactive'].includes(viewKey)) return;
+      const headRow = tableElement.querySelector('thead tr');
+      if (headRow && !headRow.querySelector('[data-actions-head]')) {
+        const th = document.createElement('th');
+        th.textContent = 'Action';
+        th.dataset.actionsHead = 'true';
+        headRow.appendChild(th);
+      }
+      tableElement.querySelectorAll('tbody tr').forEach((row, index) => {
+        if (row.querySelector('.actions')) return;
+        const cell = document.createElement('td');
+        cell.className = 'actions';
+        cell.innerHTML = viewKey === 'review'
+          ? '<button class="mini accept" data-review-action="accept">Accept</button><button class="mini reject" data-review-action="reject">Reject</button><button class="mini recrawl" data-review-action="recrawl">Recrawl</button>'
+          : '<button class="mini reject" data-review-action="suppress">Suppress</button><button class="mini recrawl" data-review-action="verify">Verify</button>';
+        row.appendChild(cell);
+      });
+      tableElement.querySelectorAll('[data-review-action]').forEach(button => {
+        button.addEventListener('click', () => {
+          button.closest('tr').dataset.selectedAction = button.dataset.reviewAction;
+        });
+      });
     }
     render();
   </script>

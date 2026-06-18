@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_spec_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_dashboard_actions_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_spec_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_dashboard_actions_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_spec_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_dashboard_actions_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_spec_fixed/cli/config.json",
+      "detail": "outputs/verify_dashboard_actions_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -536,6 +536,11 @@
       "passed": true
     },
     {
+      "detail": "accept/reject/recrawl controls",
+      "name": "package_dashboard_reviewer_actions",
+      "passed": true
+    },
+    {
       "detail": "rows=3, violations=",
       "name": "package_safe_auto_apply_policy",
       "passed": true
@@ -561,7 +566,7 @@
       "passed": true
     },
     {
-      "detail": "115 curated-package checks passed=True",
+      "detail": "116 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },
