@@ -8,7 +8,7 @@ This submission therefore includes:
 
 - `prototype/recommendation_api_examples.json`
 - `prototype/recommendation_api_schema.json`
-- a full-repository exporter used to regenerate the examples from pipeline outputs
+- examples generated from the same pipeline outputs used by the MVP
 
 ## Response Shape
 

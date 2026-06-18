@@ -42,7 +42,7 @@ Expected output files:
 - `outputs/judge_smoke/review_queue.csv`
 - `outputs/judge_smoke/metrics.json`
 
-The package has already been verified by `evidence/verification.json`; the repository root includes a full package verifier for maintainers.
+The package has already been verified by `evidence/verification.json`.
 
 ## Folder Map
 
