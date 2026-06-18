@@ -157,19 +157,14 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `START_HERE.md`
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 - `proposal/JUDGE_DECISION_MEMO.md`
-- `proposal/JUDGE_COMPARISON_MATRIX.md`
-- `proposal/BONUS_COVERAGE_MATRIX.md`
-- `proposal/PRESENTATION_NARRATIVE.md`
 - `proposal/WINNING_PROPOSAL_BRIEF.md`
+- `proposal/BONUS_COVERAGE_MATRIX.md`
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 - `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-- `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-- `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md`
-- `proposal/LEAN_TEAM_OPERATING_MODEL.md`
-- `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-- `proposal/OFFICIAL_SOURCE_REFERENCES.md`
 - `prototype/WORKING_PROTOTYPE.md`
 - `dashboard/index.html`
+
+For the full reading order, use `START_HERE.md`.
 
 ## Prototype Proof Points
 
