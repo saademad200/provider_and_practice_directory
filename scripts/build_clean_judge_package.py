@@ -78,6 +78,8 @@ numpy>=1.24
 scikit-learn>=1.3
 matplotlib>=3.7
 ipython>=8.0
+requests>=2.31
+beautifulsoup4>=4.12
 """
 
 CURATED_SRC_FILES = [
