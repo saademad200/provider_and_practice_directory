@@ -19,6 +19,7 @@ TOP_LEVEL_FILES = [
     ("README.md", "README.md"),
     ("Provider_Directory_Update_Pipeline_End_to_End.ipynb", "Provider_Directory_Update_Pipeline_End_to_End.ipynb"),
     ("JUDGE_DECISION_MEMO.md", "proposal/JUDGE_DECISION_MEMO.md"),
+    ("ONE_PAGE_SCORECARD.md", "proposal/ONE_PAGE_SCORECARD.md"),
     ("JUDGE_COMPARISON_MATRIX.md", "proposal/JUDGE_COMPARISON_MATRIX.md"),
     ("BONUS_COVERAGE_MATRIX.md", "proposal/BONUS_COVERAGE_MATRIX.md"),
     ("PRESENTATION_NARRATIVE.md", "proposal/PRESENTATION_NARRATIVE.md"),
@@ -116,7 +117,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 116 curated-package verification checks
+- 120 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -125,22 +126,23 @@ Why it should win: it is immediately implementable after the competition. The pa
 ## Recommended Judge Path
 
 1. Open `Provider_Directory_Update_Pipeline_End_to_End.ipynb` for the narrated end-to-end walkthrough.
-2. Read `proposal/WINNING_PROPOSAL_BRIEF.md` for the executive case.
-3. Read `proposal/JUDGE_DECISION_MEMO.md` for the consulting-ready business case.
-4. Read `proposal/PRESENTATION_NARRATIVE.md` for the pitch story.
-5. Read `proposal/JUDGE_COMPARISON_MATRIX.md` for the fast comparison against likely alternatives.
-6. Read `proposal/BONUS_COVERAGE_MATRIX.md` for bonus-point evidence links.
-7. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
-8. Read `proposal/AGENT_WORKFLOW_DIAGRAM.md` for the bounded agent workflow.
-9. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
-10. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
-11. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
-12. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
-13. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
-14. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-15. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
-16. Inspect `dashboard/index.html` for the sample human review experience.
-17. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+2. Read `proposal/ONE_PAGE_SCORECARD.md` for the rubric-to-evidence map.
+3. Read `proposal/WINNING_PROPOSAL_BRIEF.md` for the executive case.
+4. Read `proposal/JUDGE_DECISION_MEMO.md` for the consulting-ready business case.
+5. Read `proposal/PRESENTATION_NARRATIVE.md` for the pitch story.
+6. Read `proposal/JUDGE_COMPARISON_MATRIX.md` for the fast comparison against likely alternatives.
+7. Read `proposal/BONUS_COVERAGE_MATRIX.md` for bonus-point evidence links.
+8. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
+9. Read `proposal/AGENT_WORKFLOW_DIAGRAM.md` for the bounded agent workflow.
+10. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
+11. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
+12. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
+13. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
+14. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
+15. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+16. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
+17. Inspect `dashboard/index.html` for the sample human review experience.
+18. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Run The MVP
 
@@ -169,6 +171,7 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 
 - `START_HERE.md`
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+- `proposal/ONE_PAGE_SCORECARD.md`
 - `proposal/JUDGE_DECISION_MEMO.md`
 - `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/BONUS_COVERAGE_MATRIX.md`

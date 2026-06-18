@@ -28,29 +28,30 @@ Start here:
 
 1. `START_HERE.md`
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-3. `proposal/JUDGE_DECISION_MEMO.md`
-4. `proposal/WINNING_PROPOSAL_BRIEF.md`
-5. `proposal/PRESENTATION_NARRATIVE.md`
-6. `proposal/JUDGE_COMPARISON_MATRIX.md`
-7. `proposal/BONUS_COVERAGE_MATRIX.md`
-8. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-9. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
-10. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-11. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-12. `prototype/WORKING_PROTOTYPE.md`
-13. `prototype/RECOMMENDATION_API_CONTRACT.md`
-14. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-15. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-16. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-17. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-18. `dashboard/index.html`
-19. `evidence/verification.json`
+3. `proposal/ONE_PAGE_SCORECARD.md`
+4. `proposal/JUDGE_DECISION_MEMO.md`
+5. `proposal/WINNING_PROPOSAL_BRIEF.md`
+6. `proposal/PRESENTATION_NARRATIVE.md`
+7. `proposal/JUDGE_COMPARISON_MATRIX.md`
+8. `proposal/BONUS_COVERAGE_MATRIX.md`
+9. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+10. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
+11. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+12. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+13. `prototype/WORKING_PROTOTYPE.md`
+14. `prototype/RECOMMENDATION_API_CONTRACT.md`
+15. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+16. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+17. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+18. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+19. `dashboard/index.html`
+20. `evidence/verification.json`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 116 curated-package checks
+- Verification checks passed: 120 curated-package checks
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
@@ -63,23 +64,24 @@ Show only the curated package path above. The intended first impression is small
 
 1. `START_HERE.md`
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
-3. `proposal/JUDGE_DECISION_MEMO.md`
-4. `proposal/WINNING_PROPOSAL_BRIEF.md`
-5. `proposal/PRESENTATION_NARRATIVE.md`
-6. `proposal/JUDGE_COMPARISON_MATRIX.md`
-7. `proposal/BONUS_COVERAGE_MATRIX.md`
-8. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-9. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
-10. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-11. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-12. `prototype/WORKING_PROTOTYPE.md`
-13. `prototype/RECOMMENDATION_API_CONTRACT.md`
-14. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-15. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-16. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-17. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-18. `dashboard/index.html`
-19. `evidence/verification.json`
+3. `proposal/ONE_PAGE_SCORECARD.md`
+4. `proposal/JUDGE_DECISION_MEMO.md`
+5. `proposal/WINNING_PROPOSAL_BRIEF.md`
+6. `proposal/PRESENTATION_NARRATIVE.md`
+7. `proposal/JUDGE_COMPARISON_MATRIX.md`
+8. `proposal/BONUS_COVERAGE_MATRIX.md`
+9. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+10. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
+11. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+12. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+13. `prototype/WORKING_PROTOTYPE.md`
+14. `prototype/RECOMMENDATION_API_CONTRACT.md`
+15. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+16. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+17. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+18. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+19. `dashboard/index.html`
+20. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 

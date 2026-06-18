@@ -6,6 +6,7 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 
 - `START_HERE.md`
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
+- `proposal/ONE_PAGE_SCORECARD.md`
 - `proposal/JUDGE_DECISION_MEMO.md`
 - `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/BONUS_COVERAGE_MATRIX.md`

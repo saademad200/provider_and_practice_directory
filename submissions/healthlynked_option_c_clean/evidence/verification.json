@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_actions_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_scorecard_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_actions_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_scorecard_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_actions_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_scorecard_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_actions_fixed/cli/config.json",
+      "detail": "outputs/verify_scorecard_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -163,6 +163,11 @@
     {
       "detail": "healthlynked_option_c_clean/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "package_Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/ONE_PAGE_SCORECARD.md",
+      "name": "package_proposal/ONE_PAGE_SCORECARD.md",
       "passed": true
     },
     {
@@ -426,6 +431,21 @@
       "passed": true
     },
     {
+      "detail": "Competition Criteria",
+      "name": "package_text_proposal/ONE_PAGE_SCORECARD.md_Competition Criteria",
+      "passed": true
+    },
+    {
+      "detail": "Bonus Coverage",
+      "name": "package_text_proposal/ONE_PAGE_SCORECARD.md_Bonus Coverage",
+      "passed": true
+    },
+    {
+      "detail": "The Judge Decision In One Sentence",
+      "name": "package_text_proposal/ONE_PAGE_SCORECARD.md_The Judge Decision In One Sentence",
+      "passed": true
+    },
+    {
       "detail": "Monday-Morning Implementation Plan",
       "name": "package_text_proposal/JUDGE_DECISION_MEMO.md_Monday-Morning Implementation Plan",
       "passed": true
@@ -566,7 +586,7 @@
       "passed": true
     },
     {
-      "detail": "116 curated-package checks passed=True",
+      "detail": "120 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

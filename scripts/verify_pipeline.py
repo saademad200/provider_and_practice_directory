@@ -224,6 +224,7 @@ CURATED_PACKAGE_FILES = [
     "README.md",
     "START_HERE.md",
     "Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+    "proposal/ONE_PAGE_SCORECARD.md",
     "proposal/JUDGE_DECISION_MEMO.md",
     "proposal/JUDGE_COMPARISON_MATRIX.md",
     "proposal/BONUS_COVERAGE_MATRIX.md",
@@ -519,6 +520,7 @@ def validate_package(checks: list[dict[str, Any]], package_path: Path) -> None:
 def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Path, prefix: str) -> None:
     selected_docs = [
         "START_HERE.md",
+        "proposal/ONE_PAGE_SCORECARD.md",
         "proposal/JUDGE_DECISION_MEMO.md",
         "proposal/JUDGE_COMPARISON_MATRIX.md",
         "proposal/BONUS_COVERAGE_MATRIX.md",
@@ -535,6 +537,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
     forbidden = ["COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
     required_terms = {
         "START_HERE.md": ["90-Second Read", "self-contained unzip-and-run MVP smoke test passes"],
+        "proposal/ONE_PAGE_SCORECARD.md": ["Competition Criteria", "Bonus Coverage", "The Judge Decision In One Sentence"],
         "proposal/JUDGE_DECISION_MEMO.md": ["Monday-Morning Implementation Plan", "What Would Make This Unsafe"],
         "proposal/JUDGE_COMPARISON_MATRIX.md": ["Competitive Comparison", "Winning Edge By Criterion"],
         "proposal/BONUS_COVERAGE_MATRIX.md": ["Bonus Evidence", "Confidence scoring formula"],
