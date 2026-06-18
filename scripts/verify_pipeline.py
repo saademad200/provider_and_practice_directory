@@ -602,6 +602,13 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
             record(checks, "package_notebook_uses_curated_paths", notebook_portable, "evidence/audit_events.jsonl")
         except KeyError as exc:
             record(checks, "package_notebook_uses_curated_paths", False, str(exc))
+        try:
+            verification = json.loads(archive.read(f"{prefix}/evidence/verification.json").decode("utf-8"))
+            rubric = archive.read(f"{prefix}/evidence/judge_rubric_self_eval.csv").decode("utf-8")
+            expected = f"{len(verification.get('checks', []))} curated-package checks passed={verification.get('passed')}"
+            record(checks, "package_rubric_verification_claim_matches", expected in rubric, expected)
+        except (KeyError, json.JSONDecodeError) as exc:
+            record(checks, "package_rubric_verification_claim_matches", False, str(exc))
     record(checks, "package_no_legacy_doc_references", not legacy_hits, "; ".join(legacy_hits[:10]))
 
 
