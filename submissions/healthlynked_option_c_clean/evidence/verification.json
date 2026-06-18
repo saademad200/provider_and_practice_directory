@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_sources_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_cost_totals_no_local_paths/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_sources_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_cost_totals_no_local_paths/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_sources_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_cost_totals_no_local_paths/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_dashboard_sources_fixed/cli/config.json",
+      "detail": "outputs/verify_cost_totals_no_local_paths/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -86,7 +86,7 @@
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "detail": "notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "notebook_json_valid",
       "passed": true
     },
@@ -101,12 +101,12 @@
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/healthlynked_option_c_clean/prototype/recommendation_api_examples.json",
+      "detail": "submissions/healthlynked_option_c_clean/prototype/recommendation_api_examples.json",
       "name": "recommendation_examples_exist",
       "passed": true
     },
     {
-      "detail": "/home/saad/Documents/Code/provider_and_practice_directory/judge_submission_repo/submissions/healthlynked_option_c_clean/prototype/recommendation_api_examples.json",
+      "detail": "submissions/healthlynked_option_c_clean/prototype/recommendation_api_examples.json",
       "name": "recommendation_json_valid",
       "passed": true
     },
@@ -621,12 +621,17 @@
       "passed": true
     },
     {
+      "detail": "",
+      "name": "package_cost_model_totals_add_up",
+      "passed": true
+    },
+    {
       "detail": "evidence/audit_events.jsonl",
       "name": "package_notebook_uses_curated_paths",
       "passed": true
     },
     {
-      "detail": "128 curated-package checks passed=True",
+      "detail": "129 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

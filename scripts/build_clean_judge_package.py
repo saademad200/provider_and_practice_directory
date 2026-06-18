@@ -120,7 +120,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - estimated cost per correct update `$0.005836`
-- 128 curated-package verification checks
+- 129 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -290,8 +290,13 @@ def build(target: Path, source_root: Path = SOURCE) -> dict:
     offenders = assert_no_private_files(target)
     summary_path = target / "evidence/clean_package_summary.json"
     file_count = sum(1 for path in target.rglob("*") if path.is_file()) + (0 if summary_path.exists() else 1)
+    target_label = target.resolve()
+    try:
+        target_label = target_label.relative_to(ROOT)
+    except ValueError:
+        pass
     summary = {
-        "target": str(target),
+        "target": target_label.as_posix(),
         "file_count": file_count,
         "private_file_offenders": offenders,
         "passed": not offenders,

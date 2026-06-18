@@ -296,6 +296,13 @@ def record(checks: list[dict[str, Any]], name: str, passed: bool, detail: str = 
     checks.append({"name": name, "passed": bool(passed), "detail": detail})
 
 
+def display_path(path: Path) -> str:
+    try:
+        return path.resolve().relative_to(ROOT).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
 def auto_apply_policy_violations(rows: list[dict[str, str]]) -> list[str]:
     violations: list[str] = []
     for index, row in enumerate(rows, start=2):
@@ -463,7 +470,7 @@ def validate_notebook(checks: list[dict[str, Any]]) -> None:
         "Working Prototype",
     ]
     missing_terms = [term for term in required_terms if term not in text]
-    record(checks, "notebook_json_valid", True, str(notebook_path))
+    record(checks, "notebook_json_valid", True, display_path(notebook_path))
     record(checks, "notebook_cell_count", markdown_count >= 10 and code_count >= 10, f"markdown={markdown_count}, code={code_count}")
     record(checks, "notebook_required_story_terms", not missing_terms, ", ".join(missing_terms))
 
@@ -472,10 +479,10 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
     examples_path = ROOT / "submissions/healthlynked_option_c_clean/prototype/recommendation_api_examples.json"
     schema_path = ROOT / "submissions/healthlynked_option_c_clean/prototype/recommendation_api_schema.json"
     if not examples_path.exists():
-        record(checks, "recommendation_examples_exist", False, str(examples_path))
+        record(checks, "recommendation_examples_exist", False, display_path(examples_path))
         return
     if not schema_path.exists():
-        record(checks, "recommendation_schema_exist", False, str(schema_path))
+        record(checks, "recommendation_schema_exist", False, display_path(schema_path))
         return
     try:
         examples = json.loads(examples_path.read_text(encoding="utf-8"))
@@ -497,8 +504,8 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
     has_human_review = any(item.get("recommended_action") == "human_review" for item in recommendations)
     invalid_npis = [str(item.get("npi", "")) for item in recommendations if not valid_npi(item.get("npi", ""))]
     has_schema_title = schema.get("title") == "ProviderDirectoryRecommendationBatch"
-    record(checks, "recommendation_examples_exist", True, str(examples_path))
-    record(checks, "recommendation_json_valid", True, str(examples_path))
+    record(checks, "recommendation_examples_exist", True, display_path(examples_path))
+    record(checks, "recommendation_json_valid", True, display_path(examples_path))
     record(checks, "recommendation_contract_shape", valid_shape, f"recommendations={len(recommendations)}")
     record(checks, "recommendation_contract_sources", has_sources, "supporting_sources required per change")
     record(checks, "recommendation_contract_field_decisions", has_field_decisions, "field_decision required per change")
@@ -672,6 +679,26 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
                 "package_cost_model_markdown_matches_csv",
                 not mismatches,
                 "; ".join(mismatches[:8]),
+            )
+            total_mismatches = []
+            cost_components = [
+                "evidence_usd",
+                "aws_compute_storage_monitoring_usd",
+                "llm_extraction_usd",
+                "manual_review_usd",
+            ]
+            for scenario, csv_row in csv_rows.items():
+                expected_total = sum(float(csv_row[key]) for key in cost_components)
+                reported_total = float(csv_row["total_usd"])
+                if round(expected_total, 2) != round(reported_total, 2):
+                    total_mismatches.append(
+                        f"{scenario}: expected {expected_total:.2f} got {reported_total:.2f}"
+                    )
+            record(
+                checks,
+                "package_cost_model_totals_add_up",
+                not total_mismatches,
+                "; ".join(total_mismatches[:8]),
             )
         except (KeyError, ValueError) as exc:
             record(checks, "package_cost_model_markdown_matches_csv", False, str(exc))

@@ -28,7 +28,7 @@ This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM
 | base_case | 4.46 | 0.2 | 0.8 | 277.5 | 370.0 | 282.96 |
 | llm_heavy | 4.46 | 0.2 | 2.5 | 277.5 | 370.0 | 284.66 |
 | review_heavy | 4.46 | 0.2 | 0.8 | 450.0 | 600.0 | 455.46 |
-| mature_auto_apply | 4.46 | 0.2 | 0.5 | 135.0 | 180.0 | 139.96 |
+| mature_auto_apply | 4.46 | 0.2 | 0.5 | 135.0 | 180.0 | 140.16 |
 
 The proxy benchmark is intentionally enriched for risky/outdated records, so its raw review queue rate is not used as the production base-case rate. The `manual_review_rate` assumption is a planning target that HealthLynked can recalibrate from reviewer disposition data during shadow mode.
 
