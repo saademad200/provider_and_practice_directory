@@ -49,9 +49,9 @@ That harness is what HealthLynked can actually operate after the competition.
 
 1. Open `notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb`.
 2. Skim the rendered metric cards and decision funnel.
-3. Open `submissions/exp0172/TECHNICAL_ARCHITECTURE_PROPOSAL.md`.
-4. Open `submissions/exp0172/ARCHITECTURE_DIAGRAM.md`.
-5. Open `submissions/exp0172/WORKING_PROTOTYPE.md`.
+3. Open `submissions/healthlynked_option_c_clean/proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`.
+4. Open `submissions/healthlynked_option_c_clean/proposal/ARCHITECTURE_DIAGRAM.md`.
+5. Open `submissions/healthlynked_option_c_clean/prototype/WORKING_PROTOTYPE.md`.
 6. Inspect `candidate_updates.csv`, `auto_apply_updates.csv`, `review_queue.csv`, and `audit_events.jsonl`.
 
 ## Closing Argument

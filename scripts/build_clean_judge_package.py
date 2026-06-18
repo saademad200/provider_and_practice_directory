@@ -10,8 +10,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "submissions/exp0172"
 TARGET = ROOT / "submissions/healthlynked_option_c_clean"
+SOURCE = TARGET
+CURATED_SOURCE = TARGET
 
 
 TOP_LEVEL_FILES = [
@@ -216,6 +217,16 @@ def copy_file(src: Path, dst: Path) -> None:
     shutil.copy2(src, dst)
 
 
+def source_file(source_root: Path, source_name: str, target_name: str) -> Path:
+    legacy_path = source_root / source_name
+    if legacy_path.exists():
+        return legacy_path
+    curated_path = source_root / target_name
+    if curated_path.exists():
+        return curated_path
+    raise FileNotFoundError(f"Missing package source for {source_name} -> {target_name}")
+
+
 def assert_no_private_files(target: Path) -> list[str]:
     offenders = []
     for path in target.rglob("*"):
@@ -227,7 +238,16 @@ def assert_no_private_files(target: Path) -> list[str]:
     return offenders
 
 
-def build(target: Path) -> dict:
+def build(target: Path, source_root: Path = SOURCE) -> dict:
+    temp_source: Path | None = None
+    same_source_and_target = source_root.exists() and source_root.resolve() == target.resolve()
+    if same_source_and_target or (not source_root.exists() and CURATED_SOURCE.exists()):
+        temp_source = ROOT / "outputs/build_clean_source_snapshot"
+        if temp_source.exists():
+            shutil.rmtree(temp_source)
+        shutil.copytree(source_root if source_root.exists() else CURATED_SOURCE, temp_source)
+        source_root = temp_source
+
     if target.exists():
         shutil.rmtree(target)
     target.mkdir(parents=True)
@@ -238,11 +258,11 @@ def build(target: Path) -> dict:
     for source_name, target_name in TOP_LEVEL_FILES:
         if source_name == "README.md":
             continue
-        copy_file(SOURCE / source_name, target / target_name)
+        copy_file(source_file(source_root, source_name, target_name), target / target_name)
     patch_notebook_for_curated_package(target)
 
     for directory in ["dashboard"]:
-        source_dir = SOURCE / directory
+        source_dir = source_root / directory
         if source_dir.exists():
             shutil.copytree(source_dir, target / directory)
     sync_dashboard_metrics(target)
@@ -267,6 +287,8 @@ def build(target: Path) -> dict:
         json.dumps(summary, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+    if temp_source and temp_source.exists():
+        shutil.rmtree(temp_source)
     return summary
 
 
@@ -297,17 +319,18 @@ def patch_notebook_for_curated_package(target: Path) -> None:
     if not notebook_path.exists():
         return
     notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
-    old = "audit_path = ROOT / 'submissions/exp0172/audit_events.jsonl'\n"
-    new = "audit_path = ROOT / 'evidence/audit_events.jsonl'\n"
-    fallback = [
-        "if not audit_path.exists():\n",
-        "    audit_path = ROOT / 'submissions/exp0172/audit_events.jsonl'\n",
+    curated_source = [
+        "audit_path = ROOT / 'evidence/audit_events.jsonl'\n",
+        "if audit_path.exists():\n",
+        "    audit_preview = [json.loads(line) for line in audit_path.read_text().splitlines()[:5]]\n",
+        "    display(pd.DataFrame(audit_preview))\n",
+        "else:\n",
+        "    print('Audit fixture not found in this checkout.')\n",
     ]
     for cell in notebook.get("cells", []):
         source = cell.get("source", [])
-        if isinstance(source, list):
-            cleaned = [new if line == old else line for line in source]
-            cell["source"] = [line for line in cleaned if line not in fallback]
+        if isinstance(source, list) and "audit_events.jsonl" in "".join(source):
+            cell["source"] = curated_source
     notebook_text = json.dumps(notebook, indent=1, ensure_ascii=False)
     notebook_text = notebook_text.replace(str(ROOT), ".")
     notebook_path.write_text(notebook_text + "\n", encoding="utf-8")

@@ -1,7 +1,0 @@
-step,skill,agent,message_in,message_out,downstream,aws_control_plane,artifact_bus,blocking_gate
-1,checking-source-health,source_retrieval_agent,source_batch_requested,source_health_verified,normalizing-provider-evidence,AWS Step Functions,S3 versioned artifacts plus EventBridge status events,required eval passes
-2,normalizing-provider-evidence,evidence_normalization_agent,raw_snapshot_ready,normalized_evidence_ready,resolving-provider-identity,AWS Step Functions,S3 versioned artifacts plus EventBridge status events,required eval passes
-3,resolving-provider-identity,identity_resolution_agent,normalized_evidence_ready,identity_resolution_ready,routing-human-review,AWS Step Functions,S3 versioned artifacts plus EventBridge status events,required eval passes
-4,routing-human-review,evidence_scoring_agent,candidate_updates_ready,review_or_auto_apply_batch_ready,auditing-and-rollback,AWS Step Functions,S3 versioned artifacts plus EventBridge status events,no auto-apply for identity or high-risk fields
-5,auditing-and-rollback,audit_and_rollback_agent,approved_update_batch_ready,audit_and_rollback_artifacts_ready,evaluating-provider-directory-pipeline,AWS Step Functions,S3 versioned artifacts plus EventBridge status events,human approval plus rollback-plan precheck
-6,evaluating-provider-directory-pipeline,evaluation_agent,evaluation_artifacts_ready,release_verification_ready,release_artifacts,AWS Step Functions,S3 versioned artifacts plus EventBridge status events,required eval passes

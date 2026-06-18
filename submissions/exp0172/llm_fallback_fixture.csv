@@ -1,4 +1,0 @@
-fixture,should_call_llm,gate_reasons,deterministic_fields_found,estimated_input_tokens,estimated_cost_usd,valid_grounded_output,validation_errors,validation_warnings,route
-clean_regex_page,False,,4,21,0.001097,True,,,review
-messy_location_page,True,deterministic_extraction_sparse|location_hint_without_address|provider_hint_without_specialty,0,45,0.001116,True,,missing_structured_contact_fields|llm_low_confidence_review_only,review
-unsupported_span,False,,2,12,0.00109,False,unsupported_evidence_span:address,schema_or_grounding_error_review_only,review

@@ -385,8 +385,8 @@ def validate_notebook(checks: list[dict[str, Any]]) -> None:
 
 
 def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
-    examples_path = ROOT / "submissions/exp0172/recommendation_api_examples.json"
-    schema_path = ROOT / "submissions/exp0172/recommendation_api_schema.json"
+    examples_path = ROOT / "submissions/healthlynked_option_c_clean/prototype/recommendation_api_examples.json"
+    schema_path = ROOT / "submissions/healthlynked_option_c_clean/prototype/recommendation_api_schema.json"
     if not examples_path.exists():
         record(checks, "recommendation_examples_exist", False, str(examples_path))
         return
@@ -452,7 +452,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "prototype/WORKING_PROTOTYPE.md",
         "prototype/RECOMMENDATION_API_CONTRACT.md",
     ]
-    forbidden = ["submissions/exp0172/", "COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
+    forbidden = ["COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
     required_terms = {
         "START_HERE.md": ["90-Second Read", "self-contained unzip-and-run MVP smoke test passes"],
         "proposal/JUDGE_DECISION_MEMO.md": ["Monday-Morning Implementation Plan", "What Would Make This Unsafe"],
@@ -496,7 +496,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
             record(checks, "package_dashboard_metrics_match_prototype", False, str(exc))
         try:
             notebook_text = archive.read(f"{prefix}/Provider_Directory_Update_Pipeline_End_to_End.ipynb").decode("utf-8")
-            notebook_portable = "submissions/exp0172/audit_events.jsonl" not in notebook_text and "evidence/audit_events.jsonl" in notebook_text
+            notebook_portable = "submissions/" not in notebook_text and "evidence/audit_events.jsonl" in notebook_text
             record(checks, "package_notebook_uses_curated_paths", notebook_portable, "evidence/audit_events.jsonl")
         except KeyError as exc:
             record(checks, "package_notebook_uses_curated_paths", False, str(exc))
@@ -540,7 +540,7 @@ def main() -> int:
     parser.add_argument("--out-dir", default="outputs/verify_pipeline", help="Directory for verification outputs.")
     parser.add_argument(
         "--package",
-        default="submissions/exp0172_final_combined_abc_handoff_package.zip",
+        default="submissions/latest_final_package.zip",
         help="Submission package zip to validate.",
     )
     args = parser.parse_args()

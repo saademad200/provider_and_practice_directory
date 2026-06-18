@@ -1,6 +1,0 @@
-decision,freshness_status,count
-auto_apply,all_stale,9
-auto_apply,fresh,2
-auto_apply,partially_stale,9
-review,all_stale,22
-review,partially_stale,15

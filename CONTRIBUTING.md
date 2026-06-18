@@ -18,10 +18,4 @@ Run:
 make verify
 ```
 
-For research iterations:
-
-```bash
-python3 scripts/run_one_research_iteration.py
-```
-
-Log meaningful changes in `autoresearch/JOURNAL.md` and keep the final package handoff synchronized when a new best result is promoted.
+For judge-facing changes, keep `FINAL_UPLOAD.md`, `submissions/latest_final_package.zip`, and `submissions/healthlynked_option_c_clean/` synchronized before pushing.

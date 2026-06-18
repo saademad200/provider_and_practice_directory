@@ -79,6 +79,6 @@ python3 scripts/verify_pipeline.py \
 - `src/entity_resolution.py`
 - `src/source_registry.py`
 - `src/review_priority.py`
-- `submissions/exp0172/candidate_updates.csv`
-- `submissions/exp0172/auto_apply_updates.csv`
-- `submissions/exp0172/review_queue.csv`
+- `submissions/healthlynked_option_c_clean/prototype/candidate_updates.csv`
+- `submissions/healthlynked_option_c_clean/prototype/auto_apply_updates.csv`
+- `submissions/healthlynked_option_c_clean/prototype/review_queue.csv`

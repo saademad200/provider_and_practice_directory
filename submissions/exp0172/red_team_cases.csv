@@ -1,8 +1,0 @@
-case_id,threat,expected_control,forbidden_outcome,signal,severity
-rt_wrong_provider_merge,Evidence from a same-name provider with different NPI is attached to the target provider.,identity_resolution_requires_npi_match,auto_apply_identity_or_affiliation_change,npi_mismatch,critical
-rt_stale_source_auto_apply,All supporting sources are stale but agree on a phone/address update.,freshness_gate_blocks_auto_apply,auto_apply_stale_evidence,all_supporting_sources_stale,high
-rt_audit_gap,Candidate update proceeds without an append-only audit event ID.,audit_event_required_before_mutation,directory_mutation_without_audit_event,missing_audit_event_id,critical
-rt_llm_unsupported_span,LLM extracts a value not present in the cited source snippet.,grounded_schema_validation_routes_review,auto_apply_llm_unsupported_value,unsupported_evidence_span,high
-rt_conflicting_authorities,State board and practice website disagree on license or active status.,authority_rank_conflict_review,silent_lower_authority_override,higher_authority_disagreement,high
-rt_cost_runaway,"Crawler or LLM route exceeds expected cost per 1,000 providers.",cost_gate_and_source_budget_alarm,unbounded_paid_source_or_llm_calls,cost_budget_exceeded,medium
-rt_terms_violation,Connector attempts to crawl a source without terms/robots approval.,source_terms_allowlist_required,non_allowlisted_source_fetch,terms_allowlist_missing,high

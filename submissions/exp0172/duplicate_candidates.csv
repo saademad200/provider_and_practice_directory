@@ -1,2 +1,0 @@
-left_provider_id,right_provider_id,duplicate_score,name_similarity,signals,recommended_action
-P0000,P_DUP_0000,0.96,0.8,same_npi|same_phone|same_address|same_specialty,merge_review

@@ -1,3 +1,0 @@
-run_id,passed,trajectory_score,missing_required_events,forbidden_events,event_count,recommended_action
-bad_trace,False,0.24,identity_resolution|source_conflict_check|route_review|write_audit_event|emit_monitoring_metrics,call_llm_without_cost_gate|write_update_without_audit,5,block_and_debug_trace
-good_trace,True,1.0,,,8,ship_candidate

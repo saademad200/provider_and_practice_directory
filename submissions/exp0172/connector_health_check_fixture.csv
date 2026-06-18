@@ -1,7 +1,0 @@
-connector_id,expected_health_status,freshness_sla_days,cache_ttl_days,required_actions_on_failure,sample_check
-nppes_npi_registry,ok,7,7,"mark stale, block auto-apply if min-source policy fails, emit CloudWatch alert","GET sample NPI query, validate result_count and schema version"
-cms_provider_data_catalog,ok,30,30,"mark stale, block auto-apply if min-source policy fails, emit CloudWatch alert","GET schema list and one dataset page, validate dataset modified timestamp"
-state_license_board,ok,14,14,"mark stale, block auto-apply if min-source policy fails, emit CloudWatch alert",jurisdiction-specific search fixture plus schema/status vocabulary validation
-practice_website,ok,21,14,"mark stale, block auto-apply if min-source policy fails, emit CloudWatch alert","robots/terms allowed, HTTP 200, parser fixture coverage, canonical domain match"
-health_system_directory,ok,14,14,"mark stale, block auto-apply if min-source policy fails, emit CloudWatch alert","feed timestamp, provider roster row count, parser drift and stale-page checks"
-business_listing,disabled,45,30,"mark stale, block auto-apply if min-source policy fails, emit CloudWatch alert","terms allowlist, duplicate listing rate, stale listing rate, cost threshold"
