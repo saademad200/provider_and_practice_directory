@@ -52,7 +52,6 @@ residual_false_negatives.csv,metrics,Remaining false-negative missed gold update
 residual_false_positives.csv,metrics,Remaining false-positive proposed updates after normalized matching.,1522,12
 threshold_robustness_sweep.csv,metrics,"Nearby confidence, source-weight, and auto-apply threshold sweep results.",1189,12
 dashboard/index.html,dashboard,Static operations dashboard prototype.,16965,13
-dashboard/index.html,dashboard,"Lifecycle, LLM, and rollback dashboard lanes.",16965,13
 audit_events.jsonl,audit,Append-only audit trail sample.,44305,14
 rollback_plan.csv,audit,Rollback plan for applied updates.,3285,14
 PUBLIC_DATASET_PROFILE.md,data_profile,Profile and review-first triage transfer check for the visible 42k-row public provider-directory dataset.,2345,15
@@ -114,7 +113,6 @@ INACTIVE_PROVIDER_DETECTION.md,supporting_artifact,Supporting package artifact.,
 INCIDENT_RESPONSE_RUNBOOKS.md,supporting_artifact,Supporting package artifact.,2117,50
 JUDGING_NARRATIVE.md,supporting_artifact,Supporting package artifact.,1835,50
 LLM_FALLBACK_CONTRACT.md,supporting_artifact,Supporting package artifact.,2035,50
-MILESTONE_100_NORTH_STAR_AUDIT.md,supporting_artifact,Supporting package artifact.,1742,50
 MISSING_SOURCE_ROBUSTNESS.md,supporting_artifact,Supporting package artifact.,2130,50
 MONITORING_ALERTS.md,supporting_artifact,Supporting package artifact.,2498,50
 NO_SECRETS_SCAN.md,supporting_artifact,Supporting package artifact.,170,50
@@ -151,7 +149,6 @@ inactive_provider_candidates.csv,supporting_artifact,Supporting package artifact
 incident_response_runbooks.csv,supporting_artifact,Supporting package artifact.,2457,50
 learning_actions.csv,supporting_artifact,Supporting package artifact.,1310,50
 llm_fallback_fixture.csv,supporting_artifact,Supporting package artifact.,557,50
-milestone_100_north_star_audit.csv,supporting_artifact,Supporting package artifact.,1180,50
 missing_source_robustness.csv,supporting_artifact,Supporting package artifact.,1108,50
 monitoring_alerts.json,supporting_artifact,Supporting package artifact.,1550,50
 no_secrets_findings.csv,supporting_artifact,Supporting package artifact.,28,50

@@ -53,7 +53,6 @@ This index helps judges navigate the submitted package without guessing which fi
 | cv_metrics.json | metrics | Grouped-CV proxy benchmark metrics. | 8322 |
 | metrics.json | metrics | CLI/prototype metrics. | 478 |
 | dashboard/index.html | dashboard | Static operations dashboard prototype. | 16965 |
-| dashboard_v2/index.html | dashboard | Lifecycle, LLM, and rollback dashboard lanes. | 16965 |
 | audit_events.jsonl | audit | Append-only audit trail sample. | 44305 |
 | rollback_plan.csv | audit | Rollback plan for applied updates. | 3285 |
 | evidence_tool_manifest.json | agentic_harness | Evidence connector tool schemas and permissions. | 11371 |

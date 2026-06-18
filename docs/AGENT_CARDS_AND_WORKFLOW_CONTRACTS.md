@@ -34,7 +34,7 @@ This experiment applies the local agentic-engineering whitepaper lessons to the 
 | identity_resolution_agent | Resolve providers, practices, locations, affiliations, duplicates, and movement candidates. | npi_matcher, address_matcher, practice_change_detector, duplicate_detector | evidence_scoring_agent |
 | source_conflict_agent | Adjudicate competing source values using field-specific source authority. | source_conflict_diagnostics, field_authority_policy | evidence_scoring_agent, human_review_agent |
 | evidence_scoring_agent | Score candidate updates for confidence, cost, freshness, source reliability, and auto-apply eligibility. | confidence_scorer, freshness_sla_checker, cost_model, review_priority_model | human_review_agent, audit_rollback_agent |
-| human_review_agent | Prepare reviewer worklists and capture accept, reject, edit, defer, recrawl, and rollback decisions. | dashboard_v2, review_priority_queue, case_study_generator | active_learning_agent, audit_rollback_agent |
+| human_review_agent | Prepare reviewer worklists and capture accept, reject, edit, defer, recrawl, and rollback decisions. | dashboard, review_priority_queue, case_study_generator | active_learning_agent, audit_rollback_agent |
 | audit_rollback_agent | Emit immutable audit events, provider timelines, and rollback commands for applied updates. | audit_event_writer, rollback_plan_generator, s3_archive_writer | monitoring_agent |
 | monitoring_agent | Watch connector freshness, false positives, review backlog, cost drift, and audit completeness. | monitoring_alert_rules, source_freshness_sla, cost_per_1000_model | source_retrieval_agent, human_review_agent |
 

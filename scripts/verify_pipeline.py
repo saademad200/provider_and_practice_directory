@@ -109,7 +109,6 @@ REQUIRED_PACKAGE_FILES = [
     "PACKAGE_INTEGRITY_MANIFEST.md",
     "NO_SECRETS_SCAN.md",
     "FINAL_RELEASE_NOTES.md",
-    "MILESTONE_100_NORTH_STAR_AUDIT.md",
     "verification.json",
     "prioritized_review_queue.csv",
     "case_studies.json",
@@ -165,7 +164,6 @@ REQUIRED_PACKAGE_FILES = [
     "package_integrity_summary.json",
     "no_secrets_findings.csv",
     "no_secrets_summary.json",
-    "milestone_100_north_star_audit.csv",
     "provider_directory_skill_candidates.csv",
     "provider_directory_skills_index.csv",
     "skill_eval_coverage.json",
@@ -269,7 +267,7 @@ CURATED_PACKAGE_FILES = [
     "requirements.txt",
 ]
 
-PRIVATE_PACKAGE_PATTERNS = ["JUDGE_AUDIT", "COUNTERMOVE_LOG", "MILESTONE_100_NORTH_STAR_AUDIT"]
+PRIVATE_PACKAGE_PATTERNS = ["JUDGE_AUDIT", "COUNTERMOVE_LOG"]
 
 
 def record(checks: list[dict[str, Any]], name: str, passed: bool, detail: str = "") -> None:

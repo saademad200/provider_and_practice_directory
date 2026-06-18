@@ -35,7 +35,7 @@ The visible public notebook is a useful baseline, but it is mostly a directory-h
 | Source reliability | Authority-tiered connector registry and guarded business-listing fallback only for fresh phone/address evidence. | SOURCE_CONNECTOR_REGISTRY.md; SOURCE_PERTURBATION_STRESS_TESTS.md; FRESH_BUSINESS_LISTING_FALLBACK.md |
 | Human review design | Uncertain, stale, conflicting, identity-risking, and peer-mismatched updates route to prioritized review with disposition contracts. | review_queue.csv; REVIEW_DISPOSITION_AND_SLA.md; review_disposition_contract.json |
 | Audit trail | Append-only event fixture, rollback plan, change timeline, package manifest, and no-secrets scan. | audit_events.jsonl; rollback_plan.csv; provider_change_timeline.csv; PACKAGE_INTEGRITY_MANIFEST.md; NO_SECRETS_SCAN.md |
-| Bonus coverage | Dashboard, duplicate detection, NPI validation, inactive detection, movement/rebrand detection, confidence formula, and roadmap. | MVP_FIELD_COVERAGE.md; dashboard_v2/index.html; NPPES_API_SMOKE.md; INACTIVE_PROVIDER_DETECTION.md; PRACTICE_AFFILIATION_REBRAND.md |
+| Bonus coverage | Dashboard, duplicate detection, NPI validation, inactive detection, movement/rebrand detection, confidence formula, and roadmap. | MVP_FIELD_COVERAGE.md; dashboard/index.html; NPPES_API_SMOKE.md; INACTIVE_PROVIDER_DETECTION.md; PRACTICE_AFFILIATION_REBRAND.md |
 
 ## Public Notebook Gap Analysis
 

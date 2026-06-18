@@ -1,6 +1,6 @@
 # Judge Rubric Self Eval
 
-Post-fallback refresh against the verified `exp0122` package. The score is artifact-backed and uses the promoted fresh business-listing configuration metrics.
+Curated-package refresh against `submissions/latest_final_package.zip`. The score is artifact-backed and evidence pointers are aligned to the judge upload.
 
 ## Result
 

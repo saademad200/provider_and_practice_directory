@@ -117,7 +117,6 @@
 | INCIDENT_RESPONSE_RUNBOOKS.md | supporting_artifact | Supporting package artifact. | 2117 |
 | JUDGING_NARRATIVE.md | supporting_artifact | Supporting package artifact. | 1835 |
 | LLM_FALLBACK_CONTRACT.md | supporting_artifact | Supporting package artifact. | 2035 |
-| MILESTONE_100_NORTH_STAR_AUDIT.md | supporting_artifact | Supporting package artifact. | 1742 |
 | MISSING_SOURCE_ROBUSTNESS.md | supporting_artifact | Supporting package artifact. | 2130 |
 | MONITORING_ALERTS.md | supporting_artifact | Supporting package artifact. | 2498 |
 | NO_SECRETS_SCAN.md | supporting_artifact | Supporting package artifact. | 170 |
