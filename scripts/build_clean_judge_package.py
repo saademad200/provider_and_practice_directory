@@ -299,10 +299,15 @@ def patch_notebook_for_curated_package(target: Path) -> None:
     notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
     old = "audit_path = ROOT / 'submissions/exp0172/audit_events.jsonl'\n"
     new = "audit_path = ROOT / 'evidence/audit_events.jsonl'\n"
+    fallback = [
+        "if not audit_path.exists():\n",
+        "    audit_path = ROOT / 'submissions/exp0172/audit_events.jsonl'\n",
+    ]
     for cell in notebook.get("cells", []):
         source = cell.get("source", [])
         if isinstance(source, list):
-            cell["source"] = [new if line == old else line for line in source]
+            cleaned = [new if line == old else line for line in source]
+            cell["source"] = [line for line in cleaned if line not in fallback]
     notebook_text = json.dumps(notebook, indent=1, ensure_ascii=False)
     notebook_text = notebook_text.replace(str(ROOT), ".")
     notebook_path.write_text(notebook_text + "\n", encoding="utf-8")
