@@ -69,9 +69,15 @@ TOP_LEVEL_FILES = [
 
 CODE_FILES = [
     "scripts/run_best_pipeline.py",
-    "requirements.txt",
     "pyproject.toml",
 ]
+
+CURATED_REQUIREMENTS = """pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+matplotlib>=3.7
+ipython>=8.0
+"""
 
 CURATED_SRC_FILES = [
     "src/__init__.py",
@@ -246,6 +252,7 @@ def build(target: Path) -> dict:
     shutil.copytree(ROOT / "data/sample", target / "data/sample")
     for code_file in CODE_FILES:
         copy_file(ROOT / code_file, target / code_file)
+    (target / "requirements.txt").write_text(CURATED_REQUIREMENTS, encoding="utf-8")
 
     offenders = assert_no_private_files(target)
     summary_path = target / "evidence/clean_package_summary.json"
