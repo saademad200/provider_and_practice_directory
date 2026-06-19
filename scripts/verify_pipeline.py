@@ -516,9 +516,9 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
 
 def validate_package(checks: list[dict[str, Any]], package_path: Path) -> None:
     if not package_path.exists():
-        record(checks, "package_exists", False, str(package_path))
+        record(checks, "package_exists", False, package_path.name)
         return
-    record(checks, "package_exists", True, str(package_path))
+    record(checks, "package_exists", True, package_path.name)
     with zipfile.ZipFile(package_path) as archive:
         names = set(archive.namelist())
     top_level_dirs = {name.split("/", 1)[0] for name in names if "/" in name}
@@ -572,7 +572,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "prototype/WORKING_PROTOTYPE.md",
         "prototype/RECOMMENDATION_API_CONTRACT.md",
     ]
-    forbidden = ["COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
+    forbidden = ["COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md", "scripts/verify_pipeline.py"]
     required_terms = {
         "START_HERE.md": ["90-Second Read", "Five-Minute Judge Path", "self-contained unzip-and-run MVP smoke test passes"],
         "proposal/ONE_PAGE_SCORECARD.md": [

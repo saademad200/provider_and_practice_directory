@@ -8,14 +8,6 @@ This package includes a lightweight MVP that demonstrates the pipeline using sam
 python3 scripts/run_best_pipeline.py --out-dir outputs/local_best
 ```
 
-Verify the final package:
-
-```bash
-python3 scripts/verify_pipeline.py \
-  --package submissions/latest_final_package.zip \
-  --out-dir outputs/verify_latest
-```
-
 ## Demonstrated Capabilities
 
 - Load sample provider/practice data.
