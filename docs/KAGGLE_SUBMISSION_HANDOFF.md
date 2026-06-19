@@ -14,7 +14,7 @@ This Option C hybrid submission combines a runnable provider/practice directory 
 
 Key proof points:
 
-- Verified package checks: 101 curated-package checks
+- Verified package checks: 144 curated-package checks
 - Local proxy F1: 0.948276
 - Precision/recall: 0.948276 / 0.948276
 - Auto-apply precision: 1.0
@@ -28,14 +28,20 @@ Recommended first files for judges:
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 3. `proposal/WINNING_PROPOSAL_BRIEF.md`
 4. `proposal/JUDGE_DECISION_MEMO.md`
-5. `proposal/BONUS_COVERAGE_MATRIX.md`
-6. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-7. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-8. `prototype/WORKING_PROTOTYPE.md`
-9. `prototype/RECOMMENDATION_API_CONTRACT.md`
-10. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-11. `dashboard/index.html`
-12. `evidence/verification.json`
+5. `proposal/PRESENTATION_NARRATIVE.md`
+6. `proposal/BONUS_COVERAGE_MATRIX.md`
+7. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+8. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
+9. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+10. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
+11. `prototype/WORKING_PROTOTYPE.md`
+12. `prototype/RECOMMENDATION_API_CONTRACT.md`
+13. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+14. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+15. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+16. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+17. `dashboard/index.html`
+18. `evidence/verification.json`
 
 ## Verify Before Upload
 

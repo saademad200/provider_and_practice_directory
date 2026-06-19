@@ -72,7 +72,7 @@ Grouped validation uses `GroupKFold(provider_id)` with five folds. Candidate gen
 - Auto-apply precision: 1.0
 - Auto-apply count: 3
 - Review count: 55
-- Cost per correct update: $0.005836
+- Prototype evidence-only cost per correct update: $0.005836
 
 Per-field metrics:
 

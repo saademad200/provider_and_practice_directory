@@ -12,7 +12,7 @@ This package is explicitly an **Option C: Hybrid Submission**. It includes a run
 - Auto-apply precision: 1.0
 - Auto-apply count: 3
 - Review count: 55
-- Cost per correct update: $0.005836
+- Prototype evidence-only cost per correct update: $0.005836
 
 ## Why Hybrid Is The Right Fit
 

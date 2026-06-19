@@ -19,7 +19,7 @@ This competition provides no official train/test data, so the solution is framed
 - Auto-apply precision: 1.0
 - Auto-apply count: 3
 - Review count: 55
-- Cost per correct update: $0.005836
+- Prototype evidence-only cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
 
 ## What To Emphasize In Submission

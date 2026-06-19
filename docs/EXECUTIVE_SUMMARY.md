@@ -22,7 +22,7 @@ This is an Option C Hybrid submission: a runnable provider-directory update prot
 - Auto-apply precision: 1.0
 - Auto-apply count: 3
 - Review count: 55
-- Cost per correct update: $0.005836
+- Prototype evidence-only cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
 
 ## Latest Metric Improvement
