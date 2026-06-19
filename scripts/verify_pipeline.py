@@ -590,7 +590,7 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
         "proposal/BONUS_COVERAGE_MATRIX.md": ["Bonus Evidence", "Confidence scoring formula"],
         "proposal/PRESENTATION_NARRATIVE.md": ["Three-Minute Talk Track", "Closing Ask"],
         "proposal/CONFIDENCE_AND_DECISION_POLICY.md": ["Confidence Formula", "Auto-Update Rules", "Human Review Rules"],
-        "proposal/AGENT_WORKFLOW_DIAGRAM.md": ["Agent Responsibilities", "Safety And Policy Gates", "Render-Free Diagram"],
+        "proposal/AGENT_WORKFLOW_DIAGRAM.md": ["Agent Responsibilities", "Safety And Policy Gates", "Render-Free Diagram", "safetyClass"],
         "proposal/ARCHITECTURE_DIAGRAM.md": ["Render-Free Diagram", "LLM extraction is a gated fallback"],
         "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md": ["Confidence And Decision Law", "AWS Production Plan"],
         "prototype/WORKING_PROTOTYPE.md": ["Deterministic Reproduction Check"],
