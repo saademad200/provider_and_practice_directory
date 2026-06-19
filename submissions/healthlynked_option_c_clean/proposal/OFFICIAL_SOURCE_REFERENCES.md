@@ -10,7 +10,7 @@ This note records the public authority sources that shaped the connector strateg
 |---|---|---|
 | NPPES NPI Registry API: https://npiregistry.cms.hhs.gov/api-page | Official targeted lookup for NPI/provider facts | Used for targeted NPI verification, provider identity facts, taxonomy, and source-backed evidence records |
 | CMS NPPES Data Dissemination: https://www.cms.gov/medicare/regulations-guidance/administrative-simplification/data-dissemination | Monthly full replacement and weekly incremental files; no-charge downloadable data | Used for low-cost batch refresh, deactivation checks, and stale/risky record prioritization |
-| CMS NPI Files: https://download.cms.gov/nppes/NPI_Files.html | Current downloadable file names, update dates, and supplemental reference files. Checked June 18, 2026: CMS listed the June 08, 2026 monthly V.2 file plus June 2026 weekly incremental files. | Used by the production connector to pin file versions and preserve source lineage |
+| CMS NPI Files: https://download.cms.gov/nppes/NPI_Files.html | Current downloadable file names, update dates, and supplemental reference files. Checked June 19, 2026: CMS listed the June 08, 2026 monthly V.2 file plus June 2026 weekly incremental files. | Used by the production connector to pin file versions and preserve source lineage |
 | CMS NPPES downloadable-file readme: https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand/downloads/data_dissemination_file-readme.pdf | NPPES data-field interpretation and public dissemination scope | Used to map raw NPPES fields to normalized directory fields without guessing |
 | FSMB Data Integration: https://www.fsmb.org/data-integration/ | Primary-source verified licensure/discipline data availability | Used as the preferred paid/contracted authority path for license/status enrichment when HealthLynked approves cost and terms |
 | FSMB Physician Data Center files: https://www.fsmb.org/PDC/pdc-data-files/ | High-volume licensure and disciplinary data option | Used in the production roadmap as a scalable alternative to one-off state-board scraping |
@@ -28,7 +28,7 @@ This note records the public authority sources that shaped the connector strateg
 
 ## Current Verification Snapshot
 
-The package includes `evidence/source_reference_health.csv` as the machine-readable source-health snapshot. The June 18, 2026 check records official URLs, observed status, and the design implication used by the connector plan. The most important operational finding is that the CMS NPI files page lists V.2 downloadable files and warns that NPI issuance does not validate licensure; the architecture therefore uses NPPES as an identity/taxonomy anchor and keeps active/inactive status review-first unless higher-authority licensure evidence agrees.
+The package includes `evidence/source_reference_health.csv` as the machine-readable source-health snapshot. The June 19, 2026 check records official URLs, observed status, and the design implication used by the connector plan. The most important operational finding is that CMS makes the NPI Registry and downloadable files available as no-charge FOIA-disclosable public data, the NPI files page lists V.2 downloadable files, and CMS warns that NPI issuance does not validate licensure. The architecture therefore uses NPPES as an identity/taxonomy anchor and keeps active/inactive status review-first unless higher-authority licensure evidence agrees.
 
 ## Judge Takeaway
 
