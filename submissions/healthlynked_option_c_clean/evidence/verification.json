@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_shadow_story_alignment/cli/candidate_updates.csv",
+      "detail": "outputs/verify_dashboard_launch_gates/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_shadow_story_alignment/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_dashboard_launch_gates/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_shadow_story_alignment/cli/review_queue.csv",
+      "detail": "outputs/verify_dashboard_launch_gates/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_shadow_story_alignment/cli/config.json",
+      "detail": "outputs/verify_dashboard_launch_gates/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -696,7 +696,7 @@
       "passed": true
     },
     {
-      "detail": "review table includes source, URL, and prototype provenance columns",
+      "detail": "review table includes source, URL, prototype provenance, and launch gates",
       "name": "package_dashboard_review_sources",
       "passed": true
     },

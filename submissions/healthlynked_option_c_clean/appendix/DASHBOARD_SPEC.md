@@ -53,6 +53,7 @@ This dashboard is the operational surface for uncertain provider-directory updat
 4. Source Health: coverage, stale-source rates, connector failures, and missing-source diagnostics.
 5. Calibration: reviewer accept rates by source/field/freshness and recommended learning actions.
 6. Auto-Apply Monitor: recently auto-applied updates with rollback/export controls.
+7. Launch Gates: field-level launch state showing `auto_update_candidate`, `review_only`, `blocked`, or `no_change_confirmed` before production writes are enabled.
 
 ## Data Contract
 
