@@ -11,7 +11,7 @@ Proof points:
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - prototype evidence-only cost per correct update `$0.005836`
-- 144 curated-package verification checks
+- 150 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
 
@@ -38,13 +38,14 @@ Why it should win: it is immediately implementable after the competition. The pa
 9. Read `proposal/AGENT_WORKFLOW_DIAGRAM.md` for the bounded agent workflow.
 10. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
 11. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
-12. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
-13. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
-14. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
-15. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-16. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
-17. Inspect `dashboard/index.html` for the sample human review experience.
-18. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+12. Read `proposal/SHADOW_MODE_PILOT_PROTOCOL.md` for the no-write HealthLynked pilot and launch gates.
+13. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
+14. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
+15. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
+16. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+17. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
+18. Inspect `dashboard/index.html` for the sample human review experience.
+19. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Run The MVP
 

@@ -6,7 +6,7 @@
 - Source package: `submissions/healthlynked_option_c_clean/`
 - Submission mode: Option C Hybrid with Option A architecture and Option B working prototype coverage.
 - Verification: see `submissions/healthlynked_option_c_clean/evidence/verification.json`.
-- Verification checks: 144 curated-package checks.
+- Verification checks: 150 curated-package checks.
 - Public dataset CLI smoke: passes on 42,000 Kaggle-adjacent rows when the downloaded public dataset is present.
 - Self no-secrets scan: see `NO_SECRETS_SCAN.md`.
 - Production readiness score: 50 / 50.
@@ -23,7 +23,7 @@
 - Review count: 55
 - Prototype evidence-only cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
-- Package checks passed: 144
+- Package checks passed: 150
 
 ## Major Additions
 
@@ -39,4 +39,4 @@
 
 ## Final Submission Advice
 
-Submit `submissions/latest_final_package.zip`. Lead with the clean package files: `START_HERE.md`, `Provider_Directory_Update_Pipeline_End_to_End.ipynb`, `proposal/ONE_PAGE_SCORECARD.md`, `proposal/JUDGE_DECISION_MEMO.md`, `proposal/WINNING_PROPOSAL_BRIEF.md`, `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`, `prototype/WORKING_PROTOTYPE.md`, `dashboard/index.html`, and `evidence/verification.json`.
+Submit `submissions/latest_final_package.zip`. Lead with the clean package files: `START_HERE.md`, `Provider_Directory_Update_Pipeline_End_to_End.ipynb`, `proposal/ONE_PAGE_SCORECARD.md`, `proposal/JUDGE_DECISION_MEMO.md`, `proposal/WINNING_PROPOSAL_BRIEF.md`, `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`, `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`, `prototype/WORKING_PROTOTYPE.md`, `dashboard/index.html`, and `evidence/verification.json`.

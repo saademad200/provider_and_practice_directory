@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_mermaid_safety_class_final/cli/candidate_updates.csv",
+      "detail": "outputs/verify_shadow_pilot_final/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_mermaid_safety_class_final/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_shadow_pilot_final/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_mermaid_safety_class_final/cli/review_queue.csv",
+      "detail": "outputs/verify_shadow_pilot_final/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_mermaid_safety_class_final/cli/config.json",
+      "detail": "outputs/verify_shadow_pilot_final/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -208,6 +208,11 @@
     {
       "detail": "healthlynked_option_c_clean/proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
       "name": "package_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/proposal/SHADOW_MODE_PILOT_PROTOCOL.md",
+      "name": "package_proposal/SHADOW_MODE_PILOT_PROTOCOL.md",
       "passed": true
     },
     {
@@ -531,6 +536,31 @@
       "passed": true
     },
     {
+      "detail": "Shadow-Mode Pilot Protocol",
+      "name": "package_text_proposal/SHADOW_MODE_PILOT_PROTOCOL.md_Shadow-Mode Pilot Protocol",
+      "passed": true
+    },
+    {
+      "detail": "No-Write Pilot Law",
+      "name": "package_text_proposal/SHADOW_MODE_PILOT_PROTOCOL.md_No-Write Pilot Law",
+      "passed": true
+    },
+    {
+      "detail": "Daily Reviewer Disposition Loop",
+      "name": "package_text_proposal/SHADOW_MODE_PILOT_PROTOCOL.md_Daily Reviewer Disposition Loop",
+      "passed": true
+    },
+    {
+      "detail": "Go/No-Go Gates",
+      "name": "package_text_proposal/SHADOW_MODE_PILOT_PROTOCOL.md_Go/No-Go Gates",
+      "passed": true
+    },
+    {
+      "detail": "Field-Level Launch Decision",
+      "name": "package_text_proposal/SHADOW_MODE_PILOT_PROTOCOL.md_Field-Level Launch Decision",
+      "passed": true
+    },
+    {
       "detail": "What The Current Metrics Do Not Prove",
       "name": "package_text_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md_What The Current Metrics Do Not Prove",
       "passed": true
@@ -706,7 +736,7 @@
       "passed": true
     },
     {
-      "detail": "144 curated-package checks passed=True",
+      "detail": "150 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

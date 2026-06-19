@@ -9,7 +9,7 @@ This package is designed to win as an Option C hybrid: a runnable prototype plus
 | Accuracy | Field-level recommendations reach F1 `0.948276`; safe auto-apply precision is `1.0`; unsafe identity-sensitive changes route to review. | `prototype/metrics.json`, `evidence/verification.json`, `proposal/CONFIDENCE_AND_DECISION_POLICY.md` |
 | Scalability | The production plan separates cheap deterministic source checks from bounded LLM fallback and scales with AWS Step Functions, S3, ECS/Lambda, queues, and RDS/DynamoDB. | `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`, `appendix/AWS_PRODUCTION_ARCHITECTURE.md` |
 | Cost Efficiency | The prototype estimates `$0.005836` evidence-only cost per correct update and includes per-1,000-record scenarios with AWS, LLM, and manual-review labor. | `appendix/COST_MODEL.md`, `evidence/cost_model_per_1000.csv` |
-| Practicality | The roadmap defines 30/60/90 day delivery, lean-team roles, acceptance gates, rollback, and source connector operations. | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/LEAN_TEAM_OPERATING_MODEL.md`, `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` |
+| Practicality | The roadmap defines 30/60/90 day delivery, lean-team roles, no-write pilot gates, rollback, and source connector operations. | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/LEAN_TEAM_OPERATING_MODEL.md`, `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`, `proposal/SHADOW_MODE_PILOT_PROTOCOL.md` |
 | Explainability | Every recommendation includes changed field, old/new value, confidence, source support, disagreement reason, and recommended action. | `prototype/RECOMMENDATION_API_CONTRACT.md`, `prototype/recommendation_api_examples.json` |
 | Data Quality | The MVP normalizes provider names, specialties, phones, addresses, websites, practice names, status, NPIs, and affiliations. | `src/`, `prototype/WORKING_PROTOTYPE.md`, `appendix/DUPLICATE_MOVEMENT_DETECTION.md` |
 | Source Reliability | Sources are authority-tiered; official sources dominate, stale/conflicting sources are penalized, and legally accessible connectors are governed. | `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, `proposal/OFFICIAL_SOURCE_REFERENCES.md` |
@@ -33,7 +33,7 @@ This package is designed to win as an Option C hybrid: a runnable prototype plus
 | Inactive/retired provider detection | `appendix/INACTIVE_PROVIDER_DETECTION.md`, `evidence/inactive_provider_candidates.csv` |
 | Change history and audit log | `evidence/audit_events.jsonl`, `appendix/AUDIT_ROLLBACK_WORKFLOW.md` |
 | Safe auto-update rules | `proposal/CONFIDENCE_AND_DECISION_POLICY.md`, `prototype/auto_apply_updates.csv` |
-| Clear implementation roadmap | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` |
+| Clear implementation roadmap | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`, `proposal/SHADOW_MODE_PILOT_PROTOCOL.md` |
 
 ## The Judge Decision In One Sentence
 

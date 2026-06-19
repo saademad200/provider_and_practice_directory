@@ -2,7 +2,7 @@
 
 - [x] Upload `submissions/latest_final_package.zip` as the primary Kaggle artifact.
 - [x] State explicitly that this is Option C Hybrid, with Option A architecture and Option B prototype coverage.
-- [x] Lead with the clean package files: `START_HERE.md`, notebook, scorecard, judge memo, architecture proposal, prototype runbook, dashboard, and verification evidence.
+- [x] Lead with the clean package files: `START_HERE.md`, notebook, scorecard, judge memo, architecture proposal, shadow-mode pilot protocol, prototype runbook, dashboard, and verification evidence.
 - [x] Include official-source references, source connector status, and source access policy for live competition/rubric alignment.
 - [x] Keep public dataset transfer notes as supporting evidence, not first-read judge material.
 - [x] Include bonus coverage matrix mapping requested MVP fields and bonus items to prototype and production artifacts.
@@ -26,4 +26,4 @@
 - Review count: 55
 - Prototype evidence-only cost per correct update: $0.005836
 - Estimated evidence cost: $0.321
-- Package checks passed: 144
+- Package checks passed: 150

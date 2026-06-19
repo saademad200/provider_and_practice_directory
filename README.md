@@ -38,20 +38,21 @@ Start here:
 10. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
 11. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 12. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-13. `prototype/WORKING_PROTOTYPE.md`
-14. `prototype/RECOMMENDATION_API_CONTRACT.md`
-15. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-16. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-17. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-18. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-19. `dashboard/index.html`
-20. `evidence/verification.json`
+13. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
+14. `prototype/WORKING_PROTOTYPE.md`
+15. `prototype/RECOMMENDATION_API_CONTRACT.md`
+16. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+17. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+18. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+19. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+20. `dashboard/index.html`
+21. `evidence/verification.json`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 144 curated-package checks
+- Verification checks passed: 150 curated-package checks
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
@@ -74,14 +75,15 @@ Show only the curated package path above. The intended first impression is small
 10. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
 11. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 12. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-13. `prototype/WORKING_PROTOTYPE.md`
-14. `prototype/RECOMMENDATION_API_CONTRACT.md`
-15. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-16. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-17. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-18. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-19. `dashboard/index.html`
-20. `evidence/verification.json`
+13. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
+14. `prototype/WORKING_PROTOTYPE.md`
+15. `prototype/RECOMMENDATION_API_CONTRACT.md`
+16. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+17. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+18. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+19. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+20. `dashboard/index.html`
+21. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 

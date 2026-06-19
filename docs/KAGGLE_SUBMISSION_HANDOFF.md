@@ -14,7 +14,7 @@ This Option C hybrid submission combines a runnable provider/practice directory 
 
 Key proof points:
 
-- Verified package checks: 144 curated-package checks
+- Verified package checks: 150 curated-package checks
 - Local proxy F1: 0.948276
 - Precision/recall: 0.948276 / 0.948276
 - Auto-apply precision: 1.0
@@ -34,14 +34,15 @@ Recommended first files for judges:
 8. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
 9. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
 10. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-11. `prototype/WORKING_PROTOTYPE.md`
-12. `prototype/RECOMMENDATION_API_CONTRACT.md`
-13. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-14. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-15. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-16. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-17. `dashboard/index.html`
-18. `evidence/verification.json`
+11. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
+12. `prototype/WORKING_PROTOTYPE.md`
+13. `prototype/RECOMMENDATION_API_CONTRACT.md`
+14. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+15. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
+16. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+17. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+18. `dashboard/index.html`
+19. `evidence/verification.json`
 
 ## Verify Before Upload
 
