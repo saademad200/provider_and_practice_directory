@@ -724,8 +724,13 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
             record(checks, "package_cost_model_markdown_matches_csv", False, str(exc))
         try:
             notebook_text = archive.read(f"{prefix}/Provider_Directory_Update_Pipeline_End_to_End.ipynb").decode("utf-8")
-            notebook_portable = "submissions/" not in notebook_text and "evidence/audit_events.jsonl" in notebook_text
-            record(checks, "package_notebook_uses_curated_paths", notebook_portable, "evidence/audit_events.jsonl")
+            notebook_portable = (
+                "submissions/" not in notebook_text
+                and "evidence/audit_events.jsonl" in notebook_text
+                and "Production Handoff" in notebook_text
+                and notebook_text.count("audit_path = ROOT / 'evidence/audit_events.jsonl'") == 1
+            )
+            record(checks, "package_notebook_uses_curated_paths", notebook_portable, "evidence/audit_events.jsonl + Production Handoff")
         except KeyError as exc:
             record(checks, "package_notebook_uses_curated_paths", False, str(exc))
         try:
