@@ -499,7 +499,15 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
         for item in recommendations
     )
     has_field_decisions = all(
-        all(change.get("field_decision") in {"auto_apply", "review"} for change in item.get("changes", []))
+        all(
+            change.get("field_decision") in {"auto_apply", "review"}
+            and change.get("launch_state") in {"auto_update_candidate", "review_only", "blocked", "no_change_confirmed"}
+            and change.get("policy_version")
+            and change.get("evidence_hash")
+            and isinstance(change.get("rollback_eligible"), bool)
+            and all(obs.get("authority_tier") in {"A", "B", "C", "D"} for obs in change.get("source_observations", []))
+            for change in item.get("changes", [])
+        )
         for item in recommendations
     )
     has_human_review = any(item.get("recommended_action") == "human_review" for item in recommendations)
@@ -509,7 +517,12 @@ def validate_recommendation_contract(checks: list[dict[str, Any]]) -> None:
     record(checks, "recommendation_json_valid", True, display_path(examples_path))
     record(checks, "recommendation_contract_shape", valid_shape, f"recommendations={len(recommendations)}")
     record(checks, "recommendation_contract_sources", has_sources, "supporting_sources required per change")
-    record(checks, "recommendation_contract_field_decisions", has_field_decisions, "field_decision required per change")
+    record(
+        checks,
+        "recommendation_contract_field_decisions",
+        has_field_decisions,
+        "field_decision, launch_state, policy_version, evidence_hash, rollback, source authority required per change",
+    )
     record(checks, "recommendation_contract_human_review", has_human_review, "at least one human_review example")
     record(checks, "recommendation_contract_valid_npis", not invalid_npis, "; ".join(invalid_npis[:5]))
     record(checks, "recommendation_schema_title", has_schema_title, schema.get("title", ""))

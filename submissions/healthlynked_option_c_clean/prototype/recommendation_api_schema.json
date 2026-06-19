@@ -58,7 +58,13 @@
                 "new_value",
                 "confidence_score",
                 "supporting_sources",
-                "field_decision"
+                "source_observations",
+                "field_decision",
+                "field_risk",
+                "launch_state",
+                "policy_version",
+                "evidence_hash",
+                "rollback_eligible"
               ],
               "properties": {
                 "field": {
@@ -97,6 +103,39 @@
                     "type": "string"
                   }
                 },
+                "source_observations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "source",
+                      "url",
+                      "authority_tier"
+                    ],
+                    "properties": {
+                      "source": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "authority_tier": {
+                        "enum": [
+                          "A",
+                          "B",
+                          "C",
+                          "D"
+                        ]
+                      },
+                      "age_days": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      }
+                    }
+                  }
+                },
                 "freshness_status": {
                   "type": "string"
                 },
@@ -106,8 +145,39 @@
                     "review"
                   ]
                 },
+                "field_risk": {
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high",
+                    "critical"
+                  ]
+                },
+                "launch_state": {
+                  "enum": [
+                    "auto_update_candidate",
+                    "review_only",
+                    "blocked",
+                    "no_change_confirmed"
+                  ]
+                },
+                "policy_version": {
+                  "type": "string"
+                },
                 "review_reason_code": {
                   "type": "string"
+                },
+                "review_priority_score": {
+                  "type": "number"
+                },
+                "audit_event_type": {
+                  "type": "string"
+                },
+                "evidence_hash": {
+                  "type": "string"
+                },
+                "rollback_eligible": {
+                  "type": "boolean"
                 }
               }
             }

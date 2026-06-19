@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from collections import defaultdict
@@ -22,6 +23,60 @@ def _split_pipe(value: Any) -> list[str]:
     if not text or text == "nan":
         return []
     return [item for item in text.split("|") if item]
+
+
+AUTHORITY_TIERS = {
+    "nppes": "A",
+    "state_license": "A",
+    "health_system": "B",
+    "practice_website": "B",
+    "business_listing": "C",
+}
+
+FIELD_RISK = {
+    "phone": "low",
+    "website": "low",
+    "specialty": "medium",
+    "address": "high",
+    "accepting_new_patients": "medium",
+    "license_status": "critical",
+}
+
+
+def _source_ages(value: Any) -> dict[str, int]:
+    ages: dict[str, int] = {}
+    for item in _split_pipe(value):
+        if ":" not in item:
+            continue
+        source, age = item.split(":", 1)
+        try:
+            ages[source] = int(float(age))
+        except ValueError:
+            continue
+    return ages
+
+
+def _evidence_hash(provider_id: str, field: str, old_value: Any, new_value: Any, urls: list[str]) -> str:
+    payload = json.dumps(
+        {
+            "provider_id": provider_id,
+            "field": field,
+            "old_value": old_value,
+            "new_value": new_value,
+            "urls": sorted(urls),
+        },
+        sort_keys=True,
+        default=str,
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+
+def _launch_state(field: str, decision: str, reason: str) -> str:
+    if decision == "auto_apply":
+        return "auto_update_candidate"
+    if field in {"npi", "license_status"} or "identity" in reason:
+        return "blocked"
+    return "review_only"
 
 
 def recommendation_records(limit: int = 8) -> list[dict[str, Any]]:
@@ -55,24 +110,44 @@ def recommendation_records(limit: int = 8) -> list[dict[str, Any]]:
         for item in sorted(grouped[provider_id], key=lambda record: str(record["field"])):
             sources = _split_pipe(item.get("sources"))
             urls = _split_pipe(item.get("evidence_urls"))
+            ages = _source_ages(item.get("source_age_days"))
             confidence = round(float(item.get("confidence", 0.0)), 4)
-            confidences.append(confidence)
-            decisions.append(str(item.get("decision", "review")))
-            source_set.update(sources)
+            field = str(item["field"])
+            decision = str(item.get("decision", "review"))
             reason = str(item.get("review_reason_code", ""))
+            proposed_value = item["proposed_value"]
+            confidences.append(confidence)
+            decisions.append(decision)
+            source_set.update(sources)
             if reason and reason != "auto_apply_criteria_met":
                 reason_parts.append(reason)
             changes.append(
                 {
-                    "field": item["field"],
+                    "field": field,
                     "old_value": item["old_value"],
-                    "new_value": item["proposed_value"],
+                    "new_value": proposed_value,
                     "confidence_score": confidence,
                     "supporting_sources": sources,
                     "source_urls": urls,
+                    "source_observations": [
+                        {
+                            "source": source,
+                            "url": urls[index] if index < len(urls) else "",
+                            "authority_tier": AUTHORITY_TIERS.get(source, "D"),
+                            "age_days": ages.get(source),
+                        }
+                        for index, source in enumerate(sources)
+                    ],
                     "freshness_status": item.get("freshness_status", ""),
-                    "field_decision": item.get("decision", ""),
-                    "review_reason_code": item.get("review_reason_code", ""),
+                    "field_decision": decision,
+                    "field_risk": FIELD_RISK.get(field, "high"),
+                    "launch_state": _launch_state(field, decision, reason),
+                    "policy_version": "safe_auto_policy_2026_06_19",
+                    "review_reason_code": reason,
+                    "review_priority_score": round(float(item.get("review_priority_score", 0.0)), 4),
+                    "audit_event_type": "candidate_update_created",
+                    "evidence_hash": _evidence_hash(provider_id, field, item["old_value"], proposed_value, urls),
+                    "rollback_eligible": decision == "auto_apply",
                 }
             )
 

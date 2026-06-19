@@ -42,9 +42,36 @@ This submission therefore includes:
             "https://example.org/nppes/P0022",
             "https://example.org/practice_website/P0022"
           ],
+          "source_observations": [
+            {
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0022",
+              "authority_tier": "B",
+              "age_days": 6
+            },
+            {
+              "source": "nppes",
+              "url": "https://example.org/nppes/P0022",
+              "authority_tier": "A",
+              "age_days": 102
+            },
+            {
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0022",
+              "authority_tier": "B",
+              "age_days": 146
+            }
+          ],
           "freshness_status": "partially_stale",
           "field_decision": "auto_apply",
-          "review_reason_code": "auto_apply_criteria_met"
+          "field_risk": "medium",
+          "launch_state": "auto_update_candidate",
+          "policy_version": "safe_auto_policy_2026_06_19",
+          "review_reason_code": "auto_apply_criteria_met",
+          "review_priority_score": 0.288,
+          "audit_event_type": "candidate_update_created",
+          "evidence_hash": "0d3cc158258a9672",
+          "rollback_eligible": true
         }
       ],
       "overall_confidence": 0.99,
@@ -66,6 +93,17 @@ This submission therefore includes:
 | `no_change` | Current record is confirmed or external evidence is insufficient to recommend a change. |
 
 `field_decision` records the field-level route from the scoring engine. A recommendation is only `auto_update` when every changed field is `auto_apply`; mixed records are sent to `human_review` with the field-level reasons preserved.
+
+## Field-Level Production Metadata
+
+| Field | Meaning |
+|---|---|
+| `source_observations` | Per-source URL, authority tier, and evidence age used for the recommendation. |
+| `field_risk` | Field risk bucket used by the auto-update policy: low, medium, high, or critical. |
+| `launch_state` | Shadow-mode launch state: `auto_update_candidate`, `review_only`, `blocked`, or `no_change_confirmed`. |
+| `policy_version` | Versioned decision policy that produced the field route. |
+| `evidence_hash` | Stable evidence fingerprint used to join recommendation, audit event, and rollback record. |
+| `rollback_eligible` | Whether the update can be automatically reversed from the audit payload after approval. |
 
 ## Demo Source URLs
 
