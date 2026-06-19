@@ -10,8 +10,8 @@ submissions/latest_final_package.zip
 
 ## Current Artifact Fingerprint
 
-- SHA-256: `64a635c87dd8e3fea1440a8740758d64ac01e0afa087f2303e4b010895fb4345`
-- Size: `175493` bytes
+- SHA-256: `24678f7bf8eeb730deeeba3a3d9ef59deae7a6b9f028ed590a5b3d0828d46de6`
+- Size: `175710` bytes
 - Curated package files: `72`
 - Verification: `143 / 143` checks passing
 
@@ -44,10 +44,10 @@ Expected proof points:
 
 - F1 `0.948276`
 - auto-apply precision `1.0`
-- cost per correct update `$0.005836`
+- prototype evidence-only cost per correct update `$0.005836`
 
 Latest manual unzip smoke:
 
 - Method: extracted the tracked upload zip into a temporary local folder and ran the package-local MVP command
-- Result: F1 `0.948276`, auto-apply precision `1.0`, cost per correct update `$0.005836`
+- Result: F1 `0.948276`, auto-apply precision `1.0`, prototype evidence-only cost per correct update `$0.005836`
 - Output files confirmed: candidate updates and review queue

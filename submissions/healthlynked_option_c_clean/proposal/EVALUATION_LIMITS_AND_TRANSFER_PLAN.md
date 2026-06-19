@@ -14,7 +14,7 @@ The proxy metrics should be read as a reproducible engineering signal, not as a 
 | Precision | `0.948276` | The candidate-generation and matching logic is not simply over-producing changes. |
 | Recall | `0.948276` | The evidence aggregation catches most expected changes in the proxy benchmark. |
 | Auto-apply precision | `1.0` | The safe-write gate is stricter than the change-detection gate. |
-| Cost per correct update | `$0.005836` | The deterministic-source-first design keeps evidence cost low in the prototype. |
+| Prototype evidence-only cost per correct update | `$0.005836` | The deterministic-source-first design keeps evidence cost low in the prototype; production per-1,000 scenarios add AWS, LLM fallback, and review labor. |
 
 ## What The Current Metrics Do Not Prove
 

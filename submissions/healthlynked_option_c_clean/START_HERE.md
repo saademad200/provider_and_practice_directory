@@ -10,7 +10,7 @@ Proof points:
 
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
-- estimated cost per correct update `$0.005836`
+- prototype evidence-only cost per correct update `$0.005836`
 - 143 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
 - AWS production plan with source governance, review operations, monitoring, and rollback
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 python3 scripts/run_best_pipeline.py --out-dir outputs/judge_smoke
 ```
 
-The run writes candidate updates, safe auto-apply updates, human-review queue, config, and metrics under `outputs/judge_smoke/`. The expected proof point is the same as the packaged evidence: F1 `0.948276`, safe auto-apply precision `1.0`, and cost per correct update `$0.005836`.
+The run writes candidate updates, safe auto-apply updates, human-review queue, config, and metrics under `outputs/judge_smoke/`. The expected proof point is the same as the packaged evidence: F1 `0.948276`, safe auto-apply precision `1.0`, and prototype evidence-only cost per correct update `$0.005836`. Production per-1,000-record scenarios, including AWS, LLM fallback, and review labor, are modeled in `appendix/COST_MODEL.md`.
 
 ## Why The Package Is Structured This Way
 

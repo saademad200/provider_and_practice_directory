@@ -40,7 +40,7 @@ python3 scripts/run_best_pipeline.py --out-dir outputs/local_best
 - Precision: `0.948276`
 - Recall: `0.948276`
 - Auto-apply precision: `1.0`
-- Cost per correct update: `$0.005836`
+- Prototype evidence-only cost per correct update: `$0.005836`
 
 ## Deterministic Reproduction Check
 

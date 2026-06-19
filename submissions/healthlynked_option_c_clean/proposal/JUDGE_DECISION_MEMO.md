@@ -39,7 +39,7 @@ The architecture uses deterministic and cached sources first, then reserves LLM 
 
 ## Why It Is Cost-Aware
 
-The current proxy run estimates cost per correct update at `$0.005836`. The production design keeps that low by:
+The current proxy run estimates prototype evidence-only cost per correct update at `$0.005836`. The production cost model separately includes per-1,000-record scenarios for AWS infrastructure, LLM fallback, and human-review labor. The production design keeps total cost low by:
 
 - prioritizing stale/risky records before broad refresh;
 - using NPPES/CMS/state-board snapshots where possible;

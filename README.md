@@ -55,7 +55,7 @@ Current verified package:
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
-- Cost per correct update: `$0.005836`
+- Prototype evidence-only cost per correct update: `$0.005836`
 - Cloud target: AWS
 
 ## Files To Show Judges

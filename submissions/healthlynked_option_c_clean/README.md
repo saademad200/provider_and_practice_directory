@@ -23,7 +23,7 @@ For the full reading order, use `START_HERE.md`.
 - Local proxy F1: 0.948276
 - Precision / recall: 0.948276 / 0.948276
 - Safe auto-apply precision: 1.0
-- Cost per correct update: $0.005836
+- Prototype evidence-only cost per correct update: $0.005836
 - Cloud plan: AWS
 
 ## Run The MVP
