@@ -21,6 +21,7 @@ This design avoids those traps by separating evidence retrieval, normalization, 
 - A trusted-source connector plan for NPPES, CMS files, state boards/FSMB, practice websites, health-system directories, and carefully limited fallback sources.
 - A confidence and decision policy that explains exactly when a change is auto-applied, reviewed, or rejected.
 - A sample human review dashboard and review disposition loop.
+- A no-write shadow-mode pilot protocol with cohort design, reviewer dispositions, holdout replay, field-level launch gates, and rollback drills.
 - A 90-day roadmap suitable for the expected post-award consulting engagement.
 
 ## The Core Product Bet
@@ -51,10 +52,11 @@ The current proxy run estimates prototype evidence-only cost per correct update 
 
 1. Confirm HealthLynked schema, update-risk fields, and source terms.
 2. Run the MVP on a de-identified HealthLynked sample in shadow mode.
-3. Connect NPPES batch/API and one state-board/practice-site connector family.
-4. Calibrate confidence thresholds against reviewer decisions.
-5. Launch a dashboard queue for review-only recommendations.
-6. Enable safe auto-update only after measured precision remains above the agreed threshold.
+3. Apply the shadow-mode pilot protocol: stale-risk sample, high-change-risk sample, stable control sample, and reviewer holdout.
+4. Connect NPPES batch/API and one state-board/practice-site connector family.
+5. Calibrate confidence thresholds against reviewer decisions and holdout replay.
+6. Launch a dashboard queue for review-only recommendations.
+7. Enable safe auto-update only for fields that pass the field-level launch gates.
 
 ## What Would Make This Unsafe
 
@@ -77,6 +79,7 @@ Those cases go to human review with sources, confidence, reason codes, and rollb
 | "This may be too complex for a lean team." | The MVP starts with deterministic connectors, cached evidence, conservative review routing, and only a small set of low-risk auto-update fields. Agents are bounded workers, not an uncontrolled autonomous system. |
 | "LLM search could become expensive or unreliable." | LLM extraction is a fallback only after approved deterministic parsing fails, and outputs are schema-validated, source-grounded, confidence-scored, and review-only when uncertain. |
 | "Bad auto-updates could damage trust." | Identity-sensitive and high-risk changes are review-first; auto-apply requires strong agreement, fresh evidence, allowed fields, audit events, and rollback records. |
+| "How do we know it is ready for production?" | The shadow-mode protocol requires no-write pilot cohorts, reviewer dispositions, holdout replay, source quarantine, precision gates, and rollback drills before any field is enabled. |
 | "Source conflicts are unavoidable." | Source authority, freshness, and field-specific reliability are explicit scoring inputs; conflicts lower confidence and route records to review with reason codes. |
 
 ## Decision

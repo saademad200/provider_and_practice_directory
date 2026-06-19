@@ -21,7 +21,7 @@ This page maps the competition bonus-point list to concrete artifacts in the cur
 | Inactive/retired provider detection | Included | `appendix/INACTIVE_PROVIDER_DETECTION.md`, `evidence/inactive_provider_candidates.csv` |
 | Change history and audit log | Included | `evidence/audit_events.jsonl`, `appendix/AUDIT_ROLLBACK_WORKFLOW.md` |
 | Safe auto-update rules | Included | `proposal/CONFIDENCE_AND_DECISION_POLICY.md`, `prototype/auto_apply_updates.csv` |
-| Clear implementation roadmap | Included | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` |
+| Clear implementation roadmap | Included | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`, `proposal/SHADOW_MODE_PILOT_PROTOCOL.md` |
 
 ## Judge Takeaway
 

@@ -12,6 +12,7 @@ This submission provides:
 - source governance;
 - human review routing;
 - audit and rollback;
+- no-write shadow-mode pilot gates for HealthLynked data;
 - duplicate, movement, inactive-provider, and practice-change diagnostics;
 - a whitepaper-informed agentic harness with scoped agents, skills, evals, and approval gates.
 
@@ -35,8 +36,9 @@ This submission provides:
 2. `proposal/JUDGE_DECISION_MEMO.md`
 3. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 4. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-5. `prototype/WORKING_PROTOTYPE.md`
-6. `prototype/candidate_updates.csv`
-7. `prototype/auto_apply_updates.csv`
-8. `prototype/review_queue.csv`
-9. `evidence/audit_events.jsonl`
+5. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
+6. `prototype/WORKING_PROTOTYPE.md`
+7. `prototype/candidate_updates.csv`
+8. `prototype/auto_apply_updates.csv`
+9. `prototype/review_queue.csv`
+10. `evidence/audit_events.jsonl`
