@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_five_minute_path_fixed/cli/candidate_updates.csv",
+      "detail": "outputs/verify_scorecard_cost_boundary_fixed/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_five_minute_path_fixed/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_scorecard_cost_boundary_fixed/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_five_minute_path_fixed/cli/review_queue.csv",
+      "detail": "outputs/verify_scorecard_cost_boundary_fixed/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_five_minute_path_fixed/cli/config.json",
+      "detail": "outputs/verify_scorecard_cost_boundary_fixed/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -456,6 +456,11 @@
       "passed": true
     },
     {
+      "detail": "evidence-only cost per correct update",
+      "name": "package_text_proposal/ONE_PAGE_SCORECARD.md_evidence-only cost per correct update",
+      "passed": true
+    },
+    {
       "detail": "The Judge Decision In One Sentence",
       "name": "package_text_proposal/ONE_PAGE_SCORECARD.md_The Judge Decision In One Sentence",
       "passed": true
@@ -696,7 +701,7 @@
       "passed": true
     },
     {
-      "detail": "142 curated-package checks passed=True",
+      "detail": "143 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

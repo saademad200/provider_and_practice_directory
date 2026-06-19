@@ -575,7 +575,12 @@ def validate_curated_package_text(checks: list[dict[str, Any]], package_path: Pa
     forbidden = ["COMBINED_ABC_PIPELINE_COVERAGE.md", "ONE_PAGE_JUDGE_GUIDE.md"]
     required_terms = {
         "START_HERE.md": ["90-Second Read", "Five-Minute Judge Path", "self-contained unzip-and-run MVP smoke test passes"],
-        "proposal/ONE_PAGE_SCORECARD.md": ["Competition Criteria", "Bonus Coverage", "The Judge Decision In One Sentence"],
+        "proposal/ONE_PAGE_SCORECARD.md": [
+            "Competition Criteria",
+            "Bonus Coverage",
+            "evidence-only cost per correct update",
+            "The Judge Decision In One Sentence",
+        ],
         "proposal/JUDGE_DECISION_MEMO.md": [
             "Monday-Morning Implementation Plan",
             "What Would Make This Unsafe",
