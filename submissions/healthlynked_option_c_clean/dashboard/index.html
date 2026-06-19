@@ -54,6 +54,17 @@
       flex-wrap: wrap;
       margin-bottom: 12px;
     }
+    .provenance {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--blue);
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      margin-bottom: 14px;
+      padding: 11px 13px;
+    }
     button {
       border: 1px solid var(--line);
       background: #fff;
@@ -123,6 +134,9 @@
     <div class="subtle">AWS target: SQS review queue, Step Functions approvals, S3 audit bundles</div>
   </header>
   <main>
+    <div class="provenance">
+      Synthetic benchmark data uses masked provider IDs and `example.org` evidence URLs. In production, the same fields carry exact NPPES/API/file references, state-board pages, practice URLs, retrieval timestamps, parser versions, and audit hashes.
+    </div>
     <div class="metrics" id="metrics"></div>
     <div class="tabs" id="tabs"></div>
     <section>
