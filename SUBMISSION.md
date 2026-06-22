@@ -1,9 +1,10 @@
 # Kaggle Submission Instructions
 
-Submit:
+Submit these two primary files:
 
 ```text
-submissions/latest_final_package.zip
+final_submission/HealthLynked_Provider_Directory_Option_C_Writeup.md
+final_submission/HealthLynked_Provider_Directory_Update_Pipeline.ipynb
 ```
 
 Suggested title:
@@ -19,7 +20,7 @@ This is an Option C hybrid submission: a runnable provider/practice directory up
 
 Key proof points: 131 curated-package verification checks passed; local proxy F1 0.948276; precision/recall 0.948276/0.948276; auto-apply precision 1.0; prototype evidence-only cost per correct update $0.005836; includes source governance, confidence scoring, shadow-mode pilot gates, human review dashboard, duplicate/movement/inactive-provider detection, NPI validation, official-source connector plan, audit log, rollback plan, and cloud-portable scaling roadmap with AWS reference services.
 
-Recommended first files: START_HERE.md, Provider_Directory_Update_Pipeline_End_to_End.ipynb, proposal/ONE_PAGE_SCORECARD.md, proposal/JUDGE_DECISION_MEMO.md, proposal/PRESENTATION_NARRATIVE.md, proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md, proposal/CONFIDENCE_AND_DECISION_POLICY.md, proposal/SHADOW_MODE_PILOT_PROTOCOL.md, prototype/WORKING_PROTOTYPE.md, prototype/RECOMMENDATION_API_CONTRACT.md, proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md, dashboard/index.html, evidence/verification.json.
+Recommended first files: HealthLynked_Provider_Directory_Option_C_Writeup.md and HealthLynked_Provider_Directory_Update_Pipeline.ipynb. Optional GitHub evidence: START_HERE.md, proposal/ONE_PAGE_SCORECARD.md, proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md, proposal/CONFIDENCE_AND_DECISION_POLICY.md, prototype/WORKING_PROTOTYPE.md, dashboard/index.html, evidence/verification.json.
 ```
 
 Pre-upload verification:

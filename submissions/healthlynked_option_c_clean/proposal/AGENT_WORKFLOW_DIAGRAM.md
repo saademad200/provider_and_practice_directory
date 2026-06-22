@@ -57,13 +57,13 @@ Every agent has a narrow contract, field-level evidence, and a policy gate befor
 | Source Retrieval Agents | Pull NPPES, CMS/state board, practice-site, health-system, and fallback listing evidence | Paid or LLM extraction is gated behind deterministic failure reasons | `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md` |
 | Evidence Normalization Agent | Normalizes names, phones, addresses, specialties, and practice aliases | Raw and normalized values stay side by side for audit | `src/data.py`, `src/specialty.py`, `prototype/candidate_updates.csv` |
 | Provider / Practice Identity Agent | Matches provider, NPI, practice, and location candidates | Identity-level changes never bypass review | `appendix/DUPLICATE_MOVEMENT_DETECTION.md`, `evidence/provider_movement_candidates.csv` |
-| Source Conflict Resolver | Compares authority, freshness, consensus, and field risk | Conflicts lower confidence and create reviewer-visible reason codes | `appendix/SOURCE_CONFLICT_ADJUDICATION.md`, `proposal/CONFIDENCE_AND_DECISION_POLICY.md` |
+| Source Conflict Resolver | Compares authority, freshness, consensus, and field risk | Conflicts lower confidence and create reviewer-visible reason codes | `src/source_conflicts.py`, `proposal/CONFIDENCE_AND_DECISION_POLICY.md` |
 | Confidence Scoring Agent | Produces update confidence, review priority, and action recommendation | Scores are decomposed into explainable factors | `prototype/RECOMMENDATION_API_CONTRACT.md`, `prototype/recommendation_api_examples.json` |
 | Shadow-Mode Calibration Agent | Converts reviewer dispositions into field-level launch states and threshold changes | No production write threshold changes without holdout replay and launch-gate evidence | `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`, `dashboard/index.html` |
 | Safety And Policy Gates | Blocks stale, high-risk, identity-level, or weakly supported auto-updates | Auto-apply is allowed only for configured low-risk fields | `prototype/auto_apply_updates.csv`, `evidence/verification.json` |
 | Human Review Workbench | Presents only uncertain, conflicting, or high-risk records | Reviewer decisions create training and audit feedback | `dashboard/index.html`, `prototype/review_queue.csv` |
 | Audit And Rollback Agent | Writes event records, evidence hashes, and rollback rows | Every mutation has evidence and restore path | `evidence/audit_events.jsonl`, `evidence/rollback_plan.csv` |
-| Monitoring And Learning Loop | Tracks connector health, cost drift, reviewer outcomes, and threshold drift | Learning changes are promoted only after offline validation | `appendix/PRODUCTION_READINESS_SCORECARD.md`, `evidence/production_readiness_summary.json` |
+| Monitoring And Learning Loop | Tracks connector health, cost drift, reviewer outcomes, and threshold drift | Learning changes are promoted only after offline validation | `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`, `evidence/source_reference_health.csv` |
 
 ## Why This Wins
 

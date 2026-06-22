@@ -14,9 +14,24 @@ Provider/practice directory
   -> audit log, rollback, and directory update
 ```
 
-## Judge Path
+## Actual Submission Files
 
-Upload this curated judge package to Kaggle:
+Submit the two files in:
+
+```text
+final_submission/
+```
+
+Primary files:
+
+1. `HealthLynked_Provider_Directory_Option_C_Writeup.md`
+2. `HealthLynked_Provider_Directory_Update_Pipeline.ipynb`
+
+The writeup is the proposal narrative. The notebook is self-contained and demonstrates the MVP pipeline without requiring the full repository. The GitHub repo is optional supporting evidence for the larger reproducible prototype, dashboard, audit artifacts, and verification checks.
+
+## Optional Reproducibility Package
+
+The older reproducibility package is still available, but it is no longer the primary submission artifact:
 
 ```text
 submissions/latest_final_package.zip
@@ -57,7 +72,7 @@ Current verified package:
 
 ## Files To Show Judges
 
-Show only the curated package path above. The intended first impression is small and deliberate:
+Show the two files in `final_submission/` first. If judges open the GitHub repo, the intended optional deep path is:
 
 1. `START_HERE.md`
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
