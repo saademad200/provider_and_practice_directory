@@ -20,6 +20,13 @@ Primary proof artifacts in this package:
 | `assets/sample_audit_and_rollback.json` | Audit and rollback example |
 | `evidence/verification.json` | Package verification report |
 
+Supporting reproducibility links:
+
+| Link | Purpose |
+|---|---|
+| GitHub repository: https://github.com/saademad200/provider_and_practice_directory | Public, clean source repository for the runnable MVP, notebook, proposal docs, diagrams, sample evidence, tests, and verification script |
+| Google Drive folder: [paste public folder link] | Mirror of the same final package for judges who prefer direct file browsing or download |
+
 Headline MVP results:
 
 | Metric | Value |

@@ -57,4 +57,4 @@ Expected metrics:
 
 ## Submission Path
 
-Use `KAGGLE_SUBMISSION_TEXT.md` as the main Kaggle writeup. Attach or link `HealthLynked_Provider_Directory_Update_Pipeline.ipynb` as the runnable code artifact. Link the public Google Drive reproducibility folder in the writeup. Ensure the Google Drive folder exactly mirrors this final package.
+Use `KAGGLE_SUBMISSION_TEXT.md` as the main Kaggle writeup. Attach or link `HealthLynked_Provider_Directory_Update_Pipeline.ipynb` as the runnable code artifact. Include the GitHub repository as supporting reproducibility evidence: `https://github.com/saademad200/provider_and_practice_directory`. Link the public Google Drive reproducibility folder as a mirror of this final package.

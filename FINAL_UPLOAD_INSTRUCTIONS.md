@@ -6,8 +6,9 @@ Use the Kaggle writeup field as the primary submission surface.
 
 1. Paste `KAGGLE_SUBMISSION_TEXT.md` into the Kaggle writeup field.
 2. Attach or link the Kaggle notebook `HealthLynked_Provider_Directory_Update_Pipeline.ipynb`.
-3. Link the public Google Drive reproducibility folder. Ensure the Google Drive reproducibility folder exactly mirrors this final package.
-4. Use this ZIP only as the supporting proof package if Kaggle allows attachments or external artifact links.
+3. Include the public GitHub repository as supporting reproducibility evidence: `https://github.com/saademad200/provider_and_practice_directory`.
+4. Link the public Google Drive reproducibility folder. Ensure the Google Drive folder exactly mirrors this final package.
+5. Use the ZIP only as a supporting proof package if Kaggle allows attachments or external artifact links.
 
 ## Judge path
 
