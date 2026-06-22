@@ -114,7 +114,7 @@ Proof points:
 - self-contained unzip-and-run MVP smoke test passes
 - cloud-agnostic production plan with AWS reference services, source governance, review operations, monitoring, and rollback
 
-Why it should win: it is immediately implementable after the competition. The package includes the technical architecture, working prototype, confidence policy, connector operating model, human review workflow, audit trail, cost controls, and post-award acceptance criteria.
+Implementation value: it is designed to be implementable after the competition. The package includes the technical architecture, working prototype, confidence policy, connector operating model, human review workflow, audit trail, cost controls, and post-award acceptance criteria.
 
 ## Five-Minute Judge Path
 

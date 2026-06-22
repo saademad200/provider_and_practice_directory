@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_sanitized_language/cli/candidate_updates.csv",
+      "detail": "outputs/verify_no_hype/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_sanitized_language/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_no_hype/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_sanitized_language/cli/review_queue.csv",
+      "detail": "outputs/verify_no_hype/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_sanitized_language/cli/config.json",
+      "detail": "outputs/verify_no_hype/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
