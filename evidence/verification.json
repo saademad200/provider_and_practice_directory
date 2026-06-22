@@ -1,0 +1,303 @@
+{
+  "checks": [
+    {
+      "detail": "START_HERE.md",
+      "name": "required_file_START_HERE.md",
+      "passed": true
+    },
+    {
+      "detail": "README.md",
+      "name": "required_file_README.md",
+      "passed": true
+    },
+    {
+      "detail": "KAGGLE_SUBMISSION_TEXT.md",
+      "name": "required_file_KAGGLE_SUBMISSION_TEXT.md",
+      "passed": true
+    },
+    {
+      "detail": "FINAL_UPLOAD_INSTRUCTIONS.md",
+      "name": "required_file_FINAL_UPLOAD_INSTRUCTIONS.md",
+      "passed": true
+    },
+    {
+      "detail": "HealthLynked_Provider_Directory_Update_Pipeline.ipynb",
+      "name": "required_file_HealthLynked_Provider_Directory_Update_Pipeline.ipynb",
+      "passed": true
+    },
+    {
+      "detail": "assets/architecture_diagram.png",
+      "name": "required_file_assets/architecture_diagram.png",
+      "passed": true
+    },
+    {
+      "detail": "assets/agent_workflow_diagram.png",
+      "name": "required_file_assets/agent_workflow_diagram.png",
+      "passed": true
+    },
+    {
+      "detail": "assets/human_review_dashboard_mock.png",
+      "name": "required_file_assets/human_review_dashboard_mock.png",
+      "passed": true
+    },
+    {
+      "detail": "assets/source_governance_matrix.md",
+      "name": "required_file_assets/source_governance_matrix.md",
+      "passed": true
+    },
+    {
+      "detail": "assets/confidence_scoring_formula.md",
+      "name": "required_file_assets/confidence_scoring_formula.md",
+      "passed": true
+    },
+    {
+      "detail": "assets/cost_model_per_1000_records.md",
+      "name": "required_file_assets/cost_model_per_1000_records.md",
+      "passed": true
+    },
+    {
+      "detail": "assets/launch_gates_matrix.md",
+      "name": "required_file_assets/launch_gates_matrix.md",
+      "passed": true
+    },
+    {
+      "detail": "assets/sample_recommendations.json",
+      "name": "required_file_assets/sample_recommendations.json",
+      "passed": true
+    },
+    {
+      "detail": "assets/sample_human_review_queue.json",
+      "name": "required_file_assets/sample_human_review_queue.json",
+      "passed": true
+    },
+    {
+      "detail": "assets/sample_audit_and_rollback.json",
+      "name": "required_file_assets/sample_audit_and_rollback.json",
+      "passed": true
+    },
+    {
+      "detail": "prototype/metrics.json",
+      "name": "required_file_prototype/metrics.json",
+      "passed": true
+    },
+    {
+      "detail": "dashboard/index.html",
+      "name": "required_file_dashboard/index.html",
+      "passed": true
+    },
+    {
+      "detail": "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "name": "required_file_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md",
+      "passed": true
+    },
+    {
+      "detail": "proposal/CONFIDENCE_AND_DECISION_POLICY.md",
+      "name": "required_file_proposal/CONFIDENCE_AND_DECISION_POLICY.md",
+      "passed": true
+    },
+    {
+      "detail": "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "name": "required_file_proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md",
+      "passed": true
+    },
+    {
+      "detail": "appendix/CLOUD_AGNOSTIC_PRODUCTION_ARCHITECTURE.md",
+      "name": "required_file_appendix/CLOUD_AGNOSTIC_PRODUCTION_ARCHITECTURE.md",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "cli_exit",
+      "passed": true
+    },
+    {
+      "detail": "actual=0.948276 expected=0.948276",
+      "name": "metric_f1",
+      "passed": true
+    },
+    {
+      "detail": "actual=0.948276 expected=0.948276",
+      "name": "metric_precision",
+      "passed": true
+    },
+    {
+      "detail": "actual=0.948276 expected=0.948276",
+      "name": "metric_recall",
+      "passed": true
+    },
+    {
+      "detail": "actual=1.0 expected=1.0",
+      "name": "metric_auto_apply_precision",
+      "passed": true
+    },
+    {
+      "detail": "actual=3 expected=3",
+      "name": "metric_auto_apply_count",
+      "passed": true
+    },
+    {
+      "detail": "actual=55 expected=55",
+      "name": "metric_review_count",
+      "passed": true
+    },
+    {
+      "detail": "actual=58 expected=58",
+      "name": "metric_predicted_updates",
+      "passed": true
+    },
+    {
+      "detail": "actual=58 expected=58",
+      "name": "metric_gold_updates",
+      "passed": true
+    },
+    {
+      "detail": "sample_recommendations",
+      "name": "sample_metrics_align",
+      "passed": true
+    },
+    {
+      "detail": "recommendation mix",
+      "name": "sample_has_auto_and_review",
+      "passed": true
+    },
+    {
+      "detail": "P0022",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0022",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0001",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0001",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0003",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0003",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0004",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0004",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0004",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0004",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0005",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0005",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0005",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0005",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "P0006",
+      "name": "recommendation_change_has_sources",
+      "passed": true
+    },
+    {
+      "detail": "P0006",
+      "name": "recommendation_change_has_audit_hash",
+      "passed": true
+    },
+    {
+      "detail": "audit sample",
+      "name": "audit_has_rollback",
+      "passed": true
+    },
+    {
+      "detail": "1900x1200",
+      "name": "image_size_assets/architecture_diagram.png",
+      "passed": true
+    },
+    {
+      "detail": "1800x1050",
+      "name": "image_size_assets/agent_workflow_diagram.png",
+      "passed": true
+    },
+    {
+      "detail": "1900x1120",
+      "name": "image_size_assets/human_review_dashboard_mock.png",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no_nested_zip_files",
+      "passed": true
+    },
+    {
+      "detail": "",
+      "name": "no_stale_or_placeholder_refs",
+      "passed": true
+    },
+    {
+      "detail": "........                                                                 [100%]\n=============================== warnings summary ===============================\n../../../../miniconda3/lib/python3.12/site-packages/dateutil/tz/tz.py:37\n  /home/saad/miniconda3/lib/python3.12/site-packages/dateutil/tz/tz.py:37: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).\n    EPOCH = datetime.datetime.utcfromtimestamp(0)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n8 passed, 1 warning in 1.00s\n/home/saad/miniconda3/lib/python3.12/site-packages/pytest_asyncio/plugin.py:207: PytestDeprecationWarning: The configuration option \"asyncio_default_fixture_loop_scope\" is unset.\nThe event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: \"function\", \"class\", \"module\", \"package\", \"session\"\n\n  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))\n",
+      "name": "pytest",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "auto_apply_count": 3,
+    "auto_apply_precision": 1.0,
+    "cost_per_correct_update_usd": 0.005836,
+    "estimated_cost_usd": 0.321,
+    "f1": 0.948276,
+    "fn": 3,
+    "fp": 3,
+    "gold_updates": 58,
+    "precision": 0.948276,
+    "predicted_updates": 58,
+    "recall": 0.948276,
+    "review_count": 55,
+    "review_recall": 0.896552,
+    "source_cost_breakdown_usd": {
+      "business_listing": 0.018,
+      "health_system": 0.115,
+      "nppes": 0.0045,
+      "practice_website": 0.176,
+      "state_license": 0.0075
+    },
+    "tp": 55
+  },
+  "passed": true
+}

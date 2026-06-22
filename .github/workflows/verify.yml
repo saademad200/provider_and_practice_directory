@@ -1,4 +1,4 @@
-name: verify-package
+name: verify
 
 on:
   push:
@@ -21,8 +21,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Verify final package
+      - name: Verify repository package
         run: |
-          python scripts/verify_pipeline.py \
-            --package submissions/latest_final_package.zip \
-            --out-dir outputs/ci_verify
+          python scripts/verify_pipeline.py

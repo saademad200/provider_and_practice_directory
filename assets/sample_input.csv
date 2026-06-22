@@ -1,0 +1,26 @@
+provider_id,practice_id,npi,provider_name,phone,address,specialty,license_status,accepting_new_patients
+P0000,PR000,1999000007,Provider 000,555-100-2000,"100 Main St, Suite 1, FL",family medicine,probation,False
+P0001,PR000,1999000015,Provider 001,555-101-2037,"107 Oak Ave, Suite 2, FL",cardiology,active,True
+P0002,PR000,1999000023,Provider 002,555-102-2074,"114 Cedar Rd, Suite 3, FL",dermatology,active,True
+P0003,PR001,1999000031,Provider 003,555-103-2111,"632 Market St, Suite 5, FL",pediatrics,active,True
+P0004,PR001,1999000049,Provider 004,555-205-5885,"639 Lake Dr, Suite 6, FL",orthopedics,active,False
+P0005,PR001,1999000056,Provider 005,555-206-5922,"135 Lake Dr, Suite 6, FL",cardiology,active,True
+P0006,PR002,1999000064,Provider 006,555-207-5959,"142 Main St, Suite 7, FL",family medicine,active,True
+P0007,PR002,1999000072,Provider 007,555-107-2259,"149 Oak Ave, Suite 8, FL",cardiology,active,True
+P0008,PR002,1999000080,Provider 008,555-108-2296,"156 Cedar Rd, Suite 9, FL",dermatology,active,False
+P0009,PR003,1999000098,Provider 009,555-210-6070,"163 Pine Blvd, Suite 10, FL",pediatrics,active,True
+P0010,PR003,1999000106,Provider 010,555-110-2370,"681 Lake Dr, Suite 12, FL",orthopedics,active,False
+P0011,PR003,1999000114,Provider 011,555-111-2407,"177 Lake Dr, Suite 12, FL",neurology,inactive,True
+P0012,PR004,1999000122,Provider 012,555-213-6181,"184 Main St, Suite 1, FL",family medicine,active,False
+P0013,PR004,1999000130,Provider 013,555-113-2481,"191 Oak Ave, Suite 2, FL",cardiology,active,True
+P0014,PR004,1999000148,Provider 014,555-114-2518,"198 Cedar Rd, Suite 3, FL",dermatology,active,True
+P0015,PR005,1999000155,Provider 015,555-115-2555,"205 Pine Blvd, Suite 4, FL",pediatrics,inactive,True
+P0016,PR005,1999000163,Provider 016,555-116-2592,"212 Market St, Suite 5, FL",orthopedics,active,True
+P0017,PR005,1999000171,Provider 017,555-117-2629,"730 Main St, Suite 7, FL",neurology,probation,True
+P0018,PR006,1999000189,Provider 018,555-118-2666,"226 Main St, Suite 7, FL",family medicine,active,True
+P0019,PR006,1999000197,Provider 019,555-119-2703,"233 Oak Ave, Suite 8, FL",cardiology,active,False
+P0020,PR006,1999000205,Provider 020,555-120-2740,"240 Cedar Rd, Suite 9, FL",dermatology,active,False
+P0021,PR007,1999000213,Provider 021,555-121-2777,"247 Pine Blvd, Suite 10, FL",pediatrics,active,True
+P0022,PR007,1999000221,Provider 022,555-122-2814,"254 Market St, Suite 11, FL",family medicine,active,True
+P0023,PR007,1999000239,Provider 023,555-123-2851,"772 Main St, Suite 1, FL",cardiology,active,True
+P0024,PR008,1999000247,Provider 024,555-124-2888,"268 Main St, Suite 1, FL",family medicine,active,False

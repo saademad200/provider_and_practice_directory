@@ -1,0 +1,433 @@
+{
+  "metrics_snapshot": {
+    "auto_apply_count": 3,
+    "auto_apply_precision": 1.0,
+    "cost_per_correct_update_usd": 0.005836,
+    "estimated_cost_usd": 0.321,
+    "f1": 0.948276,
+    "fn": 3,
+    "fp": 3,
+    "gold_updates": 58,
+    "precision": 0.948276,
+    "predicted_updates": 58,
+    "recall": 0.948276,
+    "review_count": 55,
+    "review_recall": 0.896552,
+    "source_cost_breakdown_usd": {
+      "business_listing": 0.018,
+      "health_system": 0.115,
+      "nppes": 0.0045,
+      "practice_website": 0.176,
+      "state_license": 0.0075
+    },
+    "tp": 55
+  },
+  "pipeline_version": "best_cfg_full_peer_context_2026_06_22",
+  "recommendations": [
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "5689f3846130bd01",
+          "field": "specialty",
+          "field_decision": "auto_apply",
+          "field_risk": "medium",
+          "freshness_status": "partially_stale",
+          "launch_state": "auto_update_candidate",
+          "new_value": "orthopedics",
+          "old_value": "family medicine",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.288,
+          "review_reason_code": "auto_apply_criteria_met",
+          "rollback_eligible": true,
+          "source_observations": [
+            {
+              "age_days": 6,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0022"
+            },
+            {
+              "age_days": 102,
+              "authority_tier": "A",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "nppes",
+              "url": "https://example.org/nppes/P0022"
+            },
+            {
+              "age_days": 146,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0022"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000221",
+      "overall_confidence": 0.99,
+      "practice_id": "PR007",
+      "provider_id": "P0022",
+      "provider_name": "Provider 022",
+      "reason": "All proposed changes pass the safe low risk auto update gate.",
+      "recommended_action": "auto_update",
+      "supporting_source_count": 3
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "f63d898b6fa38116",
+          "field": "specialty",
+          "field_decision": "review",
+          "field_risk": "medium",
+          "freshness_status": "partially_stale",
+          "launch_state": "review_only",
+          "new_value": "orthopedics",
+          "old_value": "cardiology",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.348,
+          "review_reason_code": "insufficient_auto_sources",
+          "rollback_eligible": false,
+          "source_observations": [
+            {
+              "age_days": 3,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0001"
+            },
+            {
+              "age_days": 76,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0001"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000015",
+      "overall_confidence": 0.99,
+      "practice_id": "PR000",
+      "provider_id": "P0001",
+      "provider_name": "Provider 001",
+      "reason": "At least one field is high risk, stale, conflicting, or lacks enough independent evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 2
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "d20534201b8e8980",
+          "field": "address",
+          "field_decision": "review",
+          "field_risk": "high",
+          "freshness_status": "all_stale",
+          "launch_state": "review_only",
+          "new_value": "121 pine boulevard suite 4 florida",
+          "old_value": "632 Market St, Suite 5, FL",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.456,
+          "review_reason_code": "field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "rollback_eligible": false,
+          "source_observations": [
+            {
+              "age_days": 107,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0003"
+            },
+            {
+              "age_days": 76,
+              "authority_tier": "A",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "nppes",
+              "url": "https://example.org/nppes/P0003"
+            },
+            {
+              "age_days": 156,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0003"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000031",
+      "overall_confidence": 0.99,
+      "practice_id": "PR001",
+      "provider_id": "P0003",
+      "provider_name": "Provider 003",
+      "reason": "At least one field is high risk, stale, conflicting, or lacks enough independent evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 3
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "0cca3e757a16ba1c",
+          "field": "address",
+          "field_decision": "review",
+          "field_risk": "high",
+          "freshness_status": "all_stale",
+          "launch_state": "review_only",
+          "new_value": "128 market street suite 5 florida",
+          "old_value": "639 Lake Dr, Suite 6, FL",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.516,
+          "review_reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+          "rollback_eligible": false,
+          "source_observations": [
+            {
+              "age_days": 121,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0004"
+            },
+            {
+              "age_days": 141,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0004"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "practice_website"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "aa6209e0527d1c5c",
+          "field": "phone",
+          "field_decision": "review",
+          "field_risk": "medium",
+          "freshness_status": "all_stale",
+          "launch_state": "review_only",
+          "new_value": "555-104-2148",
+          "old_value": "555-205-5885",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.42,
+          "review_reason_code": "insufficient_auto_sources|stale_or_missing_supporting_evidence",
+          "rollback_eligible": false,
+          "source_observations": [
+            {
+              "age_days": 67,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0004"
+            },
+            {
+              "age_days": 116,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0004"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000049",
+      "overall_confidence": 0.99,
+      "practice_id": "PR001",
+      "provider_id": "P0004",
+      "provider_name": "Provider 004",
+      "reason": "At least one field is high risk, stale, conflicting, or lacks enough independent evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 2
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "2a6a5c40e77b449e",
+          "field": "phone",
+          "field_decision": "review",
+          "field_risk": "medium",
+          "freshness_status": "partially_stale",
+          "launch_state": "review_only",
+          "new_value": "555-105-2185",
+          "old_value": "555-206-5922",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.46,
+          "review_reason_code": "practice_peer_mismatch",
+          "rollback_eligible": false,
+          "source_observations": [
+            {
+              "age_days": 57,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0005"
+            },
+            {
+              "age_days": 167,
+              "authority_tier": "A",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "nppes",
+              "url": "https://example.org/nppes/P0005"
+            },
+            {
+              "age_days": 26,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0005"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        },
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "a14d6e3abefff418",
+          "field": "specialty",
+          "field_decision": "auto_apply",
+          "field_risk": "medium",
+          "freshness_status": "partially_stale",
+          "launch_state": "auto_update_candidate",
+          "new_value": "neurology",
+          "old_value": "cardiology",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.288,
+          "review_reason_code": "auto_apply_criteria_met",
+          "rollback_eligible": true,
+          "source_observations": [
+            {
+              "age_days": 170,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0005"
+            },
+            {
+              "age_days": 3,
+              "authority_tier": "A",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "nppes",
+              "url": "https://example.org/nppes/P0005"
+            },
+            {
+              "age_days": 39,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0005"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000056",
+      "overall_confidence": 0.99,
+      "practice_id": "PR001",
+      "provider_id": "P0005",
+      "provider_name": "Provider 005",
+      "reason": "At least one field is high risk, stale, conflicting, or lacks enough independent evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 3
+    },
+    {
+      "audit_required": true,
+      "change_detected": true,
+      "changes": [
+        {
+          "confidence_score": 0.99,
+          "evidence_hash": "6cee4b2f8ab984cf",
+          "field": "phone",
+          "field_decision": "review",
+          "field_risk": "medium",
+          "freshness_status": "partially_stale",
+          "launch_state": "review_only",
+          "new_value": "555-106-2222",
+          "old_value": "555-207-5959",
+          "policy_version": "safe_auto_policy_2026_06_22",
+          "review_priority_score": 0.46,
+          "review_reason_code": "practice_peer_mismatch",
+          "rollback_eligible": false,
+          "source_observations": [
+            {
+              "age_days": 12,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "health_system",
+              "url": "https://example.org/health_system/P0006"
+            },
+            {
+              "age_days": 55,
+              "authority_tier": "A",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "nppes",
+              "url": "https://example.org/nppes/P0006"
+            },
+            {
+              "age_days": 7,
+              "authority_tier": "B",
+              "provenance": "synthetic_fixture_for_reproducible_mvp",
+              "source": "practice_website",
+              "url": "https://example.org/practice_website/P0006"
+            }
+          ],
+          "supporting_sources": [
+            "health_system",
+            "nppes",
+            "practice_website"
+          ]
+        }
+      ],
+      "npi": "1999000064",
+      "overall_confidence": 0.99,
+      "practice_id": "PR002",
+      "provider_id": "P0006",
+      "provider_name": "Provider 006",
+      "reason": "At least one field is high risk, stale, conflicting, or lacks enough independent evidence.",
+      "recommended_action": "human_review",
+      "supporting_source_count": 3
+    }
+  ],
+  "schema_version": "provider-directory-recommendation-v1"
+}

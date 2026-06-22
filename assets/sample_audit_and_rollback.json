@@ -1,0 +1,39 @@
+{
+  "audit_event": {
+    "actor": "system",
+    "audit_id": "AUD-20260622-000001",
+    "confidence": 0.99,
+    "created_at": "2026-06-22T00:00:00Z",
+    "decision": "auto_apply",
+    "event_type": "candidate_update_created",
+    "evidence_hash": "a14d6e3abefff418",
+    "field": "specialty",
+    "mutation_status": "pending_shadow_mode",
+    "new_value": "neurology",
+    "old_value": "cardiology",
+    "policy_version": "safe_auto_policy_2026_06_22",
+    "practice_id": "PR001",
+    "provider_id": "P0005",
+    "retrieved_source_ages": "health_system:170|nppes:3|practice_website:39",
+    "run_id": "RUN-20260622-FINAL",
+    "source_urls": [
+      "https://example.org/health_system/P0005",
+      "https://example.org/nppes/P0005",
+      "https://example.org/practice_website/P0005"
+    ],
+    "supporting_sources": [
+      "health_system",
+      "nppes",
+      "practice_website"
+    ]
+  },
+  "rollback_plan": {
+    "field": "specialty",
+    "provider_id": "P0005",
+    "requires_human_approval": false,
+    "restore_value": "cardiology",
+    "rollback_id": "RB-20260622-000001",
+    "rollback_mode": "single_field_restore_from_versioned_audit_event",
+    "rollback_trigger": "reviewer_reversal_or_policy_kill_switch"
+  }
+}

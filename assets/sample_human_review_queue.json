@@ -1,0 +1,223 @@
+[
+  {
+    "confidence": 0.99,
+    "evidence_hash": "0cca3e757a16ba1c",
+    "field": "address",
+    "freshness_status": "all_stale",
+    "old_value": "639 Lake Dr, Suite 6, FL",
+    "practice_id": "PR001",
+    "priority_band": "medium",
+    "proposed_value": "128 market street suite 5 florida",
+    "provider_id": "P0004",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.516,
+    "sources": [
+      "health_system",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "64783f186d1c8232",
+    "field": "address",
+    "freshness_status": "all_stale",
+    "old_value": "681 Lake Dr, Suite 12, FL",
+    "practice_id": "PR003",
+    "priority_band": "medium",
+    "proposed_value": "1213 pine boulevard suite 4 florida",
+    "provider_id": "P0010",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.516,
+    "sources": [
+      "health_system",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "ad0a0b263f4e259e",
+    "field": "address",
+    "freshness_status": "all_stale",
+    "old_value": "933 Lake Dr, Suite 12, FL",
+    "practice_id": "PR015",
+    "priority_band": "medium",
+    "proposed_value": "422 market street suite 11 florida",
+    "provider_id": "P0046",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.516,
+    "sources": [
+      "health_system",
+      "nppes"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "bade87971d4481f9",
+    "field": "address",
+    "freshness_status": "all_stale",
+    "old_value": "947 Oak Ave, Suite 2, FL",
+    "practice_id": "PR016",
+    "priority_band": "medium",
+    "proposed_value": "436 main street suite 1 florida",
+    "provider_id": "P0048",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.516,
+    "sources": [
+      "nppes",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "eaa7d15232743688",
+    "field": "address",
+    "freshness_status": "all_stale",
+    "old_value": "1052 Market St, Suite 5, FL",
+    "practice_id": "PR021",
+    "priority_band": "medium",
+    "proposed_value": "541 pine boulevard suite 4 florida",
+    "provider_id": "P0063",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.516,
+    "sources": [
+      "health_system",
+      "nppes"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "7ba9a0f1cfa8ff5e",
+    "field": "accepting_new_patients",
+    "freshness_status": "partially_stale",
+    "old_value": "True",
+    "practice_id": "PR005",
+    "priority_band": "low",
+    "proposed_value": "false",
+    "provider_id": "P0016",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.468,
+    "sources": [
+      "health_system",
+      "nppes"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "071677dd0c6964bb",
+    "field": "accepting_new_patients",
+    "freshness_status": "all_stale",
+    "old_value": "False",
+    "practice_id": "PR009",
+    "priority_band": "low",
+    "proposed_value": "true",
+    "provider_id": "P0027",
+    "reason_code": "insufficient_auto_sources|field_not_safe_for_auto_apply|stale_or_missing_supporting_evidence",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.468,
+    "sources": [
+      "health_system",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "2a6a5c40e77b449e",
+    "field": "phone",
+    "freshness_status": "partially_stale",
+    "old_value": "555-206-5922",
+    "practice_id": "PR001",
+    "priority_band": "low",
+    "proposed_value": "555-105-2185",
+    "provider_id": "P0005",
+    "reason_code": "practice_peer_mismatch",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.46,
+    "sources": [
+      "health_system",
+      "nppes",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "6cee4b2f8ab984cf",
+    "field": "phone",
+    "freshness_status": "partially_stale",
+    "old_value": "555-207-5959",
+    "practice_id": "PR002",
+    "priority_band": "low",
+    "proposed_value": "555-106-2222",
+    "provider_id": "P0006",
+    "reason_code": "practice_peer_mismatch",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.46,
+    "sources": [
+      "health_system",
+      "nppes",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "43f7a17abc26a1fd",
+    "field": "phone",
+    "freshness_status": "partially_stale",
+    "old_value": "555-210-6070",
+    "practice_id": "PR003",
+    "priority_band": "low",
+    "proposed_value": "555-109-2333",
+    "provider_id": "P0009",
+    "reason_code": "practice_peer_mismatch",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.46,
+    "sources": [
+      "business_listing",
+      "health_system",
+      "nppes"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "8f0f7505abaa1334",
+    "field": "phone",
+    "freshness_status": "partially_stale",
+    "old_value": "555-235-6995",
+    "practice_id": "PR011",
+    "priority_band": "low",
+    "proposed_value": "555-134-3258",
+    "provider_id": "P0034",
+    "reason_code": "practice_peer_mismatch",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.46,
+    "sources": [
+      "health_system",
+      "nppes",
+      "practice_website"
+    ]
+  },
+  {
+    "confidence": 0.99,
+    "evidence_hash": "49aaa018d4bcde2e",
+    "field": "phone",
+    "freshness_status": "partially_stale",
+    "old_value": "555-262-7994",
+    "practice_id": "PR020",
+    "priority_band": "low",
+    "proposed_value": "555-161-4257",
+    "provider_id": "P0061",
+    "reason_code": "practice_peer_mismatch",
+    "recommended_reviewer_action": "inspect_evidence_and_accept_reject_or_recrawl",
+    "review_priority_score": 0.46,
+    "sources": [
+      "health_system",
+      "nppes",
+      "practice_website"
+    ]
+  }
+]

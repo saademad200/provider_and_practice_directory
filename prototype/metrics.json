@@ -1,0 +1,23 @@
+{
+  "auto_apply_count": 3,
+  "auto_apply_precision": 1.0,
+  "cost_per_correct_update_usd": 0.005836,
+  "estimated_cost_usd": 0.321,
+  "f1": 0.948276,
+  "fn": 3,
+  "fp": 3,
+  "gold_updates": 58,
+  "precision": 0.948276,
+  "predicted_updates": 58,
+  "recall": 0.948276,
+  "review_count": 55,
+  "review_recall": 0.896552,
+  "source_cost_breakdown_usd": {
+    "business_listing": 0.018,
+    "health_system": 0.115,
+    "nppes": 0.0045,
+    "practice_website": 0.176,
+    "state_license": 0.0075
+  },
+  "tp": 55
+}

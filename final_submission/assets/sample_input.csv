@@ -1,4 +1,0 @@
-provider_id,provider_name,npi,specialty,practice_name,address,phone,website,active_status,last_verified_days
-P1001,Dr. Maya Patel,1234567893,family medicine,Bayview Primary Care,"100 Lake Dr Ste 2, Tampa, FL 33602",(555) 200-1000,https://bayviewprimary.example.com,active,420
-P1002,Jonathan Reed MD,1234567893,cardiology,Heart Group South,"200 Market St, Tampa, FL 33602",555-300-1000,http://heartgroupsouth.example.com,active,35
-P1003,Elena Nguyen,1999999995,dermatology,Coastal Skin Clinic,"9 Pine Blvd Suite 1, Tampa, FL 33603",555-400-1111,https://coastalskin.example.com,active,510

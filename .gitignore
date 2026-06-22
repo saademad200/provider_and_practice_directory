@@ -18,15 +18,13 @@ htmlcov/
 .idea/
 .vscode/
 
-# Generated research outputs
+# Generated local outputs
 outputs/
 results/
-
-# Keep the final submission package, not every historical package.
-submissions/*.zip
-!submissions/latest_final_package.zip
-submissions/exp0*/
 
 # Raw external downloads and reference PDFs are not required in the repo.
 data/raw/kaggle_competition/provider-practice-directory-update-pipeline.zip
 AgenticWhitepapers/*.pdf
+
+# Do not commit generated archives from local packaging runs.
+*.zip
