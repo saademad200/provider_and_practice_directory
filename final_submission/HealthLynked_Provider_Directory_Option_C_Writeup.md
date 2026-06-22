@@ -262,9 +262,9 @@ It also demonstrates bonus areas:
 - Add production monitoring for cost, freshness, precision, review backlog, and drift.
 - Prepare staged rollout with field-level kill switches.
 
-## Why This Should Win
+## Implementation Value
 
-This submission is practical, not speculative. It gives HealthLynked:
+This approach is practical rather than speculative. It gives HealthLynked:
 
 - a clear architecture;
 - a working prototype;
@@ -274,4 +274,4 @@ This submission is practical, not speculative. It gives HealthLynked:
 - audit and rollback from day one;
 - a scalable path a lean engineering team can implement during the post-award consulting period.
 
-The winning insight is simple: provider directory quality is not solved by scraping more pages. It is solved by a repeatable evidence-and-decision system that knows when to trust, when to abstain, when to ask a human, and how to prove every change afterward.
+The core implementation principle is simple: provider directory quality is not solved by scraping more pages. It is solved by a repeatable evidence-and-decision system that knows when to trust, when to abstain, when to ask a human, and how to prove every change afterward.

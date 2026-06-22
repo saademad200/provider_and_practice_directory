@@ -2,7 +2,7 @@
 
 ## Opening
 
-Provider directories decay every day. Providers move, practices rebrand, phone numbers drift, websites disagree, NPIs deactivate, and weak sources can confidently repeat old information. The winning system should not be a one-time cleanup. It should be a repeatable quality-control plane that keeps HealthLynked's directory trustworthy while controlling cost, risk, and manual labor.
+Provider directories decay every day. Providers move, practices rebrand, phone numbers drift, websites disagree, NPIs deactivate, and weak sources can confidently repeat old information. The production system should not be a one-time cleanup. It should be a repeatable quality-control plane that keeps HealthLynked's directory trustworthy while controlling cost, risk, and manual labor.
 
 ## Three-Minute Talk Track
 
@@ -31,4 +31,4 @@ The architecture applies agentic-engineering lessons from the provided whitepape
 
 ## Closing Ask
 
-Choose this submission if HealthLynked wants a team that can begin implementation immediately. The package is executable enough to prove the mechanics and structured enough to become a production system: source governance, normalization, identity resolution, confidence scoring, no-write shadow-mode validation, human review, safe auto-update, audit, rollback, cost controls, and a 90-day roadmap.
+Use this submission if HealthLynked wants a team that can begin implementation immediately. The package is executable enough to prove the mechanics and structured enough to become a production system: source governance, normalization, identity resolution, confidence scoring, no-write shadow-mode validation, human review, safe auto-update, audit, rollback, cost controls, and a 90-day roadmap.

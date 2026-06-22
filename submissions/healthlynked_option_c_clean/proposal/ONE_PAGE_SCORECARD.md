@@ -1,6 +1,6 @@
 # One-Page Judge Scorecard
 
-This package is designed to win as an Option C hybrid: a runnable prototype plus a cloud-agnostic production architecture that a lean HealthLynked team can implement on its preferred cloud, with AWS shown as a reference.
+This package is designed as an Option C hybrid: a runnable prototype plus a cloud-agnostic production architecture that a lean HealthLynked team can implement on its preferred cloud, with AWS shown as a reference.
 
 ## Competition Criteria
 
@@ -37,4 +37,4 @@ This package is designed to win as an Option C hybrid: a runnable prototype plus
 
 ## The Judge Decision In One Sentence
 
-Choose this submission because it does not merely describe AI agents; it packages a verified control plane for directory quality: deterministic evidence first, bounded agents where useful, source reliability law, conservative auto-update rules, human review only where it matters, and a clean cloud path with AWS reference services from MVP to production.
+This submission is appropriate because it does not merely describe AI agents; it packages a verified control plane for directory quality: deterministic evidence first, bounded agents where useful, source reliability law, conservative auto-update rules, human review only where it matters, and a clean cloud path with AWS reference services from MVP to production.

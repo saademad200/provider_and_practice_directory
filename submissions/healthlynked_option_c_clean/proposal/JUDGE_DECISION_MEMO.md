@@ -26,7 +26,7 @@ This design avoids those traps by separating evidence retrieval, normalization, 
 
 ## The Core Product Bet
 
-The winning solution is not "use an LLM to search providers." The winning solution is a directory-quality control plane:
+The effective solution is not "use an LLM to search providers." it is a directory-quality control plane:
 
 - Source authority decides what evidence is allowed to influence each field.
 - Freshness and conflict rules prevent stale or weak evidence from silently changing records.
@@ -84,4 +84,4 @@ Those cases go to human review with sources, confidence, reason codes, and rollb
 
 ## Decision
 
-This is the best submission if the goal is to hire a consultant team that can actually implement the pipeline after the competition. It gives judges a working prototype, production architecture, operating policy, and evidence trail in one coherent package.
+This submission is strongest when the goal is to hire a consultant team that can actually implement the pipeline after the competition. It gives judges a working prototype, production architecture, operating policy, and evidence trail in one coherent package.

@@ -65,7 +65,7 @@ Every agent has a narrow contract, field-level evidence, and a policy gate befor
 | Audit And Rollback Agent | Writes event records, evidence hashes, and rollback rows | Every mutation has evidence and restore path | `evidence/audit_events.jsonl`, `evidence/rollback_plan.csv` |
 | Monitoring And Learning Loop | Tracks connector health, cost drift, reviewer outcomes, and threshold drift | Learning changes are promoted only after offline validation | `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`, `evidence/source_reference_health.csv` |
 
-## Why This Wins
+## Implementation Value
 
 - It turns agentic AI into an auditable workflow, not an uncontrolled scraper.
 - It answers the competition's practical concern: a lean team can run this because each agent has a small contract and clear failure mode.
