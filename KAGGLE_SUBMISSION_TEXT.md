@@ -41,7 +41,7 @@ These metrics are not presented as production truth. They are a reproducible MVP
 
 | Competition criterion | What HealthLynked should want | Evidence in this submission |
 |---|---|---|
-| Accuracy | Detect true stale records while avoiding unsafe false changes | `prototype/metrics.json`, `outputs/final_run/metrics.json`, `evidence/judge_rubric_self_eval.csv` |
+| Accuracy | Detect true stale records while avoiding unsafe false changes | `prototype/metrics.json`, `evidence/verification.json`, `evidence/judge_rubric_self_eval.csv` |
 | Scalability | Run periodically for thousands to millions of records | `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`, `appendix/CLOUD_AGNOSTIC_PRODUCTION_ARCHITECTURE.md` |
 | Cost efficiency | Avoid unnecessary paid APIs, LLM calls, crawling, and manual labor | `assets/cost_model_per_1000_records.md`, `appendix/COST_MODEL.md`, `evidence/cost_model_per_1000.csv` |
 | Practicality | Lean team can implement in a three month consulting engagement | `proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md`, `proposal/JUDGE_DECISION_MEMO.md` |

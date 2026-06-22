@@ -17,7 +17,7 @@ This design avoids those traps by separating evidence retrieval, normalization, 
 ## What HealthLynked Gets On Day One
 
 - A runnable MVP with candidate updates, auto-apply updates, review queue, recommendation JSON, metrics, and audit events.
-- An cloud-agnostic production architecture for periodic and continuous refresh, with portable service boundaries.
+- A cloud-agnostic production architecture for periodic and continuous refresh, with portable service boundaries.
 - A trusted-source connector plan for NPPES, CMS files, state boards/FSMB, practice websites, health-system directories, and carefully limited fallback sources.
 - A confidence and decision policy that explains exactly when a change is auto-applied, reviewed, or rejected.
 - A sample human review dashboard and review disposition loop.
