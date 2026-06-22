@@ -30,6 +30,54 @@ The MVP demonstrates the core loop on sample provider/practice data:
 
 The key design choice is separation of discovery from mutation. The system may discover many candidate changes, but it auto-updates only low-risk fields with fresh, corroborated evidence. Identity-sensitive, conflicting, stale, or low-confidence changes go to human review.
 
+## How To Evaluate This Submission
+
+The writeup is the primary proposal artifact. The notebook is a self-contained MVP demonstration that can be executed without the full repository. The optional GitHub repository provides the larger reproducible benchmark, sample data, dashboard HTML, audit outputs, and verifier.
+
+| Evidence | Where to inspect |
+|---|---|
+| Main architecture and production plan | This writeup |
+| Runnable self-contained MVP | `HealthLynked_Provider_Directory_Update_Pipeline.ipynb` |
+| Larger reproducible benchmark | Optional GitHub repo, `scripts/run_best_pipeline.py` |
+| Sample human review dashboard | Optional GitHub repo, `submissions/healthlynked_option_c_clean/dashboard/index.html` |
+| Audit events and rollback examples | Inline below, plus optional GitHub repo evidence files |
+| Verification checks | Optional GitHub repo, `evidence/verification.json` |
+
+The benchmark figures in the executive summary come from the larger reproducible sample run in the optional repository. The submitted notebook intentionally uses a smaller inline sample so judges can inspect and run the core logic without needing external files.
+
+## Rubric-To-Evidence Map
+
+| Evaluation criterion | How this submission addresses it | Evidence in main artifacts |
+|---|---|---|
+| Accuracy | Uses authority-tiered source evidence, source agreement, freshness, field-risk penalties, and review-first routing for uncertain changes. | Notebook scoring loop; confidence formula; field risk policy |
+| Scalability | Separates source ingestion, normalization, scoring, queues, review, audit, and monitoring so each component can scale independently. | Production roadmap; cloud-agnostic operating model |
+| Cost efficiency | Prioritizes risky/stale records, caches public files, uses deterministic parsers first, and gates LLM fallback. | Cost model per 1,000 records |
+| Practicality | Defines a 30/60/90-day implementation plan suitable for a lean engineering team. | Production roadmap and operating model |
+| Explainability | Each recommendation includes changed field, old/new value, confidence, reason code, sources, evidence URLs, and evidence hash. | Notebook recommendation table; sample JSON |
+| Data quality | Covers normalization for names, phones, addresses, specialties, websites, status, NPI, and practice/location matching. | Normalization policy; notebook helpers |
+| Source reliability | Uses explicit source tiers and separates identity, licensure, taxonomy, address, and practice-roster evidence. | Source governance matrix |
+| Human review design | Sends high-risk, conflicting, stale, and low-confidence changes to a reviewer queue with action states. | Dashboard mock; review queue examples |
+| Audit trail | Writes immutable recommendation events, evidence hashes, and rollback rows before mutation. | Sample audit and rollback JSON |
+
+## Bonus Coverage Map
+
+| Bonus item | Covered? | Evidence |
+|---|---|---|
+| Working prototype | Yes | Submitted notebook; optional larger repo benchmark |
+| Agent workflow diagram | Yes | Mermaid diagram below |
+| Cost estimate per 1,000 records | Yes | Numeric cost table below |
+| Confidence scoring formula | Yes | Formula and thresholds below |
+| Sample human review dashboard | Yes | Inline dashboard mock and optional HTML dashboard |
+| Duplicate detection logic | Yes | Notebook duplicate NPI flag; optional repo movement/duplicate diagnostics |
+| Address normalization strategy | Yes | USPS Publication 28-aligned policy below |
+| NPI validation | Yes | Notebook NPI validation and source governance |
+| Practice-location matching | Yes | Matching policy and review-first movement handling |
+| Provider movement detection | Yes | Field risk policy and optional repo movement candidates |
+| Inactive/retired provider detection | Yes | State-board/NPPES deactivation review policy |
+| Change history and audit log | Yes | Sample audit JSON |
+| Safe auto-update rules | Yes | Field risk and launch gates |
+| Clear implementation roadmap | Yes | 30/60/90-day plan |
+
 ## Desired Pipeline Architecture
 
 ```text
@@ -54,6 +102,48 @@ No Change | Auto Update | Human Review
 Record confirmed as accurate | High-confidence update | Low-confidence or conflicting data
   ↓
 Save Audit Log + Update Provider Directory
+```
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    A[HealthLynked Provider / Practice Database] --> B[Risk Scanner]
+    B --> C[Trusted Source Search]
+    C --> C1[NPPES / NPI Registry]
+    C --> C2[CMS Public Data]
+    C --> C3[State Boards]
+    C --> C4[Practice and Health-System Websites]
+    C1 --> D[Evidence Store]
+    C2 --> D
+    C3 --> D
+    C4 --> D
+    D --> E[Normalize Names / Addresses / Phones / Specialties]
+    E --> F[Provider / Practice / Location Matching]
+    F --> G[Confidence Scoring]
+    G --> H{Decision}
+    H -->|Confirmed| I[No Change]
+    H -->|Low-risk + high confidence| J[Safe Auto Update]
+    H -->|Conflict / identity risk / low confidence| K[Human Review]
+    I --> L[Audit Log]
+    J --> L
+    K --> L
+    L --> M[Directory Update + Feedback Loop]
+```
+
+## Agent Workflow Diagram
+
+```mermaid
+flowchart LR
+    A[Risk Prioritization Agent] --> B[Source Discovery Agent]
+    B --> C[Evidence Extraction Agent]
+    C --> D[Normalization Agent]
+    D --> E[Identity Resolution Agent]
+    E --> F[Source Conflict Resolver]
+    F --> G[Confidence Scoring Agent]
+    G --> H[Human Review Routing Agent]
+    H --> I[Audit And Rollback Agent]
+    I --> J[Monitoring And Calibration Loop]
 ```
 
 ## How The Pipeline Works
@@ -84,6 +174,28 @@ The source strategy is authority-tiered:
 | D | untrusted or unsupported pages | never used for auto-update |
 
 Source access is legally conservative. The system uses public or contractually approved sources, respects terms of use, records source URLs and retrieval timestamps, and keeps raw evidence snapshots for audit.
+
+## Source Governance Matrix
+
+This table turns “trusted sources” into an operating policy.
+
+| Tier | Source | Best use | Can auto-update from this alone? | Operating note |
+|---|---|---|---|---|
+| A | CMS NPPES monthly/weekly downloadable files and deactivation data | NPI identity, provider names, taxonomy, practice locations, deactivation signals | No, except low-risk confirmation with corroboration | CMS publishes downloadable NPI files and deactivation data. CMS also states that having an NPI does not ensure a provider is licensed or credentialed. See CMS NPI files: https://download.cms.gov/nppes/NPI_Files.html and CMS NPI fact sheet: https://www.cms.gov/files/document/npi-fact-sheet.pdf |
+| A | State medical boards | License status, disciplinary signals, professional standing | No for status changes; review first | State board evidence is the appropriate authority for licensure-sensitive decisions. |
+| B | NUCC provider taxonomy | Specialty normalization vocabulary | No | NUCC states taxonomy codes are self-selected and do not establish licensure scope. See https://www.nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40 |
+| B | Practice and health-system websites | Phone, address, roster, affiliation, website | Only for low-risk fields with corroboration and freshness checks | Useful for current operational details, but roster/affiliation changes remain review-first. |
+| B | USPS Publication 28 or conforming address software | Address standardization | Not a source of truth by itself | Publication 28 defines U.S. postal addressing standards. See https://pe.usps.com/text/pub28/welcome.htm |
+| C | Reputable business listings | Phone/address hints only | Never alone | Weak support source; can help prioritize review or corroborate low-risk fields. |
+| D | Blocked, gated, unsupported, or terms-incompatible scraping | None | Never | Excluded from production connectors. |
+
+### Healthcare Source Limitations
+
+- NPPES/NPI is an identity and enumeration source, not proof of licensure or credentialing.
+- NUCC taxonomy is useful for specialty normalization, but taxonomy codes are self-selected and do not prove scope of practice.
+- State boards and official licensing sources should drive active/inactive and licensure-sensitive decisions.
+- Practice websites are useful for current operational details, but provider movement, affiliation, and identity-sensitive changes remain review-first.
+- USPS Publication 28-style normalization improves address quality, but address deliverability does not prove that a provider currently practices at the location.
 
 ### 3. Collect And Normalize Evidence
 
@@ -140,6 +252,30 @@ The MVP exposes confidence, review priority, source set, evidence URLs, reason c
 
 Safe auto-update rules are deliberately narrow. In the MVP, auto-apply precision is `1.0`; uncertain cases are routed to review instead of silently changed.
 
+## Field Risk And Launch Gates
+
+| Field | Risk | Auto-update policy | Required evidence |
+|---|---|---|---|
+| Phone | Low/medium | Allowed only with high confidence, fresh evidence, and independent source agreement | NPPES/practice/health-system agreement or equivalent |
+| Website | Low/medium | Allowed only when canonical domain is corroborated and not a parked/redirected page | Practice or health-system source plus URL validation |
+| Specialty | Medium | Allowed only when taxonomy/display specialty mapping is stable and corroborated | NPPES/NUCC normalization plus practice or health-system agreement |
+| Address | High | Review-first | NPPES plus practice/health-system evidence and movement checks |
+| Practice affiliation | High | Review-first | Practice roster, health-system source, and identity/location match |
+| Provider name | High | Review-first | NPI identity, name history, and reviewer approval |
+| NPI | Identity-critical | Never auto-update | Manual identity resolution |
+| Active/inactive status | High | Review-first | State board or authoritative status evidence; NPPES deactivation as signal, not sole proof |
+| Duplicate merge | Identity-critical | Never auto-update | Human identity resolution and rollback plan |
+
+Launch gates before any auto-update:
+
+1. field is allowed for auto-update;
+2. confidence is above the field threshold;
+3. at least two independent trusted sources support the value;
+4. evidence is fresh for the field;
+5. there is no high-risk identity flag;
+6. audit event and rollback row can be written before mutation;
+7. shadow-mode precision for that field remains above the production threshold.
+
 ### 7. Audit Log And Update
 
 Every recommendation carries:
@@ -186,11 +322,21 @@ The design keeps cost low by:
 
 ### Example Cost Per 1,000 Records
 
-| Scenario | Evidence | Cloud compute/storage/monitoring | LLM fallback | Manual review | Total |
-|---|---:|---:|---:|---:|---:|
-| Conservative MVP-like run | low | low | near-zero | moderate | low operating cost |
-| Production steady state | cached public data + targeted refresh | modest | bounded | reduced by confidence gates | scalable |
-| High-risk refresh campaign | higher source retrieval | modest | bounded | higher review queue | temporary spike |
+Assumptions for a 1,000-record refresh:
+
+- public/bulk evidence is cached where possible;
+- deterministic extraction is attempted before LLM fallback;
+- manual review is estimated at 2 minutes per item and `$30/hour` loaded cost;
+- LLM fallback is reserved for approved messy pages;
+- cloud infrastructure is described generically, with AWS only as a reference implementation.
+
+| Scenario | Evidence retrieval | Cloud compute/storage/monitoring | LLM fallback | Manual review | Review items | Total / 1,000 |
+|---|---:|---:|---:|---:|---:|---:|
+| Low-risk periodic refresh | `$4.50` | `$3.00` | `$1.00` | `$50.00` | `50` | `$58.50` |
+| Base production run | `$9.00` | `$6.00` | `$5.00` | `$150.00` | `150` | `$170.00` |
+| High-risk backlog cleanup | `$18.00` | `$10.00` | `$15.00` | `$350.00` | `350` | `$393.00` |
+
+The operating model is deliberately dominated by human review cost, not model cost. The main savings lever is better routing: avoid sending obvious no-change records to reviewers and avoid using LLMs where deterministic source parsing is sufficient.
 
 Cloud services are intentionally described generically. If a concrete reference is useful, AWS can be used as an example implementation: object storage similar to S3, workflow orchestration similar to Step Functions, queueing similar to SQS, serverless/container workers similar to Lambda/ECS/Batch, monitoring similar to CloudWatch, and governed foundation-model fallback similar to Bedrock.
 
@@ -206,6 +352,114 @@ The MVP includes a sample dashboard concept showing:
 - rollback and audit evidence.
 
 The dashboard is designed to reduce reviewer work, not create a second manual cleanup project.
+
+### Reviewer Decision Card Mock
+
+```text
+Provider: P1003 / Elena Nguyen / NPI 1999999995
+Field: address
+Current value: 9 pine blvd ste 1 tampa fl 33603
+Proposed value: 700 cedar rd ste 3 tampa fl 33604
+Confidence: 0.72
+Decision: HUMAN REVIEW
+Reason: field_not_safe_for_auto_apply | practice_location_move
+Supporting sources:
+  - NPPES, fresh 25 days, https://npiregistry.cms.hhs.gov/...
+  - Practice website, fresh 20 days, https://coastalskin.example.com/location
+Reviewer actions:
+  [Accept] [Reject] [Request recrawl] [Escalate identity review]
+Audit status:
+  evidence_hash=8d1d44cbd247fe7e, rollback_required=true
+```
+
+## Sample Recommendation Contract
+
+```json
+{
+  "provider_id": "P1001",
+  "npi": "1234567893",
+  "change_detected": true,
+  "field": "phone",
+  "old_value": "555-200-1000",
+  "proposed_value": "555-201-1000",
+  "confidence": 0.98,
+  "recommended_action": "auto_update",
+  "reason_code": "auto_apply_criteria_met",
+  "supporting_sources": [
+    {
+      "source": "practice_website",
+      "authority_tier": "B",
+      "fresh_days": 12,
+      "url": "https://bayviewprimary.example.com/contact"
+    },
+    {
+      "source": "health_system",
+      "authority_tier": "B",
+      "fresh_days": 24,
+      "url": "https://healthsystem.example.com/maya-patel"
+    }
+  ],
+  "evidence_hash": "4d5e3a9b7d2c1110",
+  "audit_required": true,
+  "rollback_eligible": true
+}
+```
+
+## Sample Audit And Rollback Records
+
+```json
+{
+  "event_type": "candidate_update_created",
+  "event_date": "2026-06-22",
+  "provider_id": "P1001",
+  "npi": "1234567893",
+  "field": "phone",
+  "old_value": "555-200-1000",
+  "proposed_value": "555-201-1000",
+  "confidence": 0.98,
+  "recommended_action": "auto_update",
+  "reason_code": "auto_apply_criteria_met",
+  "sources": ["practice_website", "health_system"],
+  "evidence_hash": "4d5e3a9b7d2c1110"
+}
+```
+
+```json
+{
+  "provider_id": "P1001",
+  "field": "phone",
+  "current_value_to_replace": "555-201-1000",
+  "restore_value": "555-200-1000",
+  "required_approval": "directory_ops_lead",
+  "evidence_hash": "4d5e3a9b7d2c1110"
+}
+```
+
+## Evaluation Protocol
+
+The larger optional benchmark computes field-level candidate updates against a labeled sample dataset:
+
+- true positive: proposed field update matches the labeled update;
+- false positive: proposed field update is not in the gold update set;
+- false negative: gold update is missed;
+- precision: `TP / (TP + FP)`;
+- recall: `TP / (TP + FN)`;
+- F1: harmonic mean of precision and recall;
+- safe auto-apply precision: precision among the subset that passes auto-update gates.
+
+The reported benchmark result is:
+
+```text
+TP = 55
+FP = 3
+FN = 3
+Precision = 0.948276
+Recall = 0.948276
+F1 = 0.948276
+Safe auto-apply precision = 1.0
+```
+
+The submitted notebook is a smaller, fully inline demonstration of the same control logic. It is not meant to be the full benchmark dataset.
 
 ## MVP Scope Covered
 
