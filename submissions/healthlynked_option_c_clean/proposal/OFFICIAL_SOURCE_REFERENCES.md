@@ -12,6 +12,8 @@ This note records the public authority sources that shaped the connector strateg
 | CMS NPPES Data Dissemination: https://www.cms.gov/medicare/regulations-guidance/administrative-simplification/data-dissemination | Monthly full replacement and weekly incremental files; no-charge downloadable data | Used for low-cost batch refresh, deactivation checks, and stale/risky record prioritization |
 | CMS NPI Files: https://download.cms.gov/nppes/NPI_Files.html | Current downloadable file names, update dates, and supplemental reference files. Checked June 19, 2026: CMS listed the June 08, 2026 monthly V.2 file plus June 2026 weekly incremental files. | Used by the production connector to pin file versions and preserve source lineage |
 | CMS NPPES downloadable-file readme: https://www.cms.gov/regulations-and-guidance/administrative-simplification/nationalprovidentstand/downloads/data_dissemination_file-readme.pdf | NPPES data-field interpretation and public dissemination scope | Used to map raw NPPES fields to normalized directory fields without guessing |
+| CMS PECOS / Medicare enrollment public data surfaces | Medicare enrollment and organization-affiliation cross-checks | Used as review-first evidence for enrollment and practice/group signals where legally accessible |
+| NUCC Provider Taxonomy: https://nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40 | Official taxonomy code set for provider classification | Used to normalize specialty text and map NPPES taxonomy codes to reviewable specialty families |
 | FSMB Data Integration: https://www.fsmb.org/data-integration/ | Primary-source verified licensure/discipline data availability | Used as the preferred paid/contracted authority path for license/status enrichment when HealthLynked approves cost and terms |
 | FSMB Physician Data Center files: https://www.fsmb.org/PDC/pdc-data-files/ | High-volume licensure and disciplinary data option | Used in the production roadmap as a scalable alternative to one-off state-board scraping |
 | FSMB Physician Data Center FAQ: https://www.fsmb.org/PDC/pdc-faq/ | Source lineage from state boards and regulatory entities | Used to justify higher authority weight for licensure/status evidence than business listings |
@@ -19,6 +21,8 @@ This note records the public authority sources that shaped the connector strateg
 ## Design Implications
 
 - NPPES is excellent for NPI identity, taxonomy, and public provider facts, but the pipeline does not treat an NPI record as proof of licensure.
+- PECOS and Medicare enrollment surfaces are treated as strong review signals for enrollment and group affiliation, not sole authority for identity, inactive status, or practice movement.
+- NUCC/NPPES taxonomy mapping is used for specialty normalization so display-name variants do not create false specialty changes.
 - Monthly and weekly CMS files are the default scale path because they are cheaper and more stable than repeated web searches.
 - The production connector should persist the exact CMS file label/date, not just the generic source name, so every recommendation can be traced to a specific monthly or weekly NPPES release.
 - State boards and FSMB-style sources are the higher-authority path for active/inactive, licensure, and disciplinary status.

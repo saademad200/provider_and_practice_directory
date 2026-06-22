@@ -41,7 +41,7 @@ If HealthLynked starts with a smaller operational sample, the same design still 
 | NPI validity and identity lock rate | Provider and practice-location pair | Prevents identity corruption |
 | Movement and inactive-provider review yield | Field and reviewer disposition | Tests high-value directory cleanup without unsafe automation |
 | Review time per case | Reason code and queue priority | Quantifies staffing and cost |
-| Cost per 1,000 records | Evidence, AWS compute, LLM fallback, review labor | Keeps the operating model affordable |
+| Cost per 1,000 records | Evidence, cloud compute (AWS reference), LLM fallback, review labor | Keeps the operating model affordable |
 | Rollback drill success | Auto-eligible field and audit event | Proves every write can be reversed |
 
 ## Go/No-Go Gates
@@ -95,7 +95,7 @@ The pilot produces these implementation artifacts:
 
 | Period | Deliverable |
 |---|---|
-| Weeks 1-2 | Schema mapping, source registry, no-write AWS pilot environment, and first shadow run |
+| Weeks 1-2 | Schema mapping, source registry, no-write cloud pilot environment (AWS as reference), and first shadow run |
 | Weeks 3-4 | Reviewer dashboard loop, disposition taxonomy, audit ledger, and baseline calibration report |
 | Weeks 5-8 | Connector hardening, threshold calibration, holdout replay, cost monitoring, and review SLA dashboard |
 | Weeks 9-12 | Limited production launch for approved low-risk fields, rollback drill, monitoring dashboard, and production handoff |

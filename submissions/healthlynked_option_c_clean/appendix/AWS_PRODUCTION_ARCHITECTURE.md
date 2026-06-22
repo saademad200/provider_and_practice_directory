@@ -1,6 +1,6 @@
-# AWS Production Architecture
+# Cloud-Agnostic Production Architecture (AWS Reference Example)
 
-This document maps the local provider-directory prototype to an AWS production deployment. It uses AWS only where naming a cloud is helpful; the code remains local and portable.
+This document maps the local provider-directory prototype to a cloud-agnostic production deployment. AWS services are named as a concrete reference implementation; the same roles can map to the organizer's preferred cloud services.
 
 ## Current Prototype Metrics
 
@@ -13,20 +13,20 @@ This document maps the local provider-directory prototype to an AWS production d
 
 ## Service Map
 
-| Layer | AWS Service | Role |
-|---|---|---|
-| Scheduling | Amazon EventBridge Scheduler | Trigger recurring NPPES, CMS, state-board, website, and health-system refresh jobs. |
-| Workflow orchestration | AWS Step Functions | Coordinate source fetch, normalization, matching, scoring, review routing, and audit export. |
-| Batch/source ingestion | AWS Glue or AWS Batch | Process NPPES monthly files, weekly incrementals, and large CMS/website refresh batches. |
-| Raw evidence lake | Amazon S3 | Store immutable raw source snapshots, crawl output, parsed evidence, and audit bundles. |
-| Metadata/catalog | AWS Glue Data Catalog | Catalog source snapshots, normalized evidence, and candidate-update tables. |
-| Operational queues | Amazon SQS | Buffer provider refresh tasks, review tasks, retry work, and dead-letter failures. |
-| Online lookup/cache | Amazon DynamoDB | Cache provider evidence summaries, source freshness state, and NPI lookup results. |
-| Relational workflow state | Amazon RDS/PostgreSQL or Aurora PostgreSQL | Store candidate updates, review decisions, audit trail, and reviewer outcomes. |
-| Optional LLM extraction | Amazon Bedrock | Run constrained extraction only for messy web pages after deterministic parsers fail. |
-| Human review UI | AWS Amplify or ECS/Fargate app | Serve the review dashboard and evidence drill-down workflow. |
-| Monitoring | Amazon CloudWatch | Track source coverage, freshness, cost, failures, review backlog, and auto-apply precision checks. |
-| Secrets and access | AWS Secrets Manager and IAM | Manage source credentials, least-privilege connector roles, and audit access boundaries. |
+| Layer | Cloud capability | AWS reference example | Role |
+|---|---|---|---|
+| Scheduling | Managed scheduler | Amazon EventBridge Scheduler | Trigger recurring NPPES, CMS, state-board, website, and health-system refresh jobs. |
+| Workflow orchestration | State-machine/workflow service | AWS Step Functions | Coordinate source fetch, normalization, matching, scoring, review routing, and audit export. |
+| Batch/source ingestion | Managed ETL or batch workers | AWS Glue or AWS Batch | Process NPPES monthly files, weekly incrementals, and large CMS/website refresh batches. |
+| Raw evidence lake | Object storage | Amazon S3 | Store immutable raw source snapshots, crawl output, parsed evidence, and audit bundles. |
+| Metadata/catalog | Data catalog | AWS Glue Data Catalog | Catalog source snapshots, normalized evidence, and candidate-update tables. |
+| Operational queues | Managed queue | Amazon SQS | Buffer provider refresh tasks, review tasks, retry work, and dead-letter failures. |
+| Online lookup/cache | Key-value cache/store | Amazon DynamoDB | Cache provider evidence summaries, source freshness state, and NPI lookup results. |
+| Relational workflow state | Relational database | Amazon RDS/PostgreSQL or Aurora PostgreSQL | Store candidate updates, review decisions, audit trail, and reviewer outcomes. |
+| Optional LLM extraction | Governed foundation-model endpoint | Amazon Bedrock | Run constrained extraction only for messy web pages after deterministic parsers fail. |
+| Human review UI | Hosted web app or container service | AWS Amplify or ECS/Fargate app | Serve the review dashboard and evidence drill-down workflow. |
+| Monitoring | Logs, metrics, and alerting | Amazon CloudWatch | Track source coverage, freshness, cost, failures, review backlog, and auto-apply precision checks. |
+| Secrets and access | Secrets manager and IAM | AWS Secrets Manager and IAM | Manage source credentials, least-privilege connector roles, and audit access boundaries. |
 
 ## Production Flow
 

@@ -111,7 +111,7 @@ The prototype uses synthetic `example.org` source URLs because the sample benchm
 
 ## Production Notes
 
-- The JSON contract can be emitted by an AWS Lambda/ECS scoring task after evidence normalization.
+- The JSON contract can be emitted by a cloud scoring task (AWS Lambda/ECS as one reference) after evidence normalization.
 - Each recommendation should be written to the audit ledger before mutation.
 - `audit_required` is always true for any detected change.
 - Identity-level actions such as merge, inactive suppression, or practice reassignment remain review-first.

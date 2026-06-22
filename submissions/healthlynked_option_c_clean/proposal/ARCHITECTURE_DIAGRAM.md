@@ -11,6 +11,7 @@ HealthLynked directory
   -> provider / practice / location matching
   -> validation logic
   -> confidence score
+  -> shadow-mode launch gates
   -> decision router
        -> no change: confirm current record
        -> safe high-confidence update: auto-update
@@ -48,8 +49,9 @@ flowchart TD
     F --> G[Provider / Practice Matching]
     G --> H[Validation Logic]
     H --> I[Confidence Score]
+    I --> Q[Shadow-Mode Launch Gates]
 
-    I --> J{Decision}
+    Q --> J{Decision}
     J -->|Record confirmed| N
     J -->|High-confidence update| K[Safe Auto Update]
     J -->|Low confidence or conflict| L[Human Review]

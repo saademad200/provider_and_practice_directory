@@ -1,11 +1,12 @@
 flowchart LR
-    schedule[AWS EventBridge Schedule] --> registry[Source Connector Registry]
+    schedule[Cloud Scheduler (AWS EventBridge reference)] --> registry[Source Connector Registry]
     registry --> retrieval[Source Retrieval Agents]
     retrieval --> normalize[Evidence Normalization Agent]
     normalize --> identity[Provider / Practice Identity Agent]
     identity --> conflict[Source Conflict Resolver]
     conflict --> score[Confidence Scoring Agent]
-    score --> safety[Safety And Policy Gates]
+    score --> shadow[Shadow-Mode Calibration Agent]
+    shadow --> safety[Safety And Policy Gates]
     safety --> route{Decision Router}
     route -->|safe low-risk update| audit[Audit And Rollback Agent]
     route -->|ambiguous or high-risk| review[Human Review Workbench]
@@ -16,6 +17,6 @@ flowchart LR
     classDef agent fill:#e8f1f8,stroke:#1e6b9e,color:#16202a
     classDef human fill:#fff4df,stroke:#9a6b1d,color:#16202a
     classDef safetyClass fill:#fbe7e7,stroke:#a33a3a,color:#16202a
-    class registry,retrieval,normalize,identity,conflict,score,audit,monitor agent
+    class registry,retrieval,normalize,identity,conflict,score,shadow,audit,monitor agent
     class review human
     class safety safetyClass

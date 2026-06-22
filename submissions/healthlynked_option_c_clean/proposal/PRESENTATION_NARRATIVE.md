@@ -16,7 +16,7 @@ Provider directories decay every day. Providers move, practices rebrand, phone n
 8. **Every decision is auditable.** The recommendation explains old value, new value, sources, confidence, action, reason code, and rollback path.
 9. **The MVP proves the loop.** It runs end to end with candidate updates, safe auto-apply outputs, review queue, audit events, dashboard, metrics, and recommendation JSON.
 10. **The launch path is no-write first.** HealthLynked can run a shadow-mode pilot with stale-risk, high-change-risk, stable-control, and reviewer-holdout cohorts before any production mutation.
-11. **The production design is ready for AWS.** Batch and event jobs, cached source payloads, review queues, monitoring, and field-level launch gates turn the prototype into an implementation plan for the post-award consulting period.
+11. **The production design is cloud-portable, with AWS as a reference path.** Batch and event jobs, cached source payloads, review queues, monitoring, and field-level launch gates turn the prototype into an implementation plan for the post-award consulting period.
 
 ## Whitepaper-Informed Design
 

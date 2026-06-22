@@ -22,24 +22,17 @@ TOP_LEVEL_FILES = [
     ("Provider_Directory_Update_Pipeline_End_to_End.ipynb", "Provider_Directory_Update_Pipeline_End_to_End.ipynb"),
     ("JUDGE_DECISION_MEMO.md", "proposal/JUDGE_DECISION_MEMO.md"),
     ("ONE_PAGE_SCORECARD.md", "proposal/ONE_PAGE_SCORECARD.md"),
-    ("JUDGE_COMPARISON_MATRIX.md", "proposal/JUDGE_COMPARISON_MATRIX.md"),
     ("BONUS_COVERAGE_MATRIX.md", "proposal/BONUS_COVERAGE_MATRIX.md"),
     ("PRESENTATION_NARRATIVE.md", "proposal/PRESENTATION_NARRATIVE.md"),
-    ("WINNING_PROPOSAL_BRIEF.md", "proposal/WINNING_PROPOSAL_BRIEF.md"),
     ("TECHNICAL_ARCHITECTURE_PROPOSAL.md", "proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md"),
     ("CONFIDENCE_AND_DECISION_POLICY.md", "proposal/CONFIDENCE_AND_DECISION_POLICY.md"),
-    ("IMPLEMENTATION_ACCEPTANCE_CRITERIA.md", "proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md"),
     ("SHADOW_MODE_PILOT_PROTOCOL.md", "proposal/SHADOW_MODE_PILOT_PROTOCOL.md"),
-    ("EVALUATION_LIMITS_AND_TRANSFER_PLAN.md", "proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md"),
-    ("LEAN_TEAM_OPERATING_MODEL.md", "proposal/LEAN_TEAM_OPERATING_MODEL.md"),
-    ("FAILURE_MODE_PLAYBOOK.md", "proposal/FAILURE_MODE_PLAYBOOK.md"),
     ("AGENT_WORKFLOW_DIAGRAM.md", "proposal/AGENT_WORKFLOW_DIAGRAM.md"),
     ("AGENT_WORKFLOW_DIAGRAM.mmd", "proposal/AGENT_WORKFLOW_DIAGRAM.mmd"),
     ("ARCHITECTURE_DIAGRAM.md", "proposal/ARCHITECTURE_DIAGRAM.md"),
     ("ARCHITECTURE_DIAGRAM.mmd", "proposal/ARCHITECTURE_DIAGRAM.mmd"),
     ("IMPLEMENTATION_ROADMAP_90_DAYS.md", "proposal/IMPLEMENTATION_ROADMAP_90_DAYS.md"),
     ("OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md", "proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md"),
-    ("SOURCE_CONNECTOR_STATUS_MATRIX.md", "proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md"),
     ("SOURCE_ACCESS_COMPLIANCE_POLICY.md", "proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md"),
     ("OFFICIAL_SOURCE_REFERENCES.md", "proposal/OFFICIAL_SOURCE_REFERENCES.md"),
     ("WORKING_PROTOTYPE.md", "prototype/WORKING_PROTOTYPE.md"),
@@ -58,20 +51,13 @@ TOP_LEVEL_FILES = [
     ("inactive_provider_candidates.csv", "evidence/inactive_provider_candidates.csv"),
     ("audit_events.jsonl", "evidence/audit_events.jsonl"),
     ("rollback_plan.csv", "evidence/rollback_plan.csv"),
-    ("production_readiness_summary.json", "evidence/production_readiness_summary.json"),
     ("judge_rubric_self_eval.csv", "evidence/judge_rubric_self_eval.csv"),
     ("verification.json", "evidence/verification.json"),
     ("COST_MODEL.md", "appendix/COST_MODEL.md"),
     ("AWS_PRODUCTION_ARCHITECTURE.md", "appendix/AWS_PRODUCTION_ARCHITECTURE.md"),
-    ("DASHBOARD_SPEC.md", "appendix/DASHBOARD_SPEC.md"),
     ("DUPLICATE_MOVEMENT_DETECTION.md", "appendix/DUPLICATE_MOVEMENT_DETECTION.md"),
     ("INACTIVE_PROVIDER_DETECTION.md", "appendix/INACTIVE_PROVIDER_DETECTION.md"),
     ("AUDIT_ROLLBACK_WORKFLOW.md", "appendix/AUDIT_ROLLBACK_WORKFLOW.md"),
-    ("SOURCE_CONFLICT_ADJUDICATION.md", "appendix/SOURCE_CONFLICT_ADJUDICATION.md"),
-    ("SOURCE_GOVERNANCE_CHECKLIST.md", "appendix/SOURCE_GOVERNANCE_CHECKLIST.md"),
-    ("SYNTHETIC_VOLUME_BENCHMARK.md", "appendix/SYNTHETIC_VOLUME_BENCHMARK.md"),
-    ("PRODUCTION_READINESS_SCORECARD.md", "appendix/PRODUCTION_READINESS_SCORECARD.md"),
-    ("PRIVACY_COMPLIANCE_MODEL.md", "appendix/PRIVACY_COMPLIANCE_MODEL.md"),
 ]
 
 
@@ -93,11 +79,14 @@ CURATED_SRC_FILES = [
     "src/__init__.py",
     "src/cost.py",
     "src/data.py",
+    "src/entity_resolution.py",
     "src/freshness.py",
+    "src/inactive_detection.py",
     "src/metrics.py",
     "src/cv.py",
     "src/npi.py",
     "src/review_priority.py",
+    "src/source_conflicts.py",
     "src/specialty.py",
 ]
 
@@ -114,16 +103,16 @@ This is the curated judge package for the HealthLynked Provider / Practice Direc
 
 ## 90-Second Read
 
-This is an Option C hybrid submission: a runnable MVP plus an AWS-ready production architecture. The core idea is a provider-directory quality control plane, not a one-time cleanup script. It collects trusted evidence, normalizes fields, resolves provider/practice/location identity, scores confidence, routes uncertain changes to review, safely auto-updates only low-risk high-confidence fields, and records an audit/rollback trail for every recommendation.
+This is an Option C hybrid submission: a runnable MVP plus a cloud-agnostic production architecture with AWS shown as a reference implementation. The core idea is a provider-directory quality control plane, not a one-time cleanup script. It collects trusted evidence, normalizes fields, resolves provider/practice/location identity, scores confidence, routes uncertain changes to review, safely auto-updates only low-risk high-confidence fields, and records an audit/rollback trail for every recommendation.
 
 Proof points:
 
 - F1 `0.948276`, precision `0.948276`, recall `0.948276`
 - safe auto-apply precision `1.0`
 - prototype evidence-only cost per correct update `$0.005836`
-- 150 curated-package verification checks
+- 131 curated-package verification checks
 - self-contained unzip-and-run MVP smoke test passes
-- AWS production plan with source governance, review operations, monitoring, and rollback
+- cloud-agnostic production plan with AWS reference services, source governance, review operations, monitoring, and rollback
 
 Why it should win: it is immediately implementable after the competition. The package includes the technical architecture, working prototype, confidence policy, connector operating model, human review workflow, audit trail, cost controls, and post-award acceptance criteria.
 
@@ -139,23 +128,18 @@ Why it should win: it is immediately implementable after the competition. The pa
 
 1. Open `Provider_Directory_Update_Pipeline_End_to_End.ipynb` for the narrated end-to-end walkthrough.
 2. Read `proposal/ONE_PAGE_SCORECARD.md` for the rubric-to-evidence map.
-3. Read `proposal/WINNING_PROPOSAL_BRIEF.md` for the executive case.
-4. Read `proposal/JUDGE_DECISION_MEMO.md` for the consulting-ready business case.
-5. Read `proposal/PRESENTATION_NARRATIVE.md` for the pitch story.
-6. Read `proposal/JUDGE_COMPARISON_MATRIX.md` for the fast comparison against likely alternatives.
-7. Read `proposal/BONUS_COVERAGE_MATRIX.md` for bonus-point evidence links.
-8. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
-9. Read `proposal/AGENT_WORKFLOW_DIAGRAM.md` for the bounded agent workflow.
-10. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
-11. Read `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md` for the post-award delivery gates.
-12. Read `proposal/SHADOW_MODE_PILOT_PROTOCOL.md` for the no-write HealthLynked pilot and launch gates.
-13. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
-14. Read `proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md` for how proxy metrics transfer to HealthLynked data.
-15. Read `proposal/LEAN_TEAM_OPERATING_MODEL.md` and `proposal/FAILURE_MODE_PLAYBOOK.md` for production operations.
-16. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
-17. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
-18. Inspect `dashboard/index.html` for the sample human review experience.
-19. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
+3. Read `proposal/JUDGE_DECISION_MEMO.md` for the consulting-ready business case.
+4. Read `proposal/PRESENTATION_NARRATIVE.md` for the pitch story.
+5. Read `proposal/BONUS_COVERAGE_MATRIX.md` for bonus-point evidence links.
+6. Read `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md` and `proposal/ARCHITECTURE_DIAGRAM.md` for the production architecture.
+7. Read `proposal/AGENT_WORKFLOW_DIAGRAM.md` for the bounded agent workflow.
+8. Read `proposal/CONFIDENCE_AND_DECISION_POLICY.md` for the exact auto-update and review policy.
+9. Read `proposal/SHADOW_MODE_PILOT_PROTOCOL.md` for the no-write pilot and launch gates.
+10. Read `prototype/WORKING_PROTOTYPE.md` and inspect `prototype/metrics.json` for the runnable MVP.
+11. Open `prototype/RECOMMENDATION_API_CONTRACT.md` for the exact update recommendation shape.
+12. Open `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`, `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`, and `proposal/OFFICIAL_SOURCE_REFERENCES.md` for trusted-source operations.
+13. Inspect `dashboard/index.html` for the sample human review experience.
+14. Use `evidence/verification.json` and `evidence/judge_rubric_self_eval.csv` to audit the claims.
 
 ## Run The MVP
 
@@ -168,11 +152,11 @@ pip install -r requirements.txt
 python3 scripts/run_best_pipeline.py --out-dir outputs/judge_smoke
 ```
 
-The run writes candidate updates, safe auto-apply updates, human-review queue, config, and metrics under `outputs/judge_smoke/`. The expected proof point is the same as the packaged evidence: F1 `0.948276`, safe auto-apply precision `1.0`, and prototype evidence-only cost per correct update `$0.005836`. Production per-1,000-record scenarios, including AWS, LLM fallback, and review labor, are modeled in `appendix/COST_MODEL.md`.
+The run writes candidate updates, safe auto-apply updates, human-review queue, config, and metrics under `outputs/judge_smoke/`. The expected proof point is the same as the packaged evidence: F1 `0.948276`, safe auto-apply precision `1.0`, and prototype evidence-only cost per correct update `$0.005836`. Production per-1,000-record scenarios, including cloud infrastructure (AWS reference), LLM fallback, and review labor, are modeled in `appendix/COST_MODEL.md`.
 
 ## Why The Package Is Structured This Way
 
-The first layer is intentionally small: notebook, proposal, prototype, architecture, API contract, source plan, dashboard, and verification. Supporting material is organized under `appendix/` and `evidence/` so judges can go deep without being forced through a flat folder of internal research files.
+The package is intentionally compact: notebook, proposal, prototype, architecture, API contract, source plan, dashboard, and verification. Supporting evidence is organized under `appendix/` and `evidence/` so judges can go deep without being forced through a flat folder of internal research files.
 """
 
 
@@ -186,7 +170,6 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 - `proposal/ONE_PAGE_SCORECARD.md`
 - `proposal/JUDGE_DECISION_MEMO.md`
-- `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/BONUS_COVERAGE_MATRIX.md`
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 - `proposal/AGENT_WORKFLOW_DIAGRAM.md`
@@ -203,7 +186,7 @@ For the full reading order, use `START_HERE.md`.
 - Precision / recall: 0.948276 / 0.948276
 - Safe auto-apply precision: 1.0
 - Prototype evidence-only cost per correct update: $0.005836
-- Cloud plan: AWS
+- Cloud reference: cloud-agnostic; AWS examples included
 
 ## Run The MVP
 
@@ -227,7 +210,7 @@ The package has already been verified by `evidence/verification.json`.
 
 ## Folder Map
 
-- `proposal/` - architecture, winning brief, source connector plan, roadmap, and diagram.
+- `proposal/` - architecture, decision memo, source connector plan, roadmap, and diagrams.
 - `prototype/` - runnable MVP outputs, metrics, recommendation API contract, and update examples.
 - `dashboard/` - sample human review dashboard.
 - `evidence/` - machine-readable verification, rubric, source-health, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.
@@ -410,9 +393,6 @@ def main() -> int:
     summary = build(target)
     zip_path = Path(args.zip)
     zip_dir(target, zip_path)
-    companion = zip_path.with_name("healthlynked_option_c_clean.zip")
-    if companion != zip_path:
-        shutil.copy2(zip_path, companion)
     print(json.dumps({**summary, "zip": str(zip_path)}, indent=2, sort_keys=True))
     return 0 if summary["passed"] else 1
 

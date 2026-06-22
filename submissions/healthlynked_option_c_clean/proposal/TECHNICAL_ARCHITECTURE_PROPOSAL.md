@@ -12,7 +12,6 @@ Open these files together:
 - `appendix/COST_MODEL.md`
 - `appendix/AWS_PRODUCTION_ARCHITECTURE.md`
 - `appendix/AUDIT_ROLLBACK_WORKFLOW.md`
-- `appendix/SOURCE_CONFLICT_ADJUDICATION.md`
 
 ## Pipeline Summary
 
@@ -31,6 +30,8 @@ HealthLynked directory
 ## Data Sources
 
 - NPPES/NPI Registry for identity and taxonomy anchors.
+- CMS PECOS / Medicare enrollment public data surfaces for enrollment and organization-affiliation cross-checks where legally accessible.
+- NUCC provider taxonomy for specialty normalization and synonym mapping.
 - State licensing boards for active/inactive and license status.
 - CMS/public datasets for cross-checks.
 - Practice websites and health-system directories for location, phone, roster, and affiliation evidence.
@@ -54,6 +55,9 @@ Each agent has scoped permissions, source authority rules, and output contracts 
 
 - NPI format and identity anchoring.
 - Name, phone, address, specialty, website, affiliation, and status normalization.
+- Production address normalization can use libpostal for parsing plus USPS/Smarty-style deliverability validation when HealthLynked approves terms and cost.
+- Production phone normalization should use libphonenumber-style E.164 parsing, extension handling, and invalid-area-code rejection.
+- Specialty normalization maps free text through NUCC/NPPES taxonomy codes before comparing display names.
 - Duplicate detection.
 - Provider movement detection.
 - Practice-location matching.
@@ -87,6 +91,10 @@ The production decision law is documented in `proposal/CONFIDENCE_AND_DECISION_P
 | Auto Update | High-confidence, low-risk, non-conflicting field update |
 | Human Review | Low-confidence, conflicting, high-risk, or identity-sensitive update |
 
-## AWS Production Plan
+## Cloud-Agnostic Production Plan (AWS Reference Example)
 
-The production plan uses EventBridge, Step Functions, Lambda/ECS, S3, RDS/DynamoDB, CloudWatch, and gated Bedrock fallback. See `appendix/AWS_PRODUCTION_ARCHITECTURE.md`.
+The production plan is cloud-agnostic: scheduler, workflow service, serverless/container/batch workers, object storage, relational/key-value state, monitoring, and gated foundation-model fallback. AWS examples are EventBridge, Step Functions, Lambda/ECS/Batch, S3, RDS/DynamoDB, CloudWatch, and Bedrock. See `appendix/AWS_PRODUCTION_ARCHITECTURE.md`.
+
+## IaC And Delivery Plan
+
+The implementation should be promoted through dev, staging, and production environments with infrastructure as code. The recommended infrastructure-as-code path is Terraform, or AWS CDK when using AWS as the reference implementation, for evidence buckets, normalized evidence tables, workflows, workers, review queues, IAM roles, secret entries, and monitoring alarms. CI should run unit tests for normalization, NPI validation, confidence scoring, audit logging, and package verification before any workflow policy is promoted.

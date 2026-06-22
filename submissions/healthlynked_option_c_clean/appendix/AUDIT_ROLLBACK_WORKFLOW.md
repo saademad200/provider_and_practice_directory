@@ -42,7 +42,7 @@ Required event fields:
 - Rollback writes a new audit event; it never mutates the original event.
 - Evidence hashes let operators prove which source snapshot supported the original decision.
 
-## AWS Storage Pattern
+## Cloud Storage Pattern (AWS Reference Example)
 
 - Raw source snapshots and JSONL audit bundles: Amazon S3 with retention policy.
 - Queryable event table: Aurora PostgreSQL or DynamoDB depending on product workflow needs.

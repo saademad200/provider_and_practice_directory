@@ -19,7 +19,8 @@ flowchart TD
     F --> G[Provider / Practice Matching]
     G --> H[Validation Logic]
     H --> I[Confidence Score]
-    I --> J{Decision}
+    I --> Q[Shadow-Mode Launch Gates]
+    Q --> J{Decision}
     J -->|Record confirmed| N
     J -->|High-confidence update| K[Safe Auto Update]
     J -->|Low confidence or conflict| L[Human Review]

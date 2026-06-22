@@ -1,7 +1,7 @@
 {
   "checks": [
     {
-      "detail": "src, scripts, experiments",
+      "detail": "src, scripts",
       "name": "python_compile",
       "passed": true
     },
@@ -21,22 +21,22 @@
       "passed": true
     },
     {
-      "detail": "outputs/verify_recommendation_contract_v2/cli/candidate_updates.csv",
+      "detail": "outputs/verify_final_clean/cli/candidate_updates.csv",
       "name": "cli_output_candidate_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_recommendation_contract_v2/cli/auto_apply_updates.csv",
+      "detail": "outputs/verify_final_clean/cli/auto_apply_updates.csv",
       "name": "cli_output_auto_apply_updates.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_recommendation_contract_v2/cli/review_queue.csv",
+      "detail": "outputs/verify_final_clean/cli/review_queue.csv",
       "name": "cli_output_review_queue.csv",
       "passed": true
     },
     {
-      "detail": "outputs/verify_recommendation_contract_v2/cli/config.json",
+      "detail": "outputs/verify_final_clean/cli/config.json",
       "name": "cli_output_config.json",
       "passed": true
     },
@@ -56,37 +56,22 @@
       "passed": true
     },
     {
-      "detail": "docs/ARCHITECTURE.md",
-      "name": "doc_ARCHITECTURE.md",
+      "detail": "README.md",
+      "name": "doc_README.md",
       "passed": true
     },
     {
-      "detail": "docs/JUDGING_NARRATIVE.md",
-      "name": "doc_JUDGING_NARRATIVE.md",
+      "detail": "SUBMISSION.md",
+      "name": "doc_SUBMISSION.md",
       "passed": true
     },
     {
-      "detail": "docs/FIELD_RISK_POLICY.md",
-      "name": "doc_FIELD_RISK_POLICY.md",
+      "detail": "FINAL_UPLOAD.md",
+      "name": "doc_FINAL_UPLOAD.md",
       "passed": true
     },
     {
-      "detail": "docs/SUBMISSION_CHECKLIST.md",
-      "name": "doc_SUBMISSION_CHECKLIST.md",
-      "passed": true
-    },
-    {
-      "detail": "docs/RISK_REGISTER.md",
-      "name": "doc_RISK_REGISTER.md",
-      "passed": true
-    },
-    {
-      "detail": "docs/BENCHMARK_DATASHEET.md",
-      "name": "doc_BENCHMARK_DATASHEET.md",
-      "passed": true
-    },
-    {
-      "detail": "notebooks/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
+      "detail": "submissions/healthlynked_option_c_clean/Provider_Directory_Update_Pipeline_End_to_End.ipynb",
       "name": "notebook_json_valid",
       "passed": true
     },
@@ -176,11 +161,6 @@
       "passed": true
     },
     {
-      "detail": "healthlynked_option_c_clean/proposal/JUDGE_COMPARISON_MATRIX.md",
-      "name": "package_proposal/JUDGE_COMPARISON_MATRIX.md",
-      "passed": true
-    },
-    {
       "detail": "healthlynked_option_c_clean/proposal/BONUS_COVERAGE_MATRIX.md",
       "name": "package_proposal/BONUS_COVERAGE_MATRIX.md",
       "passed": true
@@ -188,11 +168,6 @@
     {
       "detail": "healthlynked_option_c_clean/proposal/PRESENTATION_NARRATIVE.md",
       "name": "package_proposal/PRESENTATION_NARRATIVE.md",
-      "passed": true
-    },
-    {
-      "detail": "healthlynked_option_c_clean/proposal/WINNING_PROPOSAL_BRIEF.md",
-      "name": "package_proposal/WINNING_PROPOSAL_BRIEF.md",
       "passed": true
     },
     {
@@ -206,33 +181,8 @@
       "passed": true
     },
     {
-      "detail": "healthlynked_option_c_clean/proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
-      "name": "package_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md",
-      "passed": true
-    },
-    {
       "detail": "healthlynked_option_c_clean/proposal/SHADOW_MODE_PILOT_PROTOCOL.md",
       "name": "package_proposal/SHADOW_MODE_PILOT_PROTOCOL.md",
-      "passed": true
-    },
-    {
-      "detail": "healthlynked_option_c_clean/proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
-      "name": "package_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md",
-      "passed": true
-    },
-    {
-      "detail": "healthlynked_option_c_clean/proposal/LEAN_TEAM_OPERATING_MODEL.md",
-      "name": "package_proposal/LEAN_TEAM_OPERATING_MODEL.md",
-      "passed": true
-    },
-    {
-      "detail": "healthlynked_option_c_clean/proposal/FAILURE_MODE_PLAYBOOK.md",
-      "name": "package_proposal/FAILURE_MODE_PLAYBOOK.md",
-      "passed": true
-    },
-    {
-      "detail": "healthlynked_option_c_clean/proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md",
-      "name": "package_proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md",
       "passed": true
     },
     {
@@ -266,8 +216,8 @@
       "passed": true
     },
     {
-      "detail": "healthlynked_option_c_clean/proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
-      "name": "package_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md",
+      "detail": "healthlynked_option_c_clean/proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md",
+      "name": "package_proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md",
       "passed": true
     },
     {
@@ -366,11 +316,6 @@
       "passed": true
     },
     {
-      "detail": "healthlynked_option_c_clean/appendix/DASHBOARD_SPEC.md",
-      "name": "package_appendix/DASHBOARD_SPEC.md",
-      "passed": true
-    },
-    {
       "detail": "healthlynked_option_c_clean/appendix/DUPLICATE_MOVEMENT_DETECTION.md",
       "name": "package_appendix/DUPLICATE_MOVEMENT_DETECTION.md",
       "passed": true
@@ -381,8 +326,23 @@
       "passed": true
     },
     {
+      "detail": "healthlynked_option_c_clean/appendix/AUDIT_ROLLBACK_WORKFLOW.md",
+      "name": "package_appendix/AUDIT_ROLLBACK_WORKFLOW.md",
+      "passed": true
+    },
+    {
       "detail": "healthlynked_option_c_clean/src/data.py",
       "name": "package_src/data.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/src/entity_resolution.py",
+      "name": "package_src/entity_resolution.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/src/inactive_detection.py",
+      "name": "package_src/inactive_detection.py",
       "passed": true
     },
     {
@@ -398,6 +358,11 @@
     {
       "detail": "healthlynked_option_c_clean/src/npi.py",
       "name": "package_src/npi.py",
+      "passed": true
+    },
+    {
+      "detail": "healthlynked_option_c_clean/src/source_conflicts.py",
+      "name": "package_src/source_conflicts.py",
       "passed": true
     },
     {
@@ -486,16 +451,6 @@
       "passed": true
     },
     {
-      "detail": "Competitive Comparison",
-      "name": "package_text_proposal/JUDGE_COMPARISON_MATRIX.md_Competitive Comparison",
-      "passed": true
-    },
-    {
-      "detail": "Winning Edge By Criterion",
-      "name": "package_text_proposal/JUDGE_COMPARISON_MATRIX.md_Winning Edge By Criterion",
-      "passed": true
-    },
-    {
       "detail": "Bonus Evidence",
       "name": "package_text_proposal/BONUS_COVERAGE_MATRIX.md_Bonus Evidence",
       "passed": true
@@ -521,18 +476,8 @@
       "passed": true
     },
     {
-      "detail": "AWS Production Plan",
-      "name": "package_text_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md_AWS Production Plan",
-      "passed": true
-    },
-    {
-      "detail": "Go/No-Go Thresholds",
-      "name": "package_text_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md_Go/No-Go Thresholds",
-      "passed": true
-    },
-    {
-      "detail": "Consulting Success Definition",
-      "name": "package_text_proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md_Consulting Success Definition",
+      "detail": "Cloud-Agnostic Production Plan",
+      "name": "package_text_proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md_Cloud-Agnostic Production Plan",
       "passed": true
     },
     {
@@ -558,36 +503,6 @@
     {
       "detail": "Field-Level Launch Decision",
       "name": "package_text_proposal/SHADOW_MODE_PILOT_PROTOCOL.md_Field-Level Launch Decision",
-      "passed": true
-    },
-    {
-      "detail": "What The Current Metrics Do Not Prove",
-      "name": "package_text_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md_What The Current Metrics Do Not Prove",
-      "passed": true
-    },
-    {
-      "detail": "Transfer Plan To HealthLynked Data",
-      "name": "package_text_proposal/EVALUATION_LIMITS_AND_TRANSFER_PLAN.md_Transfer Plan To HealthLynked Data",
-      "passed": true
-    },
-    {
-      "detail": "Minimum Team",
-      "name": "package_text_proposal/LEAN_TEAM_OPERATING_MODEL.md_Minimum Team",
-      "passed": true
-    },
-    {
-      "detail": "Decision Rights",
-      "name": "package_text_proposal/LEAN_TEAM_OPERATING_MODEL.md_Decision Rights",
-      "passed": true
-    },
-    {
-      "detail": "Safe Defaults",
-      "name": "package_text_proposal/FAILURE_MODE_PLAYBOOK.md_Safe Defaults",
-      "passed": true
-    },
-    {
-      "detail": "Incident Workflow",
-      "name": "package_text_proposal/FAILURE_MODE_PLAYBOOK.md_Incident Workflow",
       "passed": true
     },
     {
@@ -633,16 +548,6 @@
     {
       "detail": "Human Review Rules",
       "name": "package_text_proposal/CONFIDENCE_AND_DECISION_POLICY.md_Human Review Rules",
-      "passed": true
-    },
-    {
-      "detail": "Connector Health Signals",
-      "name": "package_text_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md_Connector Health Signals",
-      "passed": true
-    },
-    {
-      "detail": "Field-Level Source Law",
-      "name": "package_text_proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md_Field-Level Source Law",
       "passed": true
     },
     {
@@ -712,7 +617,7 @@
     },
     {
       "detail": "",
-      "name": "package_dashboard_spec_matches_outputs",
+      "name": "package_dashboard_matches_outputs",
       "passed": true
     },
     {
@@ -736,7 +641,7 @@
       "passed": true
     },
     {
-      "detail": "150 curated-package checks passed=True",
+      "detail": "131 curated-package checks passed=True",
       "name": "package_rubric_verification_claim_matches",
       "passed": true
     },

@@ -8,7 +8,6 @@ Option C hybrid submission: a working MVP plus a production architecture for con
 - `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 - `proposal/ONE_PAGE_SCORECARD.md`
 - `proposal/JUDGE_DECISION_MEMO.md`
-- `proposal/WINNING_PROPOSAL_BRIEF.md`
 - `proposal/BONUS_COVERAGE_MATRIX.md`
 - `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
 - `proposal/AGENT_WORKFLOW_DIAGRAM.md`
@@ -25,7 +24,7 @@ For the full reading order, use `START_HERE.md`.
 - Precision / recall: 0.948276 / 0.948276
 - Safe auto-apply precision: 1.0
 - Prototype evidence-only cost per correct update: $0.005836
-- Cloud plan: AWS
+- Cloud reference: cloud-agnostic; AWS examples included
 
 ## Run The MVP
 
@@ -49,7 +48,7 @@ The package has already been verified by `evidence/verification.json`.
 
 ## Folder Map
 
-- `proposal/` - architecture, winning brief, source connector plan, roadmap, and diagram.
+- `proposal/` - architecture, decision memo, source connector plan, roadmap, and diagrams.
 - `prototype/` - runnable MVP outputs, metrics, recommendation API contract, and update examples.
 - `dashboard/` - sample human review dashboard.
 - `evidence/` - machine-readable verification, rubric, source-health, cost, audit, rollback, duplicate, movement, and inactive-provider evidence.

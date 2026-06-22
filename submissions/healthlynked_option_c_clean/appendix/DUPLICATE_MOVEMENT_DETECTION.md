@@ -38,5 +38,5 @@ Movement scoring uses address/phone update candidates, practice-peer mismatch, f
 
 - Duplicate candidates should be reviewed before auto-applying identity-level merges.
 - Provider movement should require fresh patient-facing or authoritative source evidence.
-- AWS Step Functions can run duplicate and movement scans after each evidence refresh.
+- A managed workflow service (AWS Step Functions as reference) can run duplicate and movement scans after each evidence refresh.
 - Reviewer outcomes should feed the active-learning loop, especially for name-similarity and practice-affiliation thresholds.

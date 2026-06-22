@@ -30,34 +30,30 @@ Start here:
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 3. `proposal/ONE_PAGE_SCORECARD.md`
 4. `proposal/JUDGE_DECISION_MEMO.md`
-5. `proposal/WINNING_PROPOSAL_BRIEF.md`
-6. `proposal/PRESENTATION_NARRATIVE.md`
-7. `proposal/JUDGE_COMPARISON_MATRIX.md`
-8. `proposal/BONUS_COVERAGE_MATRIX.md`
-9. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-10. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
-11. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-12. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-13. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
-14. `prototype/WORKING_PROTOTYPE.md`
-15. `prototype/RECOMMENDATION_API_CONTRACT.md`
-16. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-17. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-18. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-19. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-20. `dashboard/index.html`
-21. `evidence/verification.json`
+5. `proposal/PRESENTATION_NARRATIVE.md`
+6. `proposal/BONUS_COVERAGE_MATRIX.md`
+7. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+8. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
+9. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+10. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
+11. `prototype/WORKING_PROTOTYPE.md`
+12. `prototype/RECOMMENDATION_API_CONTRACT.md`
+13. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+14. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+15. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+16. `dashboard/index.html`
+17. `evidence/verification.json`
 
 Current verified package:
 
 - Submission mode: Option C Hybrid, with Option A and Option B coverage included
 - Package: `submissions/latest_final_package.zip`
-- Verification checks passed: 150 curated-package checks
+- Verification checks passed: 131 curated-package checks
 - Local proxy F1: `0.948276`
 - Precision / recall: `0.948276` / `0.948276`
 - Auto-apply precision: `1.0`
 - Prototype evidence-only cost per correct update: `$0.005836`
-- Cloud target: AWS
+- Cloud reference: cloud-agnostic; AWS examples included
 
 ## Files To Show Judges
 
@@ -67,37 +63,28 @@ Show only the curated package path above. The intended first impression is small
 2. `Provider_Directory_Update_Pipeline_End_to_End.ipynb`
 3. `proposal/ONE_PAGE_SCORECARD.md`
 4. `proposal/JUDGE_DECISION_MEMO.md`
-5. `proposal/WINNING_PROPOSAL_BRIEF.md`
-6. `proposal/PRESENTATION_NARRATIVE.md`
-7. `proposal/JUDGE_COMPARISON_MATRIX.md`
-8. `proposal/BONUS_COVERAGE_MATRIX.md`
-9. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
-10. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
-11. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
-12. `proposal/IMPLEMENTATION_ACCEPTANCE_CRITERIA.md`
-13. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
-14. `prototype/WORKING_PROTOTYPE.md`
-15. `prototype/RECOMMENDATION_API_CONTRACT.md`
-16. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
-17. `proposal/SOURCE_CONNECTOR_STATUS_MATRIX.md`
-18. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
-19. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
-20. `dashboard/index.html`
-21. `evidence/verification.json`
+5. `proposal/PRESENTATION_NARRATIVE.md`
+6. `proposal/BONUS_COVERAGE_MATRIX.md`
+7. `proposal/TECHNICAL_ARCHITECTURE_PROPOSAL.md`
+8. `proposal/AGENT_WORKFLOW_DIAGRAM.md`
+9. `proposal/CONFIDENCE_AND_DECISION_POLICY.md`
+10. `proposal/SHADOW_MODE_PILOT_PROTOCOL.md`
+11. `prototype/WORKING_PROTOTYPE.md`
+12. `prototype/RECOMMENDATION_API_CONTRACT.md`
+13. `proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md`
+14. `proposal/SOURCE_ACCESS_COMPLIANCE_POLICY.md`
+15. `proposal/OFFICIAL_SOURCE_REFERENCES.md`
+16. `dashboard/index.html`
+17. `evidence/verification.json`
 
 Everything else in the upload is supporting evidence under `appendix/`, `evidence/`, `src/`, or `scripts/`.
 
 ## What Is Included
 
-- `src/` - reusable pipeline modules for candidate generation, scoring, source reliability, review routing, audit, privacy, red-team checks, and production readiness.
-- `scripts/` - reproducible CLI entrypoints for the best pipeline, public dataset triage, Kaggle metadata collection, and package verification.
-- `docs/` - supporting research, architecture, source governance, operations, and validation notes.
-- `architecture/` - root copies of the architecture proposal and diagram source.
-- `prototype/` - root copy of the MVP runbook.
-- `notebooks/` - polished end-to-end notebook with narrative, MVP execution, metrics, diagrams, and bonus coverage.
+- `src/` - minimal reusable MVP modules for loading, scoring, normalization, NPI validation, and review routing.
+- `scripts/` - reproducible CLI entrypoints for the best pipeline, recommendation examples, package build, and package verification.
 - `submissions/healthlynked_option_c_clean/prototype/RECOMMENDATION_API_CONTRACT.md` - product-facing JSON recommendation shape matching the competition examples.
-- `submissions/healthlynked_option_c_clean/proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` - real-source ingestion plan for NPPES, CMS files, FSMB/state boards, practice websites, and fallback sources.
-- `experiments/` - research experiment scripts retained for reproducibility; the curated judge package excludes private/internal loop artifacts.
+- `submissions/healthlynked_option_c_clean/proposal/OFFICIAL_SOURCE_CONNECTOR_PLAYBOOK.md` - real-source ingestion plan for NPPES, CMS files, PECOS, NUCC taxonomy, state boards, practice websites, and fallback sources.
 - `data/sample/` - synthetic provider/evidence/gold-update benchmark used when official train/test labels are unavailable.
 - `submissions/healthlynked_option_c_clean/` - curated judge-facing handoff package.
 - `submissions/latest_final_package.zip` - upload-ready Kaggle package.
@@ -126,15 +113,6 @@ python3 scripts/verify_pipeline.py \
   --out-dir outputs/verify_latest
 ```
 
-Optional public-provider-directory triage smoke:
-
-```bash
-python3 scripts/run_public_dataset_triage.py \
-  --input data/raw/kaggle_public_provider_directory/provider_directory_dataset.csv \
-  --out-dir outputs/public_dataset_triage \
-  --top-n 100
-```
-
 ## Production Positioning
 
 The architecture is intentionally practical for a lean engineering team:
@@ -146,10 +124,10 @@ The architecture is intentionally practical for a lean engineering team:
 - safe auto-update rules separated from update discovery
 - review-first routing for identity-sensitive, conflicting, or high-risk changes
 - append-only audit trail, package manifest, rollback workflow, and privacy controls
-- AWS-oriented scaling through S3, Lambda/ECS, Step Functions, RDS/DynamoDB, EventBridge, CloudWatch, Bedrock fallback, and human-review queues
+- cloud-portable scaling through object storage, managed compute, workflow orchestration, relational/key-value storage, monitoring, gated foundation-model fallback, and review queues; AWS services are used as reference examples where concrete names help.
 
 ## GitHub Notes
 
 This repository is structured for a private GitHub handoff. It intentionally excludes `.env`, raw Kaggle zip downloads, Python caches, historical result directories, old intermediate submission zips, and reference PDFs.
 
-See `GITHUB_REPO_HANDOFF.md` for push commands and repository settings.
+The root repository is intentionally small. Internal research logs, adversarial review notes, raw Kaggle downloads, and generated caches are kept out of the judge-facing surface.

@@ -1,6 +1,6 @@
 # Cost Model Per 1,000 Provider Records
 
-This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM prices change, so the model keeps assumptions explicit and easy to replace.
+This is a parameterized operating-cost model, not a live AWS-reference bill. Cloud and LLM prices change, so the model keeps assumptions explicit and easy to replace.
 
 ## Current Prototype Inputs
 
@@ -11,7 +11,7 @@ This is a parameterized operating-cost model, not a live AWS bill. Cloud and LLM
 
 ## Metric Boundary
 
-The `$0.005836` prototype figure is evidence acquisition cost per true-positive recommendation. It does not include human labor. The per-1,000-record scenarios below add AWS compute/storage/monitoring, gated LLM extraction, and manual-review labor so judges can see both the cheap evidence layer and the operational cost of review.
+The `$0.005836` prototype figure is evidence acquisition cost per true-positive recommendation. It does not include human labor. The per-1,000-record scenarios below add cloud compute/storage/monitoring, modeled with AWS reference pricing, gated LLM extraction, and manual-review labor so judges can see both the cheap evidence layer and the operational cost of review.
 
 ## Default Assumptions
 
@@ -27,7 +27,7 @@ The `$0.005836` prototype figure is evidence acquisition cost per true-positive 
 
 ## Scenario Estimates
 
-| Scenario | Evidence | AWS Compute/Storage/Monitoring | LLM Extraction | Manual Review | Review Items | Total / 1,000 |
+| Scenario | Evidence | Cloud Compute/Storage/Monitoring (AWS Reference) | LLM Extraction | Manual Review | Review Items | Total / 1,000 |
 |---|---:|---:|---:|---:|---:|---:|
 | base_case | 4.46 | 0.2 | 0.8 | 277.5 | 370.0 | 282.96 |
 | llm_heavy | 4.46 | 0.2 | 2.5 | 277.5 | 370.0 | 284.66 |
@@ -42,7 +42,7 @@ The proxy benchmark is intentionally enriched for risky/outdated records, so its
 - Use deterministic extraction first; call Bedrock only for pages that fail parsers or have high-value stale fields.
 - Re-fetch stale evidence before review to avoid wasting reviewer time.
 - Use active learning to expand auto-apply only where reviewer accept rates are strong.
-- Batch large public files through AWS Glue/Batch and reserve API/crawler work for changed or high-risk records.
+- Batch large public files through managed ETL/batch workers (AWS Glue/Batch as reference) and reserve API/crawler work for changed or high-risk records.
 
 ## Why This Matters
 

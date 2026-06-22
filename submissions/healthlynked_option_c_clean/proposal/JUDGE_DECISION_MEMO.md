@@ -17,7 +17,7 @@ This design avoids those traps by separating evidence retrieval, normalization, 
 ## What HealthLynked Gets On Day One
 
 - A runnable MVP with candidate updates, auto-apply updates, review queue, recommendation JSON, metrics, and audit events.
-- A production AWS architecture for periodic and continuous refresh.
+- A cloud-agnostic production architecture with AWS reference services for periodic and continuous refresh.
 - A trusted-source connector plan for NPPES, CMS files, state boards/FSMB, practice websites, health-system directories, and carefully limited fallback sources.
 - A confidence and decision policy that explains exactly when a change is auto-applied, reviewed, or rejected.
 - A sample human review dashboard and review disposition loop.
@@ -40,7 +40,7 @@ The architecture uses deterministic and cached sources first, then reserves LLM 
 
 ## Why It Is Cost-Aware
 
-The current proxy run estimates prototype evidence-only cost per correct update at `$0.005836`. The production cost model separately includes per-1,000-record scenarios for AWS infrastructure, LLM fallback, and human-review labor. The production design keeps total cost low by:
+The current proxy run estimates prototype evidence-only cost per correct update at `$0.005836`. The production cost model separately includes per-1,000-record scenarios for cloud infrastructure (AWS reference), LLM fallback, and human-review labor. The production design keeps total cost low by:
 
 - prioritizing stale/risky records before broad refresh;
 - using NPPES/CMS/state-board snapshots where possible;

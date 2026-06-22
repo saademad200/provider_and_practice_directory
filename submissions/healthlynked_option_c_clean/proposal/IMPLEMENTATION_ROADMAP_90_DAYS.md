@@ -3,7 +3,7 @@
 ## Days 0-15
 
 - Map HealthLynked provider/practice schema.
-- Configure AWS account boundary, IAM, S3 evidence storage, Secrets Manager.
+- Configure cloud account boundary, IAM, object storage, and secrets management; AWS account/IAM/S3/Secrets Manager are the reference examples.
 - Run MVP on de-identified sample records in no-write shadow mode.
 - Approve source registry and field-risk policy.
 - Establish reviewer disposition labels and the initial field-level launch matrix.
@@ -24,8 +24,8 @@
 
 ## Days 61-90
 
-- Deploy AWS EventBridge and Step Functions orchestration.
-- Run connector/scoring workers on Lambda/ECS or AWS Batch.
+- Deploy cloud scheduler and workflow orchestration, using AWS EventBridge and Step Functions as the reference.
+- Run connector/scoring workers on managed compute, using Lambda/ECS or AWS Batch as the reference.
 - Gate Amazon Bedrock extraction to messy approved pages only.
 - Graduate approved low-risk fields from shadow mode into limited safe auto-apply.
 - Keep identity, NPI, inactive-status, affiliation, and source-conflict changes human-review-first.
