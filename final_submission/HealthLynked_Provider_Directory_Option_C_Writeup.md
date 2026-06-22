@@ -38,6 +38,13 @@ The writeup is the primary proposal artifact. The notebook is a self-contained M
 |---|---|
 | Main architecture and production plan | This writeup |
 | Runnable self-contained MVP | `HealthLynked_Provider_Directory_Update_Pipeline.ipynb` |
+| Architecture diagram image | `assets/architecture_diagram.png` |
+| Agent workflow image | `assets/agent_workflow_diagram.png` |
+| Human review dashboard mock | `assets/human_review_dashboard_mock.png` |
+| Sample input records | `assets/sample_input.csv` |
+| Sample recommendations | `assets/sample_recommendations.json` |
+| Sample review queue | `assets/sample_human_review_queue.json` |
+| Sample audit and rollback | `assets/sample_audit_and_rollback.json` |
 | Larger reproducible benchmark | Optional GitHub repo, `scripts/run_best_pipeline.py` |
 | Sample human review dashboard | Optional GitHub repo, `submissions/healthlynked_option_c_clean/dashboard/index.html` |
 | Audit events and rollback examples | Inline below, plus optional GitHub repo evidence files |
@@ -106,6 +113,8 @@ Save Audit Log + Update Provider Directory
 
 ## Architecture Diagram
 
+![Provider directory pipeline architecture](assets/architecture_diagram.png)
+
 ```mermaid
 flowchart TD
     A[HealthLynked Provider / Practice Database] --> B[Risk Scanner]
@@ -132,6 +141,8 @@ flowchart TD
 ```
 
 ## Agent Workflow Diagram
+
+![Agent workflow diagram](assets/agent_workflow_diagram.png)
 
 ```mermaid
 flowchart LR
@@ -352,6 +363,8 @@ The MVP includes a sample dashboard concept showing:
 - rollback and audit evidence.
 
 The dashboard is designed to reduce reviewer work, not create a second manual cleanup project.
+
+![Human review dashboard mock](assets/human_review_dashboard_mock.png)
 
 ### Reviewer Decision Card Mock
 
